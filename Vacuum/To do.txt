@@ -1,1 +1,2 @@
-Bei den Tubeplots die startwerte bei 1000mbar abschneiden damit die plots besser vergleichbar sind
+Peaks bei den Histogrammen beschriften.
+Vllt. beide Histogramme in 1 plot?
