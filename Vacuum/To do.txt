@@ -1,2 +1,0 @@
-Peaks bei den Histogrammen beschriften.
-Vllt. beide Histogramme in 1 plot?
