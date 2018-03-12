@@ -1,4 +1,6 @@
 \documentclass[]{article}
+\usepackage{graphicx}
+\usepackage{hyperref}
 
 %opening
 \title{Vacuum Science and the Inﬂuence of Vacuum Conditions on Thin Film Growth}
@@ -33,24 +35,32 @@ Mittlere freie Weglänge.
 \subsection{Pumps}
 We use different pumps to produce a high vacuum for the different pressure regimes. The pre pump is used to get to a low enough pressure to use the turbo pump which gets us to a very high vacuum.
 \subsubsection{Pre Pump}
-The pre pump works by changing the volume in a pumping chamber while opening and closing 2 valves.
-\\\\
-Hier muss noch ein Bild von einer Pumpe und eine erklärung des arbeitszyklus hin.
-\\\\
-The pressure limit we can reach with the pre pump alone is on the one hand caused by leaks of the valves and the piston. On the other hand there is a pressure limit even with perfect pistons and valve by the air at atmospheric pressure which remains in the cylinder at the outlet stage. With adiabatic expansion in the cylinder we can calculate this minimum pressure to be
-\[  \]
+The pre pump (Fig.\ref{fig:prepump}) works by changing the volume in a pumping chamber while opening and closing 2 valves. During the inlet phase the valve towards the vacuum is open, and the one towards the atmosphere is closed, while the volume in the pump is increased. This is reversed during the outlet stage.
+
+\begin{figure}
+	
+	\centering
+	\includegraphics[width=0.7\linewidth]{Bilder/PrePump}
+	\label{fig:prepump}
+	\caption{Shematic representation of a pump}
+	
+\end{figure}
+
+
+The pressure limit we can reach with the pre pump alone is on the one hand caused by leaks of the valves and the piston. On the other hand there is a pressure limit even with perfect valves by the air ($V_{0} $) at atmospheric pressure which remains in the cylinder at the outlet stage . With isotherm expansion in the cylinder we can calculate this minimum pressure to be: \[ p_{min}=p_{Atmosph.}\frac{V_{0}}{V_{max}} \]
 \subsubsection{Turbo Pump}
+Different from the pre pump which works by producing a pressure gradient between two chambers, a turbo pump works through the principle of momentum transfer. Atoms in a chamber don't bounce elastically of the walls but stick to them through adsorption for a short amount of time, so it is possible to accelerate them with spinning rotors in the turbo pump and push the atoms to the outlet. This only works if the mean free path of a particle is lager than the distance between the rotor blades, which is why we connect the outlet of the turbo, to the pre pump. Our turbo pump is able to evacuate 300 litres of gas per minute.
 \subsection{Sputtering}
 
 \subsection{Flow}
 \subsubsection{Laminar}
 \subsubsection{Turbulent}
-\subsubsection{Resistance}
+\subsubsection{Resistance and Conductivity}
 \subsection{Gauges}
 \subsection{Questions}
 \subsubsection{Day1}
 \begin{itemize}  
-	\item What causes the limit on the pressure one can reach with the pre-pump alone? 
+	\item What causes the limit on the pressure one can reach with the pre-pump alone? $\surd$
 	\item  Calculate the mean free path of a nitrogen (N2) molecule in atmospheric pressure and at $1 \cdot 10^{−9}$ mbar 
 	\item Based on the data from section 5.3, how much gas is desorped from the walls after the turbo reaches full speed? Hint: Consider the data over the time period after the turbo reaches speed. This is the pressure drop in a ﬁxed time. The volume of the chamber is 30 litres and you can assume the chamber is at a constant temperature of 293K. The mass of air is approximately 29g/mol.
 	 
