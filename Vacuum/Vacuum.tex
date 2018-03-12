@@ -1,6 +1,7 @@
 \documentclass[]{article}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{amsmath}
 
 %opening
 \title{Vacuum Science and the Inﬂuence of Vacuum Conditions on Thin Film Growth}
@@ -26,9 +27,21 @@ What we can measure as temperature is caused by the movement of the particles in
 \[ pV=nk_{B} T\]
  where $k_{B}\approx1,38J/K$ is the Boltzmann constant and temperature is measured in Kelvin.We assume for our purpose that all particles are incompressible hard spheres and that there are no frictional forces between the particles and the walls. Because the particle speeds are distributed isotropically there are $1/3N$ particles moving along each axis. For simplicity we consider a particle moving along the x-Axis with the velocity $v_{x}$. Initially it has the momentum $p_{x}=v_{x}*m$. After an elastic collision with a wall its momentum is $-p_{x}$, so the momentum change is $\Delta p_{x}=2p_{x}$. We can calculate the force on the wall by multiplying the momentum change of each collision with the ammount of collisions per time interval. In a box with surface A and length $ds=v*dt$ there are \[ N=\frac{N}{V}A *v* dt \] particles of which 1/6 is moving in x-direction. So the total momentum transfer is \[ \Delta p_{i}=\frac{2N* A* v* dt*m* v}{6V} \]. For the force on the wall we get \[ F=\frac{dp}{dt}=\frac{ANmv^{2}}{3V} \rightarrow p=\frac{Nmv^{2}}{3V} \Leftrightarrow p=\frac{N*E_{kin}}{3V}\]. Comparing this equation to the ideal gas law gives us that \[ v^{2}=\frac{3k_{b}T}{m_{p}} \] 
  Boltzmannstatistikk \\\\\\\\\\\\
-Mittlere Geschwindigkeit
+ Assuming we have a canonical ensemble of gas molecules we can conclude that the distribution of particle speeds can be described by a Maxwell-Boltzmann-statistic. \[ f(v)=\frac{m^{\frac{3}{2}}}{2\pi k T} 4\pi v^{2} e^{\frac{-mv^{2}}{2kT}} \] Now we can calculate the expectation value for the speed $<v>$ and also $\sigma_{v}$
+ \[<v>=\int_{0}^{\infty}vf(v)dv=\sqrt{\frac{8kT}{\pi m}}  \]
+ \[ \sqrt{<v^{2}>}=\int_{0}^{\infty}v^{2}f(v)dv=\sqrt{\frac{3kT}{\pi m}}  \]
+ The second result is consistent with the speed we derived earlier with simple thoughts about pressure. We can easily see that lighter particles move a lot faster than heavier ones. 
+ \paragraph{Example}
+ \mbox{}\\
+ If we have an $H_{2}O$ molecule at room temperature (300K), we can calculate its thermal speed and energy.\[ 
+ v=\sqrt{\frac{3kT}{\pi m}}=363\frac{m}{s} \]
+ \[ E_{thermal}=\frac{1}{2}mv^{2}=1.09*10^{-22}J \]
 \\\\\\\\
-Mittlere freie Weglänge.
+\subsubsection{Mean free path}\
+The mean free path of a particle is described as the length after which $e^{-1}$ have not hit another particle yet. We can estimate the mean free path $\lambda$ in a gas if we know the total cross section $\sigma$  of a particle. The mean free path multiplied with the cross section gives us the effective volume the particle has covered. If in average a particle has then hit another particle the product of the covered volume with the particle density should be one.\[\lambda \sigma *\frac{N}{V}=1 \Leftrightarrow \lambda=\frac{V}{N\sigma}  \]
+\paragraph{Example}mbox{}\\
+We will calculate the mean free path of nitrogen (N2) molecules in atmospheric pressure and at $10^{9}mbar$
+\\\\Hier muss noch das beispiel gerechnet werden.
 
 
 \subsection{Desorption}
