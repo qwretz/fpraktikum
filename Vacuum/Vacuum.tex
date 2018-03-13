@@ -108,30 +108,32 @@ A penning gauge is made out of a cyllindric metal cage, serving as the cathode a
 	\item Why do we pre-sputter the target before deposition? \item  Plot the Polanyi-Wigner equation as a function of desorption energy for an ensemble of $5.35 \cdot 10^{13}$ particles for $T_w$ = 300K, 500K, 800K, 1000K for Edes between 0 and 60 kJ/mol (universal gas constant 8.31 J/mol). Scale the y-axis to $10^{13}$ as a maximum.
 	
 \end{itemize}
+
+
+
+\newpage
 \section{Experiment}
 As already mentioned the main task of the experiment was to learn how the vacuum chamber works and being able to operate it. 
 
 We were allowed to operate a vacuum chamber with a volume of 30 litres. The inside is reachable by the main window which is hold by eight bolts and a copper seal. The sputtering targets are at the bottom while a rotatable disk, where the sample was placed, is in the center. This one is operate-able from the outside. At the backside the pressure gauges are connected. 
 The chamber itself was connected to a turbo pump, which itself was connected to a valve with electric controls as well a brass cap for the venting. Behind the turbo pump the pre-pump with a 25mm diameter tubing was placed. Above the pumping systems is the mass spectrometer with its filament.
 
+\newpage
+
 \subsection{Pre-Pump}
 The first task of Day 1 was to confirm the equations for flow resistance R and conductance C, \cite[Page 91]{VacuumHandbook}. 
 \[ \quad Series \: Connection: \quad
-R = R_1 + R_2 + ...  \quad C = \frac{1}{C_1} + \frac{1}{C_2} + ... \]
+R = R_1 + R_2 + ...  \quad \frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2} + ... \]
 \[ Parrallel \: Connection: \quad
-C = C_1 + C_2 + ...  \quad R = \frac{1}{R_1} + \frac{1}{R_2} + ... \]
+C = C_1 + C_2 + ...  \quad \frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2} + ... \]
 
 To do so we exchanged the tubes connecting pre-pump and the vacuum chamber. Our different tube diameters were 25mm and 40mm. With three measurements of the pressure change in time, each tube alone and once in series connection. With the data we are able to determine the effective pumping speed \cite[Page 93]{VacuumHandbook} given by:
 \[ \frac{1}{S_{eff}} = \frac{1}{S} + \frac{1}{C} \quad , \quad
-S_{eff} = \frac{S}{1+S/C}\]
+S_{eff} = \frac{V}{\Delta t} \ln{ \frac{p_0}{p_1} } \]
 
+Now we get three different $S_{eff}$ form our three measurements by applying the second equation on the data. According to the first one, we now can calculate the real pumping speed and the conductances of both tubes. The real pumping speed should be around 8 litres per minute.
 
-Was fang ich mit den versch Seff an??
-\\Wir sollen die C von den verschiedenen rohren bestimmen (und dann noch das reale S glaub ich). Wenn du die 3 Seff hast kannst du das als gleichungssystem aufschreiben und die einzelnen cs bestimmen.
-
-
-
-\begin{figure}
+\begin{figure}[!h]
 \centering\includegraphics[width=1\textwidth]{Plots/Comparison.png}
 \caption{Pressure change in time for every tube set-up.}
 \label{fig::comparison}
@@ -148,7 +150,7 @@ Molar Mass & 2 & 18 & 28 & 32 & 40 & 44 \\
 \end{tabular} 
 \end{table}
 
-Setting the mass spectrometer in the range from 1 to 50 amu we can compare our two measurements. The individual graphics are shown in \ref{MS Plots}.
+Turning on the mass spectrometer below a pressure of $10^{-6} mbar$ ensures that it won't break due to too many atoms around. They would all be ionised and the current we are measuring would be too high for the sensitive MS. Setting the MS in the range from 1 to 50 amu we now can compare our two measurements. For each atomic mass measure time of 10s was given. Thereby we want to ensure that our peaks are sharp and clearly visible. The individual graphics are shown in \ref{MS Plots}.
 
 \begin{figure}[!h]
 \centering\includegraphics[width=1\textwidth]{Plots/BeforeAfter.png}
