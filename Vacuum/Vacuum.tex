@@ -131,7 +131,12 @@ To do so we exchanged the tubes connecting pre-pump and the vacuum chamber. Our 
 \[ \frac{1}{S_{eff}} = \frac{1}{S} + \frac{1}{C} \quad , \quad
 S_{eff} = \frac{V}{\Delta t} \ln{ \frac{p_0}{p_1} } \]
 
-Now we get three different $S_{eff}$ form our three measurements by applying the second equation on the data. According to the first one, we now can calculate the real pumping speed and the conductances of both tubes. The real pumping speed should be around 8 litres per minute.
+From the second equation we get three different $S_{eff-i}$, where 1 stands for the 25mm diameter tube and 2 for the 40mm one. According to the first one, we now can calculate the real pumping speed and the conductances of both tubes. The real pumping speed S should be around 8 litres per minute.
+
+\[ \frac{1}{S} = \frac{1}{S_{eff-1}} + \frac{1}{S_{eff-2}} -\frac{1}{S_{eff-12}} \quad , \quad
+\frac{1}{C_i} = \frac{1}{S_{eff-12}} - \frac{1}{S_{eff-i}} \]
+
+The results of those equations are: dersfydgxtfcx
 
 \begin{figure}[!h]
 \centering\includegraphics[width=1\textwidth]{Plots/Comparison.png}
@@ -158,7 +163,9 @@ Turning on the mass spectrometer below a pressure of $10^{-6} mbar$ ensures that
 \label{fig::BeforeAfter}
 \end{figure}
 
+The plot shows exactly what we wanted to achieve. The intensity of most molar masses dropped after baking. Looking at the main peaks $N_2$ and $CO_2$ dropped by around half of a magnitude,  $H_2O$ dropped even by a whole magnitude. The $H_2$ on the other hand increased for a little bit.
 
+With less pressure and therefore less atoms in the vacuum chamber
 
 \section{Appendix}
 \subsection{Pre-Pump Plots}
