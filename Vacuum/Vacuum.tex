@@ -26,8 +26,7 @@ It is measured in [Pa] or [bar].
 \[ [Pa]=N/m^{2}     \qquad  1bar=10^{5}Pa		 \]
 What we can measure as temperature is caused by the movement of the particles in the gas. So it has to be related to the kinetic energy, what explains why the pressure on the walls rises, if we increase the temperature. From experiments done in the 17th and 18th century we know the state equation for an ideal gas
 \[ pV=nk_{B} T\]
- where $k_{B}\approx1,38J/K$ is the Boltzmann constant and temperature is measured in Kelvin.We assume for our purpose that all particles are incompressible hard spheres and that there are no frictional forces between the particles and the walls. Because the particle speeds are distributed isotropically there are $1/3N$ particles moving along each axis. For simplicity we consider a particle moving along the x-Axis with the velocity $v_{x}$. Initially it has the momentum $p_{x}=v_{x}*m$. After an elastic collision with a wall its momentum is $-p_{x}$, so the momentum change is $\Delta p_{x}=2p_{x}$. We can calculate the force on the wall by multiplying the momentum change of each collision with the ammount of collisions per time interval. In a box with surface A and length $ds=v*dt$ there are \[ N=\frac{N}{V}A *v* dt \] particles of which 1/6 is moving in x-direction. So the total momentum transfer is \[ \Delta p_{i}=\frac{2N* A* v* dt*m* v}{6V} \]. For the force on the wall we get \[ F=\frac{dp}{dt}=\frac{ANmv^{2}}{3V} \rightarrow p=\frac{Nmv^{2}}{3V} \Leftrightarrow p=\frac{N*E_{kin}}{3V}\]. Comparing this equation to the ideal gas law gives us that \[ v^{2}=\frac{3k_{b}T}{m_{p}} \] 
- Boltzmannstatistikk \\\\\\\\\\\\
+ where $k_{B}\approx1,38J/K$ is the Boltzmann constant and temperature is measured in Kelvin.We assume for our purpose that all particles are incompressible hard spheres and that there are no frictional forces between the particles and the walls. Because the particle speeds are distributed isotropically there are $1/3N$ particles moving along each axis. For simplicity we consider a particle moving along the x-Axis with the velocity $v_{x}$. Initially it has the momentum $p_{x}=v_{x}*m$. After an elastic collision with a wall its momentum is $-p_{x}$, so the momentum change is $\Delta p_{x}=2p_{x}$. We can calculate the force on the wall by multiplying the momentum change of each collision with the ammount of collisions per time interval. In a box with surface A and length $ds=v*dt$ there are \[ N=\frac{N}{V}A *v* dt \] particles of which 1/6 is moving in x-direction. So the total momentum transfer is \[ \Delta p_{i}=\frac{2N* A* v* dt*m* v}{6V} \]. For the force on the wall we get \[ F=\frac{dp}{dt}=\frac{ANmv^{2}}{3V} \rightarrow p=\frac{Nmv^{2}}{3V} \Leftrightarrow p=\frac{N*E_{kin}}{3V}\] Comparing this equation to the ideal gas law gives us that \[ v^{2}=\frac{3k_{b}T}{m_{p}} \] 
  Assuming we have a canonical ensemble of gas molecules we can conclude that the distribution of particle speeds can be described by a Maxwell-Boltzmann-statistic. \[ f(v)=\frac{m^{\frac{3}{2}}}{2\pi k T} 4\pi v^{2} e^{\frac{-mv^{2}}{2kT}} \] Now we can calculate the expectation value for the speed $<v>$ and also $\sigma_{v}$
  \[<v>=\int_{0}^{\infty}vf(v)dv=\sqrt{\frac{8kT}{\pi m}}  \]
  \[ \sqrt{<v^{2}>}=\int_{0}^{\infty}v^{2}f(v)dv=\sqrt{\frac{3kT}{\pi m}}  \]
@@ -46,6 +45,14 @@ We will calculate the mean free path of nitrogen ($N_{2}$) molecules in atmosphe
 
 
 \subsection{Desorption}
+Molecules and Atoms can stick to a surface e.g. the walls of our vacuum chamber, through dipole or van der Waals forces and covalent linkage. The process of getting them off again is called desorption. For desorption we need to add kinetic energy in form of heat to the particle until the $E_{kin}>E_{des}$. The desorption energy vary in different kinds of molecules and atoms. From Boltzmann-statistics we know that there are $\Delta n=ne^{\frac{-D_{des}}{RT}}$ particles with a high enough kinetic energy to leave the surface again. Because our walls are in a heat bath with the lab they don't loose heat so that the temperature stays constant. The Polanyi-Wigner equation then tells us what the rate of desorption in our chamber is, with $\nu=\frac{kT}{h}$ being the oscillation frequency of the molecules.\[ j_{des}=\frac{dn}{dt}=-\nu n e^{-\frac{E_{des}}{RT}} \] 
+\begin{figure}
+	\includegraphics[width=0.7\linewidth]{"Plots/Polanyi Wigner"}
+	\label{fig:polanyi}
+	\caption{Polanyi Wigner equation for different temperatures}
+\end{figure}
+
+
 \subsection{Pumps}
 We use different pumps to produce a high vacuum for the different pressure regimes. The pre pump is used to get to a low enough pressure to use the turbo pump which gets us to a very high vacuum.
 \subsubsection{Pre Pump}
@@ -64,8 +71,10 @@ The pre pump (Fig.\ref{fig:prepump}) works by changing the volume in a pumping c
 The pressure limit we can reach with the pre pump alone is on the one hand caused by leaks of the valves and the piston. On the other hand there is a pressure limit even with perfect valves by the air ($V_{0} $) at atmospheric pressure which remains in the cylinder at the outlet stage . With isotherm expansion in the cylinder we can calculate this minimum pressure to be: \[ p_{min}=p_{Atmosph.}\frac{V_{0}}{V_{max}} \]
 \subsubsection{Turbo Pump}
 Different from the pre pump which works by producing a pressure gradient between two chambers, a turbo pump works through the principle of momentum transfer. Atoms in a chamber don't bounce elastically of the walls but stick to them through adsorption for a short amount of time, so it is possible to accelerate them with spinning rotors in the turbo pump and push the atoms to the outlet. This only works if the mean free path of a particle is lager than the distance between the rotor blades, which is why we connect the outlet of the turbo, to the pre pump. Our turbo pump is able to evacuate 300 litres of gas per minute.
+\subsection{Thin Films}
+This films are layers of material with a thickness between some atomic radii to several micrometers, which are grown on a substrate for mechanical support. Being two dimensional confined layers they show many interesting physical properties like \\\\\\\\\\ not found in conventional three dimensional materials.
 \subsection{Sputtering}
-
+Sputtering is a mechanical process used to create thin films, at which we bombard a target with ions to dissociate single atoms from the target and subsequently deposit them on the substrate. We enrich our vacuum chamber with Ar and shoot an electron ray into it. The electrons ionise the Ar atoms, what leads to even more electrons emitted in the chamber. If there is enough space between the cathode and the anode for electrons to hit other Ar Atoms and the concentration of Ar is high enough they will form a plasma. To accelerate the Ar atoms towards the target we apply a DC voltage that also accelerates the electrons further what helps with the ionisation. It is possible to use a magnetic field to contain the plasma in a small area around the target. The free Atoms in the chamber then will adsorb onto the surface of our substrate. Because sputtering is a purely mechanical process, we can sputter different metal alloys and keep the stoichiometry on our thin layer.
 \subsection{Flow}
 \subsubsection{Laminar}
 \subsubsection{Turbulent}
