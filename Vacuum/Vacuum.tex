@@ -2,6 +2,7 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{amsmath}
+\usepackage{caption}
 
 %opening
 \title{Vacuum Science and the Inﬂuence of Vacuum Conditions on Thin Film Growth}
@@ -99,12 +100,97 @@ A penning gauge is made out of a cyllindric metal cage, serving as the cathode a
 	
 \end{itemize}
 \section{Experiment}
-In the experiment we were allowed to operate a vacuum chamber with a volume of 30 litres. The inside is reachable by the main window which is hold by eight bolts and a copper seal. The sputtering targets are at the bottom while a rotatable disk, where the sample was placed, is in the center. This one is operate-able from the outside. At the backside the pressure gauges are connected. 
+As already mentioned the main task of the experiment was to learn how the vacuum chamber works and being able to operate it. 
+
+We were allowed to operate a vacuum chamber with a volume of 30 litres. The inside is reachable by the main window which is hold by eight bolts and a copper seal. The sputtering targets are at the bottom while a rotatable disk, where the sample was placed, is in the center. This one is operate-able from the outside. At the backside the pressure gauges are connected. 
 The chamber itself was connected to a turbo pump, which itself was connected to a valve with electric controls as well a brass cap for the venting. Behind the turbo pump the pre-pump with a 25mm diameter tubing was placed. Above the pumping systems is the mass spectrometer with its filament.
 
-\subsection{Description}
-\subsection{Data Analysis}
-\subsection{Evaluation}
+\subsection{Pre-Pump}
+The first task of Day 1 was to confirm the equations for flow resistance R and conductance C, \cite[Page 91]{VacuumHandbook}. 
+\[ \quad Series \: Connection: \quad
+R = R_1 + R_2 + ...  \quad C = \frac{1}{C_1} + \frac{1}{C_2} + ... \]
+\[ Parrallel \: Connection: \quad
+C = C_1 + C_2 + ...  \quad R = \frac{1}{R_1} + \frac{1}{R_2} + ... \]
 
+To do so we exchanged the tubes connecting pre-pump and the vacuum chamber. Our different tube diameters were 25mm and 40mm. With three measurements of the pressure change in time, each tube alone and once in series connection. With the data we are able to determine the effective pumping speed \cite[Page 93]{VacuumHandbook} given by:
+\[ \frac{1}{S_{eff}} = \frac{1}{S} + \frac{1}{C} \quad , \quad
+S_{eff} = \frac{S}{1+S/C}\]
+
+
+Was fang ich mit den versch Seff an??
+
+
+
+\begin{figure}
+\centering\includegraphics[width=1\textwidth]{Plots/Comparison.png}
+\caption{Pressure change in time for every tube set-up.}
+\label{fig::comparison}
+\end{figure}
+
+\subsection{Mass Spectrometer}
+The next task was to look at the elements in our vacuum chamber. We want to know how their amount changes with the baking process.We are especially looking for the atoms most common in our standard air:
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{lcccccc}
+Elements & $H_2$ & $H_2O$ & $N_2$ & $O_2$ & $Ar$ & $CO_2$ \\
+Molar Mass & 2 & 18 & 28 & 32 & 40 & 44 \\
+\end{tabular} 
+\end{table}
+
+Setting the mass spectrometer in the range from 1 to 50 amu we can compare our two measurements. The individual graphics are shown in \ref{MS Plots}.
+
+\begin{figure}[!h]
+\centering\includegraphics[width=1\textwidth]{Plots/BeforeAfter.png}
+\caption{Results of the mass spectrometer before and after the baking process.}
+\label{fig::BeforeAfter}
+\end{figure}
+
+
+
+\section{Appendix}
+\subsection{Pre-Pump Plots}
+\label{Pre-Pump Plots}
+
+\begin{figure}[!h]
+\centering\includegraphics[width=.5\textwidth]{Plots/25mm.png}
+\caption{The individual pressure change for the pre-pump and the tube with diameter 25mm.}
+\label{fig::25mm}
+\end{figure}
+
+\begin{figure}[!h]
+\centering\includegraphics[width=.5\textwidth]{Plots/40mm.png}
+\caption{The individual pressure change for the pre-pump and the tube with diameter 40mm.}
+\label{fig::40mm}
+\end{figure}
+
+\begin{figure}[!h]
+\centering\includegraphics[width=.5\textwidth]{Plots/BothTubes.png}
+\caption{The individual pressure change for the pre-pump and both tubes in series connection.}
+\label{fig::BothTubes}
+\end{figure}
+
+
+\subsection{MS Plots}
+\label{MS Plots}
+
+\begin{figure}[!h]
+\centering\includegraphics[width=.5\textwidth]{Plots/MSbefore.png}
+\caption{Results of the mass spectrometer after baking.}
+\label{fig::MSbefore}
+\end{figure}
+
+\begin{figure}[!h]
+\centering\includegraphics[width=.5\textwidth]{Plots/MSafter.png}
+\caption{Results of the mass spectrometer after baking.}
+\label{fig::MSafter}
+\end{figure}
+
+\newpage
+\begin{thebibliography}{9}
+
+\bibitem{VacuumHandbook} Handbook of Vacuum Technology (Second Edition), edited by Karl Jousten, Wiley-VCH, 2016 (reprinted 2017), ISBN: 978-3-527-41338-6
+
+\end{thebibliography}
 \end{document}
 
