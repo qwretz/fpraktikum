@@ -29,13 +29,13 @@ What we can measure as temperature is caused by the movement of the particles in
  where $k_{B}\approx1,38J/K$ is the Boltzmann constant and temperature is measured in Kelvin.We assume for our purpose that all particles are incompressible hard spheres and that there are no frictional forces between the particles and the walls. Because the particle speeds are distributed isotropically there are $1/3N$ particles moving along each axis. For simplicity we consider a particle moving along the x-Axis with the velocity $v_{x}$. Initially it has the momentum $p_{x}=v_{x}*m$. After an elastic collision with a wall its momentum is $-p_{x}$, so the momentum change is $\Delta p_{x}=2p_{x}$. We can calculate the force on the wall by multiplying the momentum change of each collision with the ammount of collisions per time interval. In a box with surface A and length $ds=v*dt$ there are \[ N=\frac{N}{V}A *v* dt \] particles of which 1/6 is moving in x-direction. So the total momentum transfer is \[ \Delta p_{i}=\frac{2N* A* v* dt*m* v}{6V} \]. For the force on the wall we get \[ F=\frac{dp}{dt}=\frac{ANmv^{2}}{3V} \rightarrow p=\frac{Nmv^{2}}{3V} \Leftrightarrow p=\frac{N*E_{kin}}{3V}\] Comparing this equation to the ideal gas law gives us that \[ v^{2}=\frac{3k_{b}T}{m_{p}} \] 
  Assuming we have a canonical ensemble of gas molecules we can conclude that the distribution of particle speeds can be described by a Maxwell-Boltzmann-statistic. \[ f(v)=\frac{m^{\frac{3}{2}}}{2\pi k T} 4\pi v^{2} e^{\frac{-mv^{2}}{2kT}} \] Now we can calculate the expectation value for the speed $<v>$ and also $\sigma_{v}$
  \[<v>=\int_{0}^{\infty}vf(v)dv=\sqrt{\frac{8kT}{\pi m}}  \]
- \[ \sqrt{<v^{2}>}=\int_{0}^{\infty}v^{2}f(v)dv=\sqrt{\frac{3kT}{m}}  \]
+ \[ \sqrt{<v^{2}>}=\int_{0}^{\infty}v^{2}f(v)dv=\sqrt{\frac{3kT}{\pi m}}  \]
  The second result is consistent with the speed we derived earlier with simple thoughts about pressure. We can easily see that lighter particles move a lot faster than heavier ones. 
  \paragraph{Example}
  \mbox{}\\
  If we have an $H_{2}O$ molecule at room temperature (300K), we can calculate its thermal speed and energy.\[ 
- v=\sqrt{\frac{3kT}{m}}=644\frac{m}{s} \]
- \[ E_{thermal}=\frac{1}{2}mv^{2}=6.21*10^{-21}J \]
+ v=\sqrt{\frac{3kT}{\pi m}}=363\frac{m}{s} \]
+ \[ E_{thermal}=\frac{1}{2}mv^{2}=1.09*10^{-22}J \]
 \\\\\\\\
 \subsubsection{Mean free path}\
 The mean free path of a particle is described as the length after which $e^{-1}$ have not hit another particle yet. We can estimate the mean free path $\lambda$ in a gas if we know the total cross section $\sigma$  of a particle. The mean free path multiplied with the cross section gives us the effective volume the particle has covered. If in average a particle has then hit another particle the product of the covered volume with the particle density should be one.\[\lambda \sigma *\frac{N}{V}=1 \Leftrightarrow \lambda=\frac{V}{N\sigma}  \]
@@ -134,8 +134,7 @@ S_{eff} = \frac{V}{\Delta t} \ln{ \frac{p_0}{p_1} } \]
 From the second equation we get three different $S_{eff-i}$, where 1 stands for the 25mm diameter tube and 2 for the 40mm one. According to the first one, we now can calculate the real pumping speed and the conductances of both tubes. The real pumping speed S should be around 8 litres per minute.
 
 \[ \frac{1}{S} = \frac{1}{S_{eff-1}} + \frac{1}{S_{eff-2}} -\frac{1}{S_{eff-12}} \quad , \quad
-\frac{1}{C_1} = \frac{1}{S_{eff-12}} - \frac{1}{S_{eff-2}}  \qquad
-\frac{1}{C_2} = \frac{1}{S_{eff-12}} - \frac{1}{S_{eff-1}} \]
+\frac{1}{C_i} = \frac{1}{S_{eff-12}} - \frac{1}{S_{eff-i}} \]
 
 The results of those equations are: dersfydgxtfcx
 
@@ -167,6 +166,8 @@ Turning on the mass spectrometer below a pressure of $10^{-6} mbar$ ensures that
 The plot shows exactly what we wanted to achieve. The intensity of most molar masses dropped after baking. Looking at the main peaks $N_2$ and $CO_2$ dropped by around half of a magnitude,  $H_2O$ dropped even by a whole magnitude. The $H_2$ on the other hand increased for a little bit.
 
 With less pressure and therefore less atoms in the vacuum chamber
+
+\newpage
 
 \section{Appendix}
 \subsection{Pre-Pump Plots}
