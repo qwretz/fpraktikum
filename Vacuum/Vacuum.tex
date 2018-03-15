@@ -75,10 +75,19 @@ Different from the pre pump which works by producing a pressure gradient between
 This films are layers of material with a thickness between some atomic radii to several micrometers, which are grown on a substrate for mechanical support. Being two dimensional confined layers they show many interesting physical properties like \\\\\\\\\\ not found in conventional three dimensional materials.
 \subsection{Sputtering}
 Sputtering is a mechanical process used to create thin films, at which we bombard a target with ions to dissociate single atoms from the target and subsequently deposit them on the substrate. We enrich our vacuum chamber with Ar and shoot an electron ray into it. The electrons ionise the Ar atoms, what leads to even more electrons emitted in the chamber. If there is enough space between the cathode and the anode for electrons to hit other Ar Atoms and the concentration of Ar is high enough they will form a plasma. To accelerate the Ar atoms towards the target we apply a DC voltage that also accelerates the electrons further what helps with the ionisation. It is possible to use a magnetic field to contain the plasma in a small area around the target. The free Atoms in the chamber then will adsorb onto the surface of our substrate. Because sputtering is a purely mechanical process, we can sputter different metal alloys and keep the stoichiometry on our thin layer.
+
+
 \subsection{Flow}
+
 \subsubsection{Laminar}
+
+
 \subsubsection{Turbulent}
+
+
 \subsubsection{Resistance and Conductivity}
+siehe Pre-Pump -> umschreiben?
+
 \subsection{Gauges}
 There are 3 different kinds of pressure gauges in our vacuum chamber, each designed to work best at different pressures. While it is possible to change technical parameters for every gauge the mode of operation of each gauge suits it best for a specific regime.
 \subsubsection[Capacitive]{Capacitative Pressure Gauge}
@@ -118,16 +127,15 @@ As already mentioned the main task of the experiment was to learn how the vacuum
 We were allowed to operate a vacuum chamber with a volume of 30 litres. The inside is reachable by the main window which is hold by eight bolts and a copper seal. The sputtering targets are at the bottom while a rotatable disk, where the sample was placed, is in the center. This one is operate-able from the outside. At the backside the pressure gauges are connected. 
 The chamber itself was connected to a turbo pump, which itself was connected to a valve with electric controls as well a brass cap for the venting. Behind the turbo pump the pre-pump with a 25mm diameter tubing was placed. Above the pumping systems is the mass spectrometer with its filament.
 
-\newpage
 
 \subsection{Pre-Pump}
-The first task of Day 1 was to confirm the equations for flow resistance R and conductance C, \cite[Page 91]{VacuumHandbook}. 
+The first task of Day 1 was to confirm the equations for flow resistance R and conductance C, see \cite[Page 91]{VacuumHandbook}. 
 \[ \quad Series \: Connection: \quad
 R = R_1 + R_2 + ...  \quad \frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2} + ... \]
 \[ Parrallel \: Connection: \quad
 C = C_1 + C_2 + ...  \quad \frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2} + ... \]
 
-To do so we exchanged the tubes connecting pre-pump and the vacuum chamber. Our different tube diameters were 25mm and 40mm. With three measurements of the pressure change in time, each tube alone and once in series connection. With the data we are able to determine the effective pumping speed \cite[Page 93]{VacuumHandbook} given by:
+To do so we exchanged the tubes connecting pre-pump and the vacuum chamber. Our different tube diameters were 25mm and 40mm. With three measurements of the pressure change in time, each tube alone and once in series connection. With the data we are able to determine the effective pumping speed, see \cite[Page 93]{VacuumHandbook}, given by:
 \[ \frac{1}{S_{eff}} = \frac{1}{S} + \frac{1}{C} \quad , \quad
 S_{eff} = \frac{V}{\Delta t} \ln{ \frac{p_0}{p_1} } \]
 
@@ -168,8 +176,26 @@ The plot shows exactly what we wanted to achieve. The intensity of most molar ma
 With less pressure and therefore less atoms in the vacuum chamber the mean intensity of the bars decreased. 
 
 \subsection{Baking}
-This process of baking is pretty self-explanatory. While the turbo pump was active, we wrapped heat belts around the vacuum chamber and covered them with blankets to decrease the loss of thermal energy to the surrounding air. Before turning them on to heat up the chamber for around 9 hours, we had to remove all heat sensitive components like the mass spectrometer and covered the windows with silver foil to prevent a to large heat difference, which could cause them to break and negate the whole process of creating a vacuum.
-The longer the heating time is the better the vacuum can get. By heating you allow the adsorbed 
+This process of baking is pretty self-explanatory. While the turbo pump was active, we wrapped heat belts around the vacuum chamber and covered them with blankets to decrease the loss of thermal energy to the surrounding air. Before turning them on, to heat up the chamber for around 9 hours, we had to remove all heat sensitive components like the mass spectrometer and covered the windows with silver foil to prevent a to large heat difference, which could cause them to break and negate the whole process of creating a vacuum.
+The longer the heating time is the better the vacuum can get. By heating you allow the adsorbed atoms of the inside wall get free and pumped out. 
+For the second mass spectrometer we need the chamber to cool down to room temperature, therefore the baking ended again 9 hours before we arrived for the Day 2.
+
+\begin{figure}[h]
+\centering\includegraphics[width=.75\textwidth]{Plots/Baking.png}
+\caption{Change in pressure for the first part of the baking process. Due to software problems this is the only data.}
+\label{fig::baking}
+\end{figure}
+
+As you can see in Fig.\ref{fig::baking} the temperature didn't increase in the first part of the measurement. This is caused by the positioning of the thermometer, which was placed in the center of the chamber. Less atoms means that the rising energy from the wall needs it time to get transferred. 
+The sensor only kicks in for higher temperature that room temperature, for this reason you can see the jump from 20°C to the actual value. This could also be the reason why the software decided to restart the time measurement at this moment. 
+
+Looking at the second measurement, the middle part in Fig.\ref{fig::baking}, the pressure increases rapidly before falling down again. This is the effect of the adsorbed atoms coming free and increase the pressure. If the rate of them coming free is then less than the rate of them getting pumped out, the pressure will decrease again. This process should happen many times, depending on the different desorption energies of the different molecules. 
+This is already shown in the first part of the measurement by the first peak in the pressure change. The little bump before the crossing of temperature and pressure seems to be caused by some kind of noise, because it was only there for about one measure point (Appendix Fig.\ref{fig::bump}).
+
+point of baking, probe quality. The whole reason of baking is not only to create a better vacuum for its own sake, but to remove as many unwanted atoms as fast as possible. Due to Boltzmann statistics we could achieve the same pressure within a longer time, because in an ensemble there will always be one atom with the necessary energy to leave the wall. Baking reduces the waiting time by increasing the energy of the adsorbed atoms.
+With less pressure and atoms within the chamber there are less atoms which could affect the quality of our thin film growth. That means the quality of our sample will increase automatically with better vacuum.
+
+The results of our baking were as expected but still impressive. We started with a pressure of $5.10 \cdot 10^{-7} mbar$ and at the beginning of Day 2 we already fell to $3.86 \cdot 10^{-8} mbar $. This decrease of one magnitude after only one day is the reason other chambers are getting baked for a week, if you need the lower pressure.
 
 \subsection{Film growth}
 pre sputtering
@@ -215,6 +241,13 @@ process of sputtering
 \centering\includegraphics[width=.5\textwidth]{Plots/MSafter.png}
 \caption{Results of the mass spectrometer after baking.}
 \label{fig::MSafter}
+\end{figure}
+
+\subsection{Baking}
+\begin{figure}[!h]
+\centering\includegraphics[width=.5\textwidth]{Plots/FluktuationBaking.png}
+\caption{Zoom on the little bump which could have looked like another peak in the pressure.}
+\label{fig::bump}
 \end{figure}
 
 \newpage
