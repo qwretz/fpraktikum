@@ -41,12 +41,11 @@ What we can measure as temperature is caused by the movement of the particles in
 The mean free path of a particle is described as the length after which $e^{-1}$ have not hit another particle yet. We can estimate the mean free path $\lambda$ in a gas if we know the total cross section $\sigma$  of a particle. The mean free path multiplied with the cross section gives us the effective volume the particle has covered. If in average a particle has then hit another particle the product of the covered volume with the particle density should be one.\[\lambda \sigma *\frac{N}{V}=1 \Leftrightarrow \lambda=\frac{V}{N\sigma}  \]
 \paragraph{Example}\mbox{}\\
 We will calculate the mean free path of nitrogen ($N_{2}$) molecules in atmospheric pressure and at $10^{9}mbar$. Nitrogen has an atomic radius of $7*10^{-11}m$. For this estimation we just assume that $N_{2}$ has the size of two nitrogen atoms. \[\sigma_{N_{2}}=4\pi r^{2}=6.15*10^{-20}m^{2} \]\[ \frac{V}{N}=\frac{k_{b}T}{p} \Rightarrow \lambda_{Atomsph.}=6.72*10^{-7}m?   \quad ;\lambda_{10^{9}mbar}=6.72*10^{-13}m \]
-\\\\Hier muss noch das beispiel gerechnet werden.
 
 
 \subsection{Desorption}
-Molecules and Atoms can stick to a surface e.g. the walls of our vacuum chamber, through dipole or van der Waals forces and covalent linkage. The process of getting them off again is called desorption. For desorption we need to add kinetic energy in form of heat to the particle until the $E_{kin}>E_{des}$. The desorption energy vary in different kinds of molecules and atoms. From Boltzmann-statistics we know that there are $\Delta n=ne^{\frac{-D_{des}}{RT}}$ particles with a high enough kinetic energy to leave the surface again. Because our walls are in a heat bath with the lab they don't loose heat so that the temperature stays constant. The Polanyi-Wigner equation then tells us what the rate of desorption in our chamber is, with $\nu=\frac{kT}{h}$ being the oscillation frequency of the molecules.\[ j_{des}=\frac{dn}{dt}=-\nu n e^{-\frac{E_{des}}{RT}} \] 
-\begin{figure}
+Molecules and Atoms can stick to a surface e.g. the walls of our vacuum chamber, through dipole or van der Waals forces and covalent linkage. The process of getting them off again is called desorption. For desorption we need to add kinetic energy in form of heat to the particle until the $E_{kin}>E_{des}$. The desorption energy vary in different kinds of molecules and atoms. From Boltzmann-statistics we know that there are $\Delta n=ne^{\frac{-D_{des}}{RT}}$ particles with a high enough kinetic energy to leave the surface again. Because our walls are in a heat bath with the lab they don't loose heat so that the temperature stays constant so that there are always particles with enough energy to desorp from the walls. The Polanyi-Wigner equation then tells us what the rate of desorption in our chamber is, with $\nu=\frac{kT}{h}$ being the oscillation frequency of the molecules.\[ j_{des}=\frac{dn}{dt}=-\nu n e^{-\frac{E_{des}}{RT}} \] 
+\begin{figure}[h]
 	\includegraphics[width=0.7\linewidth]{"Plots/Polanyi Wigner"}
 	\label{fig:polanyi}
 	\caption{Polanyi Wigner equation for different temperatures}
@@ -56,15 +55,15 @@ Molecules and Atoms can stick to a surface e.g. the walls of our vacuum chamber,
 \subsection{Pumps}
 We use different pumps to produce a high vacuum for the different pressure regimes. The pre pump is used to get to a low enough pressure to use the turbo pump which gets us to a very high vacuum.
 \subsubsection{Pre Pump}
-The pre pump (Fig.\ref{fig:prepump}) works by changing the volume in a pumping chamber while opening and closing 2 valves. During the inlet phase the valve towards the vacuum is open, and the one towards the atmosphere is closed, while the volume in the pump is increased. This is reversed during the outlet stage.
+The pre pump (Fig. \ref{fig:prepump}) works by changing the volume in a pumping chamber while opening and closing 2 valves. During the inlet phase the valve towards the vacuum is open, and the one towards the atmosphere is closed, while the volume in the pump is increased. This is reversed during the outlet stage.
 
-\begin{figure}
+\begin{figure}[h]
 	
 	\centering
-	\includegraphics[width=0.7\linewidth]{Bilder/PrePump}
-	\label{fig:prepump}
-	\caption{Shematic representation of a pump}
+	\includegraphics[width=0.7\linewidth]{Bilder/pump}
 	
+	\caption{Shematic representation of a pump}
+	\label{fig:prepump}
 \end{figure}
 
 
@@ -95,26 +94,27 @@ The capacitive pressure gauge is basically a plate capacitor with a insulator in
 \subsubsection[Pirani]{Pirani Pressure Gauge}
 A pirani gauge consists of a metal filament (usually platinum) connected to an electrical circuit. The filament is heated when the current flows through. At every collision with a gas molecule it gives heat to the molecule, what causes the temperature of the filament to drop. The rate of molecules hitting the filament is proportional to the amount of molecules in the chamber, so cooling of the filament slows down with sinking pressures. Because the resistance of the filament rises with temperature we can use the measurement of it to get a pressure reading from our gauge. It may be used at pressures between $0.5\ mbar$ to $10^{-3}mbar$
 \subsubsection[Penning]{Penning Pressure Gauge}
-Bild von nem penning pressure gauge
-\\\\\\\\\
 A penning gauge is made out of a cyllindric metal cage, serving as the cathode and a inner filament which serves as the anode. In a right angle to the plane of the field lines is a magnetic field, causing electrons emitted from the cathode to move in long spiral orbits towards the anode. In this process they ionise the molecules left in the chamber what causes cascades of electrons emitted to the anode, even an very low pressures. The current decreases with lower pressure, since frequency of collisions as well as cascade intensity both decrease. It can be used for pressures between $10^{-2}mbar$ to $10^{-7}mbar$.
 
 \subsection{Questions}
 \subsubsection{Day1}
 \begin{itemize}  
 	\item What causes the limit on the pressure one can reach with the pre-pump alone? $\surd$
-	\item  Calculate the mean free path of a nitrogen (N2) molecule in atmospheric pressure and at $1 \cdot 10^{−9}$ mbar 
+	\item  Calculate the mean free path of a nitrogen (N2) molecule in atmospheric pressure and at $1 \cdot 10^{−9}$ mbar $\surd ?$
 	\item Based on the data from section 5.3, how much gas is desorped from the walls after the turbo reaches full speed? Hint: Consider the data over the time period after the turbo reaches speed. This is the pressure drop in a ﬁxed time. The volume of the chamber is 30 litres and you can assume the chamber is at a constant temperature of 293K. The mass of air is approximately 29g/mol.
 	 
 
-	\item What is the purpose of baking out a chamber? 
-	\item What is the thermal energy at room temperature and the corresponding thermal speed of a water molecule (H2O)?
+	\item What is the purpose of baking out a chamber? $\surd$
+	\item What is the thermal energy at room temperature and the corresponding thermal speed of a water molecule (H2O)? $\surd$
 \end{itemize}
 \subsubsection{Day2}
 \begin{itemize}
-	 \item Can you name some properties which might arise due to scaling down the thickness of a sample? \item How have the elemental peaks changed from the spectra of the ﬁrst day? What can you say about the baking process? How will the baking process affect the quality of the samples being grown? \item Why does the pressure oscillate with clear periods of increasing and decreasing pressures during baking? \item What happens to the plasma as you increase the power being applied to the cathode?
-	Page 14 of 34
-	\item Why do we pre-sputter the target before deposition? \item  Plot the Polanyi-Wigner equation as a function of desorption energy for an ensemble of $5.35 \cdot 10^{13}$ particles for $T_w$ = 300K, 500K, 800K, 1000K for Edes between 0 and 60 kJ/mol (universal gas constant 8.31 J/mol). Scale the y-axis to $10^{13}$ as a maximum.
+	 \item Can you name some properties which might arise due to scaling down the thickness of a sample?
+	  \item How have the elemental peaks changed from the spectra of the ﬁrst day? What can you say about the baking process? How will the baking process affect the quality of the samples being grown? 
+	  \item Why does the pressure oscillate with clear periods of increasing and decreasing pressures during baking? $\surd$
+	  \item What happens to the plasma as you increase the power being applied to the cathode? $\surd$
+	\item Why do we pre-sputter the target before deposition? $\surd$ 
+	\item  Plot the Polanyi-Wigner equation as a function of desorption energy for an ensemble of $5.35 \cdot 10^{13}$ particles for $T_w$ = 300K, 500K, 800K, 1000K for Edes between 0 and 60 kJ/mol (universal gas constant 8.31 J/mol). Scale the y-axis to $10^{13}$ as a maximum. $\surd$
 	
 \end{itemize}
 
@@ -150,6 +150,21 @@ The results of those equations are: dersfydgxtfcx
 \caption{Pressure change in time for every tube set-up.}
 \label{fig::comparison}
 \end{figure}
+
+
+\subsection{Turbo Pumping}
+After loading a sample into the chamber we started the pre pump and at $10^{-1}mbar$ the turbo pump while measuring the pressure with different gauges. You can see in Fig \ref{fig:pumpingpressure} each gauge is most accurate for a certain pressure regime.
+\\\\\\\\\\\\\\\\
+Klaren ob der pirani nicht ein full range senso ist!!!!!!!!!!!!!!!
+\\\\\\\\\\\\\\\\
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{Plots/PumpingPressure}
+	\caption{pump down pressure from different gauges}
+	\label{fig:pumpingpressure}
+\end{figure}
+
 
 \subsection{Mass Spectrometer}
 The next task was to look at the elements in our vacuum chamber. We want to know how their amount changes with the baking process. We are especially looking for the atoms most common in our standard air:
@@ -197,9 +212,28 @@ With less pressure and atoms within the chamber there are less atoms which could
 The results of our baking were as expected but still impressive. We started with a pressure of $5.10 \cdot 10^{-7} mbar$ and at the beginning of Day 2 we already fell to $3.86 \cdot 10^{-8} mbar $. This decrease of one magnitude after only one day is the reason other chambers are getting baked for a week, if you need the lower pressure.
 
 \subsection{Film growth}
-pre sputtering
-I-V curve 
-process of sputtering 
+After baking the chamber over night we were ready to sputter our target and grow a film on the substrate. 
+\subsubsection{Pre Sputtering}
+At first we had to pre sputter our target for 5 minutes to remove any unwanted particles which adsorbed onto its surface, to prevent them from desorping onto our substrate later on when the substrate is above the target. Pre sputtering reduces the amount of impurities in our thin film and improves the quality of the sample.  We slowly opened the valve of the argon and adjusted the valve until the pressure in the chamber would stay constant at $3*10^{.2}mbar$ . When turning on the DC voltage we could immediately see a plasma burning.
+\subsubsection{Plasma}
+The plasma burned in a cone shape above the target with a light blue colour. After the pre sputtering was done we measured an I-V-curve for the plasma (Fig \ref{fig:ivcurve}) and observed how it was burning. At low currents up to $3mA$ the plasma was flickering. At higher currents it started to burn stable and we saw a linear relation between I and V what tells us that the plasma at higher currents behaves like a ohmic resistor. Because we connected our target to a current generator a voltage was building up until enough electrons were emitted to ionise the argon and subsequently form a plasma. At low currents there are arriving much more argon ions at the cathode than electrons are emitted from our source. That causes the the voltage to drop and the plasma stops burning. With higher currents we can compensate the ions dragged to the cathode and keep up the voltage so the plasma burns stable.
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{Plots/IVcurve}
+	\caption{At low currents we can see the voltage jumping around in a wide realm. At higher currents we see a linear increase in voltage}
+	\label{fig:ivcurve}
+\end{figure}
+
+\subsubsection{Film Growth}
+To finally grow our thin film we adjusted the current to a stable regime and moved our substrate into the plasma for 15 minutes. We can see a shiny layer of copper on the side facing the plasma.  
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{Bilder/sample}
+	\caption{Our sample. There is no copper where the substrate was glued to the holder}
+	\label{fig:sample}
+\end{figure}
+	
 
 
 \newpage
