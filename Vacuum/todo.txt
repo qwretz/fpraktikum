@@ -1,4 +1,5 @@
 todo
 desoprtion rate aufgabe
 effects of thin films
+gamma
 flow
