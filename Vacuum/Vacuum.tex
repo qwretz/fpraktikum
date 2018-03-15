@@ -40,7 +40,7 @@ What we can measure as temperature is caused by the movement of the particles in
 \subsubsection{Mean free path}\
 The mean free path of a particle is described as the length after which $e^{-1}$ have not hit another particle yet. We can estimate the mean free path $\lambda$ in a gas if we know the total cross section $\sigma$  of a particle. The mean free path multiplied with the cross section gives us the effective volume the particle has covered. If in average a particle has then hit another particle the product of the covered volume with the particle density should be one.\[\lambda \sigma *\frac{N}{V}=1 \Leftrightarrow \lambda=\frac{V}{N\sigma}  \]
 \paragraph{Example}\mbox{}\\
-We will calculate the mean free path of nitrogen ($N_{2}$) molecules in atmospheric pressure and at $10^{9}mbar$. Nitrogen has an atomic radius of $7*10^{-11}m$. For this estimation we just assume that $N_{2}$ has the size of two nitrogen atoms. \[\sigma_{N_{2}}=4\pi r^{2}=6.15*10^{-20}m^{2} \]\[ \frac{V}{N}=\frac{k_{b}T}{p} \Rightarrow \lambda_{Atomsph.}=6.72*10^{-7}m?   \quad ;\lambda_{10^{9}mbar}=6.72*10^{-13}m \]
+We will calculate the mean free path of nitrogen ($N_{2}$) molecules in atmospheric pressure and at $10^{9}mbar$. Nitrogen $N_{2}$ has an atomic radius of $r = 155 pm$ (Van der Waals radius). \[\sigma_{N_{2}}=\pi r^{2}=7.55*10^{-20}m^{2} \]\[ \frac{V}{N}=\frac{k_{b}T}{p} \Rightarrow \lambda_{Atomsph.}=54.88\:nm   \quad ;\lambda_{10^{-9}mbar}=5.5*10^{6}m \]
 
 
 \subsection{Desorption}
@@ -54,6 +54,7 @@ Molecules and Atoms can stick to a surface e.g. the walls of our vacuum chamber,
 
 \subsection{Pumps}
 We use different pumps to produce a high vacuum for the different pressure regimes. The pre pump is used to get to a low enough pressure to use the turbo pump which gets us to a very high vacuum.
+
 \subsubsection{Pre Pump}
 The pre pump (Fig. \ref{fig:prepump}) works by changing the volume in a pumping chamber while opening and closing 2 valves. During the inlet phase the valve towards the vacuum is open, and the one towards the atmosphere is closed, while the volume in the pump is increased. This is reversed during the outlet stage.
 
@@ -66,35 +67,44 @@ The pre pump (Fig. \ref{fig:prepump}) works by changing the volume in a pumping 
 	\label{fig:prepump}
 \end{figure}
 
-
 The pressure limit we can reach with the pre pump alone is on the one hand caused by leaks of the valves and the piston. On the other hand there is a pressure limit even with perfect valves by the air ($V_{0} $) at atmospheric pressure which remains in the cylinder at the outlet stage . With isotherm expansion in the cylinder we can calculate this minimum pressure to be: \[ p_{min}=p_{Atmosph.}\frac{V_{0}}{V_{max}} \]
+
 \subsubsection{Turbo Pump}
 Different from the pre pump which works by producing a pressure gradient between two chambers, a turbo pump works through the principle of momentum transfer. Atoms in a chamber don't bounce elastically of the walls but stick to them through adsorption for a short amount of time, so it is possible to accelerate them with spinning rotors in the turbo pump and push the atoms to the outlet. This only works if the mean free path of a particle is lager than the distance between the rotor blades, which is why we connect the outlet of the turbo, to the pre pump. Our turbo pump is able to evacuate 300 litres of gas per minute.
+
 \subsection{Thin Films}
 This films are layers of material with a thickness between some atomic radii to several micrometers, which are grown on a substrate for mechanical support. Being two dimensional confined layers they show many interesting physical properties like \\\\\\\\\\ not found in conventional three dimensional materials.
+
 \subsection{Sputtering}
 Sputtering is a mechanical process used to create thin films, at which we bombard a target with ions to dissociate single atoms from the target and subsequently deposit them on the substrate. We enrich our vacuum chamber with Ar and shoot an electron ray into it. The electrons ionise the Ar atoms, what leads to even more electrons emitted in the chamber. If there is enough space between the cathode and the anode for electrons to hit other Ar Atoms and the concentration of Ar is high enough they will form a plasma. To accelerate the Ar atoms towards the target we apply a DC voltage that also accelerates the electrons further what helps with the ionisation. It is possible to use a magnetic field to contain the plasma in a small area around the target. The free Atoms in the chamber then will adsorb onto the surface of our substrate. Because sputtering is a purely mechanical process, we can sputter different metal alloys and keep the stoichiometry on our thin layer.
 
 
 \subsection{Flow}
+The phenomena of flow occurs everywhere we have moved particles in a given space. The common example is a tube with diameter d where molecules are streaming through. Literature differentiates between three types depending on the pressure and determinable by the Knudsen number Kn.
+\[ 0.5 > Kn := \frac{\lambda}{d} > 0.01 \qquad for\: transitional\: flow\]
+At low pressures and high Kn it's called molecular flow. At this point collisions between the particles are very uncommon and only the collisions with the wall are changing the movement. This results in a zigzag trajectory along the tube. For higher pressure it gets into the transitional flow where both collisions are equally common. Then for low Knudsen numbers the viscous flow is relevant. In this connection one differentiates again between laminar and turbulent flow depending to the particles velocity v in the tube.
 
 \subsubsection{Laminar}
-
+Crucial for this distinction is the Reynolds number Re. Besides v and d, Re depends on the density $\rho$ and the viscosity $\eta$ of the particle stream. Is its value below 2300 we can speak about pure laminar flow. Thereby the particles moving in the center of the tube are faster than the ones further outside due to their higher chance of hitting the wall and getting their momentum changed.
+\[ Re:= \frac{\rho}{\eta} v d\]
 
 \subsubsection{Turbulent}
+If the Reynolds number is above 4000 turbulent flow is present. Thereby we can observe turbulences created by the stronger decelerated particles near the wall. They will nearly stick to the wall which forces the next particle layer onto the next part of the wall. While the particles in the center are less affected due to their distance. With longer tubes this deceleration starting at the wall can proceed into every layer and you'll observe laminar flow again. \\
+For $2300 < Re < 4000$ some turbulences will occasionally occur.
 
-
-\subsubsection{Resistance and Conductivity}
-siehe Pre-Pump -> umschreiben?
 
 \subsection{Gauges}
 There are 3 different kinds of pressure gauges in our vacuum chamber, each designed to work best at different pressures. While it is possible to change technical parameters for every gauge the mode of operation of each gauge suits it best for a specific regime.
+
 \subsubsection[Capacitive]{Capacitative Pressure Gauge}
 The capacitive pressure gauge is basically a plate capacitor with a insulator in between. One plate is connected to the chamber, so that the pressure difference will push the plates together. That causes the conductivity to increase what we then can measure. It can be used at higher pressures. 
+
 \subsubsection[Pirani]{Pirani Pressure Gauge}
-A pirani gauge consists of a metal filament (usually platinum) connected to an electrical circuit. The filament is heated when the current flows through. At every collision with a gas molecule it gives heat to the molecule, what causes the temperature of the filament to drop. The rate of molecules hitting the filament is proportional to the amount of molecules in the chamber, so cooling of the filament slows down with sinking pressures. Because the resistance of the filament rises with temperature we can use the measurement of it to get a pressure reading from our gauge. It may be used at pressures between $0.5\ mbar$ to $10^{-3}mbar$
+A pirani gauge consists of a metal filament (usually platinum) connected to an electrical circuit. The filament is heated when the current flows through. At every collision with a gas molecule it gives heat to the molecule, what causes the temperature of the filament to drop. The rate of molecules hitting the filament is proportional to the amount of molecules in the chamber, so cooling of the filament slows down with sinking pressures. Because the resistance of the filament rises with temperature we can use the measurement of it to get a pressure reading from our gauge. It may be used at pressures between $0.5\ mbar$ to $10^{-3}mbar$.
+
 \subsubsection[Penning]{Penning Pressure Gauge}
 A penning gauge is made out of a cyllindric metal cage, serving as the cathode and a inner filament which serves as the anode. In a right angle to the plane of the field lines is a magnetic field, causing electrons emitted from the cathode to move in long spiral orbits towards the anode. In this process they ionise the molecules left in the chamber what causes cascades of electrons emitted to the anode, even an very low pressures. The current decreases with lower pressure, since frequency of collisions as well as cascade intensity both decrease. It can be used for pressures between $10^{-2}mbar$ to $10^{-7}mbar$.
+
 
 \subsection{Questions}
 \subsubsection{Day1}
@@ -107,6 +117,7 @@ A penning gauge is made out of a cyllindric metal cage, serving as the cathode a
 	\item What is the purpose of baking out a chamber? $\surd$
 	\item What is the thermal energy at room temperature and the corresponding thermal speed of a water molecule (H2O)? $\surd$
 \end{itemize}
+
 \subsubsection{Day2}
 \begin{itemize}
 	 \item Can you name some properties which might arise due to scaling down the thickness of a sample?
@@ -139,13 +150,12 @@ To do so we exchanged the tubes connecting pre-pump and the vacuum chamber. Our 
 S_{eff} = \frac{V}{\Delta t} \ln{ \frac{p_0}{p_1} } \]
 
 From the second equation we get three different $S_{eff-i}$, where 1 stands for the 25mm diameter tube and 2 for the 40mm one. According to the first one, we now can calculate the real pumping speed and the conductances of both tubes. The real pumping speed S should be around 8 litres per minute.
-
 \[ \frac{1}{S} = \frac{1}{S_{eff-1}} + \frac{1}{S_{eff-2}} -\frac{1}{S_{eff-12}} \quad , \quad
 \frac{1}{C_i} = \frac{1}{S_{eff-12}} - \frac{1}{S_{eff-i}} \]
 
 The results of those equations are: dersfydgxtfcx
 
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering\includegraphics[width=.75\textwidth]{Plots/Comparison.png}
 \caption{Pressure change in time for every tube set-up.}
 \label{fig::comparison}
@@ -153,15 +163,13 @@ The results of those equations are: dersfydgxtfcx
 
 
 \subsection{Turbo Pumping}
-After loading a sample into the chamber we started the pre pump and at $10^{-1}mbar$ the turbo pump while measuring the pressure with different gauges. You can see in Fig \ref{fig:pumpingpressure} each gauge is most accurate for a certain pressure regime.
-\\\\\\\\\\\\\\\\
-Klaren ob der pirani nicht ein full range senso ist!!!!!!!!!!!!!!!
-\\\\\\\\\\\\\\\\
+After loading a sample into the chamber we started the pre pump and at $10^{-1}mbar$ the turbo pump while measuring the pressure with different gauges. You can see in Fig \ref{fig:pumpingpressure} each gauge is most accurate for its certain pressure regime.
+As already shown in the pre-pump graphics the pre-pump lowers the pressure down to less than 10m bar within 100s and also could keep on lowering it, as you can see at the full range sensor. To speed the pumping process up, the turbo pump gets activated. As you can see the pressure dropped dramatically fast until the chamber was nearly empty. Now only the newly desorbed are getting pumped out. Until 1111s in the measurement the turbo was running at 30k rpm with a driving power of 4W. Then we recognised that this was only 50\% of its power and increased it to 60k rpm and 12W. With these settings we went on with the following tasks and measurements.
 
-\begin{figure}
+\begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Plots/PumpingPressure}
-	\caption{pump down pressure from different gauges}
+	\caption{Pump down pressure from different gauges}
 	\label{fig:pumpingpressure}
 \end{figure}
 
@@ -213,10 +221,13 @@ The results of our baking were as expected but still impressive. We started with
 
 \subsection{Film growth}
 After baking the chamber over night we were ready to sputter our target and grow a film on the substrate. 
+
 \subsubsection{Pre Sputtering}
 At first we had to pre sputter our target for 5 minutes to remove any unwanted particles which adsorbed onto its surface, to prevent them from desorping onto our substrate later on when the substrate is above the target. Pre sputtering reduces the amount of impurities in our thin film and improves the quality of the sample.  We slowly opened the valve of the argon and adjusted the valve until the pressure in the chamber would stay constant at $3*10^{.2}mbar$ . When turning on the DC voltage we could immediately see a plasma burning.
+
 \subsubsection{Plasma}
 The plasma burned in a cone shape above the target with a light blue colour. After the pre sputtering was done we measured an I-V-curve for the plasma (Fig \ref{fig:ivcurve}) and observed how it was burning. At low currents up to $3mA$ the plasma was flickering. At higher currents it started to burn stable and we saw a linear relation between I and V what tells us that the plasma at higher currents behaves like a ohmic resistor. Because we connected our target to a current generator a voltage was building up until enough electrons were emitted to ionise the argon and subsequently form a plasma. At low currents there are arriving much more argon ions at the cathode than electrons are emitted from our source. That causes the the voltage to drop and the plasma stops burning. With higher currents we can compensate the ions dragged to the cathode and keep up the voltage so the plasma burns stable.
+
 \begin{figure}
 	\centering
 	\includegraphics[width=1\linewidth]{Plots/IVcurve}
@@ -230,7 +241,7 @@ To finally grow our thin film we adjusted the current to a stable regime and mov
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{Bilder/sample}
-	\caption{Our sample. There is no copper where the substrate was glued to the holder}
+	\caption{A picture of our sample. There is no copper where the substrate was glued to the holder}
 	\label{fig:sample}
 \end{figure}
 	
