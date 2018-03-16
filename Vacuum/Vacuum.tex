@@ -39,6 +39,7 @@ What we can measure as temperature is caused by the movement of the particles in
 \\\\\\\\
 \subsubsection{Mean free path}\
 The mean free path of a particle is described as the length after which $e^{-1}$ have not hit another particle yet. We can estimate the mean free path $\lambda$ in a gas if we know the total cross section $\sigma$  of a particle. The mean free path multiplied with the cross section gives us the effective volume the particle has covered. If in average a particle has then hit another particle the product of the covered volume with the particle density should be one.\[\lambda \sigma *\frac{N}{V}=1 \Leftrightarrow \lambda=\frac{V}{N\sigma}  \]
+
 \paragraph{Example}\mbox{}\\
 We will calculate the mean free path of nitrogen ($N_{2}$) molecules in atmospheric pressure and at $10^{9}mbar$. Nitrogen $N_{2}$ has an atomic radius of $r = 155 pm$ (Van der Waals radius). \[\sigma_{N_{2}}=\pi r^{2}=7.55*10^{-20}m^{2} \]\[ \frac{V}{N}=\frac{k_{b}T}{p} \Rightarrow \lambda_{Atomsph.}=54.88\:nm   \quad ;\lambda_{10^{-9}mbar}=5.5*10^{6}m \]
 
@@ -61,9 +62,9 @@ The pre pump (Fig. \ref{fig:prepump}) works by changing the volume in a pumping 
 \begin{figure}[h]
 	
 	\centering
-	\includegraphics[width=0.7\linewidth]{Bilder/pump}
+	\includegraphics[width=0.5\linewidth]{Bilder/pump}
 	
-	\caption{Shematic representation of a pump}
+	\caption{Schematic representation of a pump}
 	\label{fig:prepump}
 \end{figure}
 
@@ -72,8 +73,21 @@ The pressure limit we can reach with the pre pump alone is on the one hand cause
 \subsubsection{Turbo Pump}
 Different from the pre pump which works by producing a pressure gradient between two chambers, a turbo pump works through the principle of momentum transfer. Atoms in a chamber don't bounce elastically of the walls but stick to them through adsorption for a short amount of time, so it is possible to accelerate them with spinning rotors in the turbo pump and push the atoms to the outlet. This only works if the mean free path of a particle is lager than the distance between the rotor blades, which is why we connect the outlet of the turbo, to the pre pump. Our turbo pump is able to evacuate 300 litres of gas per minute.
 
+Considering the effective amount of volume getting pumped out $S_{eff}$ and an empty chamber, we can calculate how many atoms per time $\dot{N}$ are getting desorbed from the wall.
+
+\[ \dot{N}=\frac{q_{pV}}{k_BT}= \frac{p\dot{V}}{k_BT} \: , \quad \dot{V}=S_{eff}= \frac{V_{chamber}}{\Delta t}ln \frac{p_0}{p_1} \]
+
+\paragraph{Example}\mbox{}\\
+Also considering that the pressure is nearly constant, so we can use the mean value $p=\frac{p_0+p_1}{2}$. A pumping process with $t_0=1250s,\: p_0=10^{-5}mbar$ and $t_1=2750s,\: p_0=5\cdot 10^{-6}mbar$ for a chamber with 30l volume and $T=293K$ results in $\dot{N}=25.7\cdot 10^{6} \frac{1}{s}$. This is analogue to $1.24\cdot 10^{-15} \frac{g}{s}$ of air getting pumped out (Mass of air $29 \frac{g}{mol}$).
+\label{dn}
+
+
 \subsection{Thin Films}
-This films are layers of material with a thickness between some atomic radii to several micrometers, which are grown on a substrate for mechanical support. Being two dimensional confined layers they show many interesting physical properties like \\\\\\\\\\ not found in conventional three dimensional materials.
+These films are layers of material with a thickness between a few atomic radii to several micrometers, which are grown on a substrate for mechanical support. But why do we want to create thin films?
+
+The main usage of thin films is to create a layer of the targets material which can result a reduction of the refractive index. This is used to reduce the amount of reflected light on lenses for optical instruments and glasses. But also the opposite is possible. For example, by sputtering copper the resulting very clean and even layer can reflect nearly all light, see Fig. \ref{fig:sample}. 
+
+Both variation are used in solar panels. The top layer should be able transmit almost every photon, so the photovoltaic effect can create electrons and thereby a current. The bottom layer should reflect almost every photon, that hasn't been absorbed yet.
 
 \subsection{Sputtering}
 Sputtering is a mechanical process used to create thin films, at which we bombard a target with ions to dissociate single atoms from the target and subsequently deposit them on the substrate. We enrich our vacuum chamber with Ar and shoot an electron ray into it. The electrons ionise the Ar atoms, what leads to even more electrons emitted in the chamber. If there is enough space between the cathode and the anode for electrons to hit other Ar Atoms and the concentration of Ar is high enough they will form a plasma. To accelerate the Ar atoms towards the target we apply a DC voltage that also accelerates the electrons further what helps with the ionisation. It is possible to use a magnetic field to contain the plasma in a small area around the target. The free Atoms in the chamber then will adsorb onto the surface of our substrate. Because sputtering is a purely mechanical process, we can sputter different metal alloys and keep the stoichiometry on our thin layer.
@@ -172,6 +186,10 @@ As already shown in the pre-pump graphics the pre-pump lowers the pressure down 
 	\caption{Pump down pressure from different gauges}
 	\label{fig:pumpingpressure}
 \end{figure}
+
+Now you can do the same exemplary calculation as in \ref{dn} for the time values $t_0=1200s, \: t_1=1600$ and we get $ \dot{m} = 9.4\cdot10^{-16} \frac{g}{s}$. 
+As you can see, this value is very small. But this is what we've expected by the first calculation and that the amount of adsorbed atoms on the wall cannot be in usual dimensions we are thinking in.git add *
+
 
 
 \subsection{Mass Spectrometer}
