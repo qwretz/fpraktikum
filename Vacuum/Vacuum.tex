@@ -35,7 +35,7 @@ What we can measure as temperature is caused by the movement of the particles in
  If we have an $H_{2}O$ molecule at room temperature (300K), we can calculate its thermal speed and energy.\[ 
  v=\sqrt{\frac{3kT}{\pi m}}=363\frac{m}{s} \]
  \[ E_{thermal}=\frac{1}{2}mv^{2}=1.09*10^{-22}J \]
-\\\\\\\\
+
 \subsubsection{Mean free path}\
 The mean free path of a particle is described as the length after which $e^{-1}$ have not hit another particle yet. We can estimate the mean free path $\lambda$ in a gas if we know the total cross section $\sigma$  of a particle. The mean free path multiplied with the cross section gives us the effective volume the particle has covered. If in average a particle has then hit another particle the product of the covered volume with the particle density should be one.\[\lambda \sigma *\frac{N}{V}=1 \Leftrightarrow \lambda=\frac{V}{N\sigma}  \]
 
@@ -45,8 +45,10 @@ We will calculate the mean free path of nitrogen ($N_{2}$) molecules in atmosphe
 
 \subsection{Desorption}
 Molecules and Atoms can stick to a surface e.g. the walls of our vacuum chamber, through dipole or van der Waals forces and covalent linkage. The process of getting them off again is called desorption. For desorption we need to add kinetic energy in form of heat to the particle until the $E_{kin}>E_{des}$. The desorption energy vary in different kinds of molecules and atoms. From Boltzmann-statistics we know that there are $\Delta n=ne^{\frac{-D_{des}}{RT}}$ particles with a high enough kinetic energy to leave the surface again. Because our walls are in a heat bath with the lab they don't loose heat so that the temperature stays constant so that there are always particles with enough energy to desorp from the walls. The Polanyi-Wigner equation then tells us what the rate of desorption in our chamber is, with $\nu=\frac{kT}{h}$ being the oscillation frequency of the molecules.\[ j_{des}=\frac{dn}{dt}=-\nu n e^{-\frac{E_{des}}{RT}} \] 
+
 \begin{figure}[h]
-	\includegraphics[width=0.7\linewidth]{"Plots/Polanyi Wigner"}
+	\centering
+	\includegraphics[width=0.5\linewidth]{"Plots/Polanyi Wigner"}
 	\label{fig:polanyi}
 	\caption{Polanyi Wigner equation for different temperatures}
 \end{figure}
@@ -59,10 +61,8 @@ We use different pumps to produce a high vacuum for the different pressure regim
 The pre pump (Fig. \ref{fig:prepump}) works by changing the volume in a pumping chamber while opening and closing 2 valves. During the inlet phase the valve towards the vacuum is open, and the one towards the atmosphere is closed, while the volume in the pump is increased. This is reversed during the outlet stage.
 
 \begin{figure}[h]
-	
 	\centering
 	\includegraphics[width=0.5\linewidth]{Bilder/pump}
-	
 	\caption{Schematic representation of a pump}
 	\label{fig:prepump}
 \end{figure}
@@ -120,8 +120,6 @@ A penning gauge is made out of a cyllindric metal cage, serving as the cathode a
 
 
 
-
-
 \newpage
 \section{Experiment}
 As already mentioned the main task of the experiment was to learn how the vacuum chamber works and being able to operate it. 
@@ -142,7 +140,7 @@ S_{eff} = \frac{V}{\Delta t} \ln{ \frac{p_0}{p_1} } \]
 
 From the second equation we get three different $S_{eff-i}$, where 1 stands for the 25mm diameter tube and 2 for the 40mm one. According to the first one, we now can calculate the real pumping speed and the conductances of both tubes. The real pumping speed S should be around 8 litres per minute.
 \[ \frac{1}{S} = \frac{1}{S_{eff-1}} + \frac{1}{S_{eff-2}} -\frac{1}{S_{eff-12}} \quad , \quad
-\frac{1}{C_i} = \frac{1}{S_{eff-12}} - \frac{1}{S_{eff-i}} \]
+\frac{1}{C_1} = \frac{1}{S_{eff-12}} - \frac{1}{S_{eff-2}} \]
 
 The results of those equations are: dersfydgxtfcx
 
@@ -165,8 +163,7 @@ As already shown in the pre-pump graphics the pre-pump lowers the pressure down 
 \end{figure}
 
 Now you can do the same exemplary calculation as in \ref{dn} for the time values $t_0=1200s, \: t_1=1600$ and we get $ \dot{m} = 9.4\cdot10^{-16} \frac{g}{s}$. 
-As you can see, this value is very small. But this is what we've expected by the first calculation and that the amount of adsorbed atoms on the wall cannot be in usual dimensions we are thinking in.git add *
-
+As you can see, this value is very small. But this is what we've expected by the first calculation and that the amount of adsorbed atoms on the wall cannot be in usual dimensions we are thinking in.
 
 
 \subsection{Mass Spectrometer}
@@ -188,7 +185,7 @@ Turning on the mass spectrometer below a pressure of $10^{-6} mbar$ ensures that
 \label{fig::BeforeAfter}
 \end{figure}
 
-The plot shows exactly what we wanted to achieve. The intensity of most molar masses dropped after baking. Looking at the main peaks $N_2$ and $CO_2$ dropped by around half of a magnitude,  $H_2O$ dropped even by a whole magnitude. The $H_2$ on the other hand increased for a little bit. The amount of H-atoms adsorbed on the inside of our chamber wall is nearly constant, because they can pass quite easily from the outside through the chamber walls. When we bake the chamber over night we increase the number of H-Atoms moving through the walls and also the desorption rate by increasing the temperature. Larger molecules like $H_{2}O$ have a much harder time travelling through the chamber walls, so we can remove them from the chamber through baking.
+The plot shows exactly what we wanted to achieve. The intensity of most molar masses dropped after baking. Looking at the main peaks $N_2$ and $CO_2$ dropped by around half of a magnitude,  $H_2O$ dropped even by a whole magnitude. The $H_2$ on the other hand increased for a little bit. The amount of H-atoms adsorbed on the inside of our chamber wall is nearly constant, because they can pass quite easily from the outside through the chamber walls. When we bake the chamber over night we increase the number of H-Atoms moving through the walls due to the pressure change and also the desorption rate by increasing the temperature. Larger molecules like $H_{2}O$ have a much harder time travelling through the chamber walls, so we can remove them from the chamber through baking.
 
 With less pressure and therefore less atoms in the vacuum chamber the mean intensity of the bars decreased. 
 
