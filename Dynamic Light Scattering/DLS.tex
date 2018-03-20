@@ -19,6 +19,7 @@ In this experiment we want to get informations about the properties of our sampl
 Write here, what we did and learned.
 \end{abstract}
 
+
 \section{Theorie}
 \subsection{Colloids}
 Colloids are small particles, but still $10^3 to 10^4$ times larger than an atom, which are dissolved in a dispersion medium. Depending on the aggregation of state the colloidal systems are named differently. Liquid in a gaseous medium is called liquid aerosol and 2 liquids combined emulsion. Examples are mist and steam as well milk and salad dressing.
@@ -28,7 +29,11 @@ The steric stabilisation creates this repulsive force via polymers on the colloi
 Depending particles density $n_p$ in a constant volume $V$ one can define the volume fraction $\Phi = n_p \cdot V$. This tells us about the change of phase in a colloidal system. For a system with hard spheres the crystallization form liquid starts at $\Phi=0.494$ if the increase happens in equilibrium. For a more rapid process without equilibrium the glass phase is reachable. This happens if your system freezes nearly instantaneously.  
 
 \subsection{Light Scattering}
-Because the lasers wavelength is nearly as large as our colloids, we're not allowed to use the approximation of Rayleigh scattering. By considering every colloid as its own scattering center we now can conclude how the particles are distributed in the system.
+Considering quasi-elastic light scattering, a photon gets absorbed by the scattering center, induces a dipole moment and gets re-emitted in a different angle. The wave vector $ |\vec{k}| = \frac{2\pi n}{\lambda}$ and then the energy does not change in this assumption. Therefore the momentum change for a single photon is given by:
+\[ q= |\vec{k_{in}} - \vec{k_{out}}| = \frac{4\pi n}{\lambda} \cdot \sin \left( \dfrac{\Theta}{2} \right) \]
+
+
+The lasers wavelength is nearly as large as our colloids, therefore we're not allowed to use the approximation of Rayleigh scattering. By considering every colloid as its own scattering center we now can conclude how the particles are distributed in the system.
 
 \subsection{Hydrodynamics}
 
@@ -38,9 +43,10 @@ In the experiment we are using a green $532nm$. The main principles for a laser 
 The function of a photomultiplier relies on the photoelectric effect. Hereby a photon collides with a cathode and triggers an electron to leave the material.
 Due to a increasing potential between the cathode and the following dynodes the electron will always hit the next potentially higher dynode. Thereby it gains more speed and is able to knock more electrons out of the dynode. Due to their shape the electrons won't skip any dynode and the amount of electrons travelling increases exponentially this the amount of dynodes. At the end they'll get absorbed from the anode to measure the current and thereby getting a signal that the cathode was hit by a photon.
 
+
 \section{Experiment}
 \subsection{Setup}
-The following figure shows how the basic arrangement of hardware was. Everything was controllable by the given software. Except the sample change had to be done manually. The positioning of the sample was a little bit difficult. The holder was only a small hole in a cap for the isopropyl alcohol container and the sample was placed by the friction with this hole. We tried to align it straight downwards, but it could have been tilted. The refractive index of isopropyl alcohol is $n=1.37927$ for $T=293°C$. The measured temperature for the sample was $19.6 °C$ with an digital infra
+The following figure shows how the basic arrangement of hardware was. Everything was controllable by the given software. Except the sample change had to be done manually. The positioning of the sample was a little bit difficult. The holder was only a small hole in a cap for the isopropyl alcohol container and the sample was placed by the friction with this hole. We tried to align it straight downwards, but it could have been tilted. The refractive index of isopropyl alcohol is $n=1.37927$ for $T=293°C$. The measured temperature for the sample was $19.6 °C$ with an digital infra-red thermometer. Therefore we are using the literature value as given above.
 
 \begin{figure}[!htbp]
 \centering
@@ -48,8 +54,7 @@ The following figure shows how the basic arrangement of hardware was. Everything
 \caption{The experimental Set-up for our the Dynamic Light Scattering experiment. Figure taken from the given script.}
 \end{figure}
 
-We used green $532nm$ laser light for the scattering at the samples. To avoid an exact static installation and prevent displacements optical fibers were used. The goniometer itself was purely adjustable by electronics to get an exact angle measurement. 
-
+We used green $532nm$ laser light for the scattering at the samples. To avoid static installations and prevent displacements in the lights path, optical fibres were used. The goniometer itself was purely adjustable by electronics to get an exact angle measurement. 
 
 \subsection{A: Small particles in fluid phase}
 
