@@ -32,10 +32,31 @@ Depending particles density $n_p$ in a constant volume $V$ one can define the vo
 Considering quasi-elastic light scattering, a photon gets absorbed by the scattering center, induces a dipole moment and gets re-emitted in a different angle. The wave vector $ |\vec{k}| = \frac{2\pi n}{\lambda}$ and then the energy does not change in this assumption. Therefore the momentum change for a single photon is given by:
 \[ q= |\vec{k_{in}} - \vec{k_{out}}| = \frac{4\pi n}{\lambda} \cdot \sin \left( \dfrac{\Theta}{2} \right) \]
 
+Using the Born approximation, we neglect every induced fields from the dipole oscillation which would again induce others molecules to oscillate. These oscillations would change our scattered light, because the  
+% Born approximation erklären
 
+	
 The lasers wavelength is nearly as large as our colloids, therefore we're not allowed to use the approximation of Rayleigh scattering. By considering every colloid as its own scattering center we now can conclude how the particles are distributed in the system.
 
+In the experiment intensity is measured. From the conclusion above we can derive a formula, just depending on the form factor $P(q)$ given by the size of the individual colloids and how they are arranged in the medium:
+\[ I(q) = I_0(q)b(\vec{q}=0)^2 \cdot P(q) \cdot NS(q) \]
+
+Where N is the number of colloids in the system and b(q) 
+% was genau stellt b dar, außer komisches Ergebnis aus der Integration
+\\
+
+For moving particles their dynamics are getting important. Due to Brownian motion, see \ref{hyd}, the correlation of the electric field to itself at a later time is affected. One defines the autocorrelation function 
+\[ G_1(\vec{q}) = \langle \: \vec{E}(\vec{q},t),\vec{E}(\vec{q},t+\tau) \: \rangle \]
+
+
+Siegert relation
+\[ g_2(\vec{q},t) = G_1(\vec{q},t \]
+
 \subsection{Hydrodynamics}
+\label{hyd}
+First of all we introduce the material constant viscosity. It describes how strong the friction is for moving something through a medium. Usually it's defined as: 
+
+%Brownian motion
 
 \subsection{Laser and Photomultiplier}
 In the experiment we are using a green $532nm$. The main principles for a laser are the inversion and the stimulated emission. Considering a 3 state energy system. Inversion is created by pumping nearly every electron from the ground state into the most excited state, this means sending in photons with the transition frequency as energy. This frequency is only for the pumping and usually higher than the lasers one. The most excited state should decay fast to the middle state that should have a long lifetime. There the electrons will wait for a photon in laser frequency to stimulate the emission of an exact identically photon. This means we end up with a electron in the ground state and two photons instead of one. Due to their same properties, i.e. same frequency and phase relation to each other, a laser creates coherent light.
@@ -50,7 +71,7 @@ The following figure shows how the basic arrangement of hardware was. Everything
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.8\linewidth]{Plots/Setup}
+\includegraphics[width=0.8\linewidth]{Plots/Setup.png}
 \caption{The experimental Set-up for our the Dynamic Light Scattering experiment. Figure taken from the given script.}
 \end{figure}
 
