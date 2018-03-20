@@ -47,14 +47,13 @@ We will calculate the mean free path of nitrogen ($N_{2}$) molecules in atmosphe
 Molecules and Atoms can stick to a surface e.g. the walls of our vacuum chamber, through dipole or van der Waals forces and covalent linkage. The process of getting them off again is called desorption. For desorption we need to add kinetic energy in form of heat to the particle until the $E_{kin}>E_{des}$. The desorption energy varies for different molecules and atoms. From Boltzmann-statistics we know that there are $\Delta n=ne^{\frac{-D_{des}}{RT}}$ particles with a high enough kinetic energy to leave the surface again. Because our walls are in a heat bath with the lab they don't loose heat so that the temperature stays constant so that there are always particles with enough energy to desorp from the walls. The Polanyi-Wigner equation then tells us what the rate of desorption in our chamber is, with $\nu=\frac{kT}{h}$ being the oscillation frequency of the molecules.\[ j_{des}=\frac{dn}{dt}=-\nu n e^{-\frac{E_{des}}{RT}} \] 
 
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\linewidth]{"Plots/Polanyi Wigner"}
-	\label{fig:polanyi}
-	\caption{Polanyi Wigner equation for different temperatures}
+\centering
+\includegraphics[width=0.8\linewidth]{"Plots/Polanyi Wigner"}
+\label{fig:polanyi}
+\caption{Polanyi Wigner equation for different temperatures.}
 \end{figure}
 
 We can see that the desorption rate is much higher for higher temperatures, but after a ling enough time we have desorped almost all particles from the surface no matter what our temperature is. 
-
 
 \subsection{Pumps}
 We use two different pumps for different pressure regimes, to produce our vacuum. The pre pump is used to get from atmospheric to a low enough pressure to use the turbo pump which then gets us to a very high vacuum.
@@ -64,7 +63,7 @@ The pre pump (Fig. \ref{fig:prepump}) works by changing the volume in a pumping 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\linewidth]{Bilder/pump}
+	\includegraphics[width=.5\linewidth]{Bilder/pump}
 	\caption{Schematic representation of a pump}
 	\label{fig:prepump}
 \end{figure}
@@ -146,9 +145,24 @@ From the second equation we get three different $S_{eff-i}$, where 1 stands for 
 \[ \frac{1}{S} = \frac{1}{S_{eff-1}} + \frac{1}{S_{eff-2}} -\frac{1}{S_{eff-12}} \quad , \quad
 \frac{1}{C_1} = \frac{1}{S_{eff-12}} - \frac{1}{S_{eff-2}} \]
 
-The results of those equations are: dersfydgxtfcx
-\\\\\\Data in den Anhang
+The results of those equations are very depending on which time frames you choose. Usually the effective pumping speed of the connected tubes should be the lowest. But as you can see in \ref{fig::comparison} the pumping speed is still as fast as in the case with the 40mm diameter tube. This is caused by the fact that we connected this tube directly with the pump. These are the values we picked to get reasonable results for the real pumping speed and the conductivities:
 
+\begin{table}[h]
+\centering
+\begin{tabular}{llccccc}
+Index & Tubes & $t_0 [s]$ & $t_1 [s]$ & $p_0 [mbar]$ & $p_1 [mbar]$ & $S_{eff} [ \frac{l}{s}]$ \\
+1 & $25 mm$ & $5$ & $50$ & $668.0$ & $99.2$ & $1.30$  \\
+2 & $40 mm$ & $5$ & $100$ & $616.9$ & $12.6$ & $1.24$  \\
+12 & $both$ & $55$ & $100$ & $62.5$ & $12.1$ & $1.12$ 
+\end{tabular} 
+\end{table}
+
+And applying the equations from the start of the chapter, we get values which seemed to be appropriate for the experimental set-up.
+
+\[ S = 1.47 \:\frac{l}{s} ;\quad C_1 = 11.35 \:\frac{l}{s} ;\quad C_2 = 8.02 \:\frac{l}{s} \]
+
+The calculations failed and ended up with at least one negative conductivity if the following relation was violated:
+\[ S_{eff-12} < S_{eff-2} < S_{eff-1} \]
 
 \begin{figure}[!h]
 \centering\includegraphics[width=.75\textwidth]{Plots/Comparison.png}
@@ -212,13 +226,13 @@ The sensor only kicks in for higher temperature than room temperature. For this 
 Looking at the second measurement, the middle part in Fig.\ref{fig::baking}, the pressure increases rapidly before falling down again. This is the effect of the adsorbed atoms coming free and increase the pressure. It happens every time the thermal energy gets close to the desorption energy of a molecule. If the desorption rate is smaller than the rate of them getting pumped out because almost all particles with this specific desorption energy have left the walls, the pressure will decrease again. This process should happen many times for the different desorption energies of the molecules. It is notable that while the speed of a particle is proportional to $\frac{1}{\sqrt{m}} $ the desorption rate is independent of the molecules mass and only depends on the desorption energy.
 You can see this happen twice in our data (Fig. \ref{fig::baking}). Once at the beginning before the thermometer kicks in and then later at around 8000s in. The little bump before the crossing of temperature and pressure seems to be caused by some kind of noise, because it was only there for about one measure point (Appendix Fig.\ref{fig::bump}).
 
-\paragraph{point of baking and probe quality} \mbox{} \\
+\paragraph{Point of baking and probe quality} \mbox{} \\
 The whole reason of baking is not only to create a better vacuum for its own sake, but to remove as many unwanted atoms as fast as possible. Due to Boltzmann statistics we could achieve the same pressure within a longer time, because in an ensemble there will always be one atom with the necessary energy to leave the wall. Baking reduces the waiting time by increasing the energy of the adsorbed atoms.
 With less pressure and atoms within the chamber there are less atoms which could affect the quality of our thin film growth. That means the quality of our sample will increase automatically with better vacuum.
 
 The results of our baking were as expected but still impressive. We started with a pressure of $5.10 \cdot 10^{-7} mbar$ and at the beginning of Day 2 we already fell to $3.86 \cdot 10^{-8} mbar $. This decrease of one magnitude after only one day is the reason other chambers are getting baked for a week, if you need the lower pressure.
 
-\subsection{Film growth}
+\subsection{Film Growth}
 After baking the chamber over night we were ready to sputter our target and grow a film on the substrate. 
 
 \subsubsection{Pre Sputtering}
@@ -234,7 +248,7 @@ The plasma burned in a cone shape above the target with a light blue color. Afte
 	\label{fig:ivcurve}
 \end{figure}
 
-\subsubsection{Film Growth}
+\subsubsection{Growing the film}
 To finally grow our thin film we adjusted the current to a stable regime and moved our substrate into the plasma for 15 minutes. We can see a shiny layer of copper on the side which was facing the plasma.  
 
 \begin{figure}
