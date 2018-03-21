@@ -28,7 +28,7 @@ What we can measure as temperature is caused by movement of particles in the gas
  where $k_{B}\approx1,38*10^{-23}J/K$ is the Boltzmann constant and temperature is measured in Kelvin. We assume for our purpose that all particles are incompressible hard spheres and that there are no frictional forces between the particles and the walls. Because the particles' speeds are distributed isotropically there are $1/3N$ moving along each axis. For simplicity we consider a particle moving along the x-Axis with the velocity $v_{x}$. Initially it has the momentum $p_{x}=v_{x}*m$. After an elastic collision with a wall its momentum is $-p_{x}$, so the momentum change is $\Delta p_{x}=2p_{x}$. We can calculate the force on the wall by multiplying the momentum change of each collision with the collision frequency. In a box with surface A and length $ds=v*dt$ there are \[ N=\frac{N}{V}A *v* dt \] particles of which 1/6 is moving in positive x-direction. So the total momentum transfer is \[ \Delta p_{i}=\frac{2N* A* v* dt*m* v}{6V} \]. For the force exerted on the wall we get \[ F=\frac{dp}{dt}=\frac{ANmv^{2}}{3V} \rightarrow p=\frac{Nmv^{2}}{3V} \Leftrightarrow p=\frac{N*E_{kin}}{3V}\] Comparing this equation to the ideal gas law gives us that \[ v^{2}=\frac{3k_{b}T}{m_{p}} \] 
  Assuming we have a canonical ensemble of gas molecules we can conclude from the principle of maximum entropy that the distribution of particle speeds can be described by a Maxwell-Boltzmann-statistic. \[ f(v)=\frac{m^{\frac{3}{2}}}{2\pi k T} 4\pi v^{2} e^{\frac{-mv^{2}}{2kT}} \] Now we can calculate the expectation value for the speed $<v>$ and also $\sigma_{v}$
  \[<v>=\int_{0}^{\infty}vf(v)dv=\sqrt{\frac{8kT}{\pi m}}  \]
- \[ \sqrt{<v^{2}>}=\int_{0}^{\infty}v^{2}f(v)dv=\sqrt{\frac{3kT}{\pi m}}  \]
+ \[ \sqrt{<v^{2}>}=\int_{0}^{\infty}v^{2}f(v)dv=\sqrt{\frac{3kT}{ m}}  \]
  The second result is consistent with the speed we derived earlier with simple thoughts about pressure. We can easily see that lighter particles move a lot faster than heavier ones at the same temperature. 
  \paragraph{Example}
  \mbox{}\\
@@ -81,9 +81,6 @@ Considering the effective amount of volume getting pumped out $S_{eff}$ and an e
 Also considering that the pressure is nearly constant, so we can use the mean value $p=\frac{p_0+p_1}{2}$. A pumping process with $t_0=1250s,\: p_0=10^{-5}mbar$ and $t_1=2750s,\: p_0=5\cdot 10^{-6}mbar$ for a chamber with 30l volume and $T=293K$ results in $\dot{N}=25.7\cdot 10^{6} \frac{1}{s}$. This is analogue to $1.24\cdot 10^{-15} \frac{g}{s}$ of air getting pumped out (Mass of air $29 \frac{g}{mol}$).
 \label{dn}
 
-a
-\\\\\\\\\\\\\\\\\\\\\\\\Hier muss noch mehr formelgedöns hin sonst versteht das keine
-\\\\\\\\\\\\\\\\\\\\\\\\
 
 
 \subsection{Thin Films}
@@ -312,6 +309,8 @@ To finally grow our thin film we adjusted the current to a stable regime and mov
 \begin{thebibliography}{9}
 
 \bibitem{VacuumHandbook} Handbook of Vacuum Technology (Second Edition), edited by Karl Jousten, Wiley-VCH, 2016 (reprinted 2017), ISBN: 978-3-527-41338-6
+
+\bibitem{Skript}Practicum script "Vacuum Science and the Inﬂuence of Vacuum Conditions on Thin Film Growth" by Andrew Ross 
 
 \end{thebibliography}
 \end{document}
