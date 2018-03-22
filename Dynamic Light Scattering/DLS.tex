@@ -58,12 +58,24 @@ P(q)= \frac{9}{(qa)^6} \cdot (sin(qa) - qa \cdot cos(qa))
 For moving particles their dynamics are getting important. Due to Brownian motion, see \ref{hyd}, the correlation of the electric field to itself at a later time is affected. One defines the autocorrelation function 
 \begin{equation}\label{eq:g1}
 G_1(\vec{q}) = \langle \: \vec{E}(\vec{q},t),\vec{E}(\vec{q},t+\tau) \: \rangle
-\end{equation}
-
-Siegert relation
+\end{equation} 
+Because we are only able to measure the intensity of light we need a connection to the autocorrelation of the electric field. It can be derived by simple calculation and is called the Siegert relation:
 \begin{equation}\label{eq:siegert}
 g_2(\vec{q},t) = g_1(\vec{q},t )^2 +1
 \end{equation}
+where $g_2$ is the normalized autocorrelation of the intensity. For highly dilute samples we can further calculate $g_1$ with Fick's second law
+\begin{equation}\label{eq:g1solved}
+g_1(\vec{q},t )=e^{-\vec{q}^{2}D_0*\tau}
+\end{equation}
+where $D_0$ is the Diffusion coefficient defined as 
+\begin{equation}\label{eq:StokesEinstein}
+D_0=\frac{k_BT}{6\pi \eta a}
+\end{equation}
+This finally gives us 
+\begin{equation}\label{eq:g2}
+\boxed{g_2(\vec{q},t) =e^{- \vec{q}^{2}}D_0*\tau+1}
+\end{equation}
+for our measured autocorrelation. We are therefore able to measure the hydrodynamic radius "a" of the colloids in our samples.
 
 
 \subsection{Hydrodynamics}
@@ -120,7 +132,15 @@ We also tried to fit for a form function for a polydisperse distributed in a Gau
 But the integration already failed for a test value. For expected radii between $35$ and $180nm$ and values of momentum transfer with the lasers wavelength, the returned values didn't change from zero. 
 
 \subsubsection{Hydrodynamic radius and diffusion coefficient}
-We measured the autocorrelation for every sample and in case of sample A and B for angles between 20$^\circ$ and $150^\circ$ in steps of 10$^\circ$. This way we were able to measure the diffusion coefficient and the hydrodynamic radius and verify their independence from q. 
+We measured the autocorrelation for every sample and in case of sample A and B for angles between 20$^\circ$ and $150^\circ$ in steps of 10$^\circ$ and fitted the parameter $D_0$ of $g_2$ (\ref{eq:g2}) to our data (e.g. fig.  \ref{fig:Sample A 60}). 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{Plots/A/60}
+	\caption[Autocorrelation with fit of $g_2$]{}
+	\caption{Example of the autocorrelation with fit}
+	\label{fig:Sample A 60}
+\end{figure}
+
 
 
 \subsection{B: Large particles in fluid phase}
