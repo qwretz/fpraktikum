@@ -69,6 +69,9 @@ g_2(\vec{q},t) = g_1(\vec{q},t )^2 +1
 \subsection{Hydrodynamics}
 \label{hyd}
 First of all we introduce the material constant viscosity. It describes how strong the friction is for moving something through a medium. Usually it's defined as: 
+\begin{equation}
+\vec{F}=\eta A \frac{\partial \vec{v}}{\partial x} , \quad \eta(T)= \eta_0 e^{\frac{E_A}{RT}}
+\end{equation}
 
 %Brownian motion
 
@@ -107,6 +110,10 @@ For fitting the form factor of the colloids we'll use equation (\ref{eq:intensit
 Before fitting the intensity has to be corrected. Due to the change in momentum related to the scattering angle. To get the angle independent intensity our measured mean intensities has to be multiplied by $sin(\frac{\theta}{2} )$.
 
 % Description of the fit
+
+We also tried to fit for a form function for a polydisperse distributed in a Gaussian with $\mu$ as the given particle radii. 
+\[ \overline{P(q)} = \int_0^\infty da\: f(a)\cdot P(q,a) , \quad f(a)= \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(a-\mu)^2}{2 \sigma^2}} \]
+But the integration already failed for a test value. For expected radii between $35$ and $180nm$ and values of momentum transfer with the lasers wavelength, the returned values didn't change from zero. 
 
 
 \subsection{B: Large particles in fluid phase}
