@@ -31,7 +31,10 @@ Depending particles density $n_p$ in a constant volume $V$ one can define the vo
 
 \subsection{Light Scattering}
 Considering quasi-elastic light scattering, a photon gets absorbed by the scattering center, induces a dipole moment and gets re-emitted in a different angle. The wave vector $ |\vec{k}| = \frac{2\pi n}{\lambda}$ and then the energy does not change in this assumption. Therefore the momentum change for a single photon is given by:
-\[ q= |\vec{k_{in}} - \vec{k_{out}}| = \frac{4\pi n}{\lambda} \cdot \sin \left( \dfrac{\Theta}{2} \right) \]
+\begin{equation}\label{eq:momentum}
+q= |\vec{k_{in}} - \vec{k_{out}}| = \frac{4\pi n}{\lambda} \cdot \sin \left( \dfrac{\Theta}{2} \right)  
+\end{equation}
+
 
 Using the Born approximation, we neglect every induced fields from the dipole oscillation which would again induce others molecules to oscillate. These oscillations would change our scattered light, because the  
 % Born approximation erklären
@@ -40,18 +43,28 @@ Using the Born approximation, we neglect every induced fields from the dipole os
 The lasers wavelength is nearly as large as our colloids, therefore we're not allowed to use the approximation of Rayleigh scattering. By considering every colloid as its own scattering center we now can conclude how the particles are distributed in the system.
 
 In the experiment intensity is measured. From the conclusion above we can derive a formula, just depending on the form factor $P(q)$ given by the size of the individual colloids and how they are arranged in the medium:
-\[ I(q) = I_0(q)b(\vec{q}=0)^2 \cdot P(q) \cdot NS(q) \]
-
+\begin{equation} \label{eq:intensity}
+I(q) = I_0(q)b(\vec{q}=0)^2 \cdot P(q) \cdot NS(q)
+\end{equation}
 Where N is the number of colloids in the system and b(q) 
 % was genau stellt b dar, außer komisches Ergebnis aus der Integration
 \\
 
-For moving particles their dynamics are getting important. Due to Brownian motion, see \ref{hyd}, the correlation of the electric field to itself at a later time is affected. One defines the autocorrelation function 
-\[ G_1(\vec{q}) = \langle \: \vec{E}(\vec{q},t),\vec{E}(\vec{q},t+\tau) \: \rangle \]
+\begin{equation}\label{eq:form}
+P(q)= \frac{9}{(qa)^6} \cdot (sin(qa) - qa \cdot cos(qa))
+\end{equation}
 
+
+For moving particles their dynamics are getting important. Due to Brownian motion, see \ref{hyd}, the correlation of the electric field to itself at a later time is affected. One defines the autocorrelation function 
+\begin{equation}\label{eq:g1}
+G_1(\vec{q}) = \langle \: \vec{E}(\vec{q},t),\vec{E}(\vec{q},t+\tau) \: \rangle
+\end{equation}
 
 Siegert relation
-\[ g_2(\vec{q},t) = G_1(\vec{q},t \]
+\begin{equation}\label{eq:siegert}
+g_2(\vec{q},t) = g_1(\vec{q},t )^2 +1
+\end{equation}
+
 
 \subsection{Hydrodynamics}
 \label{hyd}
@@ -65,7 +78,7 @@ In the experiment we are using a green $532nm$. The main principles for a laser 
 The function of a photomultiplier relies on the photoelectric effect. Hereby a photon collides with a cathode and triggers an electron to leave the material.
 Due to a increasing potential between the cathode and the following dynodes the electron will always hit the next potentially higher dynode. Thereby it gains more speed and is able to knock more electrons out of the dynode. Due to their shape the electrons won't skip any dynode and the amount of electrons travelling increases exponentially this the amount of dynodes. At the end they'll get absorbed from the anode to measure the current and thereby getting a signal that the cathode was hit by a photon.
 
-
+\newpage
 \section{Experiment}
 \subsection{Setup}
 The following figure shows how the basic arrangement of hardware was. Everything was controllable by the given software. Except the sample change had to be done manually. The positioning of the sample was a little bit difficult. The holder was only a small hole in a cap for the isopropyl alcohol container and the sample was placed by the friction with this hole. We tried to align it straight downwards, but it could have been tilted. The refractive index of isopropyl alcohol is $n=1.37927$ for $T=293K$. The measured temperature for the sample was $19.6 ^\circ C$ with an digital infra-red thermometer. Therefore we are using the literature value as given above.
@@ -76,13 +89,38 @@ The following figure shows how the basic arrangement of hardware was. Everything
 \caption{The experimental Set-up for our the Dynamic Light Scattering experiment. Figure taken from the given script.}
 \end{figure}
 
-We used green $532nm$ laser light for the scattering at the samples. To avoid static installations and prevent displacements in the lights path, optical fibres were used. The goniometer itself was purely adjustable by electronics to get an exact angle measurement. 
+We used green $532nm$ laser light for the scattering at the samples. To avoid static installations and prevent displacements in the lights path, optical fibres were used. The goniometer itself was purely adjustable by electronics to get an exact angle measurement.
+
 
 \subsection{A: Small particles in fluid phase}
 
+
+For fitting the form factor of the colloids we'll use equation (\ref{eq:intensity}). Thereby we introduce another constant value A in (\ref{eq:form}) which absorbs everything factor independent of q this means except of $P(q)$ and $S(q)$. The structure function is nearly 1 for very dilute samples. The assumption that there are very few colloids in the medium is justified because we couldn't see any real particles with the naked eye. 
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\linewidth]{Plots/FormA.png}
+\caption{Intensity fitted for the form factor.}
+\label{FormA}
+\end{figure}
+
+Before fitting the intensity has to be corrected. Due to the change in momentum related to the scattering angle. To get the angle independent intensity our measured mean intensities has to be multiplied by $sin(\frac{\theta}{2} )$.
+
+% Description of the fit
+
+
 \subsection{B: Large particles in fluid phase}
 
+
 \subsection{C: Small particles in fluid phase, high concentration}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\linewidth]{Plots/"C bei 40".png}
+\caption{Autocorrelation for the Sample C at 40 degrees.}
+\label{C}
+\end{figure}
+
 
 \newpage
 \subsection{D: Small particles in crystalline phase}
@@ -241,6 +279,7 @@ As pictured in Figure \ref{D} a second slope appears for the crystalline phase. 
 
 \caption{Autocorrelation Sample B: Angle between 80 and 150 degrees.}
 \end{figure}
+
 
 \newpage
 \begin{thebibliography}{}
