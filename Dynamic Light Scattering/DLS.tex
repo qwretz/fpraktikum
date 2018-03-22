@@ -110,11 +110,7 @@ We used green $532nm$ laser light for the scattering at the samples. To avoid st
 \subsection{A: Small particles in fluid phase}
 \subsubsection{Formfactor}
 
-
-For fitting the form factor of the colloids we'll use equation (\ref{eq:intensity}). Thereby we introduce another constant value A in (\ref{eq:form}) which absorbs everything factor independent of q this means except of $P(q)$ and $S(q)$. The structure function is nearly 1 for very dilute samples. The assumption that there are very few colloids in the medium is justified because we couldn't see any real particles 
-with the naked eye. 
-
-
+For fitting the form factor of the colloids we'll use equation (\ref{eq:intensity}). Thereby we introduce another constant value A in (\ref{eq:form}) which absorbs everything factor independent of q this means except of $P(q)$ and $S(q)$. The structure function is nearly 1 for very dilute samples. The assumption that there are very few colloids in the medium is justified because we couldn't see any real particles with the naked eye. 
 
 \begin{figure}[!htbp]
 \centering
@@ -124,8 +120,9 @@ with the naked eye.
 \end{figure}
 
 Before fitting the intensity has to be corrected. Due to the change in momentum related to the scattering angle. To get the angle independent intensity our measured mean intensities has to be multiplied by $sin(\frac{\theta}{2} )$.
+Fitting only fractions of the measured values results as pictured in better fitting curves. They're always displayed for the used values. Their radii are now much larger than expected. But as pictured in "Example" the curves don't continue with fitting nearly perfectly. 
 
-% Description of the fit
+Now looking at Figure \ref{FormA}. The first fit includes every point and does not look like the function describing our data. Although its result is only off by a factor of 2 compared to the given particle radius of $35nm$. 
 
 We also tried to fit for a form function for a polydisperse distributed in a Gaussian with $\mu$ as the given particle radii. 
 \[ \overline{P(q)} = \int_0^\infty da\: f(a)\cdot P(q,a) , \quad f(a)= \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(a-\mu)^2}{2 \sigma^2}} \]
@@ -141,7 +138,7 @@ We measured the autocorrelation for every sample and in case of sample A and B f
 	\centering
 	\includegraphics[width=0.7\linewidth]{Plots/A/60}
 	\caption[Autocorrelation with fit of $g_2$]{}
-	\caption{Example of the autocorrelation with fit}
+	\caption{Example of the autocorrelation with fit. For more see Appendix.}
 	\label{fig:Sample A 60}
 \end{figure}
 
@@ -149,9 +146,9 @@ We measured the autocorrelation for every sample and in case of sample A and B f
 
 \subsection{B: Large particles in fluid phase}
 \subsubsection{Form factor}
-Again we tried to to fit for P(q). 
+Again we tried to to fit for P(q). With the same procedure figure \ref{FormB} is created. Again the partial fits are good looking for their individual space but the whole fit is completely off.
 
-Sample B was supposed to have five times larger colloids than  A. We performed the same measurements and expected getting different values for the scattering radius as well as the hydrodynamic radius. 
+Sample B was supposed to have five times larger colloids than A. We performed the same measurements and expected getting different values for the scattering radius as well as the hydrodynamic radius. 
 We calculated an average hydrodynamic radius of $51 nm$. 
 
 %Tabelle einfügen
@@ -163,7 +160,7 @@ We calculated an average hydrodynamic radius of $51 nm$.
 \centering
 \includegraphics[width=0.8\linewidth]{Plots/FormB.png}
 \caption{Intensity fitted for the form factor.}
-\label{FormA}
+\label{FormB}
 \end{figure}
 
 \subsection{C: Small particles in fluid phase, high concentration}
