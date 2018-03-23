@@ -3,9 +3,9 @@ todo
 DLS
 	beschreiben und erklären
 	Hydrodynamics schreiben
-		Stokes and brownian motion ist schon irgendwo da
-	Born approximation erklären
-	Stokesssches gesetz
+		Stokes  brown ist schon irgendwo da //gemacht
+	Born approximation erklären //hab ich gemacht.
+	Stokesssches gesetz //gemacht
 	Particle radius vs scattering radius in theorie
 
 	Irgendwo mal hinschreiben was unsere experimentellen parameter sind

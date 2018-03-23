@@ -35,9 +35,11 @@ Considering quasi-elastic light scattering, a photon gets absorbed by the scatte
 q= |\vec{k_{in}} - \vec{k_{out}}| = \frac{4\pi n}{\lambda} \cdot \sin \left( \dfrac{\Theta}{2} \right)  
 \end{equation}
 
-
-Using the Born approximation, we neglect every induced fields from the dipole oscillation which would again induce others molecules to oscillate. These oscillations would change our scattered light, because the  
+In the Bron approximation we basically assume that every particle that scattering light emits a spherical wave which does not scatter further. This is fine for highly dilute samples.
+Using the Born approximation, we neglect every induced fields from the dipole oscillation which would again induce others molecules to oscillate. These oscillations would change our scattered light.
 % Born approximation erklären
+%Hab ich glaub ich gemacht
+
 
 	
 The lasers wavelength is nearly as large as our colloids, therefore we're not allowed to use the approximation of Rayleigh scattering. By considering every colloid as its own scattering center we now can conclude how the particles are distributed in the system.
@@ -85,7 +87,19 @@ First of all we introduce the material constant viscosity. It describes how stro
 \begin{equation}
 \vec{F}=\eta A \frac{\partial \vec{v}}{\partial x} , \quad \eta(T)= \eta_0 e^{\frac{E_A}{RT}}
 \end{equation}
+\subsubsection{Brownian motion}
+Brownian motion describes the random movement of microscopic particles in liquids and gases. According to kinetic gas theory molecules in a gas or a liquid are in constant isotrop motion, that we can measure as temperature. These particles randomly hit the much larger colloids or other microscopic particles, causing a change in momentum. This change in momentum causes a what looks like a wiggling motion of the microscopic particles. The Brownian motion therefore increases with temperature cause the average momentum of the molecules is hitting the microscopic particles is larger.
+%thermische bewegung der moleküle wegen T fehlt noch
 
+\subsubsection{Stokes law}
+Stokes law gives a simple relation to determine the viscosity of a liquid. It gives us the force needed to move a spherical object with the radius a through a liquid with the velocity $\vec{v}$. The proportionality between these is the viscosity.
+\begin{equation}\label{eq:Stokes}
+	\vec{F}_s=6 \pi \eta a \vec{v_s}
+\end{equation}
+To experimentally determine the viscosity of a liquid you drop a sphere with a known mass in the liquid and measure the terminal velocity. There $\vec{F_s}+\vec{F_{lift}}=\vec{F{gravitaion}}$ so we can determine the viscosity to be
+\begin{equation}
+	\eta=\frac{2(\rho_{sphere}-\rho_{liquid})g ° a^2}{9v_s}
+\end{equation} 
 %Brownian motion
 
 \subsection{Laser and Photomultiplier}
