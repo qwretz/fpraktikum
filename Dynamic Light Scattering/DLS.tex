@@ -23,26 +23,26 @@ Write here, what we did and learned.
 
 \section{Theorie}
 \subsection{Colloids}
-Colloids are small particles, but still $10^3 to 10^4$ times larger than an atom, which are dissolved in a dispersion medium. Depending on the aggregation of state the colloidal systems are named differently. Liquid in a gaseous medium is called liquid aerosol and 2 liquids combined emulsion. Examples are mist and steam as well milk and salad dressing.
-Colloids are often spherical shaped and tend to aggregate with each other. This is preventable by stabilisation techniques. The electrostatic stabilization is creatable when a colloid with groups like $~OH$ or $~SO_3H$ are dissolved in a liquid. These groups  can then dissociate as ions and the colloid becomes negative charged with a cloud of positive charged ions around it. Now the colloids are repulsing each other due to their equally charged clouds. For high salt concentrations e.g. $NaCl$ this effect is reduced. The increased amount of ions caused by the dissolved salt prevents the colloids separation of charge and with this the repulsion between colloids is reduced. 
+Colloids are small particles, but still $10^3$ to $10^4$ times larger than an atom, which are dissolved in a dispersion medium. Depending on the aggregation of state the colloidal systems are named differently. Liquid in a gaseous medium is called liquid aerosol while 2 liquids combined are called emulsion. Examples are mist and steam as well milk and salad dressing.
+
+%Ist der part drunter so richtig?
+Colloids are often spherical shaped and tend to aggregate with each other. This is preventable by stabilisation techniques. The electrostatic stabilization is creatable when a colloid with groups like $~OH$ or $~SO_3H$ are dissolved in a liquid. These groups  can then dissociate as ions and the colloid becomes negatively charged with a cloud of positive ions around it. Now the colloids are repulsing each other due to their equally charged clouds. For high salt concentrations e.g. $NaCl$ this effect is reduced. The increased amount of ions caused by the dissolved salt prevents the colloids separation of charge and with this the repulsion between colloids is reduced. 
 The steric stabilisation creates this repulsive force via polymers on the colloids surface. These are preventing the aggregation by keeping them apart.
 
-Depending particles density $n_p$ in a constant volume $V$ one can define the volume fraction $\Phi = n_p \cdot V$. This tells us about the change of phase in a colloidal system. For a system with hard spheres the crystallization form liquid starts at $\Phi=0.494$ if the increase happens in equilibrium. For a more rapid process without equilibrium the glass phase is reachable. This happens if your system freezes nearly instantaneously.  
+Depending on particle density $n_p$ in a constant volume $V$ one can define the volume fraction $\Phi = n_p \cdot V$. This corresponds to the change of phase in a colloidal system. For a system with hard spheres the crystallization form liquid starts at $\Phi=0.494$ if the increase happens in equilibrium. For a more rapid process without equilibrium the glass phase is reachable. This happens if your system freezes nearly instantaneously.  
 
 \subsection{Light Scattering}
-Considering quasi-elastic light scattering, a photon gets absorbed by the scattering center, induces a dipole moment and gets re-emitted in a different angle. The wave vector $ |\vec{k}| = \frac{2\pi n}{\lambda}$ and then the energy does not change in this assumption. Therefore the momentum change for a single photon is given by:
+Considering quasi-elastic light scattering, a photon gets absorbed by a scattering center, induces a dipole moment and gets re-emitted in a different angle. The length of the wave vector $ |\vec{k}| = \frac{2\pi n}{\lambda}$ and therefore the energy do not change in this assumption. So the momentum change for a single photon is given by:
 \begin{equation}\label{eq:momentum}
 q= |\vec{k_{in}} - \vec{k_{out}}| = \frac{4\pi n}{\lambda} \cdot \sin \left( \dfrac{\Theta}{2} \right)  
 \end{equation}
 
-In the Bron approximation we basically assume that every particle that scattering light emits a spherical wave which does not scatter further. This is fine for highly dilute samples.
-Using the Born approximation, we neglect every induced fields from the dipole oscillation which would again induce others molecules to oscillate. These oscillations would change our scattered light.
-% Born approximation erklären
+\paragraph{Born approximation}\mbox{}\\
+In the Bron approximation we basically assume that every particle scattering light emits a spherical wave which is not scattered further. This assumption is fine for highly dilute samples.
+Using the Born approximation, we neglect every induced fields from the dipole oscillation which would again induce others molecules to oscillate. These oscillations would change our scattered light.% Born approximation erklären
 %Hab ich glaub ich gemacht
 
-
-	
-The lasers wavelength is nearly as large as our colloids, therefore we're not allowed to use the approximation of Rayleigh scattering. By considering every colloid as its own scattering center we now can conclude how the particles are distributed in the system.
+The lasers wavelength is nearly as large as our colloids. Therefore we're not allowed to use the approximation of Rayleigh scattering. By considering every colloid as its own scattering centre we now can conclude how the particles are distributed in the system.
 
 In the experiment intensity is measured. From the conclusion above we can derive a formula, just depending on the form factor $P(q)$ given by the size of the individual colloids and how they are arranged in the medium:
 \begin{equation} \label{eq:intensity}
@@ -91,8 +91,9 @@ First of all we introduce the material constant viscosity. It describes how stro
 Brownian motion describes the random movement of microscopic particles in liquids and gases. According to kinetic gas theory molecules in a gas or a liquid are in constant isotrop motion, that we can measure as temperature. These particles randomly hit the much larger colloids or other microscopic particles, causing a change in momentum. This change in momentum causes a what looks like a wiggling motion of the microscopic particles. The Brownian motion therefore increases with temperature cause the average momentum of the molecules is hitting the microscopic particles is larger.
 %thermische bewegung der moleküle wegen T fehlt noch
 
-\subsubsection{Stokes law}
-Stokes law gives a simple relation to determine the viscosity of a liquid. It gives us the force needed to move a spherical object with the radius a through a liquid with the velocity $\vec{v}$. The proportionality between these is the viscosity.
+\subsubsection{Stokes law and hydrodynamic radius}
+%Erklären was hydrodynamic radius ist fehlt noch und vgl. mit el.dyn radius
+Stokes law gives a simple relation to determine the viscosity of a liquid. It gives us the force needed to move a spherical object with the hydrodynamic radius a through a liquid with the velocity $\vec{v}$. The proportionality between these is the viscosity.
 \begin{equation}\label{eq:Stokes}
 	\vec{F}_s=6 \pi \eta a \vec{v_s}
 \end{equation}
@@ -100,7 +101,7 @@ To experimentally determine the viscosity of a liquid you drop a sphere with a k
 \begin{equation}
 	\eta=\frac{2(\rho_{sphere}-\rho_{liquid})g  a^2}{9v_s}
 \end{equation} 
-%Brownian motion
+
 
 \subsubsection{Diffusion}
 Thermodynamics tells us that a system of particles always goes to the state with the highest entropy. For a system consisting of two different particles this is accomplished by an equal distribution of the two particles over the entire system. The process which causes this equilibrium is called diffusion. It is described by Fick's laws, where J is the flow of particles, $\frac{dc}{dx} $ is the concentration gradient and D is the diffusion coefficient. 
@@ -128,7 +129,7 @@ We used green $532nm$ laser light for the scattering at the samples. To avoid st
 
 
 \subsection{A: Small particles in fluid phase}
-\subsubsection{Formfactor}
+\subsubsection{Form factor}
 
 For fitting the form factor of the colloids we'll use equation (\ref{eq:intensity}). Thereby we introduce another constant value A in (\ref{eq:form}) which absorbs everything factor independent of q this means except of $P(q)$ and $S(q)$. The structure function is nearly 1 for very dilute samples. The assumption that there are very few colloids in the medium is justified because we couldn't see any real particles with the naked eye. 
 
@@ -228,7 +229,7 @@ We calculated an average hydrodynamic radius of $51 nm$.
 
 
 \subsection{Comparison of samples A and B}
-Contrary to our expectaiton we measured a slightly smaller hydrodynamic radius for sample B. The most likely explanation for this is that the samples were not the ones described in the script. While we are sure to have changed the samples after the first measurement it is likely that sample B was just another tube with the sample A, because no sample was labelled and they looked very similar.
+Contrary to our expectoration we measured a slightly smaller hydrodynamic radius for sample B. The most likely explanation for this is that the samples were not the ones described in the script. While we are sure to have changed the samples after the first measurement it is likely that sample B was just another tube with the sample A, because no sample was labelled and they looked very similar.
 
 \begin{figure}[!htbp]
 \centering
