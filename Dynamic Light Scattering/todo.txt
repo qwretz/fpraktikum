@@ -13,8 +13,9 @@ DLS
 	VGL A und C
 	VGL A,B,C mit D
 
-	Steric stabilization schreiben?
-	Verstehen was sich bei DLS bewegt 
+	Verstehen was sich bei DLS bewegt:
+	G: Ich dachte wegen Zitterbewegungen geht die KOrrelation iwann kaputt
+	G: Im mittel bewegen sie sich aber nicht vom Ort weg bzw. ein anderes nimmt den Platz sofort ein
 
 
 	nochmal provieren C zu fitten mit k2*tau^2

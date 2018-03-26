@@ -162,7 +162,7 @@ We measured the autocorrelation for every sample and in case of sample A and B f
 %Hier muss noch der vgl der daten des hydrodyn radius und dem formfaktor hin... passt nicht mit unseren daten aber mit 35nm die er uns gegeben hat
 
 
-\begin{figure}
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Plots/A/60}
 	\caption[Autocorrelation with fit of $g_2$]{}
@@ -171,7 +171,7 @@ We measured the autocorrelation for every sample and in case of sample A and B f
 \end{figure}
 
 %Tabelle einfügen
-\begin{table}[h]
+\begin{table}[!htbp]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
@@ -197,10 +197,27 @@ We measured the autocorrelation for every sample and in case of sample A and B f
 \end{table}
 
 
-
 \subsection{B: Large particles in fluid phase}
 \subsubsection{Form factor}
 Again we tried to to fit for P(q). With the same procedure figure \ref{FormB} is created. Again the partial fits are good looking for their individual space but the whole fit is completely off.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\linewidth]{Plots/FormB.png}
+\caption{Intensity fitted for the form factor.}
+\label{FormB}
+\end{figure}
+
+The result looks pretty much the same. The only thing that really changed was the total intensity which reduced from around 140 to 60. The are neglecting this change by a independent constant and thereby we end up with nearly the same radius compared to sample A. 
+
+In figure  \ref{AB comparison} it is shown what we expected from knowing the actual particle radius. The exemplary curve for $180nm$ is cut of for better differentiation between the data values. The intensity difference is visible but otherwise they look similar. 
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\linewidth]{Plots/Comparison.png}
+\caption{Comparing the form factor of our data with the expected values.}
+\label{AB comparison}
+\end{figure}
 
 Sample B was supposed to have a five times larger colloid radius than A. We performed the same measurements and expected getting different values for the scattering radius as well as the hydrodynamic radius. 
 We calculated an average hydrodynamic radius of $51 nm$. 
@@ -208,7 +225,7 @@ We calculated an average hydrodynamic radius of $51 nm$.
 
 
 %Bdata
-\begin{table}[h]
+\begin{table}[!htbp]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
@@ -234,18 +251,12 @@ We calculated an average hydrodynamic radius of $51 nm$.
 \end{table}
 
 
-
+% Extra subsecion?
 \subsection{Comparison of samples A and B}
 Contrary to our expectoration we measured a slightly smaller hydrodynamic radius for sample B. The most likely explanation for this is that the samples were not the ones described in the script. While we are sure to have changed the samples after the first measurement it is likely that sample B was just another tube with the sample A, because no sample was labelled and they looked very similar.
 
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.8\linewidth]{Plots/FormB.png}
-\caption{Intensity fitted for the form factor.}
-\label{FormB}
-\end{figure}
-
 \subsection{C: Small particles in fluid phase, high concentration}
+Comparing the autocorrelations from sample A with figure \ref{C} the fit is no longer fitting that well.
 
 \begin{figure}[!htbp]
 \centering
@@ -267,6 +278,10 @@ The last sample was clearly different from the other. One already could see a li
 \end{figure}
 
 As pictured in Figure \ref{D} a second slope appears for the crystalline phase. The high concentration forces the particles to come together and thereby form new structures which also causes the white gleam. These new structures are now larger than the usual particles moving in the medium. Thereby they will show a different decay time for the correlation of their momentum.
+
+\subsection{Comparison of all Samples}
+
+
 
 
 \newpage
