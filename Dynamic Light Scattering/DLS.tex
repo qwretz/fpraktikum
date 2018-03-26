@@ -84,15 +84,18 @@ for our measured autocorrelation. We are therefore able to measure the hydrodyna
 \subsection{Hydrodynamics}
 \label{hyd}
 First of all we introduce the material constant viscosity. It describes how strong the friction is for moving something through a medium. Usually it's defined as: 
-\begin{equation}
+\begin{equation}\label{eq:hydForce}
 \vec{F}=\eta A \frac{\partial \vec{v}}{\partial x} , \quad \eta(T)= \eta_0 e^{\frac{E_A}{RT}}
 \end{equation}
+Imagine 2 plates with area A parallel to each other in a distance of x. One moves with a effective velocity v. The nearest particle layer  to the moving plate is getting tagged along due to van-der-Waals forces and so is the next following particle layer. The higher the area the more particles are affected and the higher the velocity the stringer the particles are accelerated. With each layer the velocity is reduced because of collisions of the particles due to their thermal movement. The last proportionality is medium depending and so equation (\ref{eq:hydForce}) is derived.
+
 \subsubsection{Brownian motion}
-Brownian motion describes the random movement of microscopic particles in liquids and gases. According to kinetic gas theory molecules in a gas or a liquid are in constant isotrop motion, that we can measure as temperature. These particles randomly hit the much larger colloids or other microscopic particles, causing a change in momentum. This change in momentum causes a what looks like a wiggling motion of the microscopic particles. The Brownian motion therefore increases with temperature cause the average momentum of the molecules is hitting the microscopic particles is larger.
+Brownian motion describes the random movement of microscopic particles in liquids and gases. According to kinetic gas theory molecules in a gas or a liquid are in constant isotropic motion, that we can measure as temperature. The faster they are moving around the higher the temperature in the medium will be. These particles randomly hit the much larger colloids or other microscopic particles, causing a change in momentum. This change in momentum causes a what looks like a wiggling motion of the microscopic particles. The Brownian motion therefore increases with temperature cause the average momentum of the molecules is hitting the microscopic particles is larger.
+
 %thermische bewegung der moleküle wegen T fehlt noch
+% G: Habe noch den dritten Satz hinzugefügt, meintest du sowas?
 
 \subsubsection{Stokes law and hydrodynamic radius}
-%Erklären was hydrodynamic radius ist fehlt noch und vgl. mit el.dyn radius
 Stokes law gives a simple relation to determine the viscosity of a liquid. It gives us the force needed to move a spherical object with the hydrodynamic radius a through a liquid with the velocity $\vec{v}$. The proportionality between these is the viscosity.
 \begin{equation}\label{eq:Stokes}
 	\vec{F}_s=6 \pi \eta a \vec{v_s}
@@ -101,7 +104,11 @@ To experimentally determine the viscosity of a liquid you drop a sphere with a k
 \begin{equation}
 	\eta=\frac{2(\rho_{sphere}-\rho_{liquid})g  a^2}{9v_s}
 \end{equation} 
-
+The hydrodynamic radius $a_h$ is the effective dimension how a particle in a medium is seen for other particles. It consists of the usual radius resulting for the form factor combined with an additional layer of particles around. It's comparable to adsorbed particles onto the colloids surface. That means it depends on the colloids surface and the size of the particles in the medium. We can obtain it by the autocorrelation function (\ref{eq:g2}) with the relation: 
+\begin{equation}\label{eq:D0}
+D_0 = \frac{k_BT}{6\pi\eta a_h}
+\end{equation}
+% G: el dyn Radius?
 
 \subsubsection{Diffusion}
 Thermodynamics tells us that a system of particles always goes to the state with the highest entropy. For a system consisting of two different particles this is accomplished by an equal distribution of the two particles over the entire system. The process which causes this equilibrium is called diffusion. It is described by Fick's laws, where J is the flow of particles, $\frac{dc}{dx} $ is the concentration gradient and D is the diffusion coefficient. 
