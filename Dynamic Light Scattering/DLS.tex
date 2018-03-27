@@ -160,6 +160,7 @@ But the integration already failed for a test value. For expected radii between 
 
 Another try was to look for the minimum of our data and compare it to the first drop of a specific form factor. This idea gets shattered by comparing the minimum as displayed in figure \ref{AB comparison}. The minimum would be around 90 degrees but the form factor for $180nm$ drops not until 100 degrees. This would again mean a larger radius which would be more divergent than the ones already fitted.
 
+%noch n fehler an die 62 nm dran, als mittelwert der fitfehler a
 \subsubsection{Hydrodynamic radius and diffusion coefficient}
 We measured the autocorrelation for every sample and in case of sample A and B for angles between 20$^\circ$ and $150^\circ$ in steps of 10$^\circ$ and fitted the parameter $D_0$ of $g_2$ (\ref{eq:g2}) to our data (e.g. fig.  \ref{fig:Sample A 60}). This way we were able to calculate the hydrodynamic radius of the colloids in our sample with the Stokes-Einstein-relation (\ref{eq:StokesEinstein}) This gave us an average radius of $62.49 nm$. This fits quite well the actual radius of the colloids of $35nm$. As expected the  hydrodynamic radius is slightly larger than the actual radius. 
 
@@ -168,7 +169,6 @@ We measured the autocorrelation for every sample and in case of sample A and B f
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Plots/A/40}
-	%\caption[Autocorrelation with fit of $g_2$]{}
 	\caption{Example of the autocorrelation with fit. For more see Appendix.}
 	\label{fig:Sample A 40}
 \end{figure}
@@ -198,7 +198,7 @@ We measured the autocorrelation for every sample and in case of sample A and B f
 	\caption{A data}
 	\label{tab:adata}
 \end{table}
-
+%Schreiben das die daten gut sind,bzw alle gleich
 
 \subsection{B: Large particles in fluid phase}
 \subsubsection{Form factor}
@@ -246,7 +246,7 @@ We calculated an average hydrodynamic radius of $51 nm$.
 	\label{tab:bdata}
 \end{table}
 
-% Extra subsecion?
+% 
 \subsection{Comparison of samples A and B}
 Contrary to our expectoration we measured a slightly smaller hydrodynamic radius for sample B. The most likely explanation for this is that the samples were not the ones described in the script. While we are sure to have changed the samples after the first measurement it is likely that sample B was just another tube with the sample A, because none of the samples was labelled and they looked very similar. The different measured intensities are also one indicator for different samples but with particles of the same size.
 
@@ -260,7 +260,8 @@ Contrary to our expectoration we measured a slightly smaller hydrodynamic radius
 Figure \ref{AB comparison} compares now the measured values with the expected form factors scales to their individual counterpart.
 We were expecting that we won't see a strong descent like the example of $180nm$, because also dilute samples there is a chance that the colloids will come together and build larger structures. This is a property of poly-disperses and will come into play for sample C and D. 
 
-
+%Vllt bisden sich hier kleine klumpen oder irgendwas anderes,dass uns unseren fit kaputt macht, aber keine ahnung... Aber wir können es nicht fitten....bzw wird es nicht besser wenn wir es fitten. 
+%Theorie: Es geht kaputt weil mit einern höheren konzentration der die kristallisation beginne
 \subsection{C: Small particles in fluid phase, high concentration}
 Comparing the autocorrelations from sample A with figure \ref{C} the fit is no longer fitting that well. 
 
@@ -271,11 +272,11 @@ Comparing the autocorrelations from sample A with figure \ref{C} the fit is no l
 \label{C}
 \end{figure}
 
-
+%Noch schriebne warum wir wie vorgegangen sind und noch erklären welcher graph welcher ist also der grüne für die kleinen teilchen und der orangene für die kristallinen poarticles
 \subsection{D: Small particles in crystalline phase}
 The last sample was clearly different from the other. One already could see a light white coloured gleam due to the high concentration which causes the crystalline phase. 
 
-\begin{figure}[!htbp]
+\begin{figure}[]
 \centering
 \includegraphics[width=0.8\linewidth]{Plots/"D bei 40".png}
 \caption{Autocorrelation for the Sample D at 40 degrees. It shows a second slope which is caused by the newly formed crystalline structure in the medium.}
@@ -288,6 +289,7 @@ As pictured in figure \ref{D} a second slope appears for the crystalline phase. 
 For sample A and B we measured nearly the same values of hydrodynamic and form factor radius. This means it seems to be the same particle size but not the same sample due to intensity change and a difference in the $a_h$. This means we should have measured always the same small particles. Comparing figures \ref{fig:Sample A 40}, \ref{C} and \ref{D} we can now see that the autocorrelation time $\tau$ is always nearly $1s$ for the scattering angle of $40^\circ$. This confirms that the samples were prepared with the same particles only for different concentrations.
 
 
+\newpage
 \newpage
 \section{Appendix}
 
