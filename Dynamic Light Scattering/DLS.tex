@@ -84,7 +84,7 @@ for our measured autocorrelation. We are therefore able to measure the hydrodyna
 
 \subsection{Hydrodynamics}
 \label{hyd}
-Here we want to describe the particles motion in liquids and how this can have an effect on larger scales e.g. Stokes law
+Here we want to describe the particles motion in liquids and how this can have an effect on larger scales e.g. Stokes law and diffusion.
 
 First of all we introduce the material constant viscosity. It describes how strong the friction is for moving something through a medium. Usually it's defined as: 
 \begin{equation}\label{eq:hydForce}
@@ -154,7 +154,7 @@ Fitting only fractions of the measured values results in better fitting curves a
 
 The first fit includes every point and does not look like the function describing our data. Although its result is only off by a factor of 2 compared to the given particle radius of $35nm$. The partial fits on the other hand are more divergent in their radius. Both are displaying the values pretty good. The resulting values for the particle radius on the other hand are worse than expected. For the second fit to values is more that thrice as large and for the third fit more that five times as large. But they are ignoring the other values. For comparison of the third fits an exemplary curve is discussed with figure \ref{AB comparison}. 
 
-We also tried to fit for a form function for a polydisperse distributed in a Gaussian with $\mu$ as the given particle radii. 
+We also tried to fit for a form function for a poly-disperse distributed in a Gaussian with $\mu$ as the given particle radii. 
 \[ \overline{P(q)} = \int_0^\infty da\: f(a)\cdot P(q,a) , \quad f(a)= \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(a-\mu)^2}{2 \sigma^2}} \]
 But the integration already failed for a test value. For expected radii between $35$ and $180nm$ and values of momentum transfer with the lasers wavelength, the returned values didn't change from zero. 
 
@@ -246,7 +246,7 @@ We calculated an average hydrodynamic radius of $51 nm$.
 
 % Extra subsecion?
 \subsection{Comparison of samples A and B}
-Contrary to our expectoration we measured a slightly smaller hydrodynamic radius for sample B. The most likely explanation for this is that the samples were not the ones described in the script. While we are sure to have changed the samples after the first measurement it is likely that sample B was just another tube with the sample A, because no sample was labelled and they looked very similar. The different measured intensities are also one indicator for different samples but with particles of the same size.
+Contrary to our expectoration we measured a slightly smaller hydrodynamic radius for sample B. The most likely explanation for this is that the samples were not the ones described in the script. While we are sure to have changed the samples after the first measurement it is likely that sample B was just another tube with the sample A, because none of the samples was labelled and they looked very similar. The different measured intensities are also one indicator for different samples but with particles of the same size.
 
 \begin{figure}[!htbp]
 \centering
@@ -256,11 +256,11 @@ Contrary to our expectoration we measured a slightly smaller hydrodynamic radius
 \end{figure}
 
 Figure \ref{AB comparison} compares now the measured values with the expected form factors scales to their individual counterpart.
-We were expecting that we won't see a strong descent like the example of $180nm$, because also dilute samples there is a chance that the colloids will come together and build larger structures. This is a property of polydisperes and will come into play for sample C and D. 
+We were expecting that we won't see a strong descent like the example of $180nm$, because also dilute samples there is a chance that the colloids will come together and build larger structures. This is a property of poly-disperses and will come into play for sample C and D. 
 
 
 \subsection{C: Small particles in fluid phase, high concentration}
-Comparing the autocorrelations from sample A with figure \ref{C} the fit is no longer fitting that well.
+Comparing the autocorrelations from sample A with figure \ref{C} the fit is no longer fitting that well. 
 
 \begin{figure}[!htbp]
 \centering
