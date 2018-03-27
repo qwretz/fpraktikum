@@ -11,7 +11,7 @@ DLS
 		
 
 	VGL A und C
-	VGL A,B,C mit D
+	(VGL A,B,C mit D )
 
 	Verstehen was sich bei DLS bewegt:
 	G: Ich dachte wegen Zitterbewegungen geht die KOrrelation iwann kaputt

@@ -48,6 +48,7 @@ In the experiment intensity is measured. From the conclusion above we can derive
 \begin{equation} \label{eq:intensity}
 I(q) = I_0(q)b(\vec{q}=0)^2 \cdot P(q) \cdot NS(q)
 \end{equation}
+
 Where N is the number of colloids in the system and b(q) 
 % was genau stellt b dar, außer komisches Ergebnis aus der Integration
 %Fouriertransformierte der größe des teilchens?
@@ -138,7 +139,9 @@ We used green $532nm$ laser light for the scattering at the samples. To avoid st
 \subsection{A: Small particles in fluid phase}
 \subsubsection{Form factor}
 
-For fitting the form factor of the colloids we'll use equation (\ref{eq:intensity}). Thereby we introduce another constant value A in (\ref{eq:form}) which absorbs everything factor independent of q this means except of $P(q)$ and $S(q)$. The structure function is nearly 1 for very dilute samples. The assumption that there are very few colloids in the medium is justified because we couldn't see any real particles with the naked eye. 
+Fitting for the form factor of the colloids we will use equation (\ref{eq:intensity}). Thereby we introduce another constant value A in (\ref{eq:form}) which absorbs every factor independent of q, this means everything except of $P(q)$ and $S(q)$. The structure function is nearly 1 for very dilute samples. The assumption that there are very few colloids in the medium is justified because we couldn't see any real particles with the naked eye. 
+Before fitting the intensity has to be corrected. Due to the change in momentum related to the scattering angle. To get the angle independent intensity our measured mean intensities has to be multiplied by $sin(\frac{\theta}{2} )$.
+Fitting only fractions of the measured values results in better fitting curves as pictured in \ref{FormA}. They are always displayed for the fitted values. Their radii are now much larger than expected. But as pictured in "Example" the curves don't continue fitting nearly perfectly. This curve is just for comparison reasons and is shown with a small offset so it does not disturb the other graphs. 
 
 \begin{figure}[!htbp]
 \centering
@@ -147,10 +150,7 @@ For fitting the form factor of the colloids we'll use equation (\ref{eq:intensit
 \label{FormA}
 \end{figure}
 
-Before fitting the intensity has to be corrected. Due to the change in momentum related to the scattering angle. To get the angle independent intensity our measured mean intensities has to be multiplied by $sin(\frac{\theta}{2} )$.
-Fitting only fractions of the measured values results as pictured in better fitting curves. They're always displayed for the used values. Their radii are now much larger than expected. But as pictured in "Example" the curves don't continue with fitting nearly perfectly. This curve is just for comparison reasons and is shown with a small offset so it does not disturb the other graphs. 
-
-Now looking at Figure \ref{FormA}. The first fit includes every point and does not look like the function describing our data. Although its result is only off by a factor of 2 compared to the given particle radius of $35nm$. The partial fits on the other hand are more divergent in their radius. As 
+The first fit includes every point and does not look like the function describing our data. Although its result is only off by a factor of 2 compared to the given particle radius of $35nm$. The partial fits on the other hand are more divergent in their radius. Both are displaying the values pretty good. The resulting values for the particle radius on the other hand are worse than expected. For the second fit to values is more that thrice as large and for the third fit more that five times as large. But they are ignoring the other values. For comparison of the third fits an exemplary curve is discussed with figure \ref{AB comparison}. 
 
 We also tried to fit for a form function for a polydisperse distributed in a Gaussian with $\mu$ as the given particle radii. 
 \[ \overline{P(q)} = \int_0^\infty da\: f(a)\cdot P(q,a) , \quad f(a)= \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(a-\mu)^2}{2 \sigma^2}} \]
@@ -161,13 +161,12 @@ We measured the autocorrelation for every sample and in case of sample A and B f
 
 %Hier muss noch der vgl der daten des hydrodyn radius und dem formfaktor hin... passt nicht mit unseren daten aber mit 35nm die er uns gegeben hat
 
-
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{Plots/A/60}
+	\includegraphics[width=0.7\linewidth]{Plots/A/40}
 	\caption[Autocorrelation with fit of $g_2$]{}
 	\caption{Example of the autocorrelation with fit. For more see Appendix.}
-	\label{fig:Sample A 60}
+	\label{fig:Sample A 40}
 \end{figure}
 
 %Tabelle einfügen
@@ -208,21 +207,14 @@ Again we tried to to fit for P(q). With the same procedure figure \ref{FormB} is
 \label{FormB}
 \end{figure}
 
-The result looks pretty much the same. The only thing that really changed was the total intensity which reduced from around 140 to 60. The are neglecting this change by a independent constant and thereby we end up with nearly the same radius compared to sample A. 
+The result looks pretty much the same. The only thing that really changed was the total intensity which reduced from around 140 to 60. The fits are neglecting this change by the independent constant A introduced for fitting and thereby we end up with nearly the same radius compared to sample A. 
+Here we expected a radius of 180nm which is nearly covered by fit number three, but then the other ones are worse.
 
 In figure  \ref{AB comparison} it is shown what we expected from knowing the actual particle radius. The exemplary curve for $180nm$ is cut of for better differentiation between the data values. The intensity difference is visible but otherwise they look similar. 
 
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.8\linewidth]{Plots/Comparison.png}
-\caption{Comparing the form factor of our data with the expected values.}
-\label{AB comparison}
-\end{figure}
 
 Sample B was supposed to have a five times larger colloid radius than A. We performed the same measurements and expected getting different values for the scattering radius as well as the hydrodynamic radius. 
 We calculated an average hydrodynamic radius of $51 nm$. 
-
-
 
 %Bdata
 \begin{table}[!htbp]
@@ -250,10 +242,20 @@ We calculated an average hydrodynamic radius of $51 nm$.
 	\label{tab:bdata}
 \end{table}
 
-
 % Extra subsecion?
 \subsection{Comparison of samples A and B}
-Contrary to our expectoration we measured a slightly smaller hydrodynamic radius for sample B. The most likely explanation for this is that the samples were not the ones described in the script. While we are sure to have changed the samples after the first measurement it is likely that sample B was just another tube with the sample A, because no sample was labelled and they looked very similar.
+Contrary to our expectoration we measured a slightly smaller hydrodynamic radius for sample B. The most likely explanation for this is that the samples were not the ones described in the script. While we are sure to have changed the samples after the first measurement it is likely that sample B was just another tube with the sample A, because no sample was labelled and they looked very similar. The different measured intensities are also one indicator for different samples but with particles of the same size.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\linewidth]{Plots/Comparison.png}
+\caption{Comparing the form factor of our data with the expected values.}
+\label{AB comparison}
+\end{figure}
+
+Figure \ref{AB comparison} compares now the measured values with the expected form factors scales to their individual counterpart.
+We were expecting that we won't see a strong descent like the example of $180nm$, because also dilute samples there is a chance that the colloids will come together and build larger structures. This is a property of polydisperes and will come into play for sample C and D. 
+
 
 \subsection{C: Small particles in fluid phase, high concentration}
 Comparing the autocorrelations from sample A with figure \ref{C} the fit is no longer fitting that well.
@@ -266,7 +268,6 @@ Comparing the autocorrelations from sample A with figure \ref{C} the fit is no l
 \end{figure}
 
 
-\newpage
 \subsection{D: Small particles in crystalline phase}
 The last sample was clearly different from the other. One already could see a light white coloured gleam due to the high concentration which causes the crystalline phase. 
 
@@ -277,11 +278,10 @@ The last sample was clearly different from the other. One already could see a li
 \label{D}
 \end{figure}
 
-As pictured in Figure \ref{D} a second slope appears for the crystalline phase. The high concentration forces the particles to come together and thereby form new structures which also causes the white gleam. These new structures are now larger than the usual particles moving in the medium. Thereby they will show a different decay time for the correlation of their momentum.
+As pictured in figure \ref{D} a second slope appears for the crystalline phase. The high concentration forces the particles to come together and thereby form new structures which also causes the white gleam. These new structures are now larger than the usual particles moving in the medium. Thereby they will show a different decay time for the correlation of their momentum.
 
 \subsection{Comparison of all Samples}
-
-
+For sample A and B we measured nearly the same values of hydrodynamic and form factor radius. This means it seems to be the same particles but not the same sample due to intensity change and a  difference in the $a_h$. This means we should have measured always the same small particles. Comparing figures \ref{fig:Sample A 40}, \ref{C} and \ref{D} we can now see that the autocorrelation time $\tau$ is always nearly $1s$ for the scattering angle of $40^\circ$. This confirms that the samples were prepared with the same particles only for different concentrations.
 
 
 \newpage
