@@ -25,6 +25,7 @@ Write here, what we did and learned.
 \subsection{Colloids}
 Colloids are small particles, but still $10^3$ to $10^4$ times larger than an atom, which are dissolved in a dispersion medium. Depending on the aggregation of state the colloidal systems are named differently. Liquid in a gaseous medium is called liquid aerosol while 2 liquids combined are called emulsion. Examples are mist and steam as well milk and salad dressing.
 
+%Ist der part drunter so richtig?
 Colloids are often spherical shaped and tend to aggregate with each other. This is preventable by stabilisation techniques. The electrostatic stabilization is creatable when a colloid with groups like \textasciitilde$OH$ or \textasciitilde$SO_3H$ are dissolved in a liquid. These groups  can then dissociate as ions and the colloid becomes negatively charged with a cloud of positive ions around it. Now the colloids are repulsing each other due to their equally charged clouds. For high salt concentrations e.g. $NaCl$ this effect is reduced. The increased amount of ions caused by the dissolved salt prevents the colloids separation of charge and with this the repulsion between colloids is reduced. 
 The steric stabilisation creates this repulsive force via polymers on the colloids surface. These are preventing the aggregation by keeping them apart.
 
@@ -38,17 +39,20 @@ q= |\vec{k_{in}} - \vec{k_{out}}| = \frac{4\pi n}{\lambda} \cdot \sin \left( \df
 
 \paragraph{Born approximation}\mbox{}\\
 In the Bron approximation we basically assume that every particle scattering light emits a spherical wave which is not scattered further. This assumption is fine for highly dilute samples.
-Using the Born approximation, we neglect every induced fields from the dipole oscillation which would again induce others molecules to oscillate. These oscillations would change our scattered light.
-
+Using the Born approximation, we neglect every induced fields from the dipole oscillation which would again induce others molecules to oscillate. These oscillations would change our scattered light.% Born approximation erklären
+%Hab ich glaub ich gemacht
 
 The lasers wavelength is nearly as large as our colloids. Therefore we're not allowed to use the approximation of Rayleigh scattering. By considering every colloid as its own scattering centre we now can conclude how the particles are distributed in the system.
-\paragraph{Dynamic light scattering}\mbox{}\\
+
 In the experiment intensity is measured. From the conclusion above we can derive a formula, just depending on the form factor $P(q)$ given by the size of the individual colloids and how they are arranged in the medium:
 \begin{equation} \label{eq:intensity}
 I(q) = I_0(q)b(\vec{q}=0)^2 \cdot P(q) \cdot NS(q)
 \end{equation}
 
-Where N is the number of colloids in the system and b($\vec{q}=0$) is the normalization of the form factor.
+Where N is the number of colloids in the system and b(q) 
+% was genau stellt b dar, außer komisches Ergebnis aus der Integration
+%Fouriertransformierte der größe des teilchens?
+\\
 
 \begin{equation}\label{eq:form}
 P(q)= \frac{9}{(qa)^6} \cdot (sin(qa) - qa \cdot cos(qa))
@@ -91,6 +95,8 @@ Imagine 2 plates with area A parallel to each other in a distance of x. One move
 \subsubsection{Brownian motion}
 Brownian motion describes the random movement of microscopic particles in liquids and gases. According to kinetic gas theory molecules in a gas or a liquid are in constant isotropic motion, that we can measure as temperature. The faster they are moving around the higher the temperature in the medium will be. These particles randomly hit the much larger colloids or other microscopic particles, causing a change in momentum. This change in momentum causes a what looks like a wiggling motion of the microscopic particles. The Brownian motion therefore increases with temperature cause the average momentum of the molecules is hitting the microscopic particles is larger.
 
+%thermische bewegung der moleküle wegen T fehlt noch
+% G: Habe noch den dritten Satz hinzugefügt, meintest du sowas?
 
 \subsubsection{Stokes law and hydrodynamic radius}
 Stokes law gives a simple relation to determine the viscosity of a liquid. It gives us the force needed to move a spherical object with the hydrodynamic radius a through a liquid with the velocity $\vec{v}$. The proportionality between these is the viscosity.
@@ -101,10 +107,11 @@ To experimentally determine the viscosity of a liquid you drop a sphere with a k
 \begin{equation}
 	\eta=\frac{2(\rho_{sphere}-\rho_{liquid})g  a^2}{9v_s}
 \end{equation} 
-The hydrodynamic radius $a_h$ is the effective dimension how a particle in a medium is seen for other particles. It consists of the usual radius, that we can measure through the form factor by scattering, and an additional layer of particles around. It's comparable to adsorbed particles onto the colloids surface. That means it depends on the colloids surface and the size of particles in the medium. We can obtain it by the autocorrelation function (\ref{eq:g2}) with the relation: 
+The hydrodynamic radius $a_h$ is the effective dimension how a particle in a medium is seen for other particles. It consists of the usual radius resulting for the form factor combined with an additional layer of particles around. It's comparable to adsorbed particles onto the colloids surface. That means it depends on the colloids surface and the size of the particles in the medium. We can obtain it by the autocorrelation function (\ref{eq:g2}) with the relation: 
 \begin{equation}\label{eq:D0}
 D_0 = \frac{k_BT}{6\pi\eta a_h}
 \end{equation}
+% G: el dyn Radius?
 
 \subsubsection{Diffusion}
 Thermodynamics tells us that a system of particles always goes to the state with the highest entropy. For a system consisting of two different particles this is accomplished by an equal distribution of the two particles over the entire system. The process which causes this equilibrium is called diffusion. It is described by Fick's laws, where J is the flow of particles, $\frac{dc}{dx} $ is the concentration gradient and D is the diffusion coefficient. 
@@ -149,13 +156,14 @@ The first fit includes every point and does not look like the function describin
 
 We also tried to fit for a form function for a poly-disperse distributed in a Gaussian with $\mu$ as the given particle radii. 
 \[ \overline{P(q)} = \int_0^\infty da\: f(a)\cdot P(q,a) , \quad f(a)= \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(a-\mu)^2}{2 \sigma^2}} \]
-But the integration already failed for a test value. For expected radii between $35$ and $180nm$ and values of momentum transfer with the lasers wavelength, the returned values didn't change from zero. 
+But the integration already failed for a test value. For expected radii between $35$ and $180nm$ and values of momentum transfer with the lasers wavelength, the returned values didn't change from zero.
+
+Another try was to look for the minimum of our data and compare it to the first drop of a specific form factor. This idea gets shattered by comparing the minimum as displayed in figure \ref{AB comparison}. The minimum would be around 90 degrees but the form factor for $180nm$ drops not until 100 degrees. This would again mean a larger radius which would be more divergent than the ones already fitted.
 
 \subsubsection{Hydrodynamic radius and diffusion coefficient}
 We measured the autocorrelation for every sample and in case of sample A and B for angles between 20$^\circ$ and $150^\circ$ in steps of 10$^\circ$ and fitted the parameter $D_0$ of $g_2$ (\ref{eq:g2}) to our data (e.g. fig.  \ref{fig:Sample A 60}). This way we were able to calculate the hydrodynamic radius of the colloids in our sample with the Stokes-Einstein-relation (\ref{eq:StokesEinstein}) This gave us an average radius of $62.49 nm$. This fits quite well the actual radius of the colloids of $35nm$. As expected the  hydrodynamic radius is slightly larger than the actual radius. 
 
 %Hier muss noch der vgl der daten des hydrodyn radius und dem formfaktor hin... passt nicht mit unseren daten aber mit 35nm die er uns gegeben hat
-
 
 \begin{figure}[!htbp]
 	\centering
@@ -277,7 +285,7 @@ The last sample was clearly different from the other. One already could see a li
 As pictured in figure \ref{D} a second slope appears for the crystalline phase. The high concentration forces the particles to come together and thereby form new structures which also causes the white gleam. These new structures are now larger than the usual particles moving in the medium. Thereby they will show a different decay time for the correlation of their momentum.
 
 \subsection{Comparison of all Samples}
-For sample A and B we measured nearly the same values of hydrodynamic and form factor radius. This means it seems to be the same particles but not the same sample due to intensity change and a  difference in the $a_h$. This means we should have measured always the same small particles. Comparing figures \ref{fig:Sample A 40}, \ref{C} and \ref{D} we can now see that the autocorrelation time $\tau$ is always nearly $1s$ for the scattering angle of $40^\circ$. This confirms that the samples were prepared with the same particles only for different concentrations.
+For sample A and B we measured nearly the same values of hydrodynamic and form factor radius. This means it seems to be the same particle size but not the same sample due to intensity change and a difference in the $a_h$. This means we should have measured always the same small particles. Comparing figures \ref{fig:Sample A 40}, \ref{C} and \ref{D} we can now see that the autocorrelation time $\tau$ is always nearly $1s$ for the scattering angle of $40^\circ$. This confirms that the samples were prepared with the same particles only for different concentrations.
 
 
 \newpage
