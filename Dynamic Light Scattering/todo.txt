@@ -5,13 +5,6 @@ DLS
 	Hydrodynamics schreiben	
 		G: habe mal die % abgearbeitet
 
-	Particle radius vs scattering radius in theorie
-	ist der scattering radius der el. dyn. radius?
-		G: eldyn radius?
-		
-
-	VGL A und C
-	(VGL A,B,C mit D )
 
 	Verstehen was sich bei DLS bewegt:
 	G: Ich dachte wegen Zitterbewegungen geht die KOrrelation iwann kaputt
@@ -21,3 +14,10 @@ DLS
 
 	nochmal provieren C zu fitten mit k2*tau^2
 
+
+
+
+	Legend für C und D sieht komisch aus.
+	G: Kannst du da bitte noch mal nachschauen: irgendwas ist da nicht gelabelt.
+
+	Bitte einmal über Sample C lesen. Vorallem Ende Absatz 1.
