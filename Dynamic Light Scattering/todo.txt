@@ -6,18 +6,9 @@ DLS
 		G: habe mal die % abgearbeitet
 
 
-	Verstehen was sich bei DLS bewegt:
-	G: Ich dachte wegen Zitterbewegungen geht die KOrrelation iwann kaputt
-	G: Im mittel bewegen sie sich aber nicht vom Ort weg bzw. ein anderes nimmt den Platz sofort ein
-	J: Ich dachte halt, die machen beides. Das komische ist, dass in der Herleitung im Skript das so beschrieben ist als würden die sich wegbewegen. Aber es kann sein das dieses wegbewegen die zitterbewegung ist 
-
-
-	nochmal provieren C zu fitten mit k2*tau^2
 
 
 
 
-	Legend für C und D sieht komisch aus.
-	G: Kannst du da bitte noch mal nachschauen: irgendwas ist da nicht gelabelt.
 
-	Bitte einmal über Sample C lesen. Vorallem Ende Absatz 1.
+
