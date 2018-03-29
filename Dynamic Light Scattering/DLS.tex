@@ -31,7 +31,7 @@ The steric stabilisation creates this repulsive force via polymers on the colloi
 Depending on particle density $n_p$ in a constant volume $V$ one can define the volume fraction $\Phi = n_p \cdot V$. This corresponds to the change of phase in a colloidal system. For a system of hard spheres the crystallization form liquid starts at $\Phi=0.494$ if the increase happens in equilibrium. For a more rapid process without equilibrium the glass phase is reachable. This happens if your system freezes nearly instantaneously.  
 
 \subsection{Light Scattering}
-Considering quasi-elastic light scattering, a photon gets absorbed by a scattering center, induces a dipole moment and gets re-emitted in a different angle. The length of the wave vector $ |\vec{k}| = \frac{2\pi n}{\lambda}$ and therefore the energy do not change in this assumption. So the momentum change for a single photon is given by:
+Considering quasi-elastic light scattering, a photon gets absorbed by a scattering centre, induces a dipole moment and gets re-emitted with a different angle. The length of the wave vector $ |\vec{k}| = \frac{2\pi n}{\lambda}$ and therefore the energy does not change in this assumption. So the momentum change for a single photon is given by:
 \begin{equation}\label{eq:momentum}
 q= |\vec{k_{in}} - \vec{k_{out}}| = \frac{4\pi n}{\lambda} \cdot \sin \left( \dfrac{\Theta}{2} \right)  
 \end{equation}
@@ -112,15 +112,15 @@ Thermodynamics tells us that a system of particles always goes to the state with
 We can see that the particles flow towards the point with the lowest concentration and that the speed of diffusion depends on the diffusion coefficient.
 
 \subsection{Laser and Photomultiplier}
-In the experiment we are using a green $532nm$. The main principles for a laser are the inversion and the stimulated emission. Considering a 3 state energy system. Inversion is created by pumping nearly every electron from the ground state into the most excited state, this means sending in photons with the transition frequency as energy. This frequency is only for the pumping and usually higher than the lasers one. The most excited state should decay fast to the middle state that should have a long lifetime. There the electrons will wait for a photon in laser frequency to stimulate the emission of an exact identically photon. This means we end up with a electron in the ground state and two photons instead of one. Due to their same properties, i.e. same frequency and phase relation to each other, a laser creates coherent light.
+In the experiment we are using a green $532nm$. The main principles for a laser are the inversion and the stimulated emission. Considering a 3 state energy system. Inversion is created by pumping nearly every electron from the ground state into the most excited state. This means sending in photons with the transition frequency as energy. The frequency is only used for pumping and usually higher than the lasers one. The most excited state should decay fast to the middle state that should have a long lifetime. There the electrons will wait for a photon in laser frequency to stimulate the emission of an exact identically photon. This means we end up with an electron in the ground state and two photons instead of one. Due to their same properties, i.e. same frequency and phase relation to each other, a laser creates coherent light.
 
 The function of a photomultiplier relies on the photoelectric effect. Hereby a photon collides with a cathode and triggers an electron to leave the material.
-Due to a increasing potential between the cathode and the following dynodes the electron will always hit the next potentially higher dynode. Thereby it gains more speed and is able to knock more electrons out of the dynode. Due to their shape the electrons won't skip any dynode and the amount of electrons travelling increases exponentially this the amount of dynodes. At the end they'll get absorbed from the anode to measure the current and thereby getting a signal that the cathode was hit by a photon.
-
+Due to a increasing potential between the cathode and the following dynodes the electron will always hit the next potentially higher dynode. Thereby it gains more speed and is able to knock more electrons out of the dynode. Due to the dynode's shape the electrons will not skip any dynode and the amount of electrons travelling increases exponentially with the amount of dynodes. At the end they will get absorbed from the anode to measure the current and thereby getting a signal that the cathode was hit by a photon.
+ 
 \newpage
 \section{Experiment}
 \subsection{Setup}
-The following figure shows how the basic arrangement of hardware was. Everything was controllable by the given software. Except the sample change had to be done manually. The positioning of the sample was a little bit difficult. The holder was only a small hole in a cap for container and the sample was placed by the friction with this hole. We tried to align it straight downwards, but it could have been tilted. The refractive index of water in which our colloids were dissolved is $n=1.3355$ for $T=293K$ \cite{refrac}. This concurs with the viscosity given in the data files with $\eta = 0.89454m\: Pa\cdot s$. The measured temperature for the sample was $19.6 ^\circ C$ with an digital infra-red thermometer. Therefore we are using the values as given above.
+The following figure shows the basic arrangement of hardware. Everything was controllable by the given software, except for the sample change which had to be done manually. The positioning of the sample was a little bit difficult. The holder was only a small hole in a cap for container and the sample was placed by the friction in this hole. We tried to align it straight downwards, but it could have been slightly tilted. The refractive index of water in which our colloids were dissolved is $n=1.3355$ for $T=293K$ \cite{refrac}. This concurs with the viscosity given in the data files with $\eta = 0.89454m\: Pa\cdot s$. The measured temperature for the sample was $19.6 ^\circ C$ with an digital infra-red thermometer. Therefore we are using the values as given above.
 
 \begin{figure}[!htbp]
 \centering
@@ -134,9 +134,9 @@ We used green $532nm$ laser light for the scattering at the samples. To avoid st
 \subsection{A: Small particles in fluid phase}
 \subsubsection{Form factor}
 
-Fitting for the form factor of the colloids we will use equation (\ref{eq:intensity}). Thereby we introduce another constant value A in (\ref{eq:form}) which absorbs every factor independent of q, this means everything except of $P(q)$ and $S(q)$. The structure function is nearly 1 for very dilute samples. The assumption that there are very few colloids in the medium is justified because we couldn't see any real particles with the naked eye. 
+For fitting the form factor of the colloids we will use equation (\ref{eq:intensity}). Thereby we introduce another constant value A in (\ref{eq:form}) which absorbs every factor independent of q, this means everything except of $P(q)$ and $S(q)$. The structure function is nearly 1 for very dilute samples. The assumption that there are very few colloids in the medium is justified because we couldn't see any real particles with the naked eye. 
 Before fitting the intensity has to be corrected. Due to the change in momentum related to the scattering angle. To get the angle independent intensity our measured mean intensities has to be multiplied by $sin(\frac{\theta}{2} )$.
-Fitting only fractions of the measured values results in better fitting curves as pictured in \ref{FormA}. They are always displayed for the fitted values. Their radii are now much larger than expected. But as pictured in "Example" the curves don't continue fitting nearly perfectly. This curve is just for comparison reasons and is shown with a small offset so it does not disturb the other graphs. 
+Fitting only fractions of the measured values results in better fitting curves as pictured in \ref{FormA}. They are always displayed for the fitted values. Their radii are now much larger than expected. But as pictured in "Example" the curves don't continue fitting for the whole data. This curve is just for comparison reasons and is shown with a small offset so it does not disturb the other graphs. 
 
 \begin{figure}[!htbp]
 \centering
@@ -147,17 +147,15 @@ Fitting only fractions of the measured values results in better fitting curves a
 
 The first fit includes every point and does not look like the function describing our data. Although its result is only off by a factor of 2 compared to the given particle radius of $35nm$. The partial fits on the other hand are more divergent in their radius. Both are displaying the values pretty good. The resulting values for the particle radius on the other hand are worse than expected. For the second fit to values is more that thrice as large and for the third fit more that five times as large. But they are ignoring the other values. For comparison of the third fits an exemplary curve is discussed with figure \ref{AB comparison}. 
 
-We also tried to fit for a form function for a poly-disperse distributed in a Gaussian with $\mu$ as the given particle radii. 
+We also tried fitting a form function for a poly-disperse distributed in a Gaussian with $\mu$ as the given particle radii. 
 \[ \overline{P(q)} = \int_0^\infty da\: f(a)\cdot P(q,a) , \quad f(a)= \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(a-\mu)^2}{2 \sigma^2}} \]
 But the integration already failed for a test value. For expected radii between $35$ and $180nm$ and values of momentum transfer with the lasers wavelength, the returned values didn't change from zero.
 
 Another try was to look for the minimum of our data and compare it to the first drop of a specific form factor. This idea gets shattered by comparing the minimum as displayed in figure \ref{AB comparison}. The minimum would be around 90 degrees but the form factor for $180nm$ drops not until 100 degrees. This would again mean a larger radius which would be more divergent than the ones already fitted.
 
-%noch n fehler an die 62 nm dran, als mittelwert der fitfehler a
 \subsubsection{Hydrodynamic radius and diffusion coefficient}
-We measured the autocorrelation for every sample and in case of sample A and B for angles between 20$^\circ$ and $150^\circ$ in steps of 10$^\circ$ and fitted the parameter $D_0$ of $g_2$ (\ref{eq:g2}) to our data (e.g. fig.  \ref{fig:Sample A 40}). This way we were able to calculate the hydrodynamic radius of the colloids in our sample with the Stokes-Einstein-relation (\ref{eq:StokesEinstein}) This gave us an average radius of $62.49 \pm  0.35nm$. This fits quite well the actual radius of the colloids of $35nm$. As expected the  hydrodynamic radius is slightly larger than the actual radius. \\ The fact that every attempt of calculation a radius from the form factor gave us a larger result than the hydrodynamic radius combined with the fact, that both our fit errors and the $\chi^2$ are quite small for the latter is a strong indication of something being wrong with calculated scattering radius.  
+We measured the autocorrelation for every sample and in case of sample A and B for angles between 20$^\circ$ and $150^\circ$ in steps of 10$^\circ$ and fitted the parameter $D_0$ of $g_2$ (\ref{eq:g2}) to our data (e.g. fig.  \ref{fig:Sample A 40}) .for the fit we multiplied a constant factor with $g_2$ to  accommodate our correlation not starting at one. This way we were able to calculate the hydrodynamic radius of the colloids in our sample with the Stokes-Einstein-relation (\ref{eq:StokesEinstein}) It gave us an average radius of $62.49 \pm  0.35nm$. This fits quite well the actual radius of the colloids we were given of $35nm$. As expected the  hydrodynamic radius is slightly larger than the actual one. \\ The fact that every attempt of calculation a radius from the form factor gave us a larger result than the hydrodynamic radius combined with the fact, that both our fit errors and the $\chi^2$ are quite small for the latter is a strong indication of something being wrong with calculated scattering radius and our hydrodynamic radius is correct.  
 
-%Hier muss noch der vgl der daten des hydrodyn radius und dem formfaktor hin... passt nicht mit unseren daten aber mit 35nm die er uns gegeben hat
 
 \begin{figure}[!htbp]
 	\centering
@@ -194,7 +192,7 @@ As you can see in our data (tab. \ref{tab:adata}) the values for the diffusion c
 
 \subsection{B: Large particles in fluid phase}
 \subsubsection{Form factor}
-Again we tried to to fit for P(q). With the same procedure figure \ref{FormB} is created. Again the partial fits are good looking for their individual space but the whole fit is completely off.
+Again we tried to fit P(q). With the same procedure figure \ref{FormB} is created. Again the partial fits are good looking for their individual space but the whole fit is completely off.
 
 \begin{figure}[!htbp]
 \centering
@@ -251,8 +249,7 @@ Contrary to our expectoration we measured a slightly smaller hydrodynamic radius
 Figure \ref{AB comparison} compares now the measured values with the expected form factors scales to their individual counterpart.
 We were expecting that we won't see a strong descent like the example of $180nm$, because also dilute samples there is a chance that the colloids will come together and build larger structures. This is a property of poly-disperses and will come into play for sample C and D. 
 
-%Vllt bisden sich hier kleine klumpen oder irgendwas anderes,dass uns unseren fit kaputt macht, aber keine ahnung... Aber wir können es nicht fitten....bzw wird es nicht besser wenn wir es fitten. 
-%Theorie: Es geht kaputt weil mit einern höheren konzentration der die kristallisation beginne
+
 \subsection{C: Small particles in fluid phase, high concentration}
 Comparing the autocorrelations from sample A with figure \ref{C} the fit is no longer working that well. The data is no longer in the shape of an usual exponential function like in the first two samples A and B. For a poly-disperse sample the shape would stay the same and would only change in the correlation time $\tau$. For larger and hence heavier particles the momentum change should be smaller and the correlation should decay slower. In this case the curve would only wander a bit to the right. But the data shows something like a convolution in the dropping part which doesn't make any sense. This could mean there are other things affecting the correlation which we don't know about.
 
@@ -261,6 +258,7 @@ We assume that this discrepancy from the fit is an indicator of effects caused b
 \begin{equation}
 	exp(2 K_1\tau +K_2 \tau^2)	
 \end{equation}
+did not give any better results.
 
 \begin{figure}[!htbp]
 \centering
@@ -269,7 +267,6 @@ We assume that this discrepancy from the fit is an indicator of effects caused b
 \label{C}
 \end{figure}
 
-%Noch schriebne warum wir wie vorgegangen sind und noch erklären welcher graph welcher ist also der grüne für die kleinen teilchen und der orangene für die kristallinen poarticles
 \subsection{D: Small particles in crystalline phase}
 The last sample was clearly different from the other. One already could see a light white coloured gleam due to the high concentration which causes the crystalline phase. As pictured in figure \ref{D} a second slope appears for the crystalline phase. The high concentration forces the particles to come together and thereby form new structures which also causes the white gleam. These new structures are now larger than the usual particles moving in the medium. Thereby they will show a different decay time for the correlation of their momentum.
 For this sample we can see a second slope for long times. Because we are in the crystalline phase the colloids form larger regular structures. The first large decay in correlation till about 10 seconds is caused by random single colloid motion. Then we see a much slower decay of correlation down to about 10$\%$ at 15 minutes where we stopped measuring. The crystalline structures in the sample stay intact and cause long term correlation. 
@@ -286,8 +283,8 @@ To accommodate this we decided to fit two theory curves (\ref{eq:g2}) to our dat
 
 
 \subsection{Comparison of all Samples}
-For sample A and B we measured nearly the same values of hydrodynamic and form factor radius. It seems to be the same particle size but not the same sample due to intensity change and a difference in the $a_h$. This means we should have measured always the same small particles. Comparing figures \ref{fig:Sample A 40}, \ref{C} and \ref{D} we can now see that the autocorrelation time $\tau$ is always nearly $1s$ for the scattering angle of $40^\circ$. This confirms that the samples were prepared with the same particles only for different concentrations. Unfortunately we were not able to confirm this assumption.
-
+For sample A and B we measured nearly the same values of hydrodynamic and form factor radius. It seems to be the same particle size but not the same sample due to intensity change and a difference in the $a_h$. This means we should have measured always the same small particles. Comparing figures \ref{fig:Sample A 40}, \ref{C} and \ref{D} we can now see that the autocorrelation time $\tau$ is always nearly $1s$ for the scattering angle of $40^\circ$. This confirms that the samples were prepared with the same particles only for different concentrations. Unfortunately we were not able to confirm this assumption by a repeated measurement of the samples.
+ 
 
 \newpage
 \newpage
@@ -440,6 +437,10 @@ For sample A and B we measured nearly the same values of hydrodynamic and form f
 
 \bibitem{refrac} \begin{verbatim}
 https://refractiveindex.info/?shelf=main&book=H2O&page=Kedenburg
+\end{verbatim}
+\bibitem{refrac} \begin{verbatim}
+No. 61: Dynamic Light Scattering
+by Jennifer Wenzl 12.04.2012, Sebastian Golde updated 04.08.2013
 \end{verbatim}
 
 \end{thebibliography}
