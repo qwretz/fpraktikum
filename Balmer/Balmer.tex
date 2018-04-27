@@ -5,6 +5,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{ngerman}
+\usepackage[utf8]{inputenc}
 
 %opening
 \title{Balmer Series}
@@ -14,7 +15,7 @@
 
 \maketitle
 \begin{abstract}
-
+asdf
 
 \end{abstract}
 
@@ -26,15 +27,62 @@
 Der klassische Ansatz ein Atom zu beschreiben ist ungenügend. Normalerweise würde man ein durchgängiges Spektrum an Strahlung erwarten, da der Abstand zwischen Kern und Elektron zunächst nicht beschränkt ist. Das Gegenteil wird jedoch gemessen. Ebenso sollte von einer bewegten Ladung Strahlung emittiert werden, dies geschieht im Atom jedoch nur wenn sich der Abstand verkleinert. Dies bewegte Bohr 1913 dazu seine Postulate zu formulieren. Darin beschreibt er, dass das Elektron den Kern umkreist und durch die elektrostatische Kraft auf seiner Umlaufbahn gehalten wird ohne dabei Strahlung auszusenden. Diese Bahnen werden durch ihren Drehimpuls $l = pr = n\hbar$ beschrieben. Hier bei beschreibt $n$ die Ordnung der Bahn, auch Hauptquantenzahl genannt. Zuletzt entspricht die Energie des emittierten bzw. absorbierten Photons dem Energieunterschied des Elektrons auf verschiedenen Umlaufbahnen $ \hbar \omega = E_2 - E_1$. 
 
 Generell erhält man aus der Behandlung der Schrödingergleichung dieselbe Energie für verschiedenen $n$, welche auch aus der Gleichsetzung von Coulomb- und Zentripetalkraft folgt. $R_\infty$ wird auch Rydbergkonstante genannt. 
-\[E_n = -\frac{1}{2} m_0 c^2 \alpha^2 \frac{Z^2}{n^2} = -13.6eV \cdot \frac{Z^2}{n^2} \: ; \: \alpha = \frac{e^2}{4\pi\epsilon_0 \hbar c} = \frac{1}{137}\]
-
-\[\Delta E = R_\infty \left(\frac{1}{n^2} - \frac{1}{m^2} \right)  = -13.6eV \cdot \left(\frac{1}{n^2} - \frac{1}{m^2} \right)\]
-
+\begin{equation}
+E_n = -\frac{1}{2} m_0 c^2 \alpha^2 \frac{Z^2}{n^2} = -13.6eV \cdot \frac{Z^2}{n^2} \: ; \: \alpha = \frac{e^2}{4\pi\epsilon_0 \hbar c} = \frac{1}{137}
+\end{equation}
+\begin{equation}
+\Delta E = R_\infty \left(\frac{1}{n^2} - \frac{1}{m^2} \right)  = -13.6eV \cdot \left(\frac{1}{n^2} - \frac{1}{m^2} \right)
+\end{equation}
 Dadurch können wir nun die Photonenenergie bestimmen, wenn ein Elektron seinen Bahn ändert. Im folgenden sowie bereits in der zweiten Gleichung behandeln wir das Wasserstoff Atom mit $Z=1$.Hierbei wird in verschiedene Serien unterschieden, je nachdem in welche das Elektron landet, nach Photon-Emission. Jede Serie wurde nach Entdecker benannt. Die ultravioletten Spektrallinien der Lyman (Ly) Serie $Ly_\alpha \:,\: Ly_\beta \:,\: Ly_\gamma \:,\: ...$ besitzt als Grundniveau den Zustand $n=1$. Analog wurden auch die infraroten Serien Brackett (B) $n=4$ und Paschen (Pa) $n=3$, sowie die sichtbare Balmer (H) Serie $n=2$ entdeckt. 
 Die lateinische Nomenklatur beschreibt von wie vielen Niveaus oberhalb, auch states genannt, das Elektron auf das Endniveau gefallen ist. Die Anzahl wird mit den Buchstaben gleichgesetzt. So hei"st der \"Ubergang $5 \rightarrow 2$ auch $B_\gamma$.
 
 \subsection{Ebert Monochromator}
 Um nun die das Licht eines Elements analysieren zu können mpüssen wir die spektrallinien auffächern. Hier im Experiment wird dies mit einer Form des Ebert Monochromators umgesetzt. Dabei handelt es sich um um zwei  Spalte durch die das Licht ein- und ausfallen kann. Während dem Durchgang wird der Lichtstrahl zwischen zwei Reflexionen an einem Hohlspiegel auch an einem Gitter umgelenkt. Dieses Gitter ist nun drehbar und der Winkel $\delta$ in \ref{fig:Monochromator} bezeichnet die Verstellung bezüglich der parallel Lichtstrahlen. 
+
+\subsection{Quantenmechanik}
+\subsubsection{Schrödingergleichung}
+Während das Bohrsche Atommodell in der Lage ist die Spektrallinien von Wasserstoff vorherzusagen, so versagt es doch bei der Erklärung der Fein- und Hyperfeinstruktur, sowie der Vorhersage von Spektrallinien bei Atomen mit mehr als einem Elektron. Aus der 1927 nachgewiesenen de Broglie Beziehung zwischen Impuls und Wellenlänge $ \lambda=\frac{h}{p} $ wobei h das Plank'sche Wikrungsquantum ist und der aus dem Photoeffekt bekannten Beziehung $ E=hf=\hbar \omega $ kann man die Schrödingergleichung motivieren. In der Quantenmechanik beschreibt man Teilchen mithilfe von Wellenfunktionen. Dabei beschreibt man ein freies Teilchen als ebene Welle.
+\begin{equation}
+\Psi(\vec{x},t)=A e^{i(k \vec{x}-\omega t)}
+\end{equation} 
+Als erstes betrachten wir die Zeit- und Ortsableitung dieser ebenen Welle. 
+\begin{equation}
+\label{eq:Energie} \frac{\partial}{\partial t} \Psi(\vec{x},t)=(-i\omega)  \Psi(\vec{x},t)=-\frac{iE}{\hbar} \Psi(\vec{x},t) \Rightarrow i\hbar \frac{\partial}{\partial t}=E  \Psi(\vec{x},t) \end{equation}
+\begin{equation}
+\label{eq:Impuls} \nabla  \Psi(\vec{x},t) =i\vec{k} \Psi(\vec{x},t)=\frac{i\vec{p}}{\hbar} \Psi(\vec{x},t) \Rightarrow -i\hbar \nabla  \Psi(\vec{x},t)= \vec{p}    \: \Psi(\vec{x},t) \end{equation}
+Aus der klassischen Mechanik wissen wir, dass die Energie eines Teilchens \begin{equation} E=T+V=\frac{\vec{p}^2}{2\mu}+V(\vec{x}) 	\end{equation} wobei $\mu$ die reduzierte Masse ist. Um daraus eine quantenmechanische Beschreibung zu erhalten muss man den Impuls nach Gl. \ref{eq:Impuls} als $-i\hbar \nabla$ schhreiben und die Energie als $i \hbar \frac{\partial}{\partial t}$ schreiben und die Gleichung mit $\Psi(\vec{x},t)$ multiplizieren. Daraus erhält man dann 
+\begin{equation}
+\label{eq:Schrodinger}
+i\hbar \frac{\partial}{\partial t}\Psi(\vec{x},t)=(-\frac{\hbar^2}{2\mu}\nabla^2+V(\vec{x})) \Psi(\vec{x},t) 
+\end{equation}
+was die Schrödingergleichung ist.
+\subsubsection{Das Wasserstoffatom}
+Um jetzt die gebundenen Energiezustände des Wasserstoffatoms zu berechnen und damit dann die $\delta E$ der Spektrallinien zu erhalten muss man die Schrödingergleichung für ein Potential
+\begin{equation}
+	V(r)=\frac{-e^2}{4\pi \epsilon} \frac{1}{r}
+\end{equation}
+lösen, also die Welleneigenfunkionen bestimmen. Da diese Rechnung in jedem Buch zur Quantenmechanik gefunden werden kann sparen wir uns hier die ausführlichen Rechnungen und Ergebnisse. Für unsere Zwecke reicht es zu wissen, dass die Energieniveaus $E_{n}$ gegeben sind durch
+\begin{equation}
+\label{eq:Wasserstoff}
+	E_{n}=\frac{-e^4\mu}{8\epsilon_0^2h^2}*\frac{1}{n^2}=-\frac{\mu c^2}{2}\frac{\alpha^2}{n^2}
+\end{equation} und wir aus der Lösung der Gleichung zwei weitere Quantenzahlen l,m erhalten, wobei l=0,1,2,...,n-1 den Drehimpuls quantifizieren und m=-l,(-l+1),...(l-1),l m die magnetische Quantenzahl ist. Die Energiewerte sind in l und m entartet, da diese die Energie für ein gegebenens n nicht ändern.
+\subsubsection{Feinstruktur}
+Die Entartung der Energiewerte aus Gl. \ref{eq:Wasserstoff} wird in l aufgehoben, wenn man die Korrekturen der Feinstruktur betrachetet. Dabei berücksichtigt man die relativistische Massenkorrektur des Elektrons sowie die Spin-Bahn-Kopplung des magnetischen Moments des Elektrons an seine Bahn. Außerdem kommt noch der Darwin-Term hinzu den man nicht durch Störungsrechnung motivieren kann, sondern ein Ergebnis der relativistischen Behandlung des Wasserstoffatoms mit der Dirac-Gleichung ist. 
+
+%%Hier müssen die korrekturterme hin. und noch etwas beschriebung der LS kopplung 
+%Na doppellinie"
+\subsection{Beugung}
+\subsubsection{Einfachspalt}
+\subsubsection{Doppelspalt}
+\subsubsection{Beugungsgitter}
+
+\subsubsection{Balmer Serie}
+\subsection{Isotopenshift}
+
+
+
+(\subsection{Hyperfeinstruktur})
+\subsection{Auswahlregeln} % (Vllt zur Balmerserie dazu)
 
 \begin{figure}[!h]
 \centering
@@ -54,6 +102,17 @@ Um nun die das Licht eines Elements analysieren zu können mpüssen wir die spek
 \section{Experiment}
 \subsection{Setup}
 Hier im Expermient wird ein Ebert Monochromator benutzt. 
+%Wellenlängen der Na und Zi Lampe die wir zum kallibrieren verwendet haben:
+
+
+\subsection{Auswertung}
+%Tabelle
+%Gemittelte Wellenlängen und energien der Übergänge
+%Rydbergconstante
+%Irgendwas mit den Dopplelinien
+\subsection{Fehlerdiskussion}
+
+\subsection{Fazit}
 
 \section{Anhang}
 
