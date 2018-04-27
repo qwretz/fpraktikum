@@ -1,8 +1,7 @@
 Natrium Doublett Wellenl‰nge [nm]
 589.0	589.6
 
-Ordnung	Maﬂ /cm	Skalenteile
-
+Ordnung	Masz	Skalenteile	dumm	arsch
 1	89.0	0.15	2.3	0.15
 2	184.3	0.3	2.0	0.3
 3	280.5	0.5	1.6	0.5
