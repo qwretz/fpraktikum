@@ -71,8 +71,35 @@ Die Entartung der Energiewerte aus Gl. \ref{eq:Wasserstoff} wird in l aufgehoben
 
 %%Hier müssen die korrekturterme hin. und noch etwas beschriebung der LS kopplung 
 %Na doppellinie"
-\subsection{Beugung}
+\subsection{Beugung und Interferenz} %Neu schreiben mit es Photonen als anfang und dann welleneigenschaften
+Interferenz und Beugung sind Phänomene die nur bei Wellen beobachtet werden. Die Überlegungen von de Broglie zur Materie-welle und der Beweis des Teilchencharakters von Photonen beschreiben die gleichzeitige Existenz eines Teilchens als Welle. Dies wird dann in der Quantenmechanik mathematisch Beschrieben. 
 \subsubsection{Einfachspalt}
+Fällt Licht auf einen einzelnen Spalt, so detektiert man dahinter nicht eine Normalverteilung der Intensität um die mitte des Spalts, sondern ein Interferenzmuster(Abb (\ref{fig:?????})). Insbesondere die Nebenmaxima lassen sich nicht mit klassischen Überlegungen erklären, da dieses Muster auch dann auftritt, wenn man einzelne Photonen durch den Spalt schickt und diese deshalb nicht miteinander Interferieren können.%Hier könnte man den klugscheißerkommentar anbringen vonwegen eichtheorie bla bla bla
+Die Frage ist jetzt wie dieses Muster entstehen kann wo es doch nicht also Bewegung der Photonen aufgrund einer Bewegungsgleichung beschrieben wird. Betrachten wir das Photon als Teilchen, dass eine Wahrscheinlichkeitsdichte $\Psi(x)$ hat, dass sich auf den Spalt zubewegt, können wir es beschreiben als 
+\begin{equation}
+	Psi(x)=\Psi_{0}e^{i(kx-\omega t)}
+\end{equation}
+Der Einfachheit halber betrachten wir das Ganze nur in einer Dimension. Nach dem Fresnel'schen Prinzip entsteht an jedem Auftreffpunkt des Spalts eine neue Kugelwelle, welche bis auf eine eventuelle Phasenverschiebung von $\delta =y sin(\alpha) $ ihrer Ursprungswelle gleicht. Dabei ist zu beachten, dass eine Kugelwelle auch eine Beugung entgegen der Bewegungsrichtung des Strahls vorausgesetzt wird, die nicht beobachtet wird. Wir machen weiterhin die Annahme der Frauenhofer Beugung, d.h. dass sich der Schirm unendlich weit weg vom Spalt befindet. Die auslaufende welle kann also beschrieben werden als
+\begin{equation}
+	\Psi(x)=\Psi_{0}e^{i(k(x-\delta)-\omega t)}
+\end{equation}
+Auf einem unendlich weit entfernten Schirm treffen alle Strahlen die den Spalt parallel zueinander durchquert haben am selben Punkt auf. Um die Wahrscheinlichkeitsamplitude an diesem Punkt zu berechnen integrieren wir also über alle Wellen die den Spalt unter dem selben Winkel verlassen.
+\begin{equation}%%%Hier muss irgendow noch ein psinull schlange hin, dass e^-ikx-wt mitnimmt
+	\Psi_{Schirm}(x,\alpha)=\Psi_{0}e^{kx-\omega t}\dfrac{1}{d}\int_{-d/2}^{d/2} e^{-iky\: sin(\alpha)}
+\end{equation}
+\begin{equation}
+	=-\frac{\Psi_{0}}{ikd \: sin \: \alpha} [e^{-iky \: sin(\alpha)}]^{+d/2}_{-d/2}
+\end{equation}
+\begin{equation}
+	=-\frac{\Psi_{0}}{ikd \: sin \: \alpha} \underbrace{(e^{-ik\frac{d}{2}sin(\alpha)}-e^{ik\frac{d}{2}\:sin(\alpha)})}_{-2i\: sin(k\frac{d}{2}sin \alpha))}
+\end{equation}
+\begin{equation}
+	=\Psi_{0}\frac{2}{kd\: sin \: \alpha}sin(\frac{\pi d}{\lambda}sin \: \alpha)
+\end{equation}
+Setzt man jetzt noch $k=\frac{2\pi}{\lambda}$ ein, so ergibt sich die relative Intensität zu
+\begin{equation}
+I_{relativ}=	\frac{|\Psi_{Schirm}|^2}{|\Psi_{0}|^2}=(\frac{\lambda}{\pi d \: sin \: \alpha} sin(\frac{\pi d}{\lambda} sin \: \alpha))^2
+\end{equation}
 \subsubsection{Doppelspalt}
 \subsubsection{Beugungsgitter}
 
@@ -95,6 +122,7 @@ Die Entartung der Energiewerte aus Gl. \ref{eq:Wasserstoff} wird in l aufgehoben
 \caption{Schematische Darstellung eines Ebert Monochromators. Grafiken wurden dem zum Experiment mitgegebenen Skript (SS 2006) entnommen. }
 \label{fig:Monochromator}
 \end{figure}
+
 
 
 
