@@ -1,0 +1,22 @@
+Zink Spketrallinien
+
+Ordnung Maﬂ /cm	Farbe
+
+1	70.7	violett
+1	71.5	blau
+1	72.7	oliv
+1	96.5	rot
+2	142.7	violett
+2	144.3	blau
+2	147.0	oliv
+2	196.5	rot
+3	218.0	violett
+3	220.3	blau
+3	224.7	oliv
+3	305.5	rot
+4	299.3	violett
+4	302.3	blau
+4	308.7	oliv
+4	440.0	rot
+5	390.5	violett
+5	395.3	blau
