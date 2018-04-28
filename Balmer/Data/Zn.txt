@@ -1,7 +1,8 @@
 Zink Spketrallinien
 
-Ordnung Maß /cm	Farbe
+Ordnung Masz	Farbe
 
+0	header	test
 1	70.7	violett
 1	71.5	blau
 1	72.7	oliv

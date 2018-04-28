@@ -1,13 +1,12 @@
-Vergleich der türkisen Doppellinien
-bzgl der Mischung von 10% Deuterium
+Vergleich der trkisen Doppellinien
+bzgl der Mischung von .1 Deuterium
 
 -- Isotopenshift
 
-Maß /cm	Skalenteile
-
+masz	1	2	3
 73.5	0	1.2	0.5
 148.5	0	1.0	0.5
-327.3	0.1	1.0	0
+227.3	0.1	1.0	0
 312.0	0.1	0.7	0
 411.0	0.2	1.0	0
 536.0	0.4	1.0	0

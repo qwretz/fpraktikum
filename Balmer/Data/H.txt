@@ -1,36 +1,37 @@
-Wasserstofflampe, 10% D_2O statt H_2O
+Wasserstofflampe .1 D2O statt H2O
 
-Intensitäten: 1-4 schwach^2 schwach mittel stark
+Intensities: 1-4 schwach_2 schwach mittel stark
 
-Farbe	Maß \cm	Intensität
+Farbe	Msz	Intensity
 
+1	2	gfd
 violett	65.5	3
-türkis	73.5	4
+trkis	73.5	4
 ?	80.7	2
 orange	83.5	3
 rot	99.5	4
 violett	132.0	3
 violett	133.0	2
-trükis	148.5	4
+trkis	148.5	4
 ?	164.0	2
 orange	189.7	2
 violett	201.5	2
 rot	203.0	4
-türkis	227.3	3
+trkis	227.3	3
 ?	251.5	1
 violett	274.0	2
 orange	294.5	2
-türkis	312.0	3
+trkis	312.0	3
 rot	317.0	3
 ?	348.3	1
 violett	355.0	2
-türkis	411.0	3
+trkis	411.0	3
 orange	418.3	2
 violett	451.0	2
 violett	454.3	1
 rot	456.0	3
 ?	465.5	2
-türkis	536.0	3
+trkis	536.0	3
 violett	577.0	2
 rot	705.0	2
 rot	706.5	3
