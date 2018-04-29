@@ -37,7 +37,37 @@ Dadurch können wir nun die Photonenenergie bestimmen, wenn ein Elektron seinen 
 Die lateinische Nomenklatur beschreibt von wie vielen Niveaus oberhalb, auch states genannt, das Elektron auf das Endniveau gefallen ist. Die Anzahl wird mit den Buchstaben gleichgesetzt. So hei"st der \"Ubergang $5 \rightarrow 2$ auch $B_\gamma$.
 
 \subsection{Ebert Monochromator}
-Um nun die das Licht eines Elements analysieren zu können mpüssen wir die spektrallinien auffächern. Hier im Experiment wird dies mit einer Form des Ebert Monochromators umgesetzt. Dabei handelt es sich um um zwei  Spalte durch die das Licht ein- und ausfallen kann. Während dem Durchgang wird der Lichtstrahl zwischen zwei Reflexionen an einem Hohlspiegel auch an einem Gitter umgelenkt. Dieses Gitter ist nun drehbar und der Winkel $\delta$ in \ref{fig:Monochromator} bezeichnet die Verstellung bezüglich der parallel Lichtstrahlen. 
+Um das Licht eines Elements analysieren zu können müssen wir die Spektrallinien auffächern. Hier im Experiment wird dies mit einer Form des Ebert Monochromators umgesetzt. Dabei handelt es sich um um zwei  Spalte durch die das Licht ein- und ausfallen kann. Während dem Durchgang wird der Lichtstrahl zwischen zwei Reflexionen an einem Hohlspiegel auch an einem Gitter umgelenkt. Dieses Gitter ist nun drehbar und der Winkel $\delta$ in  Abbildung \ref{fig:Monochromator} bezeichnet die Verstellung bezüglich der parallel Lichtstrahlen. 
+
+\begin{figure}[!h]
+\centering
+\begin{subfigure}{0.55\textwidth}
+\includegraphics[width=\linewidth]{Plots/1.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.4\linewidth}
+\includegraphics[width=\linewidth]{Plots/2.png}
+\end{subfigure}
+\caption{Schematische Darstellung eines Ebert Monochromators. Grafiken wurden dem zum Experiment mitgegebenen Skript (SS 2006) entnommen. }
+\label{fig:Monochromator}
+\end{figure}
+
+Durch das drehbare Gitter erhält man trotz konstantem Strahlengang, welcher durch die festen Positionen der Spalte gegeben ist, eine Änderung im Laufweg des Lichts, je nach Wellenlänge. Diesen Unterschied erkennt man, wenn man wie im späteren Einzelspalt die verschiedenen Maxima betrachtet. 
+
+% SKIZZE einfügen für den Strahlengang im Gitter + Herleitung
+So erhält man aus Abbildung <<<ref>>> folgende Bedingung an Gangunterschied bei konstruktiver Interferenz:
+
+\begin{equation}
+\Delta = g\cdot sin(\beta) + g\cdot sin(\gamma) = g\cdot \left( sin(\delta - \alpha) + sin(\delta + \alpha)  \right)
+\end{equation}
+\begin{equation}
+\Delta = g\cdot ( sin(\delta)cos(\alpha) + cos(\delta)sin(\alpha) +  sin(\delta)cos(\alpha) - cos(\delta)sin(\alpha) ) 
+\end{equation}
+\begin{equation}
+\Delta= 2g \cdot cos(\alpha) sin(\delta) =: c \cdot sin(\delta) \stackrel{!}{=} n\lambda
+\label{eq:}
+\end{equation}
+ 
+ 
 
 \subsection{Quantenmechanik}
 \subsubsection{Schrödingergleichung}
@@ -111,29 +141,29 @@ I_{relativ}=	\frac{|\Psi_{Schirm}|^2}{|\Psi_{0}|^2}=(\frac{\lambda}{\pi d \: sin
 (\subsection{Hyperfeinstruktur})
 \subsection{Auswahlregeln} % (Vllt zur Balmerserie dazu)
 
-\begin{figure}[!h]
-\centering
-\begin{subfigure}{0.55\textwidth}
-\includegraphics[width=\linewidth]{Plots/1.png}
-\end{subfigure}
-\begin{subfigure}[c]{0.4\linewidth}
-\includegraphics[width=\linewidth]{Plots/2.png}
-\end{subfigure}
-\caption{Schematische Darstellung eines Ebert Monochromators. Grafiken wurden dem zum Experiment mitgegebenen Skript (SS 2006) entnommen. }
-\label{fig:Monochromator}
-\end{figure}
-
-
-
 
 \newpage
 \section{Experiment}
 \subsection{Setup}
-Hier im Expermient wird ein Ebert Monochromator benutzt. 
+
+Hier im Expermient wird ein Ebert Monochromator benutzt wie er auch schon in der Theorie beschrieben wurde. Der Aufbau wurde durch einen justierbaren Spiegel über dem Gitter erweitert. Der Spiegel ist verbunden mit der Gitterachse und dreht sich somit mit wenn der Winkel verändert wird. Dadurch wird zusätzliches Licht, das auf den Spiegel geworfen wird auf ein Maßband reflektiert. Dieses Maßband wurde in einem $90^\circ$ Winkel angebracht. Der Abstand zwischen Spiegel und Maßband wurde folgendermaßen ermittelt:
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{c|c|c|c|c|c}
+		Messung & 1 & 2 & 3 & 4 & Mittelwert \\
+		\hline
+		Abstand [cm] & 250 & 250.5 & 250 & 250.5 & 250.25 $\pm$ 0.25 \\
+	\end{tabular}
+	\caption{Gemessene Abstände zwischen Spiegel und Maßband.}
+\end{table}
+
 %Wellenlängen der Na und Zi Lampe die wir zum kallibrieren verwendet haben:
 
 
 \subsection{Auswertung}
+\subsubsection{Gitterkonstante}
+Die Gitterkonstante c ist essentiell für diesen Versuch, damit wir später die Rydbergkonstante bestimmen  können. Zunächst betrachten wir die theoretische Bestimmung von c.
 %Tabelle
 %Gemittelte Wellenlängen und energien der Übergänge
 %Rydbergconstante
