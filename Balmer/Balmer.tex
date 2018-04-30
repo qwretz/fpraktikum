@@ -131,6 +131,29 @@ Setzt man jetzt noch $k=\frac{2\pi}{\lambda}$ ein, so ergibt sich die relative I
 I_{relativ}=	\frac{|\Psi_{Schirm}|^2}{|\Psi_{0}|^2}=(\frac{\lambda}{\pi d \: sin \: \alpha} sin(\frac{\pi d}{\lambda} sin \: \alpha))^2
 \end{equation}
 \subsubsection{Doppelspalt}
+Die Herleitung der Intensitätsverteilung beim Doppelspalt erfolgt analog zu der beim Einfachspalt. Anstatt aber nur über den einen Spalt zu integrieren, integriert man über zwei. 
+%Hier das Bild vom Doppelspalt hin
+\begin{equation}
+	\Psi_{doppelt}(x,a)=\Psi_{0}\frac{1}{2d}(\int_{-D/2-d/2}^{-D/2+d/2}e^{-iky \: sin \: \alpha}dy+\int_{D/2-d/2}^{D/2+d/2}e^{-iky \: sin \: \alpha}dy)
+\end{equation}
+\begin{equation}
+	=-\frac{\Psi_{0}}{2idk \: sin \: \alpha}([e^{-iky \: sin \alpha}]_{-D/2-d/2}^{-D/2+d/2}+[e^{-iky \: sin \alpha}]_{D/2-d/2}^{D/2+d/2})
+\end{equation}
+
+
+\begin{equation}
+	=\frac{\Psi_{0}}{2idk \: sin \: \alpha}(e^{ik\frac{D}{2} sin \: \alpha}+ e^{-ik\frac{D}{2} sin \: \alpha})(e^{-ik\frac{d}{2} sin \: \alpha}+ e^{ik\frac{d}{2} sin \: \alpha})
+\end{equation}
+
+\begin{equation}
+	=\Psi_{0}\frac{2}{dk \: sin \: \alpha}sin (\frac{kd}{2} sin \: \alpha)\: cos(\frac{kD}{2}sin \: \alpha)
+\end{equation}
+mit $k=\frac{2 \pi}{\lambda}$ ergibt sie die relative Intensität zu
+\begin{equation}
+	I_{relativ}=	\frac{|\Psi_{doppelt}|^2}{|\Psi_{0}|^2}=\left(\frac{\lambda}{\pi d \: sin \: \alpha}sin(\left  \frac{\pi d}{\lambda}sin \: \alpha \right)\right)^2 \cdot cos^2 \left( \frac{\pi D}{\lambda}sin \: \alpha \right) 
+\end{equation}
+
+%Hier muss dann die Herleitung hin
 \subsubsection{Beugungsgitter}
 
 \subsubsection{Balmer Serie}
