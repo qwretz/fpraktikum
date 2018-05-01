@@ -176,13 +176,57 @@ Hier im Expermient wird ein Ebert Monochromator benutzt wie er auch schon in der
 
 
 \subsection{Auswertung}
-\subsubsection{Gitterkonstante}
-Die Gitterkonstante c ist essentiell für diesen Versuch, damit wir später die Rydbergkonstante bestimmen  können. Zunächst betrachten wir die theoretische Bestimmung von c.
+\subsubsection{Natrium Doppellinien}
+
+\subsubsection{Zink Spektrallinien}
+Nach dem Wechsel zur Zink Lampe wurden erneut die 4m des Maßbandes abgefahren um nach Spektrallinien zu suchen. Abbildung \ref{fig:Zink} veranschaulicht die gefundenen Linien. Man erkennt sehr schön die erwarteten vier Linien pro Ordnung. Die farbliche Reihenfolge jeder Ordnung beleibt auch stets konstant jedoch beginnt die 4. Ordnung bereits bevor die Dritte abgeschlossen ist. Wir konnten vier komplette Ordnungen vermessen und die ersten zwei Linien der Fünften. Ebenso ist es deutlich geworden, dass, wie erwartet, mit zunehmender Ordnung der Anstand zwischen den Spektrallinien deutlich zunimmt. 
+
+% Warum ist der Abstandn bei den letzten 3 Spektrallinien plötzlich so groß?
+% Tabelle für die Messwerte -> Anhang?
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=.9\linewidth]{{Plots/Zink Linien.png}}
+\caption{ }
+\label{fig:Zink}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% WARUM erstellt er eine Über-/Unterschrift zur fig ?
+\begin{figure}[!h]
+\centering
+\includegraphics[width=.9\linewidth]{Plots/Ryd H.png}
+\caption{Bestimmung der Monochromatorkonsante durch einen linearen Fit. Gewichtung des Fits mit Fehlern auf den gemessenen Winkel $\delta$. Zoom zur Veranschaulichung der einzelnen Datenpunkte. Wellenlängen wurden aus dem Skript zum Versuch \cite{skript} entnommen. }
+\label{fig:Zink}
+\end{figure}
+
+\subsubsection{Monochromatorkonstante}
+Die Monochromatorkonstante c ist essentiell für diesen Versuch, damit wir später die Rydbergkonstante bestimmen  können. Zunächst betrachten wir die theoretische Bestimmung von c. Durch die aus dem Skript gegebenen Werte von Abstand zwischen den Spalten und ihrem Auftreffpunkt am Hohlspiegel F, dem Abstand zwischen diesen Auftreffpunkten 2R und dem Abstand zwischen Gitter und den Spalten D, können wir nun c bestimmen. 
+
+\begin{align}
+F&= 400mm ,\: D= 59mm ,\: R=30mm \:\: sowie \: Gitterkonstante \: g=\frac{1mm}{600} \\
+c&= 2g\: cos(\alpha) = 2g\: \frac{F-D}{\sqrt{(F-D)^2 + R^2}} = 3320.5\:nm
+\end{align}
+
+Diesen Wert vergleichen wir nun mit den Ergebnissen, welche aus den Daten der Natrium-Doppellinien und den Zink Spektrallinien erhalten. Wie es bereits in der Theorie dargestellt wurde tragen wir $sin(\delta)$ gegen die Wellenlänge gewichtet mit der Ordnung des Maximums $n\cdot\lambda$ auf, siehe Abbildung \ref{fig:MonoConst}.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=.9\linewidth]{Plots/Gitterkonstante.png}
+\caption{Bestimmung der Monochromatorkonsante durch einen linearen Fit. Gewichtung des Fits mit Fehlern auf den gemessenen Winkel $\delta$. Zoom zur Veranschaulichung der einzelnen Datenpunkte. Wellenlängen wurden aus dem Skript zum Versuch \cite{skript} entnommen. }
+\label{fig:MonoConst}
+\end{figure}
+
+% Werte /tabelle iwo hin kltschen...
+Das Resultat aus dem linearen Fit entspricht innerhalb seines Fehlers genau dem Wert aus den gegebenen Werten. Mit dieser Übereinstimmung von ca. $99.96\%$ zum geometrischen Ergebnis kann man mit guten Gewissen im folgenden diesen Wert zur Bestimmung der Rydbergkonstanten benutzen.
+
 %Tabelle
 %Gemittelte Wellenlängen und energien der Übergänge
 %Rydbergconstante
 %Irgendwas mit den Dopplelinien
 \subsection{Fehlerdiskussion}
+
+Zu beachten war, dass zwischen dem Winkel des Gitters und jenem welchen wir über das Maßband bestimmen konnten, ein Übersetzungsfaktor von 2 liegt. Für die Speltrallinien der Wasserstoff-Deuterium-Lampe haben wir im Raum einem Winkel von fast $180^\circ$ ausgenutzt, welches einer Gitterstellung von bis zu $90^\circ$ entspricht. Bei höheren Werten für $\delta$ gäbe es keine Linien zu sehen, da das Licht in die andere Richtung reflektiert wird. Ebenso kann die erneute Justierung des Spiegels nach $90^\circ$ zu einer Verschiebung im Winkel für die höheren Messungen geführt haben, jedoch wären dies nur wenige $cm$ und damit auch nur Verschiebungen vom wenigen Zehntel Grad, welche sehr gering sind.
+
+% Fit funktionen?
 
 \subsection{Fazit}
 
@@ -192,6 +236,8 @@ Die Gitterkonstante c ist essentiell für diesen Versuch, damit wir später die 
 \newpage
 \begin{thebibliography}{}
 
+\bibitem{skript} \begin{verbatim}
+lectures__2006__ss06_FPraktikum__V17_20060907_BalmerSerie.pdf \end{verbatim} (Begleitendes Skript zum Versuch 17: Balmer Serie)
 
 \end{thebibliography}
 \end{document}
