@@ -27,10 +27,10 @@ asdf
 Der klassische Ansatz ein Atom zu beschreiben ist ungenügend. Normalerweise würde man ein durchgängiges Spektrum an Strahlung erwarten, da der Abstand zwischen Kern und Elektron zunächst nicht beschränkt ist. Das Gegenteil wird jedoch gemessen. Ebenso sollte von einer bewegten Ladung Strahlung emittiert werden, dies geschieht im Atom jedoch nur wenn sich der Abstand verkleinert. Dies bewegte Bohr 1913 dazu seine Postulate zu formulieren. Darin beschreibt er, dass das Elektron den Kern umkreist und durch die elektrostatische Kraft auf seiner Umlaufbahn gehalten wird ohne dabei Strahlung auszusenden. Diese Bahnen werden durch ihren Drehimpuls $l = pr = n\hbar$ beschrieben. Hier bei beschreibt $n$ die Ordnung der Bahn, auch Hauptquantenzahl genannt. Zuletzt entspricht die Energie des emittierten bzw. absorbierten Photons dem Energieunterschied des Elektrons auf verschiedenen Umlaufbahnen $ \hbar \omega = E_2 - E_1$. 
 
 Generell erhält man aus der Behandlung der Schrödingergleichung dieselbe Energie für verschiedenen $n$, welche auch aus der Gleichsetzung von Coulomb- und Zentripetalkraft folgt. $R_\infty$ wird auch Rydbergkonstante genannt. 
-\begin{equation}
+\begin{equation}\label{eq:Energieniveaus_H}
 E_n = -\frac{1}{2} m_0 c^2 \alpha^2 \frac{Z^2}{n^2} = -13.6eV \cdot \frac{Z^2}{n^2} \: ; \: \alpha = \frac{e^2}{4\pi\epsilon_0 \hbar c} = \frac{1}{137}
 \end{equation}
-\begin{equation}
+\begin{equation}\label{eq:deltaE_H}
 \Delta E = R_\infty \left(\frac{1}{n^2} - \frac{1}{m^2} \right)  = -13.6eV \cdot \left(\frac{1}{n^2} - \frac{1}{m^2} \right)
 \end{equation}
 Dadurch können wir nun die Photonenenergie bestimmen, wenn ein Elektron seinen Bahn ändert. Im folgenden sowie bereits in der zweiten Gleichung behandeln wir das Wasserstoff Atom mit $Z=1$.Hierbei wird in verschiedene Serien unterschieden, je nachdem in welche das Elektron landet, nach Photon-Emission. Jede Serie wurde nach Entdecker benannt. Die ultravioletten Spektrallinien der Lyman (Ly) Serie $Ly_\alpha \:,\: Ly_\beta \:,\: Ly_\gamma \:,\: ...$ besitzt als Grundniveau den Zustand $n=1$. Analog wurden auch die infraroten Serien Brackett (B) $n=4$ und Paschen (Pa) $n=3$, sowie die sichtbare Balmer (H) Serie $n=2$ entdeckt. 
@@ -55,18 +55,11 @@ Durch das drehbare Gitter erhält man trotz konstantem Strahlengang, welcher dur
 
 % SKIZZE einfügen für den Strahlengang im Gitter + Herleitung
 So erhält man aus Abbildung <<<ref>>> folgende Bedingung an Gangunterschied bei konstruktiver Interferenz:
-
-\begin{equation}
-\Delta = g\cdot sin(\beta) + g\cdot sin(\gamma) = g\cdot \left( sin(\delta - \alpha) + sin(\delta + \alpha)  \right)
-\end{equation}
-\begin{equation}
-\Delta = g\cdot ( sin(\delta)cos(\alpha) + cos(\delta)sin(\alpha) +  sin(\delta)cos(\alpha) - cos(\delta)sin(\alpha) ) 
-\end{equation}
-\begin{equation}
-\Delta= 2g \cdot cos(\alpha) sin(\delta) =: c \cdot sin(\delta) \stackrel{!}{=} n\lambda
-\label{eq:}
-\end{equation}
- 
+\begin{align}
+\Delta &= g\cdot sin(\beta) + g\cdot sin(\gamma) = g\cdot \left( sin(\delta - \alpha) + sin(\delta + \alpha)  \right) \\
+ &= g\cdot ( sin(\delta)cos(\alpha) + cos(\delta)sin(\alpha) +  sin(\delta)cos(\alpha) - cos(\delta)sin(\alpha) ) \\
+ &= 2g \cdot cos(\alpha) sin(\delta) =: c \cdot sin(\delta) \stackrel{!}{=} n\lambda 
+\end{align}
  
 
 \subsection{Quantenmechanik}
@@ -114,49 +107,47 @@ Der Einfachheit halber betrachten wir das Ganze nur in einer Dimension. Nach dem
 	\Psi(x)=\Psi_{0}e^{i(k(x-\delta)-\omega t)}
 \end{equation}
 Auf einem unendlich weit entfernten Schirm treffen alle Strahlen die den Spalt parallel zueinander durchquert haben am selben Punkt auf. Um die Wahrscheinlichkeitsamplitude an diesem Punkt zu berechnen integrieren wir also über alle Wellen die den Spalt unter dem selben Winkel verlassen.
-\begin{equation}%%%Hier muss irgendow noch ein psinull schlange hin, dass e^-ikx-wt mitnimmt
-	\Psi_{Schirm}(x,\alpha)=\Psi_{0}e^{kx-\omega t}\dfrac{1}{d}\int_{-d/2}^{d/2} e^{-iky\: sin(\alpha)}
-\end{equation}
-\begin{equation}
-	=-\frac{\Psi_{0}}{ikd \: sin \: \alpha} [e^{-iky \: sin(\alpha)}]^{+d/2}_{-d/2}
-\end{equation}
-\begin{equation}
-	=-\frac{\Psi_{0}}{ikd \: sin \: \alpha} \underbrace{(e^{-ik\frac{d}{2}sin(\alpha)}-e^{ik\frac{d}{2}\:sin(\alpha)})}_{-2i\: sin(k\frac{d}{2}sin \alpha))}
-\end{equation}
-\begin{equation}
-	=\Psi_{0}\frac{2}{kd\: sin \: \alpha}sin(\frac{\pi d}{\lambda}sin \: \alpha)
-\end{equation}
+\begin{align}%%%Hier muss irgendow noch ein psinull schlange hin, dass e^-ikx-wt mitnimmt
+	\Psi_{Schirm}(x,\alpha)&=\Psi_{0}e^{kx-\omega t}\frac{1}{d}\int_{-d/2}^{d/2} e^{-iky\: sin(\alpha)}  \\ 
+	%
+	&=-\frac{\Psi_{0}}{ikd \: sin \: \alpha} [e^{-iky \: sin(\alpha)}]^{+d/2}_{-d/2} \\
+	%
+	&=-\frac{\Psi_{0}}{ikd \: sin \: \alpha} \underbrace{(e^{-ik\frac{d}{2}sin(\alpha)}-e^{ik\frac{d}{2}\:sin(\alpha)})}_{-2i\: sin(k\frac{d}{2}sin \alpha))} \\
+	%
+	&=\Psi_{0}\frac{2}{kd\: sin \: \alpha}sin(\frac{\pi d}{\lambda}sin \: \alpha) 
+\end{align}
 Setzt man jetzt noch $k=\frac{2\pi}{\lambda}$ ein, so ergibt sich die relative Intensität zu
 \begin{equation}
 I_{relativ}=	\frac{|\Psi_{Schirm}|^2}{|\Psi_{0}|^2}=(\frac{\lambda}{\pi d \: sin \: \alpha} sin(\frac{\pi d}{\lambda} sin \: \alpha))^2
 \end{equation}
+
+Hier muss noch etwas über die Lage der maxima und minima hin
 \subsubsection{Doppelspalt}
 Die Herleitung der Intensitätsverteilung beim Doppelspalt erfolgt analog zu der beim Einfachspalt. Anstatt aber nur über den einen Spalt zu integrieren, integriert man über zwei. 
 %Hier das Bild vom Doppelspalt hin
-\begin{equation}
-	\Psi_{doppelt}(x,a)=\Psi_{0}\frac{1}{2d}(\int_{-D/2-d/2}^{-D/2+d/2}e^{-iky \: sin \: \alpha}dy+\int_{D/2-d/2}^{D/2+d/2}e^{-iky \: sin \: \alpha}dy)
-\end{equation}
-\begin{equation}
-	=-\frac{\Psi_{0}}{2idk \: sin \: \alpha}([e^{-iky \: sin \alpha}]_{-D/2-d/2}^{-D/2+d/2}+[e^{-iky \: sin \alpha}]_{D/2-d/2}^{D/2+d/2})
-\end{equation}
-
-
-\begin{equation}
-	=\frac{\Psi_{0}}{2idk \: sin \: \alpha}(e^{ik\frac{D}{2} sin \: \alpha}+ e^{-ik\frac{D}{2} sin \: \alpha})(e^{-ik\frac{d}{2} sin \: \alpha}+ e^{ik\frac{d}{2} sin \: \alpha})
-\end{equation}
-
-\begin{equation}
-	=\Psi_{0}\frac{2}{dk \: sin \: \alpha}sin (\frac{kd}{2} sin \: \alpha)\: cos(\frac{kD}{2}sin \: \alpha)
-\end{equation}
+\begin{align}
+	\Psi_{doppelt}(x,a)&=\Psi_{0}\frac{1}{2d}(\int_{-D/2-d/2}^{-D/2+d/2}e^{-iky \: sin \: \alpha}dy+\int_{D/2-d/2}^{D/2+d/2}e^{-iky \: sin \: \alpha}dy)\\
+%
+	&=-\frac{\Psi_{0}}{2idk \: sin \: \alpha}([e^{-iky \: sin \alpha}]_{-D/2-d/2}^{-D/2+d/2}+[e^{-iky \: sin \alpha}]_{D/2-d/2}^{D/2+d/2})\\
+%
+	&=\frac{\Psi_{0}}{2idk \: sin \: \alpha}(e^{ik\frac{D}{2} sin \: \alpha}+ e^{-ik\frac{D}{2} sin \: \alpha})(e^{-ik\frac{d}{2} sin \: \alpha}+ e^{ik\frac{d}{2} sin \: \alpha})\\
+%5
+	&=\Psi_{0}\frac{2}{dk \: sin \: \alpha}sin (\frac{kd}{2} sin \: \alpha)\: cos(\frac{kD}{2}sin \: \alpha)
+\end{align}
 mit $k=\frac{2 \pi}{\lambda}$ ergibt sie die relative Intensität zu
-\begin{equation}
-	I_{relativ}=	\frac{|\Psi_{doppelt}|^2}{|\Psi_{0}|^2}=\left(\frac{\lambda}{\pi d \: sin \: \alpha}sin(\left  \frac{\pi d}{\lambda}sin \: \alpha \right)\right)^2 \cdot cos^2 \left( \frac{\pi D}{\lambda}sin \: \alpha \right) 
-\end{equation}
+\begin{align}
+	I_{relativ}&=	\frac{|\Psi_{doppelt}|^2}{|\Psi_{0}|^2}=\left( \frac{\lambda}{\pi d \: sin \: \alpha}sin \left(  \frac{\pi d}{\lambda} sin \: \alpha \right)\right)^2 \cdot cos^2 \left( \frac{\pi D}{\lambda}sin \: \alpha \right) 
+\end{align}
+
+Auch hier was über die lage der maxima und minmima noch hinschreiben
+
+
 
 %Hier muss dann die Herleitung hin
 \subsubsection{Beugungsgitter}
-
+Schreiben...
 \subsubsection{Balmer Serie}
+Die Übergänge im Wasserstoff von $n>3$ auf $n=2$ bezeichnet man als Balmer Serie. Die Wellenlängen dieser Übergänge lassen sich nach Gl. \ref{eq:Energieniveaus_H} einfach berechnen. Dabei sind die Wellenlängen mit m=3,4,5,6 zwischen 400nm und 700nm, also im sichtbaren Bereich. Sie sind deshalb besonders einfach nachzuweisen, da wir unser Auge als Detektor verwenden können, der sowohl die Lage als auch die Wellenlänge (Farbe) und auch qualitativ die Intensität der Übergänge bestimmen kann.
 \subsection{Isotopenshift}
 
 
