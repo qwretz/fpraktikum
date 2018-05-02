@@ -213,14 +213,13 @@ Die der Inhalt Wasserstofflampe, welche zur Aufnahme der Balmer Serie benutzt wi
 Nach dem Wechsel zur Zink Lampe wurden erneut die 4m des Maßbandes abgefahren um nach Spektrallinien zu suchen. Abbildung \ref{fig:Zink} veranschaulicht die gefundenen Linien. Man erkennt sehr schön die erwarteten vier Linien pro Ordnung. Die farbliche Reihenfolge jeder Ordnung beleibt auch stets konstant jedoch beginnt die 4. Ordnung bereits bevor die Dritte abgeschlossen ist. Wir konnten vier komplette Ordnungen vermessen und die ersten zwei Linien der Fünften. Ebenso ist es deutlich geworden, dass, wie erwartet, mit zunehmender Ordnung der Anstand zwischen den Spektrallinien deutlich zunimmt. 
 
 % Warum ist der Abstandn bei den letzten 3 Spektrallinien plötzlich so groß?
-% Weil sich der Abstand mit jeder Ordnung um ca 30% vergrößert
 
 % Tabelle für die Messwerte -> Anhang? 
 % Die für alle Messwerte ja, die für die gemittelten wellenlängen würde ich hier rein schreiben
 
 \begin{figure}[!h]
 \centering
-\caption{ }
+\caption{ Grafische Darstellung des Zinkspektrums inkl. zugewiesenen Ordnungen der Maxima. Für exakte Daten siehe Anhang: Tabelle \ref{Zn Data} }
 \label{fig:Zink}
 \includegraphics[width=.9\linewidth]{Plots/Zink_Linien.png}
 
@@ -242,7 +241,7 @@ Diesen Wert vergleichen wir nun mit den Ergebnissen, welche aus den Daten der Na
 \begin{figure}[!h]
 \centering
 \includegraphics[width=.9\linewidth]{Plots/Monochromatorkonstante.png}
-\caption{Bestimmung der Monochromatorkonsante durch einen linearen Fit. Gewichtung des Fits mit Fehlern auf den gemessenen Winkel $\delta$. Zoom zur Veranschaulichung der einzelnen Datenpunkte. Wellenlängen wurden aus dem Skript zum Versuch \cite{skript} entnommen. }
+\caption{Bestimmung der Monochromatorkonsante durch einen linearen Fit. Gewichtung des Fits mit Fehlern auf den gemessenen Winkel $\delta$. Zoom zur Veranschaulichung der einzelnen Datenpunkte. Wellenlängen wurden aus dem Skript zum Versuch \cite{skript} entnommen. Weitere Werte siehe Anhang, Tabelle \ref{c Data}. }
 \label{fig:MonoConst}
 \end{figure}
 
@@ -280,7 +279,7 @@ Hierbei erkennen wir deutlich die ersten drei Spektrallinien der Balmer Serie so
 	\caption{Zuordnung der gemessenen Spektrallinien der Wasserstofflampe.}
 \end{table}
 
-Dabei konnten wir nur an drei Linien die Differenz der Wasserstoff- und Deuteriumlinien erkennen. Die violette Linie spaltete sich in den Ordnungen 2 und 6 sichtbar auf sowie dir rote am Ende des Spektrums in 5. Ordnung. Nachträglich wurden noch die türkisen Linien genauer betrachtet, jedoch ist deren Unterschied sehr gering gewesen.
+Dabei konnten wir nur an drei Linien die Differenz der Wasserstoff- und Deuteriumlinien deutlich erkennen. Die violette Linie spaltete sich in den Ordnungen 2 und 6 sichtbar auf sowie dir rote am Ende des Spektrums in 5. Ordnung. Nachträglich wurden noch die türkisen Linien genauer betrachtet, jedoch ist deren Unterschied sehr gering gewesen.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Grafik hier oder bei Auflösungsvermögen
 
 \subsubsection{Rydbergkonstante}
@@ -330,12 +329,113 @@ Unsere Ergebnisse sind somit immer etwa um $0.1\%$ größer als der Literaturwer
 
 Zu beachten war, dass zwischen dem Winkel des Gitters und jenem welchen wir über das Maßband bestimmen konnten, ein Übersetzungsfaktor von 2 liegt. Für die Speltrallinien der Wasserstoff-Deuterium-Lampe haben wir im Raum einem Winkel von fast $180^\circ$ ausgenutzt, welches einer Gitterstellung von bis zu $90^\circ$ entspricht. Bei höheren Werten für $\delta$ gäbe es keine Linien zu sehen, da das Licht in die andere Richtung reflektiert wird. Ebenso kann die erneute Justierung des Spiegels nach $90^\circ$ zu einer Verschiebung im Winkel für die höheren Messungen geführt haben, jedoch wären dies nur wenige $cm$ und damit auch nur Verschiebungen vom wenigen Zehntel Grad, welche sehr gering sind.
 
+Große Fehler in dem Abbildungen für die Rydbergkonstanten entstammen der Messung mit erster Ordnung. Dort wird aufgrund des $cos(\delta)$ der Fehlerwert für kleine Winkel nicht so stark gesenkt, im Vergleich zu den weiteren Messungen für große Winkel.
 % Fit funktionen?
 
 \subsection{Fazit}
 
 \section{Anhang}
 
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Ordnung & Farbe & $\delta$ & $\Delta\delta$ & $\lambda$ [nm] & $\Delta\lambda$ [nm] \\ \hline\hline
+1 & violett & 7.5 & 0.06 & 433.57 & 197.6 \\ \hline
+1 & türkis & 8.41 & 0.06 & 485.82 & 197.16 \\ \hline
+1 & grau-grün & 9.24 & 0.06 & 533.37 & 196.72 \\ \hline
+1 & orange & 9.56 & 0.06 & 551.68 & 196.54 \\ \hline
+1 & rot & 11.39 & 0.06 & 656.0 & 195.38 \\ \hline
+2 & violett & 15.11 & 0.06 & 432.94 & 96.21 \\ \hline
+2 & violett & 15.23 & 0.06 & 436.3 & 96.15 \\ \hline
+2 & türkis & 17.0 & 0.06 & 485.59 & 95.3 \\ \hline
+2 & grau-grün & 18.77 & 0.06 & 534.42 & 94.35 \\ \hline
+2 & orange & 21.72 & 0.06 & 614.64 & 92.58 \\ \hline
+3 & violett & 23.07 & 0.06 & 433.88 & 61.12 \\ \hline
+2 & rot & 23.24 & 0.06 & 655.35 & 91.57 \\ \hline
+3 & türkis & 26.02 & 0.06 & 485.73 & 59.7 \\ \hline
+3 & grau-grün & 28.79 & 0.06 & 533.25 & 58.22 \\ \hline
+4 & violett & 31.37 & 0.07 & 432.29 & 49.63 \\ \hline
+3 & orange & 33.71 & 0.07 & 614.51 & 64.48 \\ \hline
+4 & türkis & 35.72 & 0.07 & 484.83 & 47.2 \\ \hline
+3 & rot & 36.29 & 0.07 & 655.35 & 62.48 \\ \hline
+4 & grau-grün & 39.87 & 0.07 & 532.35 & 44.62 \\ \hline
+5 & violett & 40.64 & 0.07 & 432.69 & 35.29 \\ \hline
+5 & türkis & 47.05 & 0.07 & 486.27 & 31.69 \\ \hline
+4 & orange & 47.89 & 0.07 & 616.07 & 38.98 \\ \hline
+6 & violett & 51.63 & 0.08 & 434.05 & 27.49 \\ \hline
+6 & violett & 52.01 & 0.08 & 436.32 & 27.26 \\ \hline
+4 & rot & 52.2 & 0.08 & 656.17 & 40.72 \\ \hline
+5 & grau-grün & 53.29 & 0.08 & 532.59 & 31.77 \\ \hline
+6 & türkis & 61.36 & 0.08 & 485.89 & 21.23 \\ \hline
+7 & violett & 66.05 & 0.09 & 433.68 & 17.34 \\ \hline
+5 & rot & 80.71 & 0.1 & 655.63 & 10.73 \\ \hline
+5 & rot & 80.88 & 0.1 & 655.95 & 10.54 \\ \hline
+\hline
+\end{tabular}
+\caption{Daten zum Wasserstoffspektrum.\label{H Data}}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Ordnung & Farbe & $\delta$ & $\Delta\delta$ \\ \hline\hline
+1 & violett & 8.09 & 0.06 \\ \hline
+1 & blau & 8.19 & 0.06 \\ \hline
+1 & oliv & 8.32 & 0.06 \\ \hline
+1 & rot & 11.05 & 0.06 \\ \hline
+2 & violett & 16.34 & 0.06 \\ \hline
+2 & blau & 16.52 & 0.06 \\ \hline
+2 & oliv & 16.83 & 0.06 \\ \hline
+2 & rot & 22.49 & 0.06 \\ \hline
+3 & violett & 24.96 & 0.06 \\ \hline
+3 & blau & 25.22 & 0.06 \\ \hline
+3 & oliv & 25.72 & 0.06 \\ \hline
+3 & rot & 34.97 & 0.07 \\ \hline
+4 & violett & 34.26 & 0.07 \\ \hline
+4 & blau & 34.61 & 0.07 \\ \hline
+4 & oliv & 35.34 & 0.07 \\ \hline
+4 & rot & 50.37 & 0.08 \\ \hline
+5 & violett & 44.7 & 0.07 \\ \hline
+5 & blau & 45.25 & 0.07 \\ \hline
+\hline
+\end{tabular}
+\caption{Daten zum Zinkspektrum.\label{Zn Data}}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Ordnung n & $\lambda$ [nm] & $sin(\delta)$ & $\Delta sin(\delta)$ \\ \hline\hline
+1 & 468.0 & 0.1408 & 0.001 \\ \hline
+1 & 472.2 & 0.1424 & 0.001 \\ \hline
+1 & 481.1 & 0.1447 & 0.001 \\ \hline
+1 & 636.2 & 0.1916 & 0.001 \\ \hline
+2 & 468.0 & 0.2813 & 0.001 \\ \hline
+2 & 472.2 & 0.2843 & 0.001 \\ \hline
+2 & 481.1 & 0.2895 & 0.001 \\ \hline
+2 & 636.2 & 0.3826 & 0.001 \\ \hline
+3 & 468.0 & 0.4219 & 0.001 \\ \hline
+3 & 472.2 & 0.4261 & 0.001 \\ \hline
+3 & 481.1 & 0.434 & 0.001 \\ \hline
+3 & 636.2 & 0.5732 & 0.001 \\ \hline
+4 & 468.0 & 0.563 & 0.001 \\ \hline
+4 & 472.2 & 0.5679 & 0.001 \\ \hline
+4 & 481.1 & 0.5784 & 0.001 \\ \hline
+4 & 636.2 & 0.7702 & 0.0008 \\ \hline
+5 & 468.0 & 0.7034 & 0.0009 \\ \hline
+5 & 472.2 & 0.7102 & 0.0009 \\ \hline
+\hline \hline
+1 & 589.3 & 0.1769 & 0.001 \\ \hline
+2 & 589.3 & 0.36 & 0.001 \\ \hline
+3 & 589.3 & 0.5316 & 0.001 \\ \hline
+4 & 589.3 & 0.7084 & 0.0009 \\ \hline
+\hline
+\end{tabular}
+\caption{Werte des Fits für die Gitterkonstante. Oben die Werte für Zink und unten Natrium. Gemittelte Wellenlänge der Doppellinie, da keine zusätzlichen Daten aufgenommen wurden.\label{c Data}}
+\end{table}
 
 \newpage
 \begin{thebibliography}{}
