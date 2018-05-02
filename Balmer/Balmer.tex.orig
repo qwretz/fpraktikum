@@ -30,8 +30,13 @@ Generell erhält man aus der Behandlung der Schrödingergleichung dieselbe Energ
 \begin{equation}\label{eq:Energieniveaus_H}
 E_n = -\frac{1}{2} m_0 c^2 \alpha^2 \frac{Z^2}{n^2} = -13.6eV \cdot \frac{Z^2}{n^2} \: ; \: \alpha = \frac{e^2}{4\pi\epsilon_0 \hbar c} = \frac{1}{137}
 \end{equation}
-\begin{equation}\label{eq:rydberg}
+<<<<<<< HEAD
+\begin{equation}\label{eq:deltaE_H}
+\Delta E = R_\infty \left(\frac{1}{n^2} - \frac{1}{m^2} \right)  = -13.6eV \cdot \left(\frac{1}{n^2} - \frac{1}{m^2} \right)
+=======
+\begin{equation}
 \frac{1}{\lambda} = R_\infty \left(\frac{1}{n^2} - \frac{1}{m^2} \right)  = 10\,973\,731{,}568\,508 m^{-1} \cdot \left(\frac{1}{n^2} - \frac{1}{m^2} \right)
+>>>>>>> d84ea18dd9d8dd02b029ec539a61c5f528acfcc8
 \end{equation}
 Dadurch können wir nun die Photonenenergie bestimmen, wenn ein Elektron seinen Bahn ändert. Im folgenden sowie bereits in der zweiten Gleichung behandeln wir das Wasserstoff Atom mit $Z=1$.Hierbei wird in verschiedene Serien unterschieden, je nachdem in welche das Elektron landet, nach Photon-Emission. Jede Serie wurde nach Entdecker benannt. Die ultravioletten Spektrallinien der Lyman (Ly) Serie $Ly_\alpha \:,\: Ly_\beta \:,\: Ly_\gamma \:,\: ...$ besitzt als Grundniveau den Zustand $n=1$. Analog wurden auch die infraroten Serien Brackett (B) $n=4$ und Paschen (Pa) $n=3$, sowie die sichtbare Balmer (H) Serie $n=2$ entdeckt. 
 Die lateinische Nomenklatur beschreibt von wie vielen Niveaus oberhalb, auch states genannt, das Elektron auf das Endniveau gefallen ist. Die Anzahl wird mit den Buchstaben gleichgesetzt. So hei"st der \"Ubergang $5 \rightarrow 2$ auch $B_\gamma$.
@@ -87,11 +92,11 @@ Um jetzt die gebundenen Energiezustände des Wasserstoffatoms zu berechnen und d
 lösen, also die Welleneigenfunkionen bestimmen. Da diese Rechnung in jedem Buch zur Quantenmechanik gefunden werden kann sparen wir uns hier die ausführlichen Rechnungen und Ergebnisse. Für unsere Zwecke reicht es zu wissen, dass die Energieniveaus $E_{n}$ gegeben sind durch
 \begin{equation}
 \label{eq:Wasserstoff}
-	E_{n}=\frac{-e^4\mu}{8\epsilon_0^2h^2}\cdot \frac{1}{n^2}=-\frac{\mu c^2}{2}\frac{\alpha^2}{n^2}
+	E_{n}=\frac{-e^4\mu}{8\epsilon_0^2h^2}*\frac{1}{n^2}=-\frac{\mu c^2}{2}\frac{\alpha^2}{n^2}
 \end{equation} und wir aus der Lösung der Gleichung zwei weitere Quantenzahlen l,m erhalten, wobei l=0,1,2,...,n-1 den Drehimpuls quantifizieren und m=-l,(-l+1),...(l-1),l m die magnetische Quantenzahl ist. Die Energiewerte sind in l und m entartet, da diese die Energie für ein gegebenens n nicht ändern.
 \subsubsection{Feinstruktur}
 Die Entartung der Energiewerte aus Gl. \ref{eq:Wasserstoff} wird in l aufgehoben, wenn man die Korrekturen der Feinstruktur betrachetet. Dabei berücksichtigt man die relativistische Massenkorrektur des Elektrons sowie die Spin-Bahn-Kopplung des magnetischen Moments des Elektrons an seine Bahn. Außerdem kommt noch der Darwin-Term hinzu den man nicht durch Störungsrechnung motivieren kann, sondern ein Ergebnis der relativistischen Behandlung des Wasserstoffatoms mit der Dirac-Gleichung ist. 
-Für unser Experiment können wir jedoch die Korrekturen an die Schrödingergleichung durch die Feinstruktur vernachlässigen, da sie um den Faktor $\alpha^2 \approx  10^{-4}$ unterdrückt sind und damit zu klein sind für die Auflösung unseres Experiments. Die Korrekturen der Hyperfeinstruktur $\sim \alpha^4$ sind natürlich auch irrelevant für uns, weshalb wir nicht weiter auf sie eingehen.
+
 %%Hier müssen die korrekturterme hin. und noch etwas beschriebung der LS kopplung 
 %Na doppellinie"
 \subsection{Beugung und Interferenz} %Neu schreiben mit es Photonen als anfang und dann welleneigenschaften
@@ -121,17 +126,6 @@ Setzt man jetzt noch $k=\frac{2\pi}{\lambda}$ ein, so ergibt sich die relative I
 I_{relativ}=	\frac{|\Psi_{Schirm}|^2}{|\Psi_{0}|^2}=(\frac{\lambda}{\pi d \: sin \: \alpha} sin(\frac{\pi d}{\lambda} sin \: \alpha))^2
 \end{equation}
 
-Die Intensität folgt also der Funktion 
-\begin{equation}
-	sinc(\frac{\pi d}{\lambda} sin \: \alpha)
-\end{equation} 
-Hiervon können wir die lokalen Extremstellen bestimmen, was uns eine Aussage über die Lage der hellen und dunklen Streifen unseres Beugungsmusters gibt.
-
-\begin{align}
-	&Minima: &m\pi&= x \rightarrow m\pi &= \frac{\pi d}{\lambda} \: sin \: \alpha	&\Rightarrow \frac{m}{d} &=\frac{sin \: \alpha}{\lambda}\\
-	%
-	&Maxima: &\frac{2m+1}{2}\pi&=x \rightarrow \frac{2m+1}{2}\pi &= \frac{\pi d}{\lambda}\:sin \: \alpha &\Rightarrow \frac{2m +1}{2d}&=\frac{sin \: \alpha}{\lambda}
-\end{align}
 Hier muss noch etwas über die Lage der maxima und minima hin
 \subsubsection{Doppelspalt}
 Die Herleitung der Intensitätsverteilung beim Doppelspalt erfolgt analog zu der beim Einfachspalt. Anstatt aber nur über den einen Spalt zu integrieren, integriert man über zwei. 
@@ -159,37 +153,19 @@ Auch hier was über die lage der maxima und minmima noch hinschreiben
 Schreiben...
 \subsubsection{Balmer Serie}
 Die Übergänge im Wasserstoff von $n>3$ auf $n=2$ bezeichnet man als Balmer Serie. Die Wellenlängen dieser Übergänge lassen sich nach Gl. \ref{eq:Energieniveaus_H} einfach berechnen. Dabei sind die Wellenlängen mit m=3,4,5,6 zwischen 400nm und 700nm, also im sichtbaren Bereich. Sie sind deshalb besonders einfach nachzuweisen, da wir unser Auge als Detektor verwenden können, der sowohl die Lage als auch die Wellenlänge (Farbe) und auch qualitativ die Intensität der Übergänge bestimmen kann.
-\begin{table}[!ht]
-	\centering
-	\caption{Sichtbare Übergänge der Balmer Serie}
-	\label{my-label}
-	\begin{tabular}{|l|l|l|l|l|}
-		\hline
-		Übergang von n auf m  & 3 $\rightarrow$  2 & 4 $\rightarrow$ 2 & 5 $\rightarrow$ 2 & 6 $  \rightarrow$ 2 \\ \hline
-		Name                  & $H_{\alpha }$      & $H_{\beta}$        & $H_{\gamma }$      & $H_{\delta}$       \\ \hline
-		Wellenlänge (nm)      & 656.285                      & 486.128                      & 434.046                       & 410.174                        \\ \hline
-		Energiedifferenz (eV) & 1.89                           & 2.55                           & 2.86                           & 3.03                           \\ \hline
-		Farbe                 & Rot                            & Aquamarin                      & Blau                           & Violett                        \\ \hline
-
-	\end{tabular}
-\end{table}
-
-
 \subsection{Isotopenshift}
-Bei der Herleitung der Energieniveaus aus dem Bohr Modell haben wir angenommen, dass der Atomkern eine unendliche Masse hat. Um die Masse zu berücksichtigen, können wir wie in der klassischen Mechanik das Problem im Schwerpunktsystem betrachten. Das einzige was sich in der Gleichung ändert ist, dass wir statt $m_0$ die relative Masse 
-\begin{equation}
-	\mu=\left(\frac{1}{m_{p^+}}+\frac{1}{m_{e^-}}  \right)= \frac{m_1 m_2}{M}
-\end{equation}
-in die Gleichung \ref{eq:rydberg} einsetzen. Da wir in unserer Wasserstofflampe Wasserstoff und Deuterium in einem Verhältnis von 9/1 haben erhalten wir bei jeder Spektrallinie der Balmer Serie je eine für Wasserstoff und eine für Deuterium, die sehr nah beieinander liegen und sich oft überlagern. Damit können wir das Auflösungsvermögen unserer Apparatur bestimmen.
 
 
+
+(\subsection{Hyperfeinstruktur})
+\subsection{Auswahlregeln} % (Vllt zur Balmerserie dazu)
 
 
 \newpage
 \section{Experiment}
 \subsection{Setup}
 
-Hier im Experiment wird ein Ebert Monochromator benutzt wie er auch schon in der Theorie beschrieben wurde. Der Aufbau wurde durch einen justierbaren Spiegel über dem Gitter erweitert. Der Spiegel ist verbunden mit der Gitterachse und dreht sich somit mit wenn der Winkel verändert wird. Dadurch wird zusätzliches Licht, das auf den Spiegel geworfen wird auf ein Maßband reflektiert. Dieses Maßband wurde in einem $90^\circ$ Winkel angebracht. Der Abstand zwischen Spiegel und Maßband wurde folgendermaßen ermittelt:
+Hier im Expermient wird ein Ebert Monochromator benutzt wie er auch schon in der Theorie beschrieben wurde. Der Aufbau wurde durch einen justierbaren Spiegel über dem Gitter erweitert. Der Spiegel ist verbunden mit der Gitterachse und dreht sich somit mit wenn der Winkel verändert wird. Dadurch wird zusätzliches Licht, das auf den Spiegel geworfen wird auf ein Maßband reflektiert. Dieses Maßband wurde in einem $90^\circ$ Winkel angebracht. Der Abstand zwischen Spiegel und Maßband wurde folgendermaßen ermittelt:
 
 \begin{table}[h!]
 	\centering
@@ -203,134 +179,15 @@ Hier im Experiment wird ein Ebert Monochromator benutzt wie er auch schon in der
 
 %Wellenlängen der Na und Zi Lampe die wir zum kallibrieren verwendet haben:
 
-Die der Inhalt Wasserstofflampe, welche zur Aufnahme der Balmer Serie benutzt wird, bestanden zu $90\%$ aus $H_2O$ und $10\%$ $D_2O$, sodass für höhere Ordnungen der Isotopenshift erwartet wird. Ebenso erwarten wir nicht nur die Spektrallinien von Wasserstoff H und Deuterium D aufzunehmen, sondern auch Linien vom Sauerstoff, da in der Lampe bei der (Wasser-)Elektrolyse neben $H_2$ auch $O_2$ zu erwarten ist.
-
 
 \subsection{Auswertung}
-\subsubsection{Natrium Doppellinien}
-
-\subsubsection{Zink Spektrallinien}
-Nach dem Wechsel zur Zink Lampe wurden erneut die 4m des Maßbandes abgefahren um nach Spektrallinien zu suchen. Abbildung \ref{fig:Zink} veranschaulicht die gefundenen Linien. Man erkennt sehr schön die erwarteten vier Linien pro Ordnung. Die farbliche Reihenfolge jeder Ordnung beleibt auch stets konstant jedoch beginnt die 4. Ordnung bereits bevor die Dritte abgeschlossen ist. Wir konnten vier komplette Ordnungen vermessen und die ersten zwei Linien der Fünften. Ebenso ist es deutlich geworden, dass, wie erwartet, mit zunehmender Ordnung der Anstand zwischen den Spektrallinien deutlich zunimmt. 
-
-% Warum ist der Abstandn bei den letzten 3 Spektrallinien plötzlich so groß?
-% Weil sich der Abstand mit jeder Ordnung um ca 30% vergrößert
-
-% Tabelle für die Messwerte -> Anhang? 
-% Die für alle Messwerte ja, die für die gemittelten wellenlängen würde ich hier rein schreiben
-
-\begin{figure}[!h]
-\centering
-\caption{ }
-\label{fig:Zink}
-\includegraphics[width=.9\linewidth]{Plots/Zink_Linien.png}
-
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% WARUM erstellt er eine Über-/Unterschrift zur fig ?
-%Du musst caption über das includegrapics schreiben (und das label unter caption damit der ne überschrift macht und das richti verlinkt)
-
-
-\subsubsection{Monochromatorkonstante}
-Die Monochromatorkonstante c ist essentiell für diesen Versuch, damit wir später die Rydbergkonstante bestimmen  können. Zunächst betrachten wir die theoretische Bestimmung von c. Durch die aus dem Skript gegebenen Werte von Abstand zwischen den Spalten und ihrem Auftreffpunkt am Hohlspiegel F, dem Abstand zwischen diesen Auftreffpunkten 2R und dem Abstand zwischen Gitter und den Spalten D, können wir nun c bestimmen. 
-
-\begin{align}
-F&= 400mm ,\: D= 59mm ,\: R=30mm \:\: sowie \: Gitterkonstante \: g=\frac{1mm}{600} \\
-c&= 2g\: cos(\alpha) = 2g\: \frac{F-D}{\sqrt{(F-D)^2 + R^2}} = 3320.5\:nm
-\end{align}
-
-Diesen Wert vergleichen wir nun mit den Ergebnissen, welche aus den Daten der Natrium-Doppellinien und den Zink Spektrallinien erhalten. Wie es bereits in der Theorie dargestellt wurde tragen wir $sin(\delta)$ gegen die Wellenlänge gewichtet mit der Ordnung des Maximums $n\cdot\lambda$ auf, siehe Abbildung \ref{fig:MonoConst}.
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=.9\linewidth]{Plots/Monochromatorkonstante.png}
-\caption{Bestimmung der Monochromatorkonsante durch einen linearen Fit. Gewichtung des Fits mit Fehlern auf den gemessenen Winkel $\delta$. Zoom zur Veranschaulichung der einzelnen Datenpunkte. Wellenlängen wurden aus dem Skript zum Versuch \cite{skript} entnommen. }
-\label{fig:MonoConst}
-\end{figure}
-
-% Werte /tabelle iwo hin kltschen...
-Das Resultat aus dem linearen Fit $c = 3321.74 \pm 2.36 \: nm$ entspricht innerhalb seines Fehlers genau dem Wert aus den gegebenen Werten. Mit dieser Übereinstimmung von ca. $99.96\%$ zum geometrischen Ergebnis kann man mit guten Gewissen im folgenden diesen Wert zur Bestimmung der Rydbergkonstanten benutzen.
-
-\subsubsection{Spektrum einer Wasserstofflampe}
-Zuletzt wurde das Spektrum der Wasserstofflampe aufgenommen. Zur besseren Übersicht wurde die Grafik in zweit Teile geteilt, siehe Abbildungen \ref{fig:H Lines 0} und \ref{fig:H Lines 1}. An der Teilungsstelle wurde auch der Spiegel zur Datenaufnahme neu justiert. Die schwarzen Linien indizieren wieder wie weit sich eine Ordnung erstreckt und sind absteigend dargestellt.
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=1\textwidth]{Plots/HD_Linien_0.png}
-\caption{ Erster Teil des Spektrums der Wasserstofflampe. }
-\label{fig:H Lines 0}
-\end{figure}
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=1\textwidth]{Plots/HD_Linien_1.png}
-\caption{ Zweiter Teil des Spektrums der Wasserstofflampe.}
-\label{fig:H Lines 1}
-\end{figure}
-
-Hierbei erkennen wir deutlich die ersten drei Spektrallinien der Balmer Serie sowie zwei weitere Linien aus dem Sauerstoffspektrum. Stets in einer Ordnung wurden folgende Linien in absteigender Wellenlänge beobachtet:
-
-\begin{table}[!hbt]
-	\centering
-	\begin{tabular}{c|c|c|c|c|c}
-		Linie & $H_\gamma$ & $H_\beta$ & $O$ & $O$ & $H_\alpha$ \\
-		\hline
-		Farbe & violett & türkis & gräulich grün & orange & rot \\
-		\hline
-		Wellenlänge [nm]  & 434 & 486 & N/A & N/A & 656 \\
-	\end{tabular}
-	\caption{Zuordnung der gemessenen Spektrallinien der Wasserstofflampe.}
-\end{table}
-
-Dabei konnten wir nur an drei Linien die Differenz der Wasserstoff- und Deuteriumlinien erkennen. Die violette Linie spaltete sich in den Ordnungen 2 und 6 sichtbar auf sowie dir rote am Ende des Spektrums in 5. Ordnung. Nachträglich wurden noch die türkisen Linien genauer betrachtet, jedoch ist deren Unterschied sehr gering gewesen.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Grafik hier oder bei Auflösungsvermögen
-
-\subsubsection{Rydbergkonstante}
-Durch die ermittelte Monochromatorkonstante und das Wasserstoffspektrum lassen sich nun die Rydbergkonstanten für $H$ und $D$ ermitteln. Dabei werden die drei genannten Doppellinien aufgeteilt und die einfachen Linien, sowie die türkisen, für beide Fits verwendet, da dort keine eindeutige Zuordnung möglich ist. Durch den schwereren Kern des Deuterium sind dessen Spektrallinien etwas energiereicher und somit nach links im Spektrum verschoben, da sie die kleinere Wellenlänge besitzen. 
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=1\textwidth]{Plots/R_H.png}
-\caption{ Fit zur Bestimmung der Rydbergkonstante des Wasserstoff.}
-\label{fig:Rydberg H}
-\end{figure}
-
-Es wurde hier ebenfalls wieder eine Gerade durch die Datenpunkte gefittet. Dabei wurden nach Gleichung (\ref{eq:rydberg}) das Inverse der Wellenlänge gegen den Faktor, welcher aus dem Energieunterschied zweier Energieniveaus ohne Feinstruktur hervorgeht, aufgetragen. Zuvor wurden die Wellenlängen mit unserer Monochromatorkonstante nach folgenden Gleichungen bestimmt:
-
-\begin{equation}
-\lambda = \frac{c}{n} sin(\delta) \:,\: \Delta\lambda = \frac{1}{n} \sqrt{(\Delta c \cdot sin(\delta))^2 + (c\cdot cos(\delta) \Delta\delta)^2}
-\end{equation}
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=1\textwidth]{Plots/R_D.png}
-\caption{ Fit zur Bestimmung der Rydbergkonstante des Deuterium.}
-\label{fig:Rydberg D}
-\end{figure}
-
-Die Resultate sind nun erstaunlich gut geworden im Vergleich mit dem Literaturwert $R_\infty = 10973731.57 m^{-1}$, welcher für einen unendlich schweren Kern gilt. Die folgende Tabelle verdeutlicht unsere Ergebnisse:
-
-\begin{table}[!hbt]
-	\centering
-	\begin{tabular}{c|c|c|c}
-		  & Fit & Literaturwert & Relative Abweichung  \\
-		\hline
-		$R_H$ [$m^{-1}$]& $10\,975\,512.89\pm 3\,701.14$ & $10\,967\,758.34$ & $1.00071$ \\
-		\hline
-		$R_D$ [$m^{-1}$]& $10\,981\,888.31\pm 3\,046.17$ & $10\,970\,746.20$ & $1.00102$ \\
-	\end{tabular}
-	\caption{Übersicht unserer berechneten Rydbergkonstanten. Verglichen wird mit dem Literaturwert nach $R_i = R_\infty \frac{\mu_i}{m_e}$.}
-\end{table}
-
-Unsere Ergebnisse sind somit immer etwa um $0.1\%$ größer als der Literaturwert. Die Fehler, jene die Fitfunktion liefert, sind jedoch zu klein um den Literaturwert abzudecken. Es fehlen stets eine halbe bis ganze Größenordnung.
-
+\subsubsection{Gitterkonstante}
+Die Gitterkonstante c ist essentiell für diesen Versuch, damit wir später die Rydbergkonstante bestimmen  können. Zunächst betrachten wir die theoretische Bestimmung von c.
 %Tabelle
 %Gemittelte Wellenlängen und energien der Übergänge
 %Rydbergconstante
 %Irgendwas mit den Dopplelinien
 \subsection{Fehlerdiskussion}
-
-Zu beachten war, dass zwischen dem Winkel des Gitters und jenem welchen wir über das Maßband bestimmen konnten, ein Übersetzungsfaktor von 2 liegt. Für die Speltrallinien der Wasserstoff-Deuterium-Lampe haben wir im Raum einem Winkel von fast $180^\circ$ ausgenutzt, welches einer Gitterstellung von bis zu $90^\circ$ entspricht. Bei höheren Werten für $\delta$ gäbe es keine Linien zu sehen, da das Licht in die andere Richtung reflektiert wird. Ebenso kann die erneute Justierung des Spiegels nach $90^\circ$ zu einer Verschiebung im Winkel für die höheren Messungen geführt haben, jedoch wären dies nur wenige $cm$ und damit auch nur Verschiebungen vom wenigen Zehntel Grad, welche sehr gering sind.
-
-% Fit funktionen?
 
 \subsection{Fazit}
 
@@ -340,8 +197,6 @@ Zu beachten war, dass zwischen dem Winkel des Gitters und jenem welchen wir übe
 \newpage
 \begin{thebibliography}{}
 
-\bibitem{skript} \begin{verbatim}
-lectures__2006__ss06_FPraktikum__V17_20060907_BalmerSerie.pdf \end{verbatim} (Begleitendes Skript zum Versuch 17: Balmer Serie)
 
 \end{thebibliography}
 \end{document}
