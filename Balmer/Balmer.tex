@@ -30,7 +30,7 @@ Generell erhält man aus der Behandlung der Schrödingergleichung dieselbe Energ
 \begin{equation}\label{eq:Energieniveaus_H}
 E_n = -\frac{1}{2} m_0 c^2 \alpha^2 \frac{Z^2}{n^2} = -13.6eV \cdot \frac{Z^2}{n^2} \: ; \: \alpha = \frac{e^2}{4\pi\epsilon_0 \hbar c} = \frac{1}{137}
 \end{equation}
-\begin{equation}\label{eq:deltaE_H}
+\begin{equation}\label{eq:rydberg}
 \frac{1}{\lambda} = R_\infty \left(\frac{1}{n^2} - \frac{1}{m^2} \right)  = 10\,973\,731{,}568\,508 m^{-1} \cdot \left(\frac{1}{n^2} - \frac{1}{m^2} \right)
 \end{equation}
 Dadurch können wir nun die Photonenenergie bestimmen, wenn ein Elektron seinen Bahn ändert. Im folgenden sowie bereits in der zweiten Gleichung behandeln wir das Wasserstoff Atom mit $Z=1$.Hierbei wird in verschiedene Serien unterschieden, je nachdem in welche das Elektron landet, nach Photon-Emission. Jede Serie wurde nach Entdecker benannt. Die ultravioletten Spektrallinien der Lyman (Ly) Serie $Ly_\alpha \:,\: Ly_\beta \:,\: Ly_\gamma \:,\: ...$ besitzt als Grundniveau den Zustand $n=1$. Analog wurden auch die infraroten Serien Brackett (B) $n=4$ und Paschen (Pa) $n=3$, sowie die sichtbare Balmer (H) Serie $n=2$ entdeckt. 
@@ -174,6 +174,8 @@ Hier im Expermient wird ein Ebert Monochromator benutzt wie er auch schon in der
 
 %Wellenlängen der Na und Zi Lampe die wir zum kallibrieren verwendet haben:
 
+Die der Inhalt Wasserstofflampe, welche zur Aufnahme der Balmer Serie benutzt wird, bestanden zu $90\%$ aus $H_2O$ und $10\%$ $D_2O$, sodass für höhere Ordnungen der Isotopenshift erwartet wird. Ebenso erwarten wir nicht nur die Spektrallinien von Wasserstoff H und Deuterium D aufzunehmen, sondern auch Linien vom Sauerstoff, da in der Lampe bei der (Wasser-)Elektrolyse neben $H_2$ auch $O_2$ zu erwarten ist.
+
 
 \subsection{Auswertung}
 \subsubsection{Natrium Doppellinien}
@@ -186,7 +188,7 @@ Nach dem Wechsel zur Zink Lampe wurden erneut die 4m des Maßbandes abgefahren u
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=.9\linewidth]{{Plots/Zink Linien.png}}
+\includegraphics[width=.9\linewidth]{Plots/Zink_Linien.png}
 \caption{ }
 \label{fig:Zink}
 \end{figure}
@@ -204,15 +206,86 @@ Diesen Wert vergleichen wir nun mit den Ergebnissen, welche aus den Daten der Na
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=.9\linewidth]{Plots/Gitterkonstante.png}
+\includegraphics[width=.9\linewidth]{Plots/Monochromatorkonstante.png}
 \caption{Bestimmung der Monochromatorkonsante durch einen linearen Fit. Gewichtung des Fits mit Fehlern auf den gemessenen Winkel $\delta$. Zoom zur Veranschaulichung der einzelnen Datenpunkte. Wellenlängen wurden aus dem Skript zum Versuch \cite{skript} entnommen. }
 \label{fig:MonoConst}
 \end{figure}
 
 % Werte /tabelle iwo hin kltschen...
-Das Resultat aus dem linearen Fit entspricht innerhalb seines Fehlers genau dem Wert aus den gegebenen Werten. Mit dieser Übereinstimmung von ca. $99.96\%$ zum geometrischen Ergebnis kann man mit guten Gewissen im folgenden diesen Wert zur Bestimmung der Rydbergkonstanten benutzen.
+Das Resultat aus dem linearen Fit $c = 3321.74 \pm 2.36 \: nm$ entspricht innerhalb seines Fehlers genau dem Wert aus den gegebenen Werten. Mit dieser Übereinstimmung von ca. $99.96\%$ zum geometrischen Ergebnis kann man mit guten Gewissen im folgenden diesen Wert zur Bestimmung der Rydbergkonstanten benutzen.
 
 \subsubsection{Spektrum einer Wasserstofflampe}
+Zuletzt wurde das Spektrum der Wasserstofflampe aufgenommen. Zur besseren Übersicht wurde die Grafik in zweit Teile geteilt, siehe Abbildungen \ref{fig:H Lines 0} und \ref{fig:H Lines 1}. An der Teilungsstelle wurde auch der Spiegel zur Datenaufnahme neu justiert. Die schwarzen Linien indizieren wieder wie weit sich eine Ordnung erstreckt und sind absteigend dargestellt.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=1\textwidth]{Plots/HD_Linien_0.png}
+\caption{ Erster Teil des Spektrums der Wasserstofflampe. }
+\label{fig:H Lines 0}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=1\textwidth]{Plots/HD_Linien_1.png}
+\caption{ Zweiter Teil des Spektrums der Wasserstofflampe.}
+\label{fig:H Lines 1}
+\end{figure}
+
+Hierbei erkennen wir deutlich die ersten drei Spektrallinien der Balmer Serie sowie zwei weitere Linien aus dem Sauerstoffspektrum. Stets in einer Ordnung wurden folgende Linien in absteigender Wellenlänge beobachtet:
+
+\begin{table}[!hbt]
+	\centering
+	\begin{tabular}{c|c|c|c|c|c}
+		Linie & $H_\gamma$ & $H_\beta$ & $O$ & $O$ & $H_\alpha$ \\
+		\hline
+		Farbe & violett & türkis & gräulich grün & orange & rot \\
+		\hline
+		Wellenlänge [nm]  & 434 & 486 & N/A & N/A & 656 \\
+	\end{tabular}
+	\caption{Zuordnung der gemessenen Spektrallinien der Wasserstofflampe.}
+\end{table}
+
+Dabei konnten wir nur an drei Linien die Differenz der Wasserstoff- und Deuteriumlinien erkennen. Die violette Linie spaltete sich in den Ordnungen 2 und 6 sichtbar auf sowie dir rote am Ende des Spektrums in 5. Ordnung. Nachträglich wurden noch die türkisen Linien genauer betrachtet, jedoch ist deren Unterschied sehr gering gewesen.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Grafik hier oder bei Auflösungsvermögen
+
+\subsubsection{Rydbergkonstante}
+Durch die ermittelte Monochromatorkonstante und das Wasserstoffspektrum lassen sich nun die Rydbergkonstanten für $H$ und $D$ ermitteln. Dabei werden die drei genannten Doppellinien aufgeteilt und die einfachen Linien, sowie die türkisen, für beide Fits verwendet, da dort keine eindeutige Zuordnung möglich ist. Durch den schwereren Kern des Deuterium sind dessen Spektrallinien etwas energiereicher und somit nach links im Spektrum verschoben, da sie die kleinere Wellenlänge besitzen. 
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=1\textwidth]{Plots/R_H.png}
+\caption{ Fit zur Bestimmung der Rydbergkonstante des Wasserstoff.}
+\label{fig:Rydberg H}
+\end{figure}
+
+Es wurde hier ebenfalls wieder eine Gerade durch die Datenpunkte gefittet. Dabei wurden nach Gleichung (\ref{eq:rydberg}) das Inverse der Wellenlänge gegen den Faktor, welcher aus dem Energieunterschied zweier Energieniveaus ohne Feinstruktur hervorgeht, aufgetragen. Zuvor wurden die Wellenlängen mit unserer Monochromatorkonstante nach folgenden Gleichungen bestimmt:
+
+\begin{equation}
+\lambda = \frac{c}{n} sin(\delta) \:,\: \Delta\lambda = \frac{1}{n} \sqrt{(\Delta c \cdot sin(\delta))^2 + (c\cdot cos(\delta) \Delta\delta)^2}
+\end{equation}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=1\textwidth]{Plots/R_D.png}
+\caption{ Fit zur Bestimmung der Rydbergkonstante des Deuterium.}
+\label{fig:Rydberg D}
+\end{figure}
+
+Die Resultate sind nun erstaunlich gut geworden im Vergleich mit dem Literaturwert $R_\infty = 10973731.57 m^{-1}$, welcher für einen unendlich schweren Kern gilt. Die folgende Tabelle verdeutlicht unsere Ergebnisse:
+
+\begin{table}[!hbt]
+	\centering
+	\begin{tabular}{c|c|c|c}
+		  & Fit & Literaturwert & Relative Abweichung  \\
+		\hline
+		$R_H$ [$m^{-1}$]& $10\,975\,512.89\pm 3\,701.14$ & $10\,967\,758.34$ & $1.00071$ \\
+		\hline
+		$R_D$ [$m^{-1}$]& $10\,981\,888.31\pm 3\,046.17$ & $10\,970\,746.20$ & $1.00102$ \\
+	\end{tabular}
+	\caption{Übersicht unserer berechneten Rydbergkonstanten. Verglichen wird mit dem Literaturwert nach $R_i = R_\infty \frac{\mu_i}{m_e}$.}
+\end{table}
+
+Unsere Ergebnisse sind somit immer etwa um $0.1\%$ größer als der Literaturwert. Die Fehler, jene die Fitfunktion liefert, sind jedoch zu klein um den Literaturwert abzudecken. Es fehlen stets eine halbe bis ganze Größenordnung.
 
 %Tabelle
 %Gemittelte Wellenlängen und energien der Übergänge
