@@ -104,11 +104,11 @@ Die Frage ist jetzt wie dieses Muster entstehen kann wo es doch nicht also Beweg
 \end{equation}
 Der Einfachheit halber betrachten wir das Ganze nur in einer Dimension. Nach dem Fresnel'schen Prinzip entsteht an jedem Auftreffpunkt des Spalts eine neue Kugelwelle, welche bis auf eine eventuelle Phasenverschiebung von $\delta =y sin(\alpha) $ ihrer Ursprungswelle gleicht. Dabei ist zu beachten, dass eine Kugelwelle auch eine Beugung entgegen der Bewegungsrichtung des Strahls vorausgesetzt wird, die nicht beobachtet wird. Wir machen weiterhin die Annahme der Frauenhofer Beugung, d.h. dass sich der Schirm unendlich weit weg vom Spalt befindet. Die auslaufende welle kann also beschrieben werden als
 \begin{equation}
-	\Psi(x)=\Psi_{0}e^{i(k(x-\delta)-\omega t)}
+	\Psi(x)=\tilde{\Psi_{0}}e^{i(k(x-\delta)-\omega t)}
 \end{equation}
 Auf einem unendlich weit entfernten Schirm treffen alle Strahlen die den Spalt parallel zueinander durchquert haben am selben Punkt auf. Um die Wahrscheinlichkeitsamplitude an diesem Punkt zu berechnen integrieren wir also über alle Wellen die den Spalt unter dem selben Winkel verlassen.
 \begin{align}%%%Hier muss irgendow noch ein psinull schlange hin, dass e^-ikx-wt mitnimmt
-	\Psi_{Schirm}(x,\alpha)&=\Psi_{0}e^{kx-\omega t}\frac{1}{d}\int_{-d/2}^{d/2} e^{-iky\: sin(\alpha)}  \\ 
+	\Psi_{Schirm}(x,\alpha)&=\underbrace{\Tilde{\Psi_{0}}e^{kx-\omega t}}_{\Psi_{0}}\frac{1}{d}\int_{-d/2}^{d/2} e^{-iky\: sin(\alpha)}  \\ 
 	%
 	&=-\frac{\Psi_{0}}{ikd \: sin \: \alpha} [e^{-iky \: sin(\alpha)}]^{+d/2}_{-d/2} \\
 	%
@@ -163,7 +163,31 @@ Auch hier was über die lage der maxima und minmima noch hinschreiben
 
 %Hier muss dann die Herleitung hin
 \subsubsection{Beugungsgitter}
-In der Praxis verwendet man anstelle eines Doppelspalts meist ein Beugungsgitter
+In der Praxis verwendet man anstelle eines Doppelspalts meist ein Beugungsgitter. Um die Intensitätsverteilung davon zu erhalten, können wir uns das Wissen über die Intensität vom Einzelspalt zunutze machen. Das Beugungsgitter ist eine aneinanderreihung von vielen Einfachspalten. 
+\begin{equation}
+f(x)=1 oder 0 je nachdem
+\end{equation}
+Um diese zu erhalten reicht es, die Funktion des Einfachspalts mit deiner Summe von Deltafunktionen zu falten. Wir wählen
+\begin{equation}
+	g(x)=\sum_{l=0}^{n-1}\delta(x-lG)
+\end{equation}
+wobei G der Gitterabstand ist. Die Faltung von g und f ist definiert als
+\begin{equation}
+	(f*g)(x)=\int_{\Re} f(y)g(x-y)dy
+\end{equation}
+Die Fouriertransformation der Faltung gibt uns jetzt die Wellenfunktion am Schirm. Zur Berechnung nutzen wir das Faltungstheorem aus, welches besagt, dass die Fouriertransformierte der Faltung $(f*g)(x)$ das Produkt der einzelnen Fouriertransformierten von $ f(x) $ und $ g(x) $ ist. Wir kennen bereits die Lösung für den Einzelspalt, es bleibt also nurnoch die für $g(x)$ zu berechnen.
+\begin{align}
+	\textit{F}(g)&=\int_{\Re}\sum_{l=0}^{n-1}\delta(x-lG)e^{ikx \ sin \ \alpha}\\
+				&=\sum_{l=0}^{n-1}e^{iklG \ sin \ \alpha}\\
+				&=\frac{sin(\frac{nkG}{2}sin \ \alpha)}{sin(\frac{kG}{2}sin \ \alpha)}
+\end{align}
+
+Genau wie wir beim Einfachspalt den Term $\frac{1}{d}$ bekommen, da wir über alle möglichen Wellen im Spaltabstand d integrieren müssen wir \textit{F}(g) noch durch n teilen.
+
+\begin{align}
+	\Psi_{Gitter}(x,\alpha)
+\end{align}
+
 
 \subsubsection{Balmer Serie}
 Die Übergänge im Wasserstoff von $n>3$ auf $n=2$ bezeichnet man als Balmer Serie. Die Wellenlängen dieser Übergänge lassen sich nach Gl. \ref{eq:Energieniveaus_H} einfach berechnen. Dabei sind die Wellenlängen mit m=3,4,5,6 zwischen 400nm und 700nm, also im sichtbaren Bereich. Sie sind deshalb besonders einfach nachzuweisen, da wir unser Auge als Detektor verwenden können, der sowohl die Lage als auch die Wellenlänge (Farbe) und auch qualitativ die Intensität der Übergänge bestimmen kann.
@@ -174,7 +198,7 @@ Die Übergänge im Wasserstoff von $n>3$ auf $n=2$ bezeichnet man als Balmer Ser
 	\begin{tabular}{|l|l|l|l|l|}
 		\hline
 		Übergang von n auf m  & 3 $\rightarrow$  2 & 4 $\rightarrow$ 2 & 5 $\rightarrow$ 2 & 6 $  \rightarrow$ 2 \\ \hline
-		Name                  & $H_{\alpha }$      & $H_{\beta}$        & $H_{4\gamma }$      & $H_{\delta}$       \\ \hline
+		Name                  & $H_{\alpha }$      & $H_{\beta}$        & $H_{4\gamma }$      & $_{\delta}$       \\ \hline
 		Wellenlänge (nm)      & 656.285                      & 486.128                      & 434.046                       & 410.174                        \\ \hline
 		Energiedifferenz (eV) & 1.89                           & 2.55                           & 2.86                           & 3.03                           \\ \hline
 		Farbe                 & Rot                            & Aquamarin                      & Blau                           & Violett                        \\ \hline
