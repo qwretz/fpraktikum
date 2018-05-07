@@ -1,0 +1,12 @@
+compton edges
+VME
+NIM
+internal vonverion
+ Which particles cause these signals and what are their characteristicsin terms of rate at sea level and energy?
+    comsic radiation, mainly pions and myons
+
+
+ What are the particles you expect to cause a signal and what are their characteristics?
+    Gamma radiation? maybe electrons die internal convertiert werden
+    bestimmte energien sollten triggern=>kaskaden sollten proportional zu der energie sein oder? also die intensität ~ energie
+ How do you expect the signal to look like compared to the one from cosmics? Does that correspond to your observations?
