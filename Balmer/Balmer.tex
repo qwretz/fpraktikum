@@ -167,8 +167,12 @@ Auch hier was über die lage der maxima und minmima noch hinschreiben
 \subsubsection{Beugungsgitter}
 In der Praxis verwendet man anstelle eines Doppelspalts meist ein Beugungsgitter. Um die Intensitätsverteilung davon zu erhalten, können wir uns das Wissen über die Intensität vom Einzelspalt zunutze machen. Das Beugungsgitter ist eine aneinanderreihung von vielen Einfachspalten. 
 \begin{equation}
-f(x)=1 oder 0 je nachdem
+f(x)=\begin{cases}
+1,  & \text{wenn  }x \ \epsilon \: [-d/2,d/2]\\
+0, & \text{sonst }
+\end{cases}
 \end{equation}
+
 Um diese zu erhalten reicht es, die Funktion des Einfachspalts mit deiner Summe von Deltafunktionen zu falten. Wir wählen
 \begin{equation}
 	g(x)=\sum_{l=0}^{n-1}\delta(x-lG)
@@ -189,11 +193,19 @@ Damit folgt für $k=\frac{2\pi}{\lambda}$
 \begin{equation}
 	I_{relativ}=\left|\frac{F(f) }{d}\right|^2\cdot\left|\frac{F(g)}{n}\right|^2=\left(\frac{\lambda}{\pi d \ sin \ \alpha}sin \left(\frac{\pi d}{\lambda}sin \ \alpha\right)\right)^2\cdot\left(\frac{sin \left(n \pi \frac{G}{\lambda} \ sin \ \alpha \right)}{sin \left(\pi \frac{G}{\lambda} \ sin \ \alpha\right)}\right)^2
 \end{equation}
-Wie beim Doppelspalt bildet hier das Beugungsmuster vom Einfachspalt die Einhüllende, während das Gitter für die lokalen Peaks verantwortlich ist. Dabei liegen zwischen zwei Peaks die die Einhüllende berühren immer $n-2$ lokale Maxima. Für den Fall von $n=2$ erhält man die Intensitätsverteilung des Doppelspalts.
-
-\begin{align}
-	\Psi_{Gitter}(x,\alpha)
-\end{align}
+Wie beim Doppelspalt bildet hier das Beugungsmuster vom Einfachspalt die Einhüllende, während das Gitter für die lokalen Peaks verantwortlich ist. Dabei liegen zwischen zwei Peaks die die Einhüllende berühren immer $n-2$ lokale Maxima. Für den Fall von $n=2$ erhält man die Intensitätsverteilung des Doppelspalts. Die Lage der Hauptmaxima ist die die Selbe, wie beim Doppelspalt
+\begin{equation}
+	\frac{m}{G}=\frac{sin \ \alpha}{\lambda}
+\end{equation}
+Der Vorteil gegenüber einem Einfachspalt ist eine Höhere Intensität der Maxima, da durch das Gitter mehr Licht fällt, als durch nur 2 Spalten und wesentlich schärfere Hauptmaxima. Berücksichtigt man, dass zwischen jedem Hauptmaximum und dem nächsten Nebenmaxima $\frac{1}{n}$ der Strecke zwischen zwei Hauptmaxima liegen können wir die Breite der Hauptmaxima bestimmen als:
+\begin{equation}
+	\frac{\lambda_{m_1} - \lambda_{m_1+1}}{n}=\frac{\frac{G \ sin \ \alpha }{m_1} - \frac{G \ sin \ \alpha }{m_1+1}}{n}=\frac{G \ sin \ \alpha (2m+1)}{n m (m+1)}
+\end{equation}
+wobei n die Anzahl der Spalte des Gitters ist und m das Maximum bezeichnet.
+Für das Auflösungsvermögen erhalten wir dann:
+\begin{equation}
+	A:=\frac{\lambda}{\Delta \lambda}=\frac{2m+1}{n(m+1)}
+\end{equation}
 
 
 \subsubsection{Balmer Serie}
