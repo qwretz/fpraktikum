@@ -6,6 +6,7 @@
 \usepackage{subcaption}
 \usepackage{ngerman}
 \usepackage[utf8]{inputenc}
+\usepackage{float}
 
 %opening
 \title{Balmer Series}
@@ -15,7 +16,7 @@
 
 \maketitle
 \begin{abstract}
-asdf
+Mit diesem Experiment soll das Verständnis und der Umgang mit einem Monochromator geübt werden. Dies wird anhand der Spektrallinien von Natrium, Zink und einer Wasserstofflampe durchgeführt. Die Kalibration des Monochromators, inklusive der Bestimmung der Konstante c, wird dazu genutzt um die Rydbergkonstante für Wasserstoff und Deuterium zu bestimmen. Damit werden auch die grundlegenden Annahmen des Bohr'schen Atommodels bestätigt.
 
 \end{abstract}
 
@@ -39,7 +40,7 @@ Die lateinische Nomenklatur beschreibt von wie vielen Niveaus oberhalb, auch sta
 \subsection{Ebert Monochromator}
 Um das Licht eines Elements analysieren zu können müssen wir die Spektrallinien auffächern. Hier im Experiment wird dies mit einer Form des Ebert Monochromators umgesetzt. Dabei handelt es sich um um zwei  Spalte durch die das Licht ein- und ausfallen kann. Während dem Durchgang wird der Lichtstrahl zwischen zwei Reflexionen an einem Hohlspiegel auch an einem Gitter umgelenkt. Dieses Gitter ist nun drehbar und der Winkel $\delta$ in  Abbildung \ref{fig:Monochromator} bezeichnet die Verstellung bezüglich der parallel Lichtstrahlen. 
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \begin{subfigure}{0.55\textwidth}
 \includegraphics[width=\linewidth]{Plots/1.png}
@@ -58,9 +59,10 @@ So erhält man aus Abbildung <<<ref>>> folgende Bedingung an Gangunterschied bei
 \begin{align}
 \Delta &= g\cdot sin(\beta) + g\cdot sin(\gamma) = g\cdot \left( sin(\delta - \alpha) + sin(\delta + \alpha)  \right) \\
  &= g\cdot ( sin(\delta)cos(\alpha) + cos(\delta)sin(\alpha) +  sin(\delta)cos(\alpha) - cos(\delta)sin(\alpha) ) \\
- &= 2g \cdot cos(\alpha) sin(\delta) =: c \cdot sin(\delta) \stackrel{!}{=} n\lambda 
+ &= 2g \cdot cos(\alpha) sin(\delta) =: c \cdot sin(\delta) \stackrel{!}{=} n\lambda \label{eq:c sin = n lam}
 \end{align}
- 
+
+Diese Beziehung wird in der Auswertung unserer Messwerte benutzt um zunächst c durch die Natrium und Zink Daten zu bestimmen. Später, beim Wasserstoff wird Gleichung (\ref{eq:c sin = n lam}) genutzt um die Wellenlängen und damit auch die Rydbergkonstanten zu bestimmen.
 
 \subsection{Quantenmechanik}
 \subsubsection{Schrödingergleichung}
@@ -191,7 +193,7 @@ Genau wie wir beim Einfachspalt den Term $\frac{1}{d}$ bekommen, da wir über al
 
 \subsubsection{Balmer Serie}
 Die Übergänge im Wasserstoff von $n>3$ auf $n=2$ bezeichnet man als Balmer Serie. Die Wellenlängen dieser Übergänge lassen sich nach Gl. \ref{eq:Energieniveaus_H} einfach berechnen. Dabei sind die Wellenlängen mit m=3,4,5,6 zwischen 400nm und 700nm, also im sichtbaren Bereich. Sie sind deshalb besonders einfach nachzuweisen, da wir unser Auge als Detektor verwenden können, der sowohl die Lage als auch die Wellenlänge (Farbe) und auch qualitativ die Intensität der Übergänge bestimmen kann.
-\begin{table}[!ht]
+\begin{table}[H]
 	\centering
 	\caption{Sichtbare Übergänge der Balmer Serie}
 	\label{my-label}
@@ -223,17 +225,20 @@ in die Gleichung \ref{eq:rydberg} einsetzen. Da wir in unserer Wasserstofflampe 
 
 Hier im Experiment wird ein Ebert Monochromator benutzt wie er auch schon in der Theorie beschrieben wurde. Der Aufbau wurde durch einen justierbaren Spiegel über dem Gitter erweitert. Der Spiegel ist verbunden mit der Gitterachse und dreht sich somit mit wenn der Winkel verändert wird. Dadurch wird zusätzliches Licht, das auf den Spiegel geworfen wird auf ein Maßband reflektiert. Dieses Maßband wurde in einem $90^\circ$ Winkel angebracht. Der Abstand zwischen Spiegel und Maßband wurde folgendermaßen ermittelt:
 
-\begin{table}[h!]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{c|c|c|c|c|c}
 		Messung & 1 & 2 & 3 & 4 & Mittelwert \\
 		\hline
-		Abstand [cm] & 250 & 250.5 & 250 & 250.5 & 250.25 $\pm$ 0.25 \\
+		Abstand r [cm] & 250 & 250.5 & 250 & 250.5 & 250.25 $\pm$ 0.25 \\
 	\end{tabular}
 	\caption{Gemessene Abstände zwischen Spiegel und Maßband.}
 \end{table}
 
-%Wellenlängen der Na und Zi Lampe die wir zum kallibrieren verwendet haben:
+Die folgenden Gleichungen (\ref{eq:Umrechnung Winkel}) beschreiben die Umrechnung vom gemessenen Abstand x auf dem Maßband zum Gitterstellung, beschrieben durch den Winkel $\delta$. Der Faktor $\frac{1}{2}$ entsteht durch die Übersetzung vom eigentlichen Gitter im Monochromator zum Spiegel obenauf.
+\begin{equation}\label{eq:Umrechnung Winkel}
+\delta= \frac{1}{2}\frac{x}{r} \cdot \frac{180^\circ}{\pi} \:,\: \Delta\delta= \frac{1}{2} \sqrt{\left(\frac{\Delta x}{r}\right)^2 + \left(\frac{x\cdot \Delta r}{r^2}\right)^2} \cdot \frac{180^\circ}{\pi}
+\end{equation}
 
 Die der Inhalt Wasserstofflampe, welche zur Aufnahme der Balmer Serie benutzt wird, bestanden zu $90\%$ aus $H_2O$ und $10\%$ $D_2O$, sodass für höhere Ordnungen der Isotopenshift erwartet wird. Ebenso erwarten wir nicht nur die Spektrallinien von Wasserstoff H und Deuterium D aufzunehmen, sondern auch Linien vom Sauerstoff, da in der Lampe bei der (Wasser-)Elektrolyse neben $H_2$ auch $O_2$ zu erwarten ist.
 
@@ -244,21 +249,24 @@ Die der Inhalt Wasserstofflampe, welche zur Aufnahme der Balmer Serie benutzt wi
 \subsubsection{Zink Spektrallinien}
 Nach dem Wechsel zur Zink Lampe wurden erneut die 4m des Maßbandes abgefahren um nach Spektrallinien zu suchen. Abbildung \ref{fig:Zink} veranschaulicht die gefundenen Linien. Man erkennt sehr schön die erwarteten vier Linien pro Ordnung. Die farbliche Reihenfolge jeder Ordnung beleibt auch stets konstant jedoch beginnt die 4. Ordnung bereits bevor die Dritte abgeschlossen ist. Wir konnten vier komplette Ordnungen vermessen und die ersten zwei Linien der Fünften. Ebenso ist es deutlich geworden, dass, wie erwartet, mit zunehmender Ordnung der Anstand zwischen den Spektrallinien deutlich zunimmt. 
 
-% Warum ist der Abstandn bei den letzten 3 Spektrallinien plötzlich so groß?
+Interessant sind vor allem die Winkel ab ca. $45^\circ$. Man erkennt sehr deutlich wie stark sich nun die 4. Ordnung durch die rote Linie ausdehnt und nun sogar den Anfang der 5. Ordnung überholt hat. Seltsam ist es, dass die olivfarbene Linie zum Schluss nicht mehr zu sehen ist. Trotz der zunehmenden Abstände und dem besseren Auflösungsvermögen in n, sollte sie noch nicht außerhalb der aufgenommenen Daten sein. Man könnte den dreifachen Abstand zwischen violett und blau erwarten, jedoch wurde dort nichts gesehen. Die lässt auf den erwarteten Verlust der Intensität schließen, wie er auch noch in den Grafiken zum Wasserstoff sichtbar ist, Abbildungen \ref{fig:H Lines 0} und \ref{fig:H Lines 1}.
 
-% Tabelle für die Messwerte -> Anhang? 
-% Die für alle Messwerte ja, die für die gemittelten wellenlängen würde ich hier rein schreiben
-
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
+\includegraphics[width=.9\linewidth]{Plots/Zink_Linien.png}
 \caption{ Grafische Darstellung des Zinkspektrums inkl. zugewiesenen Ordnungen der Maxima. Für exakte Daten siehe Anhang: Tabelle \ref{Zn Data} }
 \label{fig:Zink}
-\includegraphics[width=.9\linewidth]{Plots/Zink_Linien.png}
-
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% WARUM erstellt er eine Über-/Unterschrift zur fig ?
-%Du musst caption über das includegrapics schreiben (und das label unter caption damit der ne überschrift macht und das richti verlinkt)
 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c|c}
+		Farbe & violett & blau & oliv  & rot \\
+		\hline
+		Wellenlänge [nm]  & 468.0 & 472.2 & 481.1 & 636.2 \\
+	\end{tabular}
+	\caption{Theoretische Werte für die Spektrallinien von Zink. Diese Werte werden auch zur Bestimmung vom c benutzt und entstammen dem Skript \cite{skript}.}
+\end{table}
 
 \subsubsection{Monochromatorkonstante}
 Die Monochromatorkonstante c ist essentiell für diesen Versuch, damit wir später die Rydbergkonstante bestimmen  können. Zunächst betrachten wir die theoretische Bestimmung von c. Durch die aus dem Skript gegebenen Werte von Abstand zwischen den Spalten und ihrem Auftreffpunkt am Hohlspiegel F, dem Abstand zwischen diesen Auftreffpunkten 2R und dem Abstand zwischen Gitter und den Spalten D, können wir nun c bestimmen. 
@@ -270,27 +278,26 @@ c&= 2g\: cos(\alpha) = 2g\: \frac{F-D}{\sqrt{(F-D)^2 + R^2}} = 3320.5\:nm
 
 Diesen Wert vergleichen wir nun mit den Ergebnissen, welche aus den Daten der Natrium-Doppellinien und den Zink Spektrallinien erhalten. Wie es bereits in der Theorie dargestellt wurde tragen wir $sin(\delta)$ gegen die Wellenlänge gewichtet mit der Ordnung des Maximums $n\cdot\lambda$ auf, siehe Abbildung \ref{fig:MonoConst}.
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=.9\linewidth]{Plots/Monochromatorkonstante.png}
 \caption{Bestimmung der Monochromatorkonsante durch einen linearen Fit. Gewichtung des Fits mit Fehlern auf den gemessenen Winkel $\delta$. Zoom zur Veranschaulichung der einzelnen Datenpunkte. Wellenlängen wurden aus dem Skript zum Versuch \cite{skript} entnommen. Weitere Werte siehe Anhang, Tabelle \ref{c Data}. }
 \label{fig:MonoConst}
 \end{figure}
 
-% Werte /tabelle iwo hin kltschen...
 Das Resultat aus dem linearen Fit $c = 3321.74 \pm 2.36 \: nm$ entspricht innerhalb seines Fehlers genau dem Wert aus den gegebenen Werten. Mit dieser Übereinstimmung von ca. $99.96\%$ zum geometrischen Ergebnis kann man mit guten Gewissen im folgenden diesen Wert zur Bestimmung der Rydbergkonstanten benutzen.
 
 \subsubsection{Spektrum einer Wasserstofflampe}
 Zuletzt wurde das Spektrum der Wasserstofflampe aufgenommen. Zur besseren Übersicht wurde die Grafik in zweit Teile geteilt, siehe Abbildungen \ref{fig:H Lines 0} und \ref{fig:H Lines 1}. An der Teilungsstelle wurde auch der Spiegel zur Datenaufnahme neu justiert. Die schwarzen Linien indizieren wieder wie weit sich eine Ordnung erstreckt und sind absteigend dargestellt.
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{Plots/HD_Linien_0.png}
 \caption{ Erster Teil des Spektrums der Wasserstofflampe. }
 \label{fig:H Lines 0}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{Plots/HD_Linien_1.png}
 \caption{ Zweiter Teil des Spektrums der Wasserstofflampe.}
@@ -299,25 +306,28 @@ Zuletzt wurde das Spektrum der Wasserstofflampe aufgenommen. Zur besseren Übers
 
 Hierbei erkennen wir deutlich die ersten drei Spektrallinien der Balmer Serie sowie zwei weitere Linien aus dem Sauerstoffspektrum. Stets in einer Ordnung wurden folgende Linien in absteigender Wellenlänge beobachtet:
 
-\begin{table}[!hbt]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{c|c|c|c|c|c}
 		Linie & $H_\gamma$ & $H_\beta$ & $O$ & $O$ & $H_\alpha$ \\
 		\hline
 		Farbe & violett & türkis & gräulich grün & orange & rot \\
 		\hline
-		Wellenlänge [nm]  & 434 & 486 & N/A & N/A & 656 \\
+		Wellenlänge [nm]  & 434 & 486 & 532 & 615 & 656 \\
 	\end{tabular}
-	\caption{Zuordnung der gemessenen Spektrallinien der Wasserstofflampe.}
+	\caption{Zuordnung der gemessenen Spektrallinien der Wasserstofflampe. Die Werte der Sauerstofflinien wurden aus Abbildung \ref{O Linien} abgelesen. }
 \end{table}
 
 Dabei konnten wir nur an drei Linien die Differenz der Wasserstoff- und Deuteriumlinien deutlich erkennen. Die violette Linie spaltete sich in den Ordnungen 2 und 6 sichtbar auf sowie dir rote am Ende des Spektrums in 5. Ordnung. Nachträglich wurden noch die türkisen Linien genauer betrachtet, jedoch ist deren Unterschied sehr gering gewesen.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Grafik hier oder bei Auflösungsvermögen
+
+% Gemittelte Wellenlöngen?
 
 \subsubsection{Rydbergkonstante}
 Durch die ermittelte Monochromatorkonstante und das Wasserstoffspektrum lassen sich nun die Rydbergkonstanten für $H$ und $D$ ermitteln. Dabei werden die drei genannten Doppellinien aufgeteilt und die einfachen Linien, sowie die türkisen, für beide Fits verwendet, da dort keine eindeutige Zuordnung möglich ist. Durch den schwereren Kern des Deuterium sind dessen Spektrallinien etwas energiereicher und somit nach links im Spektrum verschoben, da sie die kleinere Wellenlänge besitzen. 
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{Plots/R_H.png}
 \caption{ Fit zur Bestimmung der Rydbergkonstante des Wasserstoff.}
@@ -327,10 +337,10 @@ Durch die ermittelte Monochromatorkonstante und das Wasserstoffspektrum lassen s
 Es wurde hier ebenfalls wieder eine Gerade durch die Datenpunkte gefittet. Dabei wurden nach Gleichung (\ref{eq:rydberg}) das Inverse der Wellenlänge gegen den Faktor, welcher aus dem Energieunterschied zweier Energieniveaus ohne Feinstruktur hervorgeht, aufgetragen. Zuvor wurden die Wellenlängen mit unserer Monochromatorkonstante nach folgenden Gleichungen bestimmt:
 
 \begin{equation}
-\lambda = \frac{c}{n} sin(\delta) \:,\: \Delta\lambda = \frac{1}{n} \sqrt{(\Delta c \cdot sin(\delta))^2 + (c\cdot cos(\delta) \Delta\delta)^2}
+\lambda = \frac{c}{n} sin(\delta) \:,\: \Delta\lambda = \frac{1}{n} \sqrt{(\Delta c \cdot sin(\delta))^2 + (c\cdot cos(\delta) )^2}
 \end{equation}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{Plots/R_D.png}
 \caption{ Fit zur Bestimmung der Rydbergkonstante des Deuterium.}
@@ -339,7 +349,7 @@ Es wurde hier ebenfalls wieder eine Gerade durch die Datenpunkte gefittet. Dabei
 
 Die Resultate sind nun erstaunlich gut geworden im Vergleich mit dem Literaturwert $R_\infty = 10973731.57 m^{-1}$, welcher für einen unendlich schweren Kern gilt. Die folgende Tabelle verdeutlicht unsere Ergebnisse:
 
-\begin{table}[!hbt]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{c|c|c|c}
 		  & Fit & Literaturwert & Relative Abweichung  \\
@@ -365,10 +375,78 @@ Große Fehler in dem Abbildungen für die Rydbergkonstanten entstammen der Messu
 % Fit funktionen?
 
 \subsection{Fazit}
+% Confirmed: Bohr MOdel
 
 \section{Anhang}
 
-\begin{table}[h]
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Ordnung & Farbe & $\delta$ & $\Delta\delta$ \\ \hline\hline
+1 & violett & 8.09 & 0.06 \\ \hline
+1 & blau & 8.19 & 0.06 \\ \hline
+1 & oliv & 8.32 & 0.06 \\ \hline
+1 & rot & 11.05 & 0.06 \\ \hline
+2 & violett & 16.34 & 0.06 \\ \hline
+2 & blau & 16.52 & 0.06 \\ \hline
+2 & oliv & 16.83 & 0.06 \\ \hline
+2 & rot & 22.49 & 0.06 \\ \hline
+3 & violett & 24.96 & 0.06 \\ \hline
+3 & blau & 25.22 & 0.06 \\ \hline
+3 & oliv & 25.72 & 0.06 \\ \hline
+3 & rot & 34.97 & 0.07 \\ \hline
+4 & violett & 34.26 & 0.07 \\ \hline
+4 & blau & 34.61 & 0.07 \\ \hline
+4 & oliv & 35.34 & 0.07 \\ \hline
+4 & rot & 50.37 & 0.08 \\ \hline
+5 & violett & 44.7 & 0.07 \\ \hline
+5 & blau & 45.25 & 0.07 \\ \hline
+\hline
+\end{tabular}
+\caption{Daten zum Zinkspektrum.\label{Zn Data}}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Ordnung n & $\lambda$ [nm] & $sin(\delta)$ & $\Delta sin(\delta)$ \\ \hline\hline
+1 & 468.0 & 0.1408 & 0.001 \\ \hline
+1 & 472.2 & 0.1424 & 0.001 \\ \hline
+1 & 481.1 & 0.1447 & 0.001 \\ \hline
+1 & 636.2 & 0.1916 & 0.001 \\ \hline
+2 & 468.0 & 0.2813 & 0.001 \\ \hline
+2 & 472.2 & 0.2843 & 0.001 \\ \hline
+2 & 481.1 & 0.2895 & 0.001 \\ \hline
+2 & 636.2 & 0.3826 & 0.001 \\ \hline
+3 & 468.0 & 0.4219 & 0.001 \\ \hline
+3 & 472.2 & 0.4261 & 0.001 \\ \hline
+3 & 481.1 & 0.434 & 0.001 \\ \hline
+3 & 636.2 & 0.5732 & 0.001 \\ \hline
+4 & 468.0 & 0.563 & 0.001 \\ \hline
+4 & 472.2 & 0.5679 & 0.001 \\ \hline
+4 & 481.1 & 0.5784 & 0.001 \\ \hline
+4 & 636.2 & 0.7702 & 0.0008 \\ \hline
+5 & 468.0 & 0.7034 & 0.0009 \\ \hline
+5 & 472.2 & 0.7102 & 0.0009 \\ \hline
+\hline \hline
+1 & 589.3 & 0.1769 & 0.001 \\ \hline
+2 & 589.3 & 0.36 & 0.001 \\ \hline
+3 & 589.3 & 0.5316 & 0.001 \\ \hline
+4 & 589.3 & 0.7084 & 0.0009 \\ \hline
+\hline
+\end{tabular}
+\caption{Werte des Fits für die Gitterkonstante. Oben die Werte für Zink und unten Natrium. Gemittelte Wellenlänge der Doppellinie, da keine zusätzlichen Daten aufgenommen wurden.\label{c Data}}
+\end{table}
+
+\begin{figure}[H]
+\includegraphics[width=1\textwidth]{Plots/spektO.png}
+\caption{Spektrallinien von Sauerstoff. \cite{spektO}}
+\label{O Linien}
+\end{figure}
+
+\begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
@@ -408,72 +486,17 @@ Ordnung & Farbe & $\delta$ & $\Delta\delta$ & $\lambda$ [nm] & $\Delta\lambda$ [
 \caption{Daten zum Wasserstoffspektrum.\label{H Data}}
 \end{table}
 
-\begin{table}[h]
-\centering
-\begin{tabular}{|c|c|c|c|}
-\hline
-Ordnung & Farbe & $\delta$ & $\Delta\delta$ \\ \hline\hline
-1 & violett & 8.09 & 0.06 \\ \hline
-1 & blau & 8.19 & 0.06 \\ \hline
-1 & oliv & 8.32 & 0.06 \\ \hline
-1 & rot & 11.05 & 0.06 \\ \hline
-2 & violett & 16.34 & 0.06 \\ \hline
-2 & blau & 16.52 & 0.06 \\ \hline
-2 & oliv & 16.83 & 0.06 \\ \hline
-2 & rot & 22.49 & 0.06 \\ \hline
-3 & violett & 24.96 & 0.06 \\ \hline
-3 & blau & 25.22 & 0.06 \\ \hline
-3 & oliv & 25.72 & 0.06 \\ \hline
-3 & rot & 34.97 & 0.07 \\ \hline
-4 & violett & 34.26 & 0.07 \\ \hline
-4 & blau & 34.61 & 0.07 \\ \hline
-4 & oliv & 35.34 & 0.07 \\ \hline
-4 & rot & 50.37 & 0.08 \\ \hline
-5 & violett & 44.7 & 0.07 \\ \hline
-5 & blau & 45.25 & 0.07 \\ \hline
-\hline
-\end{tabular}
-\caption{Daten zum Zinkspektrum.\label{Zn Data}}
-\end{table}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{|c|c|c|c|}
-\hline
-Ordnung n & $\lambda$ [nm] & $sin(\delta)$ & $\Delta sin(\delta)$ \\ \hline\hline
-1 & 468.0 & 0.1408 & 0.001 \\ \hline
-1 & 472.2 & 0.1424 & 0.001 \\ \hline
-1 & 481.1 & 0.1447 & 0.001 \\ \hline
-1 & 636.2 & 0.1916 & 0.001 \\ \hline
-2 & 468.0 & 0.2813 & 0.001 \\ \hline
-2 & 472.2 & 0.2843 & 0.001 \\ \hline
-2 & 481.1 & 0.2895 & 0.001 \\ \hline
-2 & 636.2 & 0.3826 & 0.001 \\ \hline
-3 & 468.0 & 0.4219 & 0.001 \\ \hline
-3 & 472.2 & 0.4261 & 0.001 \\ \hline
-3 & 481.1 & 0.434 & 0.001 \\ \hline
-3 & 636.2 & 0.5732 & 0.001 \\ \hline
-4 & 468.0 & 0.563 & 0.001 \\ \hline
-4 & 472.2 & 0.5679 & 0.001 \\ \hline
-4 & 481.1 & 0.5784 & 0.001 \\ \hline
-4 & 636.2 & 0.7702 & 0.0008 \\ \hline
-5 & 468.0 & 0.7034 & 0.0009 \\ \hline
-5 & 472.2 & 0.7102 & 0.0009 \\ \hline
-\hline \hline
-1 & 589.3 & 0.1769 & 0.001 \\ \hline
-2 & 589.3 & 0.36 & 0.001 \\ \hline
-3 & 589.3 & 0.5316 & 0.001 \\ \hline
-4 & 589.3 & 0.7084 & 0.0009 \\ \hline
-\hline
-\end{tabular}
-\caption{Werte des Fits für die Gitterkonstante. Oben die Werte für Zink und unten Natrium. Gemittelte Wellenlänge der Doppellinie, da keine zusätzlichen Daten aufgenommen wurden.\label{c Data}}
-\end{table}
 
 \newpage
 \begin{thebibliography}{}
 
 \bibitem{skript} \begin{verbatim}
-lectures__2006__ss06_FPraktikum__V17_20060907_BalmerSerie.pdf \end{verbatim} (Begleitendes Skript zum Versuch 17: Balmer Serie)
+lectures__2006__ss06_FPraktikum__V17_20060907_BalmerSerie.pdf
+\end{verbatim} (Begleitendes Skript zum Versuch 17: Balmer Serie)
+
+\bibitem{spektO} \begin{verbatim}
+https://www.itp.uni-hannover.de/fileadmin/arbeitsgruppen/zawischa/static_html/atome.html
+\end{verbatim} 
 
 \end{thebibliography}
 \end{document}
