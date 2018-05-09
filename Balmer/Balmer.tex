@@ -93,7 +93,8 @@ lösen, also die Welleneigenfunkionen bestimmen. Da diese Rechnung in jedem Buch
 \end{equation} und wir aus der Lösung der Gleichung zwei weitere Quantenzahlen l,m erhalten, wobei l=0,1,2,...,n-1 den Drehimpuls quantifizieren und m=-l,(-l+1),...(l-1),l m die magnetische Quantenzahl ist. Die Energiewerte sind in l und m entartet, da diese die Energie für ein gegebenens n nicht ändern.
 \subsubsection{Feinstruktur}
 Die Entartung der Energiewerte aus Gl. \ref{eq:Wasserstoff} wird in l aufgehoben, wenn man die Korrekturen der Feinstruktur betrachetet. Dabei berücksichtigt man die relativistische Massenkorrektur des Elektrons sowie die Spin-Bahn-Kopplung des magnetischen Moments des Elektrons an seine Bahn. Außerdem kommt noch der Darwin-Term hinzu den man nicht durch Störungsrechnung motivieren kann, sondern ein Ergebnis der relativistischen Behandlung des Wasserstoffatoms mit der Dirac-Gleichung ist. 
-Für unser Experiment können wir jedoch die Korrekturen an die Schrödingergleichung durch die Feinstruktur vernachlässigen, da sie um den Faktor $\alpha^2 \approx  10^{-4}$ unterdrückt sind und damit zu klein sind für die Auflösung unseres Experiments. Die Korrekturen der Hyperfeinstruktur $\sim \alpha^4$ sind natürlich auch irrelevant für uns, weshalb wir nicht weiter auf sie eingehen.
+Für unser Experiment können wir jedoch die Korrekturen an die Schrödingergleichung durch die Feinstruktur im Fall des Wasserstoffs vernachlässigen, da sie um den Faktor $\alpha^2 \approx  10^{-4}$ unterdrückt sind und damit zu klein sind für die Auflösung unseres Experiments. Jedoch erzeugt die LS-Kopplung der Feinstruktur eine sichtbare Doppellinie im Spektrum des Natriums; die D-Linie, die beim Übergang vom 3p- in den 3s Zustand entsteht deren Wellenlängen bei 588,9951nm oder  589,5924 nm liegen. Das Doublett entsteht, da im 3p Zustand der Spin des Elektrons an den Bahndrehimpuls zu entweder j=l+s=3/2 oder j=l-s=1/2 koppelt. 
+Die Korrekturen der Hyperfeinstruktur $\sim \alpha^4$ sind irrelevant für uns, weshalb wir nicht weiter auf sie eingehen.
 %%Hier müssen die korrekturterme hin. und noch etwas beschriebung der LS kopplung 
 %Na doppellinie"
 \subsection{Beugung und Interferenz} %Neu schreiben mit es Photonen als anfang und dann welleneigenschaften
@@ -203,7 +204,7 @@ Der Vorteil gegenüber einem Einfachspalt ist eine Höhere Intensität der Maxim
 \end{equation}
 wobei n die Anzahl der Spalte des Gitters ist und m das Maximum bezeichnet.
 Für das Auflösungsvermögen erhalten wir dann:
-\begin{equation}
+\begin{equation}\label{eq:Auflosungsvermogen_Gitter}
 	A:=\frac{\lambda}{\Delta \lambda}=\frac{\frac{n}{m}}{\frac{1}{m}-\frac{1}{m+1}}=n(m+1)
 \end{equation}
 
@@ -261,8 +262,25 @@ Die der Inhalt Wasserstofflampe, welche zur Aufnahme der Balmer Serie benutzt wi
 
 
 \subsection{Auswertung}
-\subsubsection{Natrium Doppellinien}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%S Bzw. Auflösungsvermögen
+\subsection{Auflösungsvermögen}
+Das Auflösungsvermögen einer Apparatur ist definiert als
+\begin{equation}
+	A=\frac{\lambda}{\Delta \lambda}
+\end{equation}
+Wir wollen das maximale Auflösungsvermögen anhand der Na-Doppellinie bestimmen. Die Beobachtungen der Doppellinie haben wir in Abbildung \ref{fig:Na-Doppellinie} dargestellt. Wir haben die Doppellinie schon in erster Ordnung erkannt, was uns ein max. Auflösungsvermögen von ca 1000 gibt.
+Nach der Gleichung \ref{eq:Auflosungsvermogen_Gitter} erhalten wir für die vierte Ordnung also m=4 ein max. Auflösungsvermögen von $4*1000=4000$. Das deckt sich auch mit der Beobachtung, dass die Doppellinien in der vierten Ordnung ca 0,6 Skt überlappen, während es in erster Ordnung noch 2,4 Skt waren.
+\[ \frac{2,4}{0,4}=4 \]
+
+Wir können also einen Wellenlängenunterschied von $\lambda/4000$ auflösen.
+
+Das deckt sich auch damit, dass wir in der Lage waren in der 5. Ordnung die Wasserstoff-Deuterium Doppellinien zu erkennen, welche uns auch ein Auflösungsvermögen von 4000 geben.
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{Plots/Doppel_Na}
+	\label{fig:Na-Doppellinie}
+\end{figure}
+
+
 
 \subsubsection{Zink Spektrallinien}
 Nach dem Wechsel zur Zink Lampe wurden erneut die 4m des Maßbandes abgefahren um nach Spektrallinien zu suchen. Abbildung \ref{fig:Zink} veranschaulicht die gefundenen Linien. Man erkennt sehr schön die erwarteten vier Linien pro Ordnung. Die farbliche Reihenfolge jeder Ordnung beleibt auch stets konstant jedoch beginnt die 4. Ordnung bereits bevor die Dritte abgeschlossen ist. Wir konnten vier komplette Ordnungen vermessen und die ersten zwei Linien der Fünften. Ebenso ist es deutlich geworden, dass, wie erwartet, mit zunehmender Ordnung der Anstand zwischen den Spektrallinien deutlich zunimmt. 
@@ -385,7 +403,7 @@ Die Resultate sind nun erstaunlich gut geworden im Vergleich mit dem Literaturwe
 Unsere Ergebnisse sind somit immer etwa um $0.1\%$ größer als der Literaturwert. Die Fehler, jene die Fitfunktion liefert, sind jedoch zu klein um den Literaturwert abzudecken. Es fehlen stets eine halbe bis ganze Größenordnung.
 
 \subsection{Fehlerdiskussion}
-Zu beachten war, dass zwischen dem Winkel des Gitters und jenem welchen wir über das Maßband bestimmen konnten, ein Übersetzungsfaktor von 2 liegt. Für die Speltrallinien der Wasserstoff-Deuterium-Lampe haben wir im Raum einem Winkel von fast $180^\circ$ ausgenutzt, welches einer Gitterstellung von bis zu $90^\circ$ entspricht. Bei höheren Werten für $\delta$ gäbe es keine Linien zu sehen, da das Licht in die andere Richtung reflektiert wird. Ebenso kann die erneute Justierung des Spiegels nach $90^\circ$ zu einer Verschiebung im Winkel für die höheren Messungen geführt haben, jedoch wären dies nur wenige $cm$ und damit auch nur Verschiebungen vom wenigen Zehntel Grad, welche sehr gering sind.
+Zu beachten war, dass zwischen dem Winkel des Gitters und jenem welchen wir über das Maßband bestimmen konnten, ein Übersetzungsfaktor von 2 liegt. Für die Speltrallinien der Wasserstoff-Deuterium-Lampe haben wir im Raum einem Winkel von fast $180^\circ$ ausgenutzt, welches einer Gitterstellung von bis zu $90^\circ$ entspricht. Bei höheren Werten für $\delta$ gäbe es keine Linien zu sehen, da das Licht in die andere Richtung reflektiert wird. Ebenso kann die erneute Justierung des Spiegels nach $90^\circ$ zu einer Verschiebung im Winkel für die höheren Messungen geführt haben, jedoch wären dies nur wenige $cm$ und damit auch nur Verschiebungen vom wenigen Zehntel Grad, welche sehr gering sind. Außerdem erhielten wir, nachdem wir wieder die Linie 0. Ordnung betrachtet haben eine Abweichung von weniger als einem cm vom Startpunkt, was für genaue rejustierung des Spiegels spricht.
 
 Große Fehler in dem Abbildungen für die Rydbergkonstanten entstammen der Messung mit erster Ordnung. Dort wird aufgrund des $cos(\delta)$ der Fehlerwert für kleine Winkel nicht so stark gesenkt, vgl. Messungen für große Winkel. Dies erkennt man ebenfalls an den Fehlern der gemittelten Wellenlängen beim Wasserstoff. Die Werte sind sehr nah am Literaturwert, jedoch ist der Fehler durch den individuellen der ersten Ordnung signifikant erhöht.
 
@@ -404,11 +422,13 @@ Große Fehler in dem Abbildungen für die Rydbergkonstanten entstammen der Messu
 	\caption{Vergleich: Wellenlängen der gemessenen Linien der Balmer Serie.}
 \end{table}
 
-Wie man auch an den $\chi^2$ Werten in den Grafiken mit Fits ablesen kann, sind die gemessenen Werte gut durch die Geraden Funktionen approximiert. Je näher an null der Wert ist, desto exakter wurden die Datenpunkte durch den Fit dargestellt.
+Wie man auch an den $\chi^2$ Werten in den Grafiken mit Fits ablesen kann, sind die gemessenen Werte gut durch die Geraden Funktionen approximiert. Je näher an null der Wert ist, desto exakter wurden die Datenpunkte durch den Fit dargestellt. 
+Eine weitere Fehlerquelle stellt die Breite der Spektrallinien da, die durch einen Spalt am Einlass des Monochromators eingestellt werden kann. Wir haben diese Relativ groß gewählt, um die Doppellinien sowohl bei Wasserstoff als auch bei Natrium erkennen und deren Breite in Skalenteilen angeben zu können. Wir haben bei jeder Linie versucht, deren Mittelpunkt nach Augenmaß in die Mitte der Skala zu bewegen. Hierbei kann es zu Abweichungen von ca. 0,3 Skt gekommen sein, was ca. 1mm Ablesefehler auf dem Maßband ausmacht.
+In höherer Ordnung kommt hinzu, dass die Intensität der Spektrallinien nachlässt, wodurch es schwerer wird diese zu erkennen.
 
 \subsection{Fazit}
-Mit unseren Ergebnissen können wir nun zunächst die Abmessungen des Monochromators bestätigen, sowie die Existenz der Spektrallinien aller drei Lampen. Ebenso stimmen die Wellenlängen aus der Literatur mit unseren Werten gut überein. 
-Allgemein können wir hier nun sagen, dass das Bohr'sche Atommodell gut zu unsere Daten passt, da die Rydbergkonstanten zu denen aus der Theorie sehr gut passen. Ebenso der Isotopen Shift mit der Einführung der reduzierten Masse $\mu$ in $R_\infty$ ist deutlich erkennbar, auch wenn nur 3 Linien für den Fit verschieden waren.
+Mit unseren Ergebnissen können wir nun zunächst die Abmessungen des Monochromators bestätigen, sowie die Existenz der Spektrallinien aller drei Lampen. Ebenso stimmen die Wellenlängen aus der Literatur mit unseren Werten gut überein. Außerdem konnten wir das max. Auflösungsvermögen der Apparatur bestimmen.
+Allgemein können wir hier sagen, dass das Bohr'sche Atommodell gut zu unsere Daten passt, da die von uns ermittelte Rydbergkonstanten sehr gut zu Werten aus der Theorie passen. Ebenso der Isotopen-Shift mit der Einführung der reduzierten Masse $\mu$ in $R_\infty$ ist deutlich erkennbar, auch wenn nur 3 Linien für den Fit verschieden waren. Die Vorhersage der Feinstruktur und damit einen Beleg für die Quantenphysik und den Elektronenspin konnten wir im Vorhandensein der Na-Doppellinien bestätigen.
 
 
 \section{Anhang}
