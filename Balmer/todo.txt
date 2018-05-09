@@ -1,17 +1,11 @@
 ﻿Gunther:
 Ebert monochromator 
 chi^2 für die fits? 
+Ebert einfügen
 
 Jonas:
 Theorie
-	Auswahlregeln (done)
-	Beugungsgitter hier muss noch was zur erklärung der maxima dazu 
-	Plots dazu machen (done) einbauen fehlt noch
-	Herleitung zum Auflösungsvermögen ist noch nicht ganz richtig beim Gitter (nochmal drüber nachdenken) 
-	und schauen ob es in dem Musterskript richtig ist
-
-	G: Die Grafik zur Herletiung bei Ebert, bitte. 
-	   Kann ich nicht... Zu dumm...
+	
 
 Auflösungsvermögen
 	Hier einfach Lambda/ delta lambda rechnen und fertig hab ich mir gedacht.
