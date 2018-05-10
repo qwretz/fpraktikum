@@ -16,7 +16,7 @@
 
 \maketitle
 \begin{abstract}
-Mit diesem Experiment soll das Verständnis und der Umgang mit einem Monochromator geübt werden. Dies wird anhand der Spektrallinien von Natrium, Zink und einer Wasserstofflampe durchgeführt. Die Kalibration des Monochromators, inklusive der Bestimmung der Konstante c, wird dazu genutzt um die Rydbergkonstante für Wasserstoff und Deuterium zu bestimmen. Damit werden auch die grundlegenden Annahmen des Bohr'schen Atommodels bestätigt.
+Mit diesem Experiment soll das Verständnis und der Umgang mit einem Monochromator geübt werden. Dies wird anhand der Spektrallinien von Natrium, Zink und einer Wasserstofflampe durchgeführt. Die Kalibration des Monochromators wird dazu genutzt um die Rydbergkonstanten für Wasserstoff und Deuterium zu bestimmen.
 
 \end{abstract}
 
@@ -54,8 +54,14 @@ Um das Licht eines Elements analysieren zu können müssen wir die Spektrallinie
 
 Durch das drehbare Gitter erhält man trotz konstantem Strahlengang, welcher durch die festen Positionen der Spalte gegeben ist, eine Änderung im Laufweg des Lichts, je nach Wellenlänge. Diesen Unterschied erkennt man, wenn man wie im späteren Einzelspalt die verschiedenen Maxima betrachtet. 
 
-% SKIZZE einfügen für den Strahlengang im Gitter + Herleitung
-So erhält man aus Abbildung <<<ref>>> folgende Bedingung an Gangunterschied bei konstruktiver Interferenz:
+\begin{figure}[H]
+\centering
+\includegraphics[width=.65\textwidth]{Plots/Ebert1.jpg}
+\caption{Skizze zur Herleitung der Monochromatorkonstante. Es gilt im weiteren $\delta = \rho$.}
+\label{fig:c Herleitung}
+\end{figure}
+
+So erhält man aus Abbildung \ref{fig:c Herleitung} folgende Bedingung an Gangunterschied bei konstruktiver Interferenz:
 \begin{align}
 \Delta &= g\cdot sin(\beta) + g\cdot sin(\gamma) = g\cdot \left( sin(\delta - \alpha) + sin(\delta + \alpha)  \right) \\
  &= g\cdot ( sin(\delta)cos(\alpha) + cos(\delta)sin(\alpha) +  sin(\delta)cos(\alpha) - cos(\delta)sin(\alpha) ) \\
@@ -100,7 +106,7 @@ Die Korrekturen der Hyperfeinstruktur $\sim \alpha^4$ sind irrelevant für uns, 
 \subsection{Beugung und Interferenz} %Neu schreiben mit es Photonen als anfang und dann welleneigenschaften
 Interferenz und Beugung sind Phänomene die nur bei Wellen beobachtet werden. Die Überlegungen von de Broglie zur Materie-welle und der Beweis des Teilchencharakters von Photonen beschreiben die gleichzeitige Existenz eines Teilchens als Welle. Dies wird dann in der Quantenmechanik mathematisch Beschrieben. 
 \subsubsection{Einfachspalt}
-Fällt Licht auf einen einzelnen Spalt, so detektiert man dahinter nicht eine Normalverteilung der Intensität um die mitte des Spalts, sondern ein Interferenzmuster(Abb (\ref{fig:?????})). Insbesondere die Nebenmaxima lassen sich nicht mit klassischen Überlegungen erklären, da dieses Muster auch dann auftritt, wenn man einzelne Photonen durch den Spalt schickt und diese deshalb nicht miteinander Interferieren können.%Hier könnte man den klugscheißerkommentar anbringen vonwegen eichtheorie bla bla bla
+Fällt Licht auf einen einzelnen Spalt, so detektiert man dahinter nicht eine Normalverteilung der Intensität um die mitte des Spalts, sondern ein Interferenzmuster. Insbesondere die Nebenmaxima lassen sich nicht mit klassischen Überlegungen erklären, da dieses Muster auch dann auftritt, wenn man einzelne Photonen durch den Spalt schickt und diese deshalb nicht miteinander Interferieren können.%Hier könnte man den klugscheißerkommentar anbringen vonwegen eichtheorie bla bla bla
 Die Frage ist jetzt wie dieses Muster entstehen kann wo es doch nicht also Bewegung der Photonen aufgrund einer Bewegungsgleichung beschrieben wird. Betrachten wir das Photon als Teilchen, dass eine Wahrscheinlichkeitsdichte $\Psi(x)$ hat, dass sich auf den Spalt zubewegt, können wir es beschreiben als 
 \begin{equation}
 	Psi(x)=\Psi_{0}e^{i(kx-\omega t)}
@@ -262,7 +268,7 @@ Die der Inhalt Wasserstofflampe, welche zur Aufnahme der Balmer Serie benutzt wi
 
 
 \subsection{Auswertung}
-\subsection{Auflösungsvermögen}
+\subsubsection{Auflösungsvermögen}
 Das Auflösungsvermögen einer Apparatur ist definiert als
 \begin{equation}
 	A=\frac{\lambda}{\Delta \lambda}
@@ -277,6 +283,7 @@ Das deckt sich auch damit, dass wir in der Lage waren in der 5. Ordnung die Wass
 \begin{figure}
 	\centering
 	\includegraphics[width=1\linewidth]{Plots/Doppel_Na}
+	\caption{Na Doppellinien: Überlagerung entspricht intensiverem Farbton.}
 	\label{fig:Na-Doppellinie}
 \end{figure}
 
@@ -324,7 +331,7 @@ Diesen Wert vergleichen wir nun mit den Ergebnissen, welche aus den Daten der Na
 Das Resultat aus dem linearen Fit $c = 3321.77 \pm 2.34 \: nm$ entspricht innerhalb seines Fehlers genau dem Wert aus den gegebenen Werten. Mit dieser Übereinstimmung von ca. $99.96\%$ zum geometrischen Ergebnis kann man mit guten Gewissen im folgenden diesen Wert zur Bestimmung der Rydbergkonstanten benutzen.
 
 \subsubsection{Spektrum einer Wasserstofflampe}
-Zuletzt wurde das Spektrum der Wasserstofflampe aufgenommen. Zur besseren Übersicht wurde die Grafik in zweit Teile geteilt, siehe Abbildungen \ref{fig:H Lines 0} und \ref{fig:H Lines 1}. An der Teilungsstelle wurde auch der Spiegel zur Datenaufnahme neu justiert. Die schwarzen Linien indizieren wieder wie weit sich eine Ordnung erstreckt und sind absteigend dargestellt.
+Zuletzt wurde das Spektrum der Wasserstofflampe aufgenommen. Zur besseren Übersicht wurde die Grafik in zweit Teile geteilt, siehe Abbildungen \ref{fig:H Lines 0} und \ref{fig:H Lines 1}. An der Teilungsstelle wurde auch der Spiegel zur Datenaufnahme neu justiert. 
 
 \begin{figure}[H]
 \centering
@@ -339,10 +346,9 @@ Zuletzt wurde das Spektrum der Wasserstofflampe aufgenommen. Zur besseren Übers
 \caption{ Zweiter Teil des Spektrums der Wasserstofflampe.}
 \label{fig:H Lines 1}
 \end{figure}
+\mbox \\
 
 Hierbei erkennen wir deutlich die ersten drei Spektrallinien der Balmer Serie sowie zwei weitere Linien aus dem Sauerstoffspektrum. Stets in einer Ordnung wurden folgende Linien in absteigender Wellenlänge beobachtet:
-
-%%%%%%%%%%%%%%%%% VLL hier noch mal die Grafiken rumschubsen
 
 \begin{table}[H]
 	\centering
@@ -352,16 +358,22 @@ Hierbei erkennen wir deutlich die ersten drei Spektrallinien der Balmer Serie so
 		Farbe & violett & türkis & gräulich grün & orange & rot \\
 		\hline
 		Wellenlänge [nm]  & 434 & 486 & 532 & 615 & 656 \\
-		\hline
-		\hline
-		$\lambda$ gemittelt [nm] & & & && \\		
 	\end{tabular}
 	\caption{Zuordnung der gemessenen Spektrallinien der Wasserstofflampe. Die Werte der Sauerstofflinien wurden aus Abbildung \ref{O Linien} abgelesen. }
 \end{table}
 
-Dabei konnten wir nur an drei Linien die Differenz der Wasserstoff- und Deuteriumlinien deutlich erkennen. Die violette Linie spaltete sich in den Ordnungen 2 und 6 sichtbar auf sowie dir rote am Ende des Spektrums in 5. Ordnung. Nachträglich wurden noch die türkisen Linien genauer betrachtet, jedoch ist deren Unterschied sehr gering gewesen.
+Dabei konnten wir nur an drei Linien die Differenz der Wasserstoff- und Deuteriumlinien deutlich erkennen. Die violette Linie spaltete sich in den Ordnungen 2 und 6 sichtbar auf sowie dir rote am Ende des Spektrums in 5. Ordnung. Nachträglich wurden noch die türkisen Linien genauer betrachtet, jedoch ist deren Unterschied sehr gering gewesen und die Werte nur grob abgeschätzt.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Grafik hier oder bei Auflösungsvermögen
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\textwidth]{Plots/HD_turkise_Linien.png}
+\caption{Türkise Doppellinien der Wasserstofflampe. Entstehen durch den Isotopen Shift des Wasserstoffatoms. }
+\label{fig:turkis Doppellinie}
+\end{figure}
+
+Man erwartet wie bei den Natrium Doppellinien, dass mit steigender Ordnung die Auflösung besser wird. Hierbei scheint es aber als würden die Linien zunächst ineinander laufen. Dies konnten wir uns nicht erklären. Es kann natürlich nur eine Messungenauigkeit vorliegen, die durch die verschiedenen Intensitäten der zwei Linien begründet ist, denn die Deuterium-Linie sollte 9 mal schwächer sein, da davon nur $10\%$ in der Wasserstofflampe anteilig sind.
+
+\newpage
 
 \subsubsection{Rydbergkonstante}
 Durch die ermittelte Monochromatorkonstante und das Wasserstoffspektrum lassen sich nun die Rydbergkonstanten für $H$ und $D$ ermitteln. Dabei werden die drei genannten Doppellinien aufgeteilt und die einfachen Linien, sowie die türkisen, für beide Fits verwendet, da dort keine eindeutige Zuordnung möglich ist. Durch den schwereren Kern des Deuterium sind dessen Spektrallinien etwas energiereicher und somit nach links im Spektrum verschoben, da sie die kleinere Wellenlänge besitzen. 
