@@ -29,14 +29,36 @@ The usual crystal, also called mono-crystal, is what one expects when talking ab
 
 The polycrystalline structure is nearly a mono-crystal, but there are some spots where the connection between the atoms is broken. They are many crystals without regularity of shape and orientation. The same process can happen for a high concentration of colloids in a liquid. They can form poly-crystal like structures inside the medium they are floating in. Depending on temperature and mechanical forces, like shaking the sample, it is possible to see the crystals move in the liquid.
 
-%%%%% 1. Grafiken ausm wiki, 2. vll ist colloids ein schlechts bsp, da es kein sollid ist
+\begin{figure}[H]
+\centering
+\begin{subfigure}[h]{0.59\textwidth}
+\includegraphics[width=1\textwidth]{Plots/crystalline.png}
+\end{subfigure}
+\begin{subfigure}[h]{0.39\textwidth}
+\includegraphics[width=1\textwidth]{Plots/lattice.png}
+\end{subfigure}
+\caption{Visualization of different solid states in the left. Lattice structure of a perfect crystal on the right. \cite{wiki}}
+\end{figure}
+
+%%%%% vll ist colloids ein schlechts bsp, da es kein sollid ist
 
 The last class are the amorphous solid bodies. In this state there is no structure in how the atoms are arranged. Most of the man-made solid bodies are considered amorphous. For example glass, polymers and thin films created by sputtering. 
 
 \subsection{Band structure}
 The band structure is derived from the Fermi-Dirac distribution. For fermions, spin=1/2 particles, there is a finite amount of how many are allowed to be in the same energy level. This results from Pauli's exclusion principle, where it's not possible to have 2 fermions with the exact same wave function. At a temperature $T=0K$ the electrons energy has to be the lowest possible. 
-
-%%%% Fermi Dirac + gleichung
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{1\textwidth}
+	\centering
+	\begin{equation}
+	Fermi-Dirac \ statistics: \:\: W(E) = \frac{1}{exp\left(\frac{E-E_F}{k_B T}\right)+1} 
+	\end{equation}
+\end{subfigure}
+\begin{subfigure}[b]{1\textwidth}
+	\includegraphics[width=1\textwidth]{Plots/fd.png}
+\end{subfigure}
+\caption{Fermi-Dirac statistics equation on top and plots for different temperatures underneath, while $T_1=0K$. \cite{wiki}}
+\end{figure}
 
 Considering many Coulomb potentials in a one-dimensional lattice, their energy levels overlap and shift each other apart, if they are in the same state, due to Pauli and the electromagnetic interaction between the electrons. These shifted discrete levels are still close to each other and can be merged into a band with a thickness regarding to the energy. The first band in which the electrons are no longer bound to a nucleus is called the conduction band. If an electron is this high-energetic it can be used for a current through the solid. The last band in which the electrons are still bound is called valence band. "Still bound" means that their energy is to low to leave the potential, but they are able to change the nuclei by tunneling. This is not defined as current, because the probability for tunneling into another is as low as the reversed one. The average effect is zero.
 
@@ -47,15 +69,24 @@ For semi-conductors the energy gap is just less than $1eV$. This means it is pos
 
 %%% band transfer 
 
-\subsection{Lambert Beer Law}
+\subsection{Lambert-Beer Law}
+The Lambert-Beer law describes the relation between absorbed light passing through a solid material, depending on its thickness $dx$ and the materials absorption coefficient $\alpha$. This coefficient also describes the   product of photon absorbing centres per volume $N$ and their effective cross section $\sigma$ to absorb. 
 
+\begin{equation}
+-dI(x) = \alpha \cdot I(x)\cdot dx\ \rightarrow\ \alpha=\frac{ln(I_0 / I(x))}{x} = N\cdot \sigma
+\end{equation}
 
 \section{Experiment}
 \subsection{Set-up}
 
 Via a monochromator only light of a certain wavelength can be filtered. This wavelength will later determine the energy of the light. If the lights energy is sufficient the semiconductor will be able to absorb it. In this case there will be no intensity noticeable at our photo diode. 
 
-
+\begin{figure}[H]
+\centering
+\includegraphics[width=.9\textwidth]{Plots/setup.png}
+\caption{Set-up for this experiment. (1) Lamp, (2) Monochromator, (3) Photo diode, C Cryostat, P1/P2 Polarisation filter, F Coloured filter. }
+\label{fig:setup}
+\end{figure}
 
 \subsection{Photo diode}
 \subsection{Coloured filters} \label{color filters}
@@ -139,6 +170,9 @@ In section \ref{color filters} it was strange that the $1060nm$ filter show a di
 \newpage
 \begin{thebibliography}{}
 
+\bibitem{wiki} \begin{verbatim}
+http://wiki-fp.physik.uni-mainz.de/index.php/44_energy_gap_in_GaAs_and_Si
+\end{verbatim} (Begleitendes Skript zum Versuch 44)
 
 \end{thebibliography}
 \end{document}
