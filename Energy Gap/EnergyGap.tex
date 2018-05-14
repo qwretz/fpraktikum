@@ -36,12 +36,16 @@ The last class are the amorphous solid bodies. In this state there is no structu
 \subsection{Band structure}
 The band structure is derived from the Fermi-Dirac distribution. For fermions, spin=1/2 particles, there is a finite amount of how many are allowed to be in the same energy level. This results from Pauli's exclusion principle, where it's not possible to have 2 fermions with the exact same wave function. At a temperature $T=0K$ the electrons energy has to be the lowest possible. 
 
+%%%% Fermi Dirac + gleichung
+
 Considering many Coulomb potentials in a one-dimensional lattice, their energy levels overlap and shift each other apart, if they are in the same state, due to Pauli and the electromagnetic interaction between the electrons. These shifted discrete levels are still close to each other and can be merged into a band with a thickness regarding to the energy. The first band in which the electrons are no longer bound to a nucleus is called the conduction band. If an electron is this high-energetic it can be used for a current through the solid. The last band in which the electrons are still bound is called valence band. "Still bound" means that their energy is to low to leave the potential, but they are able to change the nuclei by tunneling. This is not defined as current, because the probability for tunneling into another is as low as the reversed one. The average effect is zero.
 
 There are now three classes of solids, regarding their energy distance between valence and conduction band. This is called the energy gap. As one expects, in a metal there is no gap, electrons are free to be used a current and can change their nucleus like they want. Insulators are the extreme opposite. Their energy gap is so high, around $5eV$, that high voltage is necessary to excite them into the conduction band. This is would usually break the insulator, due to lost power as heat. 
 For semi-conductors the energy gap is just less than $1eV$. This means it is possible to excite them by applying a voltage and thereby creating conductivity.
 
-%%% doping, pn 
+%%% doping, pn
+
+%%% band transfer 
 
 \subsection{Lambert Beer Law}
 
@@ -72,12 +76,13 @@ f(x) = A \cdot e^{-\frac{(x-\mu)^2}{2 \sigma^2}} + b
 	\centering
 	\begin{tabular}{c|c|c|c}
 	Filter [nm] & 768 & 905 & 1060 \\ \hline
-	Fit [nm] &  &  &  \\ \hline
-	Difference [nm] &  &  & 
+	Fit [nm] & 764.92(6) & 899.55(5) & 1071.10(13) \\ \hline
+	Difference [nm] & -3.08 & -5.45 & 11.10
 	\end{tabular}
-	\caption{Comparison of expected and measured max intensity wavelength. The filter value is the more trustful.}
+	\caption{Comparison of expected and measured maximum intensity wavelength. The filter value is the more trustful to be correct.}
 \end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% VALUES and how to proceed
+
+We can now determine how we have to change the wavelengths for the following measurements, by interpolating the values with a straight line:
 
 \begin{figure}[H]
 \centering
@@ -86,8 +91,15 @@ f(x) = A \cdot e^{-\frac{(x-\mu)^2}{2 \sigma^2}} + b
 \label{fig:LambdaCorrection}
 \end{figure}
 
-\subsection{Lamp spectrum}
-In the case of changes relating to light of our lamp during the time of the experiment, we took the whole lamp spectrum before the first, in between and after the second measurement with the semiconductors in the light beam. It is possible, due to changes in temperature, that the intensities could fluctuate. This would affect the determination of the energy gap. If the plateau area is decreased, the edge could be broader and for the right sample, see <<<ref>>>>, it could be more difficult for determine a specific wavelength. But in our case nothing like this happened, as shown in figure \ref{fig:lamp spectra}.
+For the calculation of the energy gaps, we now have to consider changing the measured values to correct the difference between filters and monochromator. This follows the linear equation used for the fit: 
+\begin{equation}
+\lambda_{real} = a\cdot \lambda_{measured} \ + \ b
+\end{equation}
+
+\subsection{Lamp spectrum} \label{lamp spectrum}
+In the case of changes relating to light of our lamp during the time of the experiment, we took the whole lamp spectrum before the first, in between and after the second measurement with the semiconductors in the light beam. It is possible, due to changes in temperature, that the intensities could fluctuate. This would affect the determination of the energy gap. If the plateau area is decreased, the edge could be broader and for the sample on the right of the cryostat, see <<<ref>>>>. It could increase the difficulty to determine a specific wavelength.
+
+ But in our case nothing like this happened, as shown in figure \ref{fig:lamp spectra}, where the wavelengths are not yet calibrated with the $2\%$ from section \ref{color filters}.
 
 \begin{figure}[H]
 \centering
@@ -96,12 +108,16 @@ In the case of changes relating to light of our lamp during the time of the expe
 \label{fig:lamp spectra}
 \end{figure} 
 
-Except of some divergences, which could be caused by rapidly changing the wavelength, the spectra are nearly the same. The exact measured values are shown in Chapter \ref{Appendix} Appendix. 
+As you can see the intensities are dropping rapidly after  $\lambda =1000nm$, for each spectrum. Except of some divergences, which could be caused by rapidly changing the wavelength, they are nearly the identical. The exact measured values are shown in Chapter \ref{Appendix} Appendix.
 
 This concludes in constant conditions for the energy gap measurements for silicon an gallium arsenide in the next chapter.
 
 \subsection{Absorption edges}
-\subsection{Conclusion}
+\subsection{Conclusion} \label{Conclusion}
+lululul
+
+In section \ref{color filters} it was strange that the $1060nm$ filter show a displacement to the left instead of the right like the other. The reason for this result seems to be the rapidly dropping intensity after the $\lambda =1000nm$, as discussed in section \ref{lamp spectrum}. 
+
 
 \newpage
 \section{Appendix} \label{Appendix}
