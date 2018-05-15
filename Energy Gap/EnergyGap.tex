@@ -14,13 +14,13 @@
 
 \maketitle
 \begin{abstract}
-In this experiment we want to measure the energy gaps for the semiconductors silicon Si and gallium arsenide GaAs. Thereby we want to see the difference between direct and indirect band transfer
+In this experiment we want to measure the energy gaps for the semiconductors silicon Si and gallium arsenide GaAs. Thereby we want to see the difference between direct and indirect band transfer. To get appropriate values, calibration of photo diode and wavelength values have to be done in advance. In between the lamp spectrum has to be monitored to react to changes in our data caused by the temperature. In the end we want to calculate values for the energy gaps and want to see how the absorption of photons differentiates between the type of transfer.
 
 \end{abstract}
 
 \tableofcontents
 
-
+\newpage
 \section{Theory}
 \subsection{Crystallography}
 There are a few different types of crystals, depending on their inner structure, they're classified into the following groups. 
@@ -45,7 +45,8 @@ The polycrystalline structure is nearly a mono-crystal, but there are some spots
 The last class are the amorphous solid bodies. In this state there is no structure in how the atoms are arranged. Most of the man-made solid bodies are considered amorphous. For example glass, polymers and thin films created by sputtering. 
 
 \subsection{Band structure}
-The band structure is derived from the Fermi-Dirac distribution. For fermions, spin=1/2 particles, there is a finite amount of how many are allowed to be in the same energy level. This results from Pauli's exclusion principle, where it's not possible to have 2 fermions with the exact same wave function. At a temperature $T=0K$ the electrons energy has to be the lowest possible. 
+The band structure is derived from the Fermi-Dirac distribution. For fermions, spin=1/2 particles, there is a finite amount of how many are allowed to be in the same energy level. This results from Pauli's exclusion principle, where it's not possible to have 2 fermions with the exact same wave function. At a temperature $T=0K$ the electrons energy has to be the lowest possible. And thereby all states underneath the Fermi energy $E_F$ are occupied.
+
 \begin{figure}[H]
 \centering
 \begin{subfigure}[b]{1\textwidth}
@@ -55,7 +56,8 @@ The band structure is derived from the Fermi-Dirac distribution. For fermions, s
 	\end{equation}
 \end{subfigure}
 \begin{subfigure}[b]{1\textwidth}
-	\includegraphics[width=1\textwidth]{Plots/fd.png}
+	\centering
+	\includegraphics[width=.7\textwidth]{Plots/fd.png}
 \end{subfigure}
 \caption{Fermi-Dirac statistics equation on top and plots for different temperatures underneath, while $T_1=0K$. \cite{wiki}}
 \end{figure}
@@ -65,21 +67,48 @@ Considering many Coulomb potentials in a one-dimensional lattice, their energy l
 There are now three classes of solids, regarding their energy distance between valence and conduction band. This is called the energy gap. As one expects, in a metal there is no gap, electrons are free to be used a current and can change their nucleus like they want. Insulators are the extreme opposite. Their energy gap is so high, around $5eV$, that high voltage is necessary to excite them into the conduction band. This is would usually break the insulator, due to lost power as heat. 
 For semi-conductors the energy gap is just less than $1eV$. This means it is possible to excite them by applying a voltage and thereby creating conductivity.
 
-%%% doping, pn
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\textwidth]{Plots/bandstructure.png}
+\caption{Schematic illustration of different types of metal. White: conduction band. Black: valence band. Difference between the bands is equal to the energy gap. The Fermi energy is exactly between the possible occupation levels. \cite{wiki}}
+\label{fig:bandstructure}
+\end{figure}
 
-%%% band transfer 
+Besides a dependency on temperature, the energy gap can change with the process of doping. This considers adding different atoms into a semi-conducting material. Most of the time atoms with three or five valence electrons are used. This results in p- and n-doped versions. In the band structure of a n-doped semi-conductor an additional energy level is created underneath the conduction band, due to an additional valence electron which has no partner to form a covalent bond. This electron is only bond to its nucleus and therefore easily excitable with less energy.
+In a p-doped version an additional energy level above the valence band is created. The missing electron for a covalent bond can be replaced by one of the lattice forming ones. Form the foreign atom the electron can be easier excited, due to less binding energy. This means a electron can take two steps, with each lesser energy than the energy gap, to get excited into the conduction band.
 
-\subsection{Lambert-Beer Law}
+%%% pn junction ?? Wird im Versuch nicht benötigt... überfüllt nur, odwer?
+
+\subsection{Band transfer}
+For temperatures $T\neq 0$ atoms are oscillating due to their thermal energy. It is possible to quantize this energy analogue to a photons energy. Those lattice oscillations are called phonons. Just like the photons they are described by momentum $\hbar K$ and energy $\hbar \Omega_K$. This energy has to be considered while calculating the energy gap, due to different types of band transfer.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.8\textwidth]{Plots/transfer.png}
+\caption{Illustration of direct and indirect band transfer. \cite{wiki}}
+\label{fig:band transfer}
+\end{figure}
+
+The obvious direct band transfer is not depending on any phonon influence. Maximum of valence and minimum of conduction band are at the same wave vector. This means the excitation happens without a change of momentum and therefore only the energy gap has to be overcome. 
+
+In materials with an indirect band gap, like silicon, the valence maxima and conduction minima are not at the same momentum of the atoms electron. In this case the energy gap is still added by the photons energy, but a change in the lattice momentum is necessary. This happens by emitting or absorbing a phonon, because photons can't change the oscillation of the crystal in such a scale. This means the probability of excitation into the conduction band is less than in the direct transfer. Reason behind this is the necessary temperature, without no phonons could exist. Another angle of view on the function of phonon is to compare them with a catalyser, who excites the electron and afterwards keeps on oscillating. 
+
+%%%%% letzter Satz: passt das als verglecih?
+
+Light Emitting Diodes are usually produced from materials with direct band gap. On this way the intensity of light emitted is higher and more consistent.
+%%% indirect
+
+\subsection{Lambert-Beer law}
 The Lambert-Beer law describes the relation between absorbed light passing through a solid material, depending on its thickness $dx$ and the materials absorption coefficient $\alpha$. This coefficient also describes the   product of photon absorbing centres per volume $N$ and their effective cross section $\sigma$ to absorb. 
 
 \begin{equation}
 -dI(x) = \alpha \cdot I(x)\cdot dx\ \rightarrow\ \alpha=\frac{ln(I_0 / I(x))}{x} = N\cdot \sigma
 \end{equation}
 
+
 \section{Experiment}
 \subsection{Set-up}
-
-Via a monochromator only light of a certain wavelength can be filtered. This wavelength will later determine the energy of the light. If the lights energy is sufficient the semiconductor will be able to absorb it. In this case there will be no intensity noticeable at our photo diode. 
+Via a monochromator only light of a certain wavelength can be filtered. This wavelength will later determine the energy of the light. If the lights energy is sufficient the semiconductor will be able to absorb it and in this case there will be no intensity noticeable at our photo diode. 
 
 \begin{figure}[H]
 \centering
@@ -87,6 +116,16 @@ Via a monochromator only light of a certain wavelength can be filtered. This wav
 \caption{Set-up for this experiment. (1) Lamp, (2) Monochromator, (3) Photo diode, C Cryostat, P1/P2 Polarisation filter, F Coloured filter. }
 \label{fig:setup}
 \end{figure}
+
+There are four different set-ups used in this experiment. All of them are consisting of a lamp (1), a monochromator (2) and a photo diode (3) arranged as always shown in figure \ref{fig:setup}. In between the part, lenses are placed to keep a focused light path.
+
+In the first task the polarisation filters P1/P2 were placed as shown. Thereby we want to show that with linear increasing the light intensity, the photo-current increases linear, too. This ensures that the photo diode registers all of the incoming light.
+
+Task 2) consists of measuring the intensity while coloured filters F are in the lights path. With this we will compare the values given on the monochromator to the Gaussian peaks in the intensity. This leads to a correction function and more precise wavelengths to calculate the energy gaps.
+
+The third set-up includes the cryostat C with included samples of Si and GaAs. Taking a full lamp spectrum from $400nm \ - \ 1200nm$ we can then see where the photo diode starts measuring light again. This energy will be equivalent to the gap. Once without and once with liquid nitrogen filled in the tank on top to cool the samples to $T=77K$.
+
+Before the normal, in between normal and cold measurement and at the end additional lamp spectra are taken. This happens without any of the third components in figure \ref{fig:setup}. Thereby we want to observe if the conditions of the different energy gap measurements are constant and where to expect to see the photo-current. 
 
 \subsection{Photo diode}
 \subsection{Coloured filters} \label{color filters}
@@ -172,7 +211,8 @@ In section \ref{color filters} it was strange that the $1060nm$ filter show a di
 
 \bibitem{wiki} \begin{verbatim}
 http://wiki-fp.physik.uni-mainz.de/index.php/44_energy_gap_in_GaAs_and_Si
-\end{verbatim} (Begleitendes Skript zum Versuch 44)
+\end{verbatim} 
+(Begleitendes Skript zum Versuch 44)
 
 \end{thebibliography}
 \end{document}
