@@ -108,7 +108,7 @@ The Lambert-Beer law describes the relation between absorbed light passing throu
 
 \section{Experiment}
 \subsection{Set-up}
-Via a monochromator only light of a certain wavelength can be filtered. This wavelength will later determine the energy of the light. If the lights energy is sufficient the semiconductor will be able to absorb it and in this case there will be no intensity noticeable at our photo diode. 
+Via a monochromator only light of a certain wavelength can be filtered. This wavelength will later determine the energy of the light. By truning a screw on the monochromator the reflection lattice is turned and the scale should display the wavelength which is returned. If the lights energy is sufficient the semiconductor will be able to absorb it and in this case there will be no intensity noticeable at our photo diode. 
 
 \begin{figure}[H]
 \centering
@@ -167,9 +167,9 @@ For the calculation of the energy gaps, we now have to consider changing the mea
 \end{equation}
 
 \subsection{Lamp spectrum} \label{lamp spectrum}
-In the case of changes relating to light of our lamp during the time of the experiment, we took the whole lamp spectrum before the first, in between and after the second measurement with the semiconductors in the light beam. It is possible, due to changes in temperature, that the intensities could fluctuate. This would affect the determination of the energy gap. If the plateau area is decreased, the edge could be broader and for the sample on the right of the cryostat, see <<<ref>>>>. It could increase the difficulty to determine a specific wavelength.
+In the case of changes relating to light of our lamp during the time of the experiment, we took the whole lamp spectrum before the first, in between and after the second measurement with the semiconductors in the light beam. It is possible, due to changes in temperature, that the intensities could fluctuate. This would affect the determination of the energy gap. If the plateau area is decreased, the edge of the spectrum could be broader. For the sample on the right of the cryostat, see <<<ref>>>>, this could increase the difficulty to determine a specific wavelength.
 
- But in our case nothing like this happened, as shown in figure \ref{fig:lamp spectra}, where the wavelengths are not yet calibrated with the $2\%$ from section \ref{color filters}.
+But in our case nothing like this happened, as shown in figure \ref{fig:lamp spectra}, where the wavelengths are not yet calibrated with the $2\%$ from section \ref{color filters}.
 
 \begin{figure}[H]
 \centering
@@ -182,11 +182,17 @@ As you can see the intensities are dropping rapidly after  $\lambda =1000nm$, fo
 
 This concludes in constant conditions for the energy gap measurements for silicon an gallium arsenide in the next chapter.
 
-\subsection{Absorption edges}
-\subsection{Conclusion} \label{Conclusion}
-lululul
+\subsection{Energy Gaps}
 
-In section \ref{color filters} it was strange that the $1060nm$ filter show a displacement to the left instead of the right like the other. The reason for this result seems to be the rapidly dropping intensity after the $\lambda =1000nm$, as discussed in section \ref{lamp spectrum}. 
+%%% Thickness of sample -> constant and absorbed in A in the  fit eqzuation
+\subsection{Conclusion} \label{Conclusion}
+In the end we want to talk about error sources. As shown in chapter \ref{lamp spectrum} the spectrum seemed to be constant as well as the room temperature. The position if the cryostat wasn't the same for different temperatures. This could affect the thickness of the sample, but we tried to position it vertical to the lights path. 
+
+In the script it was mentioned to take care of nitrogen clouds and condensation at the cryostats window. These effects could cause decreased intensities measured by the photo diode. By covering the nitrogen with aluminium foil and heating the windows, their influence should be minimized and not noticeable.
+
+In section \ref{color filters} it was strange that the $1060nm$ filter show a displacement to the left instead of the right like the other. The reason for this result seems to be the rapidly dropping intensity after the $\lambda =1000nm$, as discussed in section \ref{lamp spectrum}. After all only 3 filters to calibrate the wavelength seems to be insufficient for excellent results.
+
+The worst error source is the monochromator screw. Although the scale should be correct, the measurements with the filters corrected it. The display of the scale itself seemed to be uncertain on $0.5nm$, because it was possible to turn the screw for a bit without changing the number displayed on the scale. 
 
 
 \newpage
