@@ -78,7 +78,7 @@ Besides a dependency on temperature, the energy gap can change with the process 
 In a p-doped version an additional energy level above the valence band is created. The missing electron for a covalent bond can be replaced by one of the lattice forming ones. Form the foreign atom the electron can be easier excited, due to less binding energy. This means a electron can take two steps, with each lesser energy than the energy gap, to get excited into the conduction band.
 
 %%% pn junction ?? Wird im Versuch nicht benötigt... überfüllt nur, odwer?
-
+%%% Ja
 \subsection{Band transfer}
 For temperatures $T\neq 0$ atoms are oscillating due to their thermal energy. It is possible to quantize this energy analogue to a photons energy. Those lattice oscillations are called phonons. Just like the photons they are described by momentum $\hbar K$ and energy $\hbar \Omega_K$. This energy has to be considered while calculating the energy gap, due to different types of band transfer.
 
@@ -91,24 +91,28 @@ For temperatures $T\neq 0$ atoms are oscillating due to their thermal energy. It
 
 The obvious direct band transfer is not depending on any phonon influence. Maximum of valence and minimum of conduction band are at the same wave vector. This means the excitation happens without a change of momentum and therefore only the energy gap has to be overcome. 
 
-In materials with an indirect band gap, like silicon, the valence maxima and conduction minima are not at the same momentum of the atoms electron. In this case the energy gap is still added by the photons energy, but a change in the lattice momentum is necessary. This happens by emitting or absorbing a phonon, because photons can't change the oscillation of the crystal in such a scale. This means the probability of excitation into the conduction band is less than in the direct transfer. Reason behind this is the necessary temperature, without no phonons could exist. Another angle of view on the function of phonon is to compare them with a catalyser, who excites the electron and afterwards keeps on oscillating. 
+In materials with an indirect band gap, like silicon, the valence maxima and conduction minima are not at the same momentum of the atoms electron. In this case the energy gap is still added by the photons energy, but a change in the lattice momentum is necessary. This happens by emitting or absorbing a phonon, because photons can't change the oscillation of the crystal in such a scale. This means the probability of excitation into the conduction band is less than in the direct transfer. Reason behind this is the necessary temperature, without no phonons could exist. Another angle of view on the function of phonons is to compare them with a catalyser, which excites the electron and afterwards keeps on oscillating. 
 
 %%%%% letzter Satz: passt das als verglecih?
+%%%Check ich nicht. was macht ein katalysator?
 
-Light Emitting Diodes are usually produced from materials with direct band gap. On this way the intensity of light emitted is higher and more consistent.
+Light Emitting Diodes are usually produced from materials with a direct band gap. This way the intensity of light emitted is higher and more consistent, than from an indirect gap.
 %%% indirect
 
 \subsection{Lambert-Beer law}
 The Lambert-Beer law describes the relation between absorbed light passing through a solid material, depending on its thickness $dx$ and the materials absorption coefficient $\alpha$. This coefficient also describes the   product of photon absorbing centres per volume $N$ and their effective cross section $\sigma$ to absorb. 
 
 \begin{equation}
+\label{eq:Lambert-Beer}
 -dI(x) = \alpha \cdot I(x)\cdot dx\ \rightarrow\ \alpha=\frac{ln(I_0 / I(x))}{x} = N\cdot \sigma
 \end{equation}
 
+\subsection{monochromator}
+Hier könnten wir unseren ebert monochromator copy pasten wenn wir noch mehr theorie brauchen
 
 \section{Experiment}
 \subsection{Set-up}
-Via a monochromator only light of a certain wavelength can be filtered. This wavelength will later determine the energy of the light. By truning a screw on the monochromator the reflection lattice is turned and the scale should display the wavelength which is returned. If the lights energy is sufficient the semiconductor will be able to absorb it and in this case there will be no intensity noticeable at our photo diode. 
+Via a monochromator only light of a certain wavelength can be filtered. This wavelength will later determine the energy of the light. By turning a screw on the monochromator the reflection lattice is turned and the scale should display the wavelength which is passed through the monochromator. If the lights energy is sufficient the semiconductor will be able to absorb it and in there will be no intensity noticeable at our photo diode. 
 
 \begin{figure}[H]
 \centering
@@ -119,15 +123,23 @@ Via a monochromator only light of a certain wavelength can be filtered. This wav
 
 There are four different set-ups used in this experiment. All of them are consisting of a lamp (1), a monochromator (2) and a photo diode (3) arranged as always shown in figure \ref{fig:setup}. In between the part, lenses are placed to keep a focused light path.
 
-In the first task the polarisation filters P1/P2 were placed as shown. Thereby we want to show that with linear increasing the light intensity, the photo-current increases linear, too. This ensures that the photo diode registers all of the incoming light.
+1: In the first task the polarisation filters P1/P2 were placed as shown. We aligned the polarisation axis of both filters and then started turning the rear filter. We measured the light current of the diode for several angles $\alpha$ between $0^\circ$ and $90^\circ$. Thereby we want to show that with linear increase in light intensity, the photo-current increases linearly, too. %This ensures that the photo diode registers all of the incoming light.
+If the diode is linear, the measured intensities only differ by a constant factor from the actual light intensity. This factor can be neglected because it will be fitted by an arbitrary coefficient in any case.
 
-Task 2) consists of measuring the intensity while coloured filters F are in the lights path. With this we will compare the values given on the monochromator to the Gaussian peaks in the intensity. This leads to a correction function and more precise wavelengths to calculate the energy gaps.
+2: Task two consists of calibrating our monochromator by measuring the intensity while coloured filters F are in the lights path. With this we will compare the values given on the monochromator to the Gaussian peaks in the intensity. This leads to a correction function and more precise wavelengths to calculate the energy gaps.
 
-The third set-up includes the cryostat C with included samples of Si and GaAs. Taking a full lamp spectrum from $400nm \ - \ 1200nm$ we can then see where the photo diode starts measuring light again. This energy will be equivalent to the gap. Once without and once with liquid nitrogen filled in the tank on top to cool the samples to $T=77K$.
+3: The third set-up includes the cryostat C with included samples of Si and GaAs. Taking a full lamp spectrum from $400nm \ - \ 1200nm$ we can then see where the photo diode starts measuring light again. This energy will be equivalent to the gap. Each measurement will be performed twice. Once with the samples at room temperature and once with them cooled to  $T=77K$ with liquid nitrogen.
 
-Before the normal, in between normal and cold measurement and at the end additional lamp spectra are taken. This happens without any of the third components in figure \ref{fig:setup}. Thereby we want to observe if the conditions of the different energy gap measurements are constant and where to expect to see the photo-current. 
+Before the normal temperature measurement, in between normal and cold measurement and at the end an additional lamp spectra are taken. This happens without any of the third components in figure \ref{fig:setup}. Thereby we want to observe if the conditions of the different energy gap measurements are constant and where to expect to see the photo-current. 
+
 
 \subsection{Photo diode}
+The light intensity is proportional to the square of the light amplitude. Behind the second polarisation filter we should measure the intensity:
+\begin{equation}
+	I \propto sin(\alpha)^2
+\end{equation}
+To show that the photo current scales linearly with the light intensity we plotted $\frac{I}{I_{\alpha=0}}$ against $sin(\alpha)^2$ and found a linear correlation with a gradient of -1. So we have a direct proportionality between our photo current and the light intensity.
+
 \subsection{Coloured filters} \label{color filters}
 Now we want to see if the values the screw on the monochromator displays us is the same wavelength the coloured filters are supposed to let through. Supposing the filters information about the wavelength is more reliable than a screw with mechanical settings.
 
@@ -183,6 +195,33 @@ As you can see the intensities are dropping rapidly after  $\lambda =1000nm$, fo
 This concludes in constant conditions for the energy gap measurements for silicon an gallium arsenide in the next chapter.
 
 \subsection{Energy Gaps}
+We had GaAs and Si as our samples but did not know which one was which. So to figure that out, we plotted the raw data (\ref{fig:raw-data}) and immediately saw two different types of energy gaps. For the two curves of GaAs we see a sharp edge where the intensity drops to zero between $800$ and $900nm$. This fits well with the literature value of the GaAs energy gap of $1.45eV$ and shows, that there are not many other factors influencing the energy gap like phonons. In case of the silicon we see a much smoother edge, because phonons can cause absorption before the photons have the energy of the gap.
+\subsubsection{GaAs (direct gap)}
+To find the energy gap of GaAs we fitted the sudden decrease in intensity and the long slope behind it linear with two different fits. The intersection should then give us the Energy gap. This gave us an energy of $892.8nm$ or around $1.39eV$ at 300K and $847nm$ or $1.46eV$ at 77K. As expected the energy of the band gap is slightly larger (around $5\%$) at a very low temperature cause we lower the energy of phonons which can effectively make the bang gap smaller. 
+
+\subsection{Silicon (indirect gap)}
+For the indirect gap we needed to fit the absorption coefficient (\ref{eq:Lambert-Beer}) with the approximation
+\begin{equation}
+	\alpha \propto {\frac  {(h\nu -E_{{{\text{g}}}}+E_{{{\text{p}}}})^{2}}{\exp({\frac  {E_{{{\text{p}}}}}{kT}})-1}}+{\frac  {(h\nu -E_{{{\text{g}}}}-E_{{{\text{p}}}})^{2}}{1-\exp(-{\frac  {E_{{{\text{p}}}}}{kT}})}}"
+\end{equation}
+where $E_g$ is the Energy of the gap and $E_p$ is the phonon energy.
+
+
+This formula is valid only for light with photon energy larger, but not too much larger, than the band gap (more specifically, this formula assumes the bands are approximately parabolic), and ignores all other sources of absorption other than the band-to-band absorption in question, as well as the electrical attraction between the newly created electron and hole (see exciton). It is also invalid in the case that the direct transition is forbidden, or in the case that many of the valence band states are empty or conduction band states are full.\cite{absformular}
+For actually fitting the data we tried to use only values larger than the energy gap and only accepted fits, where the photon energy was larger than the phonon energy. This gave us $0.80eV$ at 300K and $1.20eV$ at 77K
+%Prozentualer vgl und sagen warum der hier so viel größer ist.
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{"Plots/raw data"}
+	\caption{}
+	\label{fig:raw-data}
+\end{figure}
+
+
+
+
 
 %%% Thickness of sample -> constant and absorbed in A in the  fit eqzuation
 \subsection{Conclusion} \label{Conclusion}
@@ -218,7 +257,12 @@ The worst error source is the monochromator screw. Although the scale should be 
 \bibitem{wiki} \begin{verbatim}
 http://wiki-fp.physik.uni-mainz.de/index.php/44_energy_gap_in_GaAs_and_Si
 \end{verbatim} 
-(Begleitendes Skript zum Versuch 44)
+\bibitem{absformular}
+\begin{verbatim}
+	3.^ Jump up to: a b J.I. Pankove, Optical Processes in Semiconductors. Dover, 1971
+\end{verbatim}
+
+
 
 \end{thebibliography}
 \end{document}
