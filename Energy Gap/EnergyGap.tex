@@ -14,7 +14,7 @@
 
 \maketitle
 \begin{abstract}
-In this experiment we want to measure the energy gaps for the semiconductors silicon Si and gallium arsenide GaAs. Thereby we want to see the difference between direct and indirect band transfer. To achieve appropriate values, calibration of photo diode and wavelength values have to be done in advance. In between the measurments for different temperatures the lamp spectrum has to be monitored to react to changes in our data caused by the room temperature. In the end we want to calculate values for the energy gaps and see how the absorption of photons differentiates between the different types of transfer.
+In this experiment we want to measure the energy gaps for the semiconductors silicon Si and gallium arsenide GaAs. Thereby we want to see the difference between direct and indirect band transfer. To achieve appropriate values, calibration of photo diode and wavelength values have to be done in advance. In between the measurements for different temperatures the lamp spectrum has to be monitored to react to changes in our data caused by the room temperature. In the end we want to calculate values for the energy gaps and see how the absorption of photons differentiates between the different types of transfer.
 
 \end{abstract}
 
@@ -63,7 +63,7 @@ The last class are the amorphous solid bodies. In this state there is no structu
 \caption{Fermi-Dirac statistics equation on top and plots for different temperatures underneath, while $T_1=0K$. \cite{wiki}}
 \end{figure}
 
-Considering many Coulomb potentials in a one-dimensional lattice, their energy levels overlap and shift each other apart. This happens if they are in the same state, due to Pauli and the electromagnetic interaction between the electrons. The shifted discrete levels are still close to each other and can be summarized into a band with a thickness regarding to the energy. The first band in which the electrons are no longer bound to a nucleus is called the conduction band. If an electron has such a high energy it can be used for a current through the solid. The last band in which the electrons are still bound is called valence band. This means that their energy is not enough to leave the potential, but they are able to change the nucleus by tunneling. This causes no current, because the probability for tunneling into another potential is as low as the reversed way. The average effect is thereby zero.
+Considering many Coulomb potentials in a one-dimensional lattice, their energy levels overlap and shift each other apart. This happens if they are in the same state, due to Pauli and the electromagnetic interaction between the electrons. The shifted discrete levels are still close to each other and can be summarized into a band with a thickness regarding to the energy. The first band in which the electrons are no longer bound to a nucleus is called the conduction band. If an electron has such a high energy it can be used for a current through the solid. The last band in which the electrons are still bound is called valence band. This means that their energy is not enough to leave the potential, but they are able to change the nucleus by tunnelling. This causes no current, because the probability for tunnelling into another potential is as low as the reversed way. The average effect is thereby zero.
 
 There are 3 types of solids, regarding their distance between valence and conduction band. This distance is called energy gap. There is no gap in metal solids. Electrons are free to be used as current and can change their nucleus. Insulators are the opposite. Their energy gap is extremely high, around $5eV$. This means a high voltage is necessary to excite them into the conduction band. Usually the high voltage would break the insulator, due to power in the form of heat. A semi-conductors energy gap is around $1eV$. This means it is possible to excite them by applying a voltage and thereby creating conductivity.
 
@@ -138,6 +138,12 @@ The light intensity is proportional to the square of the light amplitude. Behind
 	I \propto sin(\alpha)^2
 \end{equation}
 To show that the photo current scales linearly with the light intensity we plotted $\frac{I}{I_{\alpha=0}}$ against $sin(\alpha)^2$ and found a linear correlation with a gradient of -1. So we have a direct proportionality between our photo current and the light intensity.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{Plots/IntCalibration}
+	\caption{Calibration of the photo diode}
+	\label{fig:intcalibration}
+\end{figure}
 
 \subsection{Coloured filters} \label{color filters}
 Now we want to see if the values the monochromator screw displays us are the same wavelengths the coloured filters are supposed to pass. Supposing the filters information about the wavelength is more reliable than a screw with mechanical settings, we will calibrate them accordingly.
@@ -196,9 +202,29 @@ This concludes in constant conditions for the energy gap measurements for silico
 \subsection{Energy Gaps}
 We had GaAs and Si as our samples but did not know which one was which. So to figure that out, we plotted the raw data (\ref{fig:raw-data}) and immediately saw two different types of energy gaps. For the two curves of GaAs we see a sharp edge where the intensity drops to zero between $800$ and $900nm$. This fits well with the literature value of the GaAs energy gap of $1.45eV$ and shows, that there are not many other factors influencing the energy gap like phonons. In case of the silicon we see a much smoother edge, because phonons can cause absorption before the photons have the energy of the gap.
 \subsubsection{GaAs (direct gap)}
-To find the energy gap of GaAs we fitted the sudden decrease in intensity and the long slope behind it linear with two different fits. The intersection should then give us the Energy gap. This gave us an energy of $892.8nm$ or around $1.39eV$ at 300K and $847nm$ or $1.46eV$ at 77K. As expected the energy of the band gap is slightly larger (around $5\%$) at a very low temperature cause we lower the energy of phonons which can effectively make the bang gap smaller. 
+To find the energy gap of GaAs we fitted the sudden decrease in intensity and the long slope behind it linear with two different fits. The intersection should then give us the Energy gap. This gave us an energy of $892.8nm$ or around $1.39eV$ at 300K (\ref{fig:300k-direct-gap}) and $847nm$ or $1.46eV$ at 77K (\ref{fig:77k-direct-gap}). It seems like the band structure has increased slightly (around $5\%$) at the low temperature, what is likely to be caused by changes in the crystal structure of the semiconductor. 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\linewidth]{"Plots/raw data"}
+	\caption{Plot of the raw data. (Lines are included to improve readability )}
+	\label{fig:raw-data}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{"Plots/300k direct gap"}
+	\caption{Plot of the direct band gap with linear fits of the band gap.}
+	\label{fig:300k-direct-gap}
+\end{figure}
+
 
 \subsubsection{Silicon (indirect gap)}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{"Plots/300k indirect gap"}
+	\caption{Fit of $\alpha$ against our data (A is a proportionality constant)}
+	\label{fig:300k-indirect-gap}
+\end{figure}
+
 For the indirect gap we needed to fit the absorption coefficient (\ref{eq:Lambert-Beer}) with the approximation
 \begin{equation}
 \label{fit function}
@@ -208,16 +234,11 @@ where $E_g$ is the Energy of the gap and $E_p$ is the phonon energy.
 
 
 This formula is valid only for light with photon energy larger, but not too much larger, than the band gap (more specifically, this formula assumes the bands are approximately parabolic), and ignores all other sources of absorption other than the band-to-band absorption in question, as well as the electrical attraction between the newly created electron and hole (see exciton). It is also invalid in the case that the direct transition is forbidden, or in the case that many of the valence band states are empty or conduction band states are full.\cite{absformular}
-For actually fitting the data we tried to use only values larger than the energy gap and only accepted fits, where the photon energy was larger than the phonon energy. This gave us $0.80eV$ at 300K and $1.20eV$ at 77K
+For actually fitting the data we tried to use only values larger than the energy gap and only accepted fits, where the photon energy was larger than the phonon energy. This gave us $0.8043 \pm 0.0009 eV$ at 300K (\ref{fig:300k-indirect-gap}) and $0.8892 \pm 0.0019 eV$ at 77K (\ref{fig:77k-indirect-gap}). As expected the difference in the between 300K and 77K is larger for the indirect band gap with in increase of about $10.6\%$. As described in the theory this is caused by the absence of phonon vibrations that can transfer momentum to the electrons, which allows the indirect band transition. We can also see from the fits, that the phonon energy have decreased around $23\%$. This was also expected and is the explanation for the increase in the band gap.
+When we compare the different band gaps, we can see that the relative change of the band gap was about twice as large for the indirect band gap. This confirms the theory of the direct and indirect band gap and also the image of phonon vibrations in the crystal.
 %Prozentualer vgl und sagen warum der hier so viel größer ist.
 
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\linewidth]{"Plots/raw data"}
-	\caption{}
-	\label{fig:raw-data}
-\end{figure}
 
 
 
@@ -225,15 +246,19 @@ For actually fitting the data we tried to use only values larger than the energy
 
 %%% Thickness of sample -> constant and absorbed in A in the  fit eqzuation
 %%% Gutnher: Jo nehme ich mal schwer an xD
-\subsection{Conclusion} \label{Conclusion}
+\subsection{Error Discussion} \label{Conclusion}
 In the end we want to talk about error sources. As shown in chapter \ref{lamp spectrum} the spectrum seemed to be constant as well as the room temperature. The position if the cryostat wasn't the same for different temperatures. This could affect the thickness of the sample, but we tried to position it vertical to the lights path. 
 
-In the script it was mentioned to take care of nitrogen clouds and condensation at the cryostats window. These effects could cause decreased intensities measured by the photo diode. By covering the nitrogen with aluminium foil and heating the windows, their influence should be minimized and not noticeable.
+In the script it was mentioned to take care of nitrogen clouds and condensation at the cryostats window. These effects could cause decreased intensities measured by the photo diode. By covering the nitrogen with aluminium foil and heating the windows, their influence should be minimized and not noticeable. In our experiment we did not see condensation or clouds of nitrogen around the windows.
 
 In section \ref{color filters} it was strange that the $1060nm$ filter show a displacement to the left instead of the right like the other. The reason for this result seems to be the rapidly dropping intensity after the $\lambda =1000nm$, as discussed in section \ref{lamp spectrum}. After all only 3 filters to calibrate the wavelength seems to be insufficient for excellent results.
 
-The worst error source is the monochromator screw. Although the scale should be correct, the measurements with the filters corrected it. The display of the scale itself seemed to be uncertain on $0.5nm$, because it was possible to turn the screw for a bit without changing the number displayed on the scale. 
+The worst experimental error source is the monochromator screw. Although the scale should be correct, the measurements with the filters corrected it. The display of the scale itself seemed to be uncertain on $1nm$, because it was possible to turn the screw for a bit without changing the number displayed on the scale. 
 
+Another large error was caused by the fit of the indirect band gaps. On the one hand the area of validity for the approximation (\ref{fit function}) is described quite vague, while the results of the fit were highly sensitive to the range over which we were fitting. We e.g. got values of $E_g=1.19eV$ and $E_p\approx0eV$ (\ref{fig:77k-indirect-gap-alternative}) which we finally rejected, because the errors became five orders of magnitude bigger than our values, suggesting something in the fit broke down. We assume that we have left the area of validity for our approximation of $\alpha$. 
+
+\subsection{Conclusion}
+Concluding this experiment we can say that we were able to calibrate the monochromator and the photo diode and measure two different values of the energy gap one at 300K and one at 77K for the indirect and the direct band gap. As expected both energy gaps were larger at 77K and the relative change in the energy gap was bigger for the indirect one, just like described in the theory. We were able to mitigate most experimental errors for this experiment. As described above we are still not satisfied by the results of the indirect band gap fit. A more precise definition of the area of validation for the approximation \ref{fit function} could help in further experiments to minimize uncertainties in this area.
 
 \newpage
 \section{Appendix} \label{Appendix}
@@ -340,7 +365,25 @@ $\lambda$ 1 [nm] & I 1 [mV] & $\lambda$ 2 [nm] & I 2 [mV] & $\lambda$ 3 [nm] & I
 \caption{Data values for the different coloured filter plots. The filters given wavelength [nm] is displayed upper left corner for each 2 rows. }
 \end{table}
 % Tabellen der ganzen dummen Werte
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{"Plots/77k direct gap"}
+	\caption{Direct gap for 77K}
+	\label{fig:77k-direct-gap}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{"Plots/77K indirect gap"}
+	\caption{Fit of the indirect gap at 77K (A is a proportionality constant)}
+	\label{fig:77k-indirect-gap}
+\end{figure}
 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{"Plots/77K indirect gap alternative"}
+	\caption{Alternative fit we finally rejected, cause the errors for the fit parameters increase exponentially}
+	\label{fig:77k-indirect-gap-alternative}
+\end{figure}
 
 \newpage
 \begin{thebibliography}{}
