@@ -23,18 +23,18 @@
 
 \newpage
 \section{Theorie}
-\subsection{Radiation}
+\subsection{Radiation}\label{radiation}
+%%% describe 207 Bismuth - decay modes
+
+\subsection{Scintillator}\label{scintillator}
 
 
-\subsection{Refraction index}
-
-
-\subsection{Scintillator}
+\subsection{Refraction index}\label{refrac index}
 
 
 \newpage
 \section{Experiment}
-\subsection{Setup}
+\subsection{Setup}\label{setup}
 This experiment we are using a long and flat plastic scintillator to detect high energetic photons or charged particles like cosmic muons. The scintillator is connected with two photo multipliers (PMT) on each side, see figure \ref{fig:setup}.
 
 \begin{figure}[H]
@@ -66,15 +66,16 @@ Bottom: Gateway for PC connection, ADC, TDC.  }
 The Gate Generators Delayed Output (DEL) produces a short signal for the TDC. This first signal starts the time measurement and gets stopped by the delayed signal of the MSCF-16. The length of the first triggering signal determines how long the second one will be measured. The ADC on the other hand receives a long signal from the gate generator. This leads to a good energy resolution but won't be necessary in this experiment.
 
 %%% Description of how the data gets passed
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{Plots/Timing.png}
 \caption{Schematic display on how the signals are passed between the components and what the TDC returns. \cite{script}}
 \label{fig:timing}
 \end{figure}
 
-Now for a detailed description on what happens see figure \ref{fig:timing}. On top are the original signals the MSCF-16 receives. The signal from the right is delayed by the Delay Boxes. The first signal from the left PMT starts a coincidence gate. This is a variable time frame in which another signal has to appear to create a trigger. This helps to select 
-
+Now for a detailed description on what happens see figure \ref{fig:timing}. On top are the original signals the MSCF-16 receives. The signal from the right is delayed by the Delay Boxes. The first signal from the left PMT starts a coincidence gate. This is a variable time frame in which another signal has to appear to create a trigger which is used to start the time measurement. This helps to separate events and noise...
+%%%%%%% WOZU ist denn dieses coincidence gate wirklich da?  
+As explained above, the trigger signal is split in two at the Fan-In/-Out and processed in the gate generators for the special converter. In the TDC the delayed signal of the MSCF-16 then stops the time measurement. For us the time difference $t_R - t_L$ is of interest. This is proportional to the delay boxes delay and later on it will depend on where our radioactive sample is placed.
 
 \subsection{Cosmic Muons} % aka Setup 2.0
 % Cabling via NIM_ECL_NIM to the oszi
@@ -89,15 +90,264 @@ Now for a detailed description on what happens see figure \ref{fig:timing}. On t
 \end{figure}
 
 
-\subsection{Time calibration}
+\subsection{Time calibration}\label{time}
+For this chapter we placed a $^{207}Bi$ source on top of the scintillator. A folding yardstick was fasten on top. For the calibration we placed the source at $100cm$ which is the middle of the scintillator. This should result in equal time delay, if the Delay Boxes are not used and the same cables are used. To determine at which time unit the most events occurred each $50\ 000$ events were measured to create a histogram. This treatment stays the same for the following calibration and the determination of the speed of light c.
+
+Because we have no value how many time units are equal to $1ns$, the calibration has to be done. We started with an offset of $32ns$ on the delay boxes, to ensure that the left PMT always starts the coincidence gate for consistency. By increasing the additional delay the time difference will rise too and therefore a proportionality will be visible.
+
+Each data set of $50\ 000$ events is presented in the histograms in the Appendix \ref{appendix}. Each is fitted by the Gaussian function, where $\mu$ is the expected value, $\sigma$ the standard derivation, A the maximum amount at $\mu$ and b a constant off-set.
+\begin{equation}
+n(x) = A\cdot exp \left( -\frac{(x-\mu)^2}{2\sigma^2} \right) + b
+\end{equation}
+
+%%%%  fit
 
 
-\subsection{Speed of light measurement}
+\subsection{Speed of light measurement}\label{c determination}
 
+%%% plot für 20 cm ist nicht im appendix
+%%% Fehlerquelle: Kabellängen 
 
 %%% refractive index ca. 1.58 \cite{refractive index}
-\section{Appendix}
+\section{Appendix}\label{appendix}
+\subsection{Time calibration}
+\begin{figure}[H]
+\centering
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Time/0ns.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Time/4ns.png}
+\end{subfigure}
 
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Time/8ns.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Time/12ns.png}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Time/20ns.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Time/28ns.png}
+\end{subfigure}
+\caption{Histograms for the time calibration in chapter \ref{time}. Part I }
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Time/40ns.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Time/52ns.png}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Time/60ns.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Time/70ns.png}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Time/80ns.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Time/95ns.png}
+\end{subfigure}
+\caption{Histograms for the time calibration in chapter \ref{time}. Part II }
+\end{figure}
+
+
+\subsection{Speed of light}
+\begin{figure}[H]
+\centering
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Pos/24cm.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Pos/28cm.png}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Pos/32cm.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Pos/36cm.png}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Pos/40cm.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Pos/44cm.png}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Pos/48cm.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Pos/52cm.png}
+\end{subfigure}
+\caption{Histograms for the c calculation in chapter \ref{c determination}. Part I }
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Pos/56cm.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Pos/60cm.png}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Pos/64cm.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Pos/68cm.png}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Pos/72cm.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Pos/76cm.png}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Pos/80cm.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Pos/84cm.png}
+\end{subfigure}
+\caption{Histograms for the c calculation in chapter \ref{c determination}. Part II }
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Pos/88cm.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Pos/92cm.png}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Pos/96cm.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Pos/100cm.png}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Pos/104cm.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Pos/108cm.png}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Pos/112cm.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Pos/116cm.png}
+\end{subfigure}
+\caption{Histograms for the c calculation in chapter \ref{c determination}. Part III }
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Pos/120cm.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Pos/124cm.png}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Pos/128cm.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Pos/132cm.png}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Pos/136cm.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Pos/140cm.png}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Pos/144cm.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Pos/148cm.png}
+\end{subfigure}
+\caption{Histograms for the time calibration in chapter \ref{time}. Part IV }
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Pos/152cm.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Pos/156cm.png}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Pos/160cm.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Pos/164cm.png}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Pos/168cm.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Pos/172cm.png}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.48\textwidth}
+\includegraphics[width=\linewidth]{Plots/Pos/176cm.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.48\linewidth}
+\includegraphics[width=\linewidth]{Plots/Pos/180cm.png}
+\end{subfigure}
+\caption{Histograms for the c calculation in chapter \ref{c determination}. Part V }
+\end{figure}
 
 
 \newpage
