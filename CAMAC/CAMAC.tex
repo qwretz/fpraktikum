@@ -39,6 +39,8 @@ Photons with 3 MeV energy are counted by a NaI(TI) detector. Sketch the expected
 Problem 6 
 
 How many counts are needed to make the standard deviation equal to 1%? And if one obtains 8423456 counts in 300 seconds, what is the standard deviation of the count rate? 
+10000
+0,6\%
 
 \subsection{Radiation}\label{radiation}
 
@@ -52,12 +54,11 @@ How many counts are needed to make the standard deviation equal to 1%? And if on
 \subsection{Scintillator}\label{scintillator}
 A scintillator is a material that exhibits light, when excited by ionizing radiation. In our experiment we use a two meter plastic scintillator with a photomultiplier at each end to detect the decay of a Bismuth source and background radiation.
 
-When ionizing radiation hits a scintillator it excites high energy molecule states, which then decay in multiple steps back into the ground state. Thereby they emit UV-light. This UV-light is then absorbed again by a wavelength shifter that works like the scintillator but for UV-light and that emits light in the visible spectrum. This can then be measured by the photomultiplier. 
+When ionizing radiation hits a scintillator it excites high energy molecule states, which then decay in multiple steps back into the ground state. Thereby they emit UV-light. This UV-light is then absorbed again by a wavelength shifter that works like the scintillator but for UV-light and that emits light in the visible spectrum. This can then be measured by the photomultiplier. Because one high energy particle can excite many high energy states until its energy is to low, the amplitude of UV light for each event is proportional to the energy of the ionizing particle.
 %Haben wir photomultiplier schonmal irgendwo erklärt? das müsste sonst hier noch dran
-Problem 5 
-
-Explain how a plastic scintillation counter works, from the incoming of a charged particle or $\gamma$ in a plastic scintillator to the output signal of the PMT. 
-
+\subsection{Photomultiplier}
+If a low energy photon hits the photo cathode it ejects an electron through the photo effect. This electron is then accelerated towards several Dynodes in succession with an electric field. Every time an electron hits a dynode, it ejects several electrons from it, due to its higher energy. This leads to an exponential increase in electrons, that can then be measured as a voltage over a resistor. For this process to work the dynodes need to be on an increasingly positive potential. This is usually accomplished by a high voltage and a potential divider. 
+The measured voltage is proportional to the amount of electrons hitting the photo cathode. This signal can then be used for further measurements. Depending on the shunt there is always a trade-off between precision between the amount of signals and the energy of the initial signal. 
 \subsection{Refraction index}\label{refrac index}
 
 
