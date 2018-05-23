@@ -111,16 +111,28 @@ Now for a detailed description on what happens see figure \ref{fig:timing}. On t
 As explained above, the trigger signal is split in two at the Fan-In/-Out and processed in the gate generators for the special converter. In the TDC the delayed signal of the MSCF-16 then stops the time measurement. For us the time difference $t_R - t_L$ is of interest. This is proportional to the delay boxes delay and later on it will depend on where our radioactive sample is placed.
 
 \subsection{Cosmic Muons} % aka Setup 2.0
-% Cabling via NIM_ECL_NIM to the oszi
-% no photos taken
-% justierung des Spannungsverteilers
+But first we had to calibrate the PMTs. The intensity of both PMTs should be the same to decide if the the event was the same. To do this we connected the MSCF-16 with the NIM-ECL-NIM module in the upper part of the blue socket. The output of both PMTs was then connected with an oscilloscope and peaks were visible by taking single events. These peaks varied form one to another measurement, due to different cosmic muon energies. An average energy for a muon at sea level is $4GeV$ with a flux of 1 muon per $cm^2$ and per minute. \cite{muon}
+
+By changing the voltage for the left PMT we tried to align the peaks intensities. In the end the channel the oscilloscope was triggering, had the higher peak. By changing the channels the higher peak changed too. This should mean that the PMTs are now measuring equally. A picture of the final voltage configuration is shown in figure \ref{fig:voltage}.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\textwidth]{Plots/Spannung.jpg}
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[width=\linewidth]{Plots/Spannung.jpg}
 \caption{Picture of the voltage distribution for similar PMT signals. HV-L (red) supplies the left PMT and HV-R (black) the right one.}
 \label{fig:voltage}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[width=\linewidth]{Plots/SignalOrder.png}
+\caption{Picture of how the signals are received in the TDC. This displays the schemata shown in figure \ref{fig:timing}. Trigger, left PMT and at last right PMT. }
+\label{fig:signal order}
+\end{subfigure}
+\caption{Set up and configuration. For detailed information see captions.}
 \end{figure}
+
+At the end of the configuration part we had to check if the order of delayed outputs and trigger signal from the gate generators DEL-output are correct. By triggering on the trigger signal we were able to reproduce the picture given in the script, see figure \ref{fig:signal order}. We forgot to take a picture by ourself but the trigger signal was on channel 1.
 
 
 \subsection{Time calibration}\label{time}
@@ -183,7 +195,7 @@ Measurement & $0.1796 \pm 0.1486$ & $ 53\ 830\ 777 \pm 445\ 371$ \\ \hline
 \end{tabular}
 \end{table}
 
-The literature value is more than three times larger than our measured value. This is not explainable by some small errors in positioning or the fit functions. Either the time calibration is very bad or another effect occurs in this experiment, which has not been discussed.
+The literature value is more than three times larger than our measured value. This is not explainable by some small errors in positioning or the fit functions. Either the time calibration is very bad or another effect occurs in this experiment, which has not been discussed yet.
 
 %%% das photon wird nicht straight zum PMT emittiert
 %%% streueung an den rändern oder an anderen atomen
@@ -191,9 +203,9 @@ The literature value is more than three times larger than our measured value. Th
 %%% UNSERE ANNAHME IST DIREKTER WEG!!!
 
 
-%%% \section{Conclusion} oder so
+\section{Conclusion} %%% oder so
 %%% Fehlerquelle: Kabellängen 
-%%% Conclusion oder was auch immer das sein soll ...
+
 
 
 \section{Appendix}\label{appendix}
@@ -455,6 +467,9 @@ https://eljentechnology.com/images/products/data_sheets/
   files/documents/sgc-bc400-404-408-412-416-data-sheet.pdf
 \end{verbatim} 
 
+\bibitem{muon} \begin{verbatim}
+http://cosmic.lbl.gov/SKliewer/Cosmic_Rays/Muons.htm
+\end{verbatim}
 
 \end{thebibliography}
 \end{document}
