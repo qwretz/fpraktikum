@@ -55,7 +55,7 @@ Internal conversion is a special case of radioactivity. It appears when a nucleu
 \end{equation}
 $E_b$ is dependent on the shell, the electron is emitted from. The spectrum of the internal conversion will show a discrete energy spectrum instead of the contiuous one from the $\beta$-decay.
 \subsubsection{Gamma decay}
-\subsubsection{$\beta^-$ decay}
+\subsubsection{beta-decay}
 \subsubsection{Interaciton of $\gamma$-rays in matter}
 There are 3 main ways $\gamma$-rays can interact with matter:
 \begin{enumerate}
@@ -76,6 +76,7 @@ There are 3 main ways $\gamma$-rays can interact with matter:
 
 \end{enumerate}
 \subsubsection{Bismuth 207 decay modes}
+
 %%% describe 207 Bismuth - decay modes
 
 \subsection{Scintillator}\label{scintillator}
@@ -106,7 +107,7 @@ This experiment we are using a long and flat plastic scintillator to detect high
 \label{fig:setup}
 \end{figure}
 
-Both of the PMT outputs are connected with the MSCF-16 unit, the yellow one in figure \ref{fig:setup} and \ref{cabling}. The L labelled cable form the left PMT and the R labelled with an additional delay from the right one. Those Delay Boxes are just more cables the signal has to pass. From the MSCF-16 on the raw data will be delayed and passed to the analogue-to-digital converter (ADC) and time-to-digital converter (TDC) on the bottom of the pictures of the rack. And there it will be processed into the data we are working with later on. Another output leads over the third black cable to the Fan-In/-Out where the signal gets copied and passed to the Dual Gate Generator.
+Both of the PMT outputs are connected with the MSCF-16 unit, the yellow one in figure \ref{fig:setup} and \ref{fig:cabling}. The L labelled cable form the left PMT and the R labelled with an additional delay from the right one. Those Delay Boxes are just more cables the signal has to pass. From the MSCF-16 on the raw data will be delayed and passed to the analogue-to-digital converter (ADC) and time-to-digital converter (TDC) on the bottom of the pictures of the rack. And there it will be processed into the data we are working with later on. Another output leads over the third black cable to the Fan-In/-Out where the signal gets copied and passed to the Dual Gate Generator.
 
 %%%%% Platz für mehr text :D # dont float mi floats 
 
@@ -150,22 +151,76 @@ As explained above, the trigger signal is split in two at the Fan-In/-Out and pr
 \subsection{Time calibration}\label{time}
 For this chapter we placed a $^{207}Bi$ source on top of the scintillator. A folding yardstick was fasten on top. For the calibration we placed the source at $100cm$ which is the middle of the scintillator. This should result in equal time delay, if the Delay Boxes are not used and the same cables are used. To determine at which time unit the most events occurred each $50\ 000$ events were measured to create a histogram. This treatment stays the same for the following calibration and the determination of the speed of light c.
 
-Because we have no value how many time units are equal to $1ns$, the calibration has to be done. We started with an offset of $32ns$ on the delay boxes, to ensure that the left PMT always starts the coincidence gate for consistency. By increasing the additional delay the time difference will rise too and therefore a proportionality will be visible.
+Because we have no value how many time units are equal to $1ns$, the calibration has to be done. We started with an offset of $32ns$ on the delay boxes, to ensure that the left PMT always starts the coincidence gate for the sake of consistency. By increasing the additional delay the time difference will rise too and therefore a proportionality will be visible.
 
-Each data set of $50\ 000$ events is presented in the histograms in the Appendix \ref{appendix}. Each is fitted by the Gaussian function, where $\mu$ is the expected value, $\sigma$ the standard derivation, A the maximum amount at $\mu$ and b a constant off-set.
+Each data set of $50\ 000$ events is presented in the histograms in the Appendix \ref{appendix}. Each is fitted by the Gaussian function, where $\mu$ is the expected value, $\sigma$ the standard derivation, A the maximum amount at $\mu$ and b a constant off-set. 
 \begin{equation}
 n(x) = A\cdot exp \left( -\frac{(x-\mu)^2}{2\sigma^2} \right) + b
 \end{equation}
 
-%%%%  fit
+We are especially interested in the expected value $\mu$. The slope of this time difference and the external delay will tell us the relation between the units of time given by the TDC and $1ns$. This comparison with a linear fit is shown in figure \ref{fig:TimeCalibration}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{Plots/TimeCalibration.png}
+\caption{Expected values versus external delay. Identification of how many units of time are equal to one $1ns$. }
+\label{fig:TimeCalibration}
+\end{figure}
+
+This concludes in in the following conversion rule, with the real time T [ns], time difference t [units of time] and slope $a$ as shown in figure \ref{fig:TimeCalibration}:
+\begin{equation}
+T = \frac{t}{a}\:,\: dT=\sqrt{\left(\frac{dt}{a}\right)^2 + \left(\frac{t\cdot da}{a^2}\right)^2}
+\end{equation}
 
 
 \subsection{Speed of light measurement}\label{c determination}
+The same procedure is now applied to determine the speed of light in the plastic scintillator material. Instead of changing the delay of the right PMT it remains constant with $32ns$ plus additional cables. We took 41 sets of $50\ 000$ events, the individuals are shown in Appendix \ref{appendix}. For each measurement the position of the $^{207} Bi$ sample was changed by $4cm$. The error on the position is estimated with $0.5cm$, due to the size of the sample itself was around $0.8cm$. An example on how the individual sets of events are displayed is shown in figure \ref{fig:histogram20}.
 
-%%% plot für 20 cm ist nicht im appendix
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{Plots/Pos/20cm.png}
+\caption{Histogram of events at the position of 20cm. }
+\label{fig:histogram20}
+\end{figure}
+
+Again the expected values are plotted but now against the positions of the sample. The plots with units of time is shown in Appendix \ref{appendix} in figure \ref{fig:c fit units}. With the conversion rule at the end of chapter \ref{time}, the values for T are calculated. The results after linear regression are shown in figure \ref{fig:c fit}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{Plots/PosTime.png}
+\caption{Linear regression for the value of c. Converted time T against the samples position. }
+\label{fig:c fit}
+\end{figure}
+
+Now by inverting the given slope we get our value for the speed of light in the plastic scintillator material. The error on this value will follow equation \ref{eq:c error}.
+\begin{equation} \label{eq:c error}
+c=\frac{1}{a}\:,\: dc=\frac{da}{a^2}
+\end{equation}
+
+To reference our value we searched for the refractive index $n$ of plastic scintillator material, due to the equation $ c= c_0 / n$. This describes the speed of light in a material, where $c_0 = 299\ 792\ 458 \frac{m}{s}$ is the speed of light in vacuum. We found a value of $n=1.58$ \cite{refractive index} and the following comparison.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c|c}
+Value & Fraction $[c_0]$ & Real value [$\frac{m}{s}$] \\ \hline \hline
+Literature & $0.633$ & $189\ 742\ 062$  \\ \hline
+Measurement & $0.1796 \pm 0.1486$ & $ 53\ 830\ 777 \pm 445\ 371$ \\ \hline
+\end{tabular}
+\end{table}
+
+The literature value is more than three times larger than our measured value. This is not explainable by some small errors in positioning or the fit functions. Either the time calibration is very bad or another effect occurs in this experiment, which has not been discussed.
+
+%%% das photon wird nicht straight zum PMT emittiert
+%%% streueung an den rändern oder an anderen atomen
+%%% längerer laufweg und damit gernigere Licht geschw
+%%% UNSERE ANNAHME IST DIREKTER WEG!!!
+
+
+%%% \section{Conclusion} oder so
 %%% Fehlerquelle: Kabellängen 
+%%% Conclusion oder was auch immer das sein soll ...
 
-%%% refractive index ca. 1.58 \cite{refractive index}
+
 \section{Appendix}\label{appendix}
 \subsection{Time calibration}
 \begin{figure}[H]
@@ -406,6 +461,12 @@ n(x) = A\cdot exp \left( -\frac{(x-\mu)^2}{2\sigma^2} \right) + b
 \caption{Histograms for the c calculation in chapter \ref{c determination}. Part V }
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{Plots/PosTimeUnit.png}
+\caption{Linear regression for the value of c. Original time units from the TDC against the samples position. }
+\label{fig:c fit units}
+\end{figure}
 
 \newpage
 \begin{thebibliography}{}
