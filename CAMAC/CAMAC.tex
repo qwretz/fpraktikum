@@ -43,14 +43,42 @@ How many counts are needed to make the standard deviation equal to 1%? And if on
 0,6\%
 
 \subsection{Radiation}\label{radiation}
+\subsubsection{beta-decay}
 
-\subsubsection{Isomeric transition}
-\subsubsection{Internal Conversion}
 \subsubsection{Gamma decay}
-%\subsubsection{$\beta^-$ decay}
-%\subsubsection{interaciton of $\gamma$-rays in matter}
 
-%% Gunther: der Math mode in den Überschriften jammert manchmal rum... manchmal macht ers aber...
+\subsubsection{Isomer}
+In nuclear physics an isomer describes nuclei with the same number of protons and neutrons but different internal energy-states. Only states differing from the ground states with a long lifetime are called isomers. The difference in internal energy comes from different nuclear spins.
+\subsubsection{Isomeric transition}
+Isomeric transition describes a process of spontaneously changing the energy-state of the nucleus from an excited one in a lower one or the ground-state by emitting $\gamma$ radiation. The energy of the $\gamma$ depends on the specific transition, as it does in atomic physics.
+\subsubsection{Internal Conversion}
+Internal conversion is a special case of radioactivity. It appears when a nucleus in an excited state decays into the ground-state without emitting a photon. Instead an electron from the shell is is emitted with a specific energy. The atom remains as an ion. The kinetic energy $E_{e^-}$ of the conversion electron is the difference between the energy from the nucleus $E_{\gamma}$ and the binding energy of the shell electron $E_b$
+\begin{equation}
+	E_{e^-}=E_{\gamma}-E_b
+\end{equation}
+$E_b$ is dependent on the shell, the electron is emitted from. The spectrum of the internal conversion will show a discrete energy spectrum instead of the contiuous one from the $\beta$-decay.
+
+\subsubsection{Interaciton of $\gamma$-rays in matter}
+There are 3 main ways $\gamma$-rays can interact with matter:
+\begin{enumerate}
+	\item Photoeffect \newline
+	If a $\gamma$ with $E_{\gamma}$ larger than the binding energy of an $e^-$ of the target material, the electron is ejected from the atomic shell and the $\gamma$ is absorbed. The kinetic energy of the electron is:
+	\begin{equation}
+		E_{kin}=E_{\gamma}-E_{binding}
+	\end{equation}
+	\item Compton scattering \\
+	As compton scattering we describe an increase in the wavelength of a photon through scattering by a charged particle, usually an electron. The scattering results in a decrease of energy (increase in wavelength) of the photon, called the Compton effect. The lost energy is transferred to the electron. This process can not be explained by the wave properties of light (like Thomson- or Rayleigh-scattering) but only if we assume an elastic collision of a photon and an electron. The change in the wavelength can be calculated by the formula:
+	\begin{align}\label{comption}
+		\Delta \lambda&=\lambda'-\lambda \nonumber \\ 
+		\Delta \lambda&=\frac{h}{m_e c}(1-\cos \Phi)		
+	\end{align}
+	Comption scattering is the dominating interaction for energies between 100keV and 10MeV. Below that energy the effect on the wavelength of Compton scattering is very small and its dominated by the photoelectric effect. For low energies we can observe Thomson-scattering. This is just the limit case of Compton-scattering for low energies, where the wavelength does not change.
+	
+
+	\item Pair production \\
+	For high photon energies pair production is the dominating effect of light-matter interaction. In this process a photon creates an elementary particle and it's antiparticle. In order of pair production to occur, the energy of the photon needs to be at least twice as large as the rest mass of the produced particles. For the lightest elementary particle, the electron, this are  $1.022MeV$. For pair production to occur energy and momentum need to be conserved. Thus it can only happen close to a nucleus absorbing the excess momentum. The probability of pair production increases with the energy of the photon. This can be deduced from Fermis golden rule. The density of states for a certain energy is larger for two particles than for one.
+\end{enumerate}
+\subsubsection{Bismuth 207 decay modes}
 
 %%% describe 207 Bismuth - decay modes
 
@@ -201,6 +229,7 @@ The literature value is more than three times larger than our measured value. Th
 %%% streueung an den rändern oder an anderen atomen
 %%% längerer laufweg und damit gernigere Licht geschw
 %%% UNSERE ANNAHME IST DIREKTER WEG!!!
+
 
 
 \section{Conclusion} %%% oder so
