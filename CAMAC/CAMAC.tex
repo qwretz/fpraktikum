@@ -15,7 +15,7 @@
 
 \maketitle
 \begin{abstract}
-
+In this experiment we want learn how to take data via a VME module. This is shown at the example of measuring the speed of light $c$ in a plastic scintiallator. A $^{207}Bi$ source will cause by its $\beta^-$ decay a signal measurable by two photomultiplier tubes PMT. Travelling time difference and position of the sample will lead to our value of c.
 
 \end{abstract}
 
@@ -187,6 +187,9 @@ This concludes in in the following conversion rule, with the real time T [ns], t
 T = \frac{t}{a}\:,\: dT=\sqrt{\left(\frac{dt}{a}\right)^2 + \left(\frac{t\cdot da}{a^2}\right)^2}
 \end{equation}
 
+This large offset in the last mentioned figure is caused by the external delay to ensure a right order in signals. The zero delay is then equal to the constant delay for all measurements. It is about $32ns$ from the delay box plus the additional wire length. 
+The shown errors are the uncertainty on the Gaussian fit parameters.
+
 
 \subsection{Speed of light measurement}\label{c determination}
 The same procedure is now applied to determine the speed of light in the plastic scintillator material. Instead of changing the delay of the right PMT it remains constant with $32ns$ plus additional cables. We took 41 sets of $50\ 000$ events, the individuals are shown in Appendix \ref{appendix}. For each measurement the position of the $^{207} Bi$ sample was changed by $4cm$. The error on the position is estimated with $0.5cm$, due to the size of the sample itself was around $0.8cm$. An example on how the individual sets of events are displayed is shown in figure \ref{fig:histogram20}.
@@ -225,12 +228,17 @@ Measurement & $0.1796 \pm 0.1486$ & $ 53\ 830\ 777 \pm 445\ 371$ \\ \hline
 
 The literature value is more than three times larger than our measured value. This is not explainable by some small errors in positioning or the fit functions. Either the time calibration is very bad or another effect occurs in this experiment, which has not been discussed yet.\\
 
-In the scintillator the $\beta^- - $ and $\gamma -$ decay particles are inducing an electromagnetic shower. With bremsstrahlung and the photo electric effect the number of photons increases with every generation. Looking at one generation: Relative to the original incoming photon the resulting outgoing photons will have a relative angle. With this effect happening in the other two dimensions   vertical to the path from source to PMT, the total length for the lights path is higher than expected. This assumption is comparable with the random walk model. If the real path is longer the photons are faster than expected. This could cause the large discrepancy to the literature value if the path is around three times larger. But a factor of three seems to much.
+In the scintillator the $\beta^- - $ and $\gamma -$ decay particles are inducing an electromagnetic shower. With bremsstrahlung and the photo electric effect the number of photons increases with every generation. Looking at one generation: Relative to the original incoming photon the resulting outgoing photons will have a relative angle. With this effect happening in the other two dimensions vertical to the path from source to PMT, the total length for the lights path is higher than expected. This assumption is comparable with the random walk model. If the real path is longer the photons are faster than expected. This could cause the large discrepancy to the literature value if the path is around three times larger. But a factor of three seems to much.
 
 
 \section{Conclusion}
 In the end our speed of light seems to be wrong. There is the possibility that a mistake occurred while calibrating the conversion rule. With a larger value for $a$ in chapter \ref{time} the determination of the speed of light fit $a'$ will be decreased, too. And this results in a higher value of c.
 
+There should be no influence on the time difference caused by the signal transmission from MSCF-16 to the ADC and TDC, because the wires length was the same. A small error cause could be the shape of the signals the TDC is receiving. A delta function would be the best way to determine start and stop of this measurement. The output visualised was not as ideal as theoretical possible but seemed sufficient.
+
+Maybe the chosen $32ns$ offset between right and left PMT signal was not enough. This could be the reason why the histograms are showing counts in the negative time difference. This also could affect the signal processing. In this case it is possible that fluctuations are able to affect the measurements.
+
+%% vll fällt jonas noch was ein...  
 
 
 \section{Appendix}\label{appendix}
