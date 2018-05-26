@@ -1,0 +1,7 @@
+Plan für die Auswertung:
+1. Alles Plotten
+2. Hintergrund anpassen (Funktion)
+3. Zeitkalibrierung (Funktion)
+4. Alle Peaks fitten und fitparameter speichern (Funktion)
+5. Energiekalibrierung machen (Von Hand)
+6. Intensitäten ausrechnen (Funktion)
