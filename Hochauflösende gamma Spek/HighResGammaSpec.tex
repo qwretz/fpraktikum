@@ -56,7 +56,7 @@ Alle genannten Strahlungsarten können nun in einem angeregten Kernzustand enden
 \end{subfigure}
 \begin{subfigure}[b]{.48\textwidth}
 \centering
-\includegraphics[width=1.1\textwidth]{Plots/Cobalt2.png}
+\includegraphics[width=1\textwidth]{Plots/Cobalt2.png}
 \caption{Spektrum des $\gamma$ Zerfalls. Beide Peaks entsprechen den im $^{60}Ni$ angegebenen Energien des Übergangs. }
 \end{subfigure}
 \caption{Darstellungen des $\gamma$ Zerfalls vom $^{60}Co$. \cite{cobalt}}
@@ -69,8 +69,37 @@ Zusätzlich existiert noch der Gegensatz zum $\beta$ Zerfall. Beim Electron Capt
 
 
 \subsection{Photonische Wechselwirkung mit Materie}
+Je nach Energiebetrag eines Photons gibt es verschiedene Arte um mit Materie zu interagieren. Hauptsächlich geschieht die Wechselwirkung durch den Compton-Effekt. Dabei wird das Photon elastisch an meist einem Elektron gestreut, prinzipiell sind aber alle geladenen Teilchen denkbar. Das Elektron erhält zusätzliche kinetische Energie und die Wellenlänge des Photons erhöht sich. Dieser Effekt tritt bei fast allen Photonenenergien auf. Seine Wahrscheinlichkeit kann jedoch in bestimmten Regionen durch andere Effekte unterdrückt sein.
+
+Der Photoeffekt ist einer davon. Er dominiert für geringere Energien bis ca. $500\ keV$. Bei diesem Prozess handelt es sich um die komplette Absorption von Energie und Impuls des Photons durch ein Elektron, welches dabei die Möglichkeit erhalten kann die Bindungsenergie zu überwinden. Überschüssige Energie findet sich im Impuls wieder.
+
+Der andere Effekt, der für hohe Energien ab einigen $MeV$ dominiert, ist die Paarbildung. Hierbei besitzt ein Photon genug Energie um ein Elektron und ein Positron zu erzeugen. Da ein Photon sich in jedem Bezugssystem, also auch im Ruhesystem von $e^-,e^+$, mit Lichtgeschwindigkeit c bewegt, wird hierbei ein Kern benötigt um die Impulserhaltung zu gewährleisten. 
+
+Alle diese Effekte führen dazu, dass sich meist ein Elektron mit überschüssiger Energie in der Materie bewegt. Dabei kann nun Bremsstrahlung auftreten. Es werden somit wieder Photonen frei und eine Kette aus diesem Prozessen findet statt. Dies ist der Grund warum im folgenden Kapitel überhaupt die Möglichkeit besteht radioaktive Zerfälle elektrisch wahrzunehmen.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\textwidth]{Plots/PhotonInteraktion.png}
+\caption{Darstellung welche Interaktion der Photonen mit Materie in welchen Energiebereichen am wahrscheinlichsten ist. }
+\end{figure}
+
 \subsection{Detektion von Strahlung}
-%%% schintillator kurz, germanium halbleiter, pmt
+Es gibt nun je nach Verwendungszweck verschiedene Arten um Teilchen nachzuweisen, insbesondere auch um radioaktive Strahlung zu detektieren. Für die meisten Nachweise werden Szintillatoren verwendet. Das Prinzip besteht darin, dass das Strahlungsteilchen seine Energie an das Material des Szintillator abgibt und dabei Elektronen frei werden. Dies kann durch Streuprozesse als auch den Photoeffekt geschehen. Dieser spielt im zweiten Schritt eine große Rolle, da die freien Elektronen meist noch genug Energie besitzen um Bremsstrahlung zu emittieren. Durch die Wiederholung des Prozesses entsteht ein Lichtblitz der sich durch das Material fortsetzt. 
+
+Zur digitalen Auswertung des Ereignisses wird dann ein Photomultiplier benötigt. Dieser beruht ebenfalls auf dem Photoeffekt, doch nun wird das frei Elektron von einer Anode angezogen, da diese auf einem höheren Potential liegt als die Anode, welche vom Photon getroffen wurde. Mit der aus dem elektrischen Feld gewonnenen Energie können nun an der Anode weitere Elektronen herausgeschlagen werden. Durch stets versetzte Anoden, damit die Elektronen keine Anode überspringen, nimmt deren Anzahl pro Anode exponentiell zu. Zum Schluss wird noch der Stromfluss gemessen, welcher proportional zur anfangs deponierten Energie ist. Diese Anwendung ist gut solange die genaue Energie eines Ereignisses nicht sonderlich wichtig ist sondern nur dessen Vorkommen und Aktivität. Sie sind jedoch besser als ein Geiger-Müller Zählrohr, bei dem nur die Anzahl der Teilchen messbar ist.
+
+Um eine genaue Energieauflösungen zu erhalten, welche den Sinn der hochauflösenden $\gamma$ Spektroskopie darstellen, sollte man nun Halbleiterdetektoren benutzen. Hierbei 
+werden statt Szintillatoren Halbleiterbauteile benutzt. In diesem Experiment wird wie auch meist ein koaxialer Germanium Detektor verwendet. Das Prinzip dahinter ist die Verwendung der Sperrschicht, welche entsteht wenn verscheiden dotierte Versionen eines Halbleiters aneinander geführt werden. Der Überschuss von Elektronen im n-dotierten Material wird vom Mangel an $e^-$, bzw. Überschuss an Löcher, abgesaugt. Es entsteht ein Bereich indem nur noch die feste Ladungsträger der Gitterstruktur vorhanden sind und dadurch ein elektrisches Feld. Durch anlegen einer Spannung in Sperrrichtung kann man weitere Elektronen bzw. Löcher von dieser Sperrschicht absaugen. Der positive Pol der Spannungsquelle liegt also an der n-dotierten Seite an. Mit hohen Spannungen kann man nun den ganzen Halbleiter in eine solche Sperrschicht umwandeln.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.66\textwidth]{Plots/Energie.png}
+\caption{Vergleich der Energieauflösungen von Szintillatoren und Halbleiter Detektoren. Man erkennt sehr gut, bei Halbleitern die Peaks schärfer sind und damit nahe Peaks deutlich unterscheidbar sind.}
+\label{fig:energiaufloesung}
+\end{figure}
+
+Tritt nun ein Photon in diesen Detektor ein, so entsteht ein Elektron und gleichzeitg ein Loch. Elektronen können nach vorigem Kapitel nun weitere erzeugen. Durch das starke elektrische Feld werden die freien Ladungsträger nun schnell abgesaugt. Der entstandene Strom ist nun wieder direkt zu Photonenenergie proportional. Anders als zum Szintillator ist die Energieauflösunge der Germaniumdetektors größer. Dies liegt an der benötigeten Energie um Elektronen im Material zuerzeugen. Während diese im Germanium Halbleiter bei ca. $0.7eV$ liegt, benötigt man in einem NaI Szintillator fast $3eV$. \cite{energieaufloesung} Es geht viel Energie auch in Gitterschwingungen ein, welche dann nicht mehr vom PMT gemessen werden kann. Die Photonenenergie erzeugt im Szintillator nun weniger Elektronen und damit .
+
 %%% Beschreibung vom Spektrum, erwartete grafik
 
 
@@ -95,6 +124,11 @@ https://de.wikipedia.org/wiki/Protonenzerfall
 \bibitem{cobalt} \begin{verbatim}
 https://en.wikipedia.org/wiki/Cobalt-60
 \end{verbatim}
+
+\bibitem{energieaufloesung} 
+\begin{verbatim}
+Vorlesung2_11_2011.ppt , Torsten Kröll, TU Darmstadt
+\end{verbatim}  
 
 \end{thebibliography}
 \end{document}
