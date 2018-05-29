@@ -102,9 +102,6 @@ Tritt nun ein Photon in diesen Detektor ein, so entsteht ein Elektron und gleich
 
 Großer Nachteil, welcher in der Auswertung eine Rolle spielen wird, ist die benötigte ständige Kühlung. Damit der Germanium Detektor wie erwartet funktionieren kann benötigte er eine Temperatur von ca. $T=77K$. Dies wird mit flüssigem Stickstoff umgesetzt. Der Grund für die Wichtigkeit dieser Temperatur ist, wie auch der große Vorteil, die geringe Bandlücke des Halbleiters von $E_g=0.7eV$. Bereits bei Zimmertemperatur ist die thermische Energie im Kristall groß genug um so Elektronen Loch Paare zu erzeugen. Dieser Stromfluss wird als Rauschen wahrgenommen und überdeckt das eigentliche Spektrum der zu messenden radioaktiven Strahlung.
 
-%%% Beschreibung vom Spektrum, erwartete grafik
-
-
 
 \newpage
 \section{Experiment}
@@ -118,7 +115,7 @@ Wie in der Theorie bereits angesprochen wird für dieses Experiment ein mit flü
 \label{fig:setup}
 \end{figure}
 
-Die Signale werden dann vom Preamplifier verstärkt. Da es sich bei einem solchen Signal im Optimalfall um eine Delta Funktion handelt und dies nur schlecht elektronisch verarbeitet werden kann, besitzt das Ausgangssignal hier noch einen abklingenden Teil, siehe Abbildung \ref{fig:signals}.
+Die Signale werden dann vom Preamplifier verstärkt. Da es sich bei einem solchen Signal im Optimalfall um eine Delta Funktion handelt, bei der die Amplitude direkt zur Energie proportional ist. Dies kann nur schlecht elektronisch realisiert werden, daher besitzt das Ausgangssignal hier noch einen abklingenden Teil, siehe Abbildung \ref{fig:signals}. Dieser hat keine zusätzliche Information über die Energie der Strahlung sondern entsteht, da sich der Schaltkreis bzw. Operationsverstärker nicht instantan wieder entladen kann. Es entsteht hierbei also eine kurze Totzeit in welcher der Preamplifier nicht arbeiten kann. 
 
 \begin{figure}[H]
 \centering 
@@ -127,6 +124,26 @@ Die Signale werden dann vom Preamplifier verstärkt. Da es sich bei einem solche
 \label{fig:signals}
 \end{figure}
 
+Danach wird das Signal vom Main Amplifier umgeformt, damit der ADC dieses später in ein digitales Signal umwandeln kann. Die wichtigste Bedingung daran ist eine gemeinsame Grundlinie. Klingt das Signal wegen langsamer Kondensatorentladung nicht auf eine konstante 0 ab, so kann nicht genau bestimmt werden wann das Signal zu Ende ist. Ebenso ist es ungünstig Delta Funktionen zu messen, da das Zeitfenster zur Energiebestimmung sehr klein ist. Daher werden aus diesen Dreieck-Signalen von Main Amplifier Gausspeaks geformt. Es entspricht einer Schaltung eines Hochpasses mit folgendem Tiefpass. Der Hochpass erstellt die 0 Linie während der Tiefpass die Spitzen glättet. Weiterhin bleibt die Energieinformation im Maximum des Peaks.
+
+Mit der Breite des Gauss kann man nun bestimmen wie schnell die Messung sein kann. Für kleine Zeitkonstanten TC, die Breite der Gausskurve entspricht $7.3\cdot TC$ \cite{signalverarbeitung}, ist der Peak nun schmal. Damit besteht die Möglichkeit mehr Events einzeln zu messen. Die Energieauflösung nimmt jedoch wegen schmalerem Signal wiederum ab. Eine Möglichkeit dies zu verhindern ist die Probe weiter vom Detektor zu platzieren, wie später noch beschrieben wird.
+
+Es gibt nun wie in Abbildung \ref{fig:signals} gezeigt, die Möglichkeit zwei Pulse, die zu nah aneinander sind abzulehnen. Dazu benötigt man ein Ablehnungssignal (Reject Signal), welches vom ... ausgesendet wird und entscheidet ob eine gültige Messung vorliegt. Dies führt jedoch zu einer größeren Totzeit des Detektors und damit zu einer schlechten Bestimmung der Aktivität einer Quelle. In unserem Fall wird dieser Mechanismus bewusst nicht benutzt um eine Energiekalibration mit den $^{60}Co$ Peaks durchzuführen, aber auch da es für geringe Zählrate unnötig ist.  
+%%%%%%%%%% REF 60Co
+Die Aktivität der zu vermessenden Präparate, siehe Tabelle \ref{tab:T 1/2}, ist mit großer Wahrscheinlichkeit bereits so gering, dass die empfohlenen $25cm$ Abstand zum Detektor, nicht mehr notwendig sind. Angeblich seien diese von 1995 und damit sind alle hoch aktiven Quellen wie $^{60}Co$ und $^{22}Na$ bereits auf $2^{-20a/T_{1/2}} \approx 1/16 \ bzw. \ 1/1024 $ der ursprünglichen Menge und damit Aktivität zerfallen. Alle Materialien anderen besitzen wegen hoher Halbwertszeit sowieso nur geringe Aktivitäten. 
+Daher wurden die Präparate direkt an der Vakuumkammer fixiert.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c|c|c|c|c|c}
+Präparat & $^{60}Co$& $^{133}Ba$& $^{152}Eu$& $^{137}Cs$& $^{22}Na$ & $^{241}Am$ \\ \hline 
+Halbwertszeit $T_{1/2} [a]$ & 5.27 & 10.51 & 13.52 & 30.17 & 2.60 & 241.06  \\ 
+\end{tabular}
+\caption{Verwendete radioaktive Materialien und deren Halbwertszeit.}
+\label{tab:T 1/2}
+\end{table}
+
+Zuletzt wird das Signal von Analog-To-Digital Converter (ADC) umgeformt, damit der aus dem Peak ein langes Signal wird, welches dann die Energieinformation beinhaltet. Dazu wird prinzipiell die Energie in eine Kondensator gespeichert und die Zeit der Entladung gemessen. Diese wird als Signal an den PC weitergegeben und entspricht weiterhin der Photonenenergie. Ein positives Ablehnungssignal würde die Weitergabe des Signals verhindern. Effektiv wäre dies dann keine Messung.
 
 %%% Signal verarbietung? JA!
 
