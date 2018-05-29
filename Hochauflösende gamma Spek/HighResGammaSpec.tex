@@ -98,7 +98,9 @@ werden statt Szintillatoren Halbleiterbauteile benutzt. In diesem Experiment wir
 \label{fig:energiaufloesung}
 \end{figure}
 
-Tritt nun ein Photon in diesen Detektor ein, so entsteht ein Elektron und gleichzeitg ein Loch. Elektronen können nach vorigem Kapitel nun weitere erzeugen. Durch das starke elektrische Feld werden die freien Ladungsträger nun schnell abgesaugt. Der entstandene Strom ist nun wieder direkt zu Photonenenergie proportional. Anders als zum Szintillator ist die Energieauflösunge der Germaniumdetektors größer. Dies liegt an der benötigeten Energie um Elektronen im Material zuerzeugen. Während diese im Germanium Halbleiter bei ca. $0.7eV$ liegt, benötigt man in einem NaI Szintillator fast $3eV$. \cite{energieaufloesung} Es geht viel Energie auch in Gitterschwingungen ein, welche dann nicht mehr vom PMT gemessen werden kann. Die Photonenenergie erzeugt im Szintillator nun weniger Elektronen und damit .
+Tritt nun ein Photon in diesen Detektor ein, so entsteht ein Elektron und gleichzeitg ein Loch. Elektronen können nach vorigem Kapitel nun weitere erzeugen. Durch das starke elektrische Feld werden die freien Ladungsträger nun schnell abgesaugt. Der entstandene Strom ist nun wieder direkt zu Photonenenergie proportional. Anders als zum Szintillator ist die Energieauflösunge der Germaniumdetektors größer. Dies liegt an der benötigeten Energie um Elektronen im Material zuerzeugen. Während diese im Germanium Halbleiter bei ca. $0.7eV$ liegt, benötigt man in einem NaI Szintillator fast $3eV$. \cite{energieaufloesung} Es geht viel Energie auch in Gitterschwingungen ein, welche dann nicht mehr vom PMT gemessen werden kann. Die Photonenenergie erzeugt im Szintillator nun weniger Elektronen und damit weniger Strom. Dadurch ist auch die Energieauflösung schlechter, wie in Abbildung \ref{fig:energiaufloesung} dargestellt. Es wurde die selbe radioaktive Quelle untersucht. Oben ist das Spektrum der Szintillators dargestellt, während darunter das Spektrum des Halbleiter Detektors liegt. Man erkennt sehr gut, dass einzelne Peaks oben eigentlich aus vielen einzelnen bestehen. Daher ist die Verwendung von, wie im Folgenden auch, eines Germanium Detektors sinnvoll.
+
+Großer Nachteil, welcher in der Auswertung eine Rolle spielen wird, ist die benötigte ständige Kühlung. Damit der Germanium Detektor wie erwartet funktionieren kann benötigte er eine Temperatur von ca. $T=77K$. Dies wird mit flüssigem Stickstoff umgesetzt. Der Grund für die Wichtigkeit dieser Temperatur ist, wie auch der große Vorteil, die geringe Bandlücke des Halbleiters von $E_g=0.7eV$. Bereits bei Zimmertemperatur ist die thermische Energie im Kristall groß genug um so Elektronen Loch Paare zu erzeugen. Dieser Stromfluss wird als Rauschen wahrgenommen und überdeckt das eigentliche Spektrum der zu messenden radioaktiven Strahlung.
 
 %%% Beschreibung vom Spektrum, erwartete grafik
 
@@ -107,7 +109,26 @@ Tritt nun ein Photon in diesen Detektor ein, so entsteht ein Elektron und gleich
 \newpage
 \section{Experiment}
 \subsection{Setup}
-%%% Signal verarbietung?
+Wie in der Theorie bereits angesprochen wird für dieses Experiment ein mit flüssigem Stickstoff gekühlter Koaxial Germanium Detektor verwendet. Es handelt sich hierbei um eine schwach n-dotierten Germanium Zylinder mit Bohrloch. Die Wände des Bohrloches werden mit stark p-dotiertem Germanium beschichtet. Dabei entsteht bereits eine Sperrschicht, welche durch das anlegen einer Spannung von bis zu $U_0=3kV$ auf den ganzen Zylinder ausgeweitet wird. Der grobe Aufbau ist in Abbildung \ref{fig:setup} dargestellt.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.8\textwidth]{Plots/Setup.png}
+\caption{Versuchsaufbau: 1) Radioaktive Quelle, 2) Fenster zur Vakuumkammer, 3) Germanium Detektor, 4) Preamplifier, 5) Hochspannungsquelle, 6) MCA inkl. ADC, 7) Main Amplifier, 8) Pulser, 9) Teilchensieb, 10) Kupferstab zur Kühlung, 11) Flüssiges $N_2$  }
+\label{fig:setup}
+\end{figure}
+
+Die Signale werden dann vom Preamplifier verstärkt. Da es sich bei einem solchen Signal im Optimalfall um eine Delta Funktion handelt und dies nur schlecht elektronisch verarbeitet werden kann, besitzt das Ausgangssignal hier noch einen abklingenden Teil, siehe Abbildung \ref{fig:signals}.
+
+\begin{figure}[H]
+\centering 
+\includegraphics[width=1\textwidth]{Plots/deadtime.png}
+\caption{Darstellung der Signalübertragung zwischen Preamplifier, Main Amplifier und ADC Output an den Computer. \cite{signalverarbeitung}  }
+\label{fig:signals}
+\end{figure}
+
+
+%%% Signal verarbietung? JA!
 
 
 \newpage
@@ -128,6 +149,11 @@ https://en.wikipedia.org/wiki/Cobalt-60
 \bibitem{energieaufloesung} 
 \begin{verbatim}
 Vorlesung2_11_2011.ppt , Torsten Kröll, TU Darmstadt
+\end{verbatim}  
+
+\bibitem{signalverarbeitung} 
+\begin{verbatim}
+Ge_Gamma_Spectroscopy.pdf , Canberra Nuclear, aus dem Wiki.
 \end{verbatim}  
 
 \end{thebibliography}
