@@ -43,9 +43,27 @@ How many counts are needed to make the standard deviation equal to 1%? And if on
 0,6\%
 
 \subsection{Radiation}\label{radiation}
-\subsubsection{beta-decay}
+\subsubsection{Radioaktive Decay}
+Starting with radioaktive decay, there are three different kinds. The $\alpha$ decay is the emission of an $He^{2+}$ particle by the atoms nucleus. This radiation is blocked easily, due to large particles interaction with its surrondings. After $10cm$ of air, the exposure is no longer a threat to humans, but having an alpha emitter inside your body can lead to cancer and other dangerous diseases. The decay chanels are shown in table  \ref{tab:zerfall}
 
-\subsubsection{Gamma decay}
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+\centering
+\begin{tabular}{c||c}
+Zerfallsart & Formel   \\ \hline
+$\alpha$ & $_Z^A X \rightarrow\ _2^4\alpha + _{Z-2}^{A-4} Y$ \\ \hline
+$\beta^+$ &   $_Z^A X \rightarrow\  _{Z-1}^{A}Y + e^+ + \nu_e$ \\ \hline
+$\beta^-$ &   $_Z^A X \rightarrow\  _{Z+1}^{A}Y + e^- +  \bar{\nu}_e$ \\ \hline
+$\gamma$ &  $_Z^A X^* \rightarrow\ _Z^A X + \gamma$  \end{tabular}
+\caption{Chart of radioactive decays. It is possible that the resulting nuclei are excited after their decay. Not for the $\gamma$ decay, there the nucleus' excitation is removed by a photon. }
+\label{tab:zerfall}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
+For every decay, including the following $\beta$ decays, the mass of the starting nucleus is larger than the combined one for of the resulting nuclei. This is due to energy conservation, because kinetic energy is produced to remove a particle from the nucleus.
+The $\beta$ decay is the decay of a nuclear particle, this means neutron or proton. Depending on the emission of a electron or positron, the decay is named after their charge. Additional a lepton is emitted due to conservation of the lepton number. 
+
+These decay variations can result in a excited state of the nucleus, which is usual represented by the nuclear spin. This additional energy is released by a photon as $\gamma$ ray just like X-rays from the nucleus' electron shell. The energy results in a reassembling the nuclear particles to a lower-energy structure. The other possibility to remove this energy is by transferring it directly to a s-orbital electron, due to their positional probability in the nucleus. This leads to its emission.
 
 \subsubsection{Isomer}
 In nuclear physics an isomer describes nuclei with the same number of protons and neutrons but different internal energy-states. Only states differing from the ground states with a long lifetime are called isomers. The difference in internal energy comes from different nuclear spins.
@@ -90,7 +108,25 @@ When ionizing radiation hits a scintillator it excites high energy molecule stat
 \subsection{Photomultiplier}
 If a low energy photon hits the photo cathode it ejects an electron through the photo effect. This electron is then accelerated towards several Dynodes in succession with an electric field. Every time an electron hits a dynode, it ejects several electrons from it, due to its higher energy. This leads to an exponential increase in electrons, that can then be measured as a voltage over a resistor. For this process to work the dynodes need to be on an increasingly positive potential. This is usually accomplished by a high voltage and a potential divider. 
 The measured voltage is proportional to the amount of electrons hitting the photo cathode. This signal can then be used for further measurements. Depending on the shunt there is always a trade-off between precision between the amount of signals and the energy of the initial signal. 
-\subsection{Refraction index}\label{refrac index}
+\subsection{Refractive Index}\label{refrac index}
+The refractive index is a characteristic of all materials. It determines the refractive angle if light passes different mediums according to Snell's law. 
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[c]{0.48\linewidth}
+\centering
+\includegraphics[width=.5\linewidth]{Plots/Snell.png}
+\end{subfigure}
+\begin{subfigure}{0.48\textwidth}
+\begin{equation}
+\frac{sin(\theta_2)}{sin(\theta_2)} =  \frac{v_2}{v_1} = \frac{n_1}{n_2} \; , \; v_i=\frac{c}{n_i}
+\end{equation}
+\end{subfigure}
+\caption{Figure for the representation of Snell's law from en.wikipedia.org and the corresponding equation. }
+\label{fig:snell}
+\end{figure}
+
+Thereby it also determines the speed of light in the medium as shown above in figure \ref{fig:snell}. On this way we will later compare our measured value with a given value for the refractive index of the plastic scintillator.
 
 
 \newpage
@@ -122,7 +158,7 @@ module, two Delay Boxes.
 Bottom: Gateway for PC connection, ADC, TDC.  }
 \label{fig:cabling}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Kabel Schema aus Skript mit ins Bild paint'en?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Kabel Schema aus Skript mit ins Bild paint'en? nää
 
 The Gate Generators Delayed Output (DEL) produces a short signal for the TDC. This first signal starts the time measurement and gets stopped by the delayed signal of the MSCF-16. The length of the first triggering signal determines how long the second one will be measured. The ADC on the other hand receives a long signal from the gate generator. This leads to a good energy resolution but won't be necessary in this experiment.
 
