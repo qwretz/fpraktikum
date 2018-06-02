@@ -64,9 +64,6 @@ Alle genannten Strahlungsarten können nun in einem angeregten Kernzustand enden
 
 Zusätzlich existiert noch der Gegensatz zum $\beta$ Zerfall. Beim Electron Capture EC wird ein Elektron eingefangen statt ausgesendet. Durch die Änderung des Kerns befindet sich jetzt das gesamte Atom in einem angeregten Zustand, statt der Kern. Am wahrscheinlichsten ist, dass ein $e^-$ aus der K-Schale gefangen wird. Dabei entsteht ein freier Platz auf einem niedrigen Niveau, welcher dann von oben wieder nach besetzt wird. Dabei entsteht nun Röntgenstrahlung, statt $\gamma$ Strahlung. Der Unterschied zwischen besteht also darin, ob das Photon im Kern ($\gamma$) oder aus der Schale (Röntgen) stammt.
 
-%%% Zur Vollständigkeit wird noch das Zerfallsgesetz angegeben?
-%%% Aktivität dazu vll?
-
 
 \subsection{Photonische Wechselwirkung mit Materie}
 Je nach Energiebetrag eines Photons gibt es verschiedene Arte um mit Materie zu interagieren. Hauptsächlich geschieht die Wechselwirkung durch den Compton-Effekt. Dabei wird das Photon elastisch an meist einem Elektron gestreut, prinzipiell sind aber alle geladenen Teilchen denkbar. Das Elektron erhält zusätzliche kinetische Energie und die Wellenlänge des Photons erhöht sich. Dieser Effekt tritt bei fast allen Photonenenergien auf. Seine Wahrscheinlichkeit kann jedoch in bestimmten Regionen durch andere Effekte unterdrückt sein.
@@ -103,6 +100,24 @@ Tritt nun ein Photon in diesen Detektor ein, so entsteht ein Elektron und gleich
 Großer Nachteil, welcher in der Auswertung eine Rolle spielen wird, ist die benötigte ständige Kühlung. Damit der Germanium Detektor wie erwartet funktionieren kann benötigte er eine Temperatur von ca. $T=77K$. Dies wird mit flüssigem Stickstoff umgesetzt. Der Grund für die Wichtigkeit dieser Temperatur ist, wie auch der große Vorteil, die geringe Bandlücke des Halbleiters von $E_g=0.7eV$. Bereits bei Zimmertemperatur ist die thermische Energie im Kristall groß genug um so Elektronen Loch Paare zu erzeugen. Dieser Stromfluss wird als Rauschen wahrgenommen und überdeckt das eigentliche Spektrum der zu messenden radioaktiven Strahlung.
 
 
+\subsection{Aktivität}
+Zur vollständigen Behandlung von radioaktiver Strahlung muss man nun auch das prinzipielle Zerfallsgesetz erwähnen. Ausgehend von einer Zerfallskonstante $\lambda$, welche die Wahrscheinlichkeit des Zerfalls eines Atomkerns bezeichnet, so gelten folgende Gesetzte:
+
+\begin{equation}
+\frac{dN(t)}{dt} = - \lambda N(t) \: \rightarrow \: N(t)=N_0 \cdot e^{\lambda t} = N_0 \cdot e^{t/\tau}
+\label{eq:zerfallsgesetz}
+\end{equation}
+
+Die Lebensdauer $ \tau = 1/\lambda $ beschreibt in diesem Zusammenhang zu welcher Zeit nur noch $1/e= 36.8\% $ übrig sind. Einfach für die Handhabung ist die Halbwertszeit $T_{1/2}$ bei welcher die Hälfte zerfallen ist. Dabei gilt der simple Zusammenhang $ T_{1/2 } = \tau \cdot ln(2) $. \\
+
+Als Aktivität wird dabei bezeichnet wie stark ein Stoff radioaktive Strahlung emittiert. SIe ist damit abhängig wie groß die Wahrscheinlichkeit des Kernzerfalls ist und wie viel noch zu einer gegebenen Zeit übrig ist. Demnach gilt:
+
+\begin{equation}
+A(t) = \lambda \cdot N(t) = \frac{ln(2)}{T_{1/2}} \cdot N(t)
+\label{eq:activity}
+\end{equation}
+
+
 \newpage
 \section{Experiment}
 \subsection{Setup}
@@ -128,8 +143,8 @@ Danach wird das Signal vom Main Amplifier umgeformt, damit der ADC dieses späte
 
 Mit der Breite des Gauss kann man nun bestimmen wie schnell die Messung sein kann. Für kleine Zeitkonstanten TC, die Breite der Gausskurve entspricht $7.3\cdot TC$ \cite{signalverarbeitung}, ist der Peak nun schmal. Damit besteht die Möglichkeit mehr Events einzeln zu messen. Die Energieauflösung nimmt jedoch wegen schmalerem Signal wiederum ab. Eine Möglichkeit dies zu verhindern ist die Probe weiter vom Detektor zu platzieren, wie später noch beschrieben wird.
 
-Es gibt nun wie in Abbildung \ref{fig:signals} gezeigt, die Möglichkeit zwei Pulse, die zu nah aneinander sind abzulehnen. Dazu benötigt man ein Ablehnungssignal (Reject Signal), welches vom ... ausgesendet wird und entscheidet ob eine gültige Messung vorliegt. Dies führt jedoch zu einer größeren Totzeit des Detektors und damit zu einer schlechten Bestimmung der Aktivität einer Quelle. In unserem Fall wird dieser Mechanismus bewusst nicht benutzt um eine Energiekalibration mit den $^{60}Co$ Peaks durchzuführen, aber auch da es für geringe Zählrate unnötig ist.  
-%%%%%%%%%% REF 60Co
+Es gibt nun wie in Abbildung \ref{fig:signals} gezeigt, die Möglichkeit zwei Pulse, die zu nah aneinander sind abzulehnen. Dazu benötigt man ein Ablehnungssignal (Reject Signal), welches von einem extra Modul des Main Amplifiers ausgesendet wird. Dieser Pileup Rejector entscheidet also ob eine gültige Messung vorliegt. Dies führt jedoch zu einer größeren Totzeit des Detektors und damit zu einer schlechten Bestimmung der Aktivität einer Quelle. In unserem Fall wird dieser Mechanismus bewusst nicht benutzt um eine Energiekalibration mit den $^{60}Co$ Peaks durchzuführen, aber auch da es für geringe Zählrate unnötig ist.  
+%%%%%%%%%% REF 60Co -- Plots von Jonas
 Die Aktivität der zu vermessenden Präparate, siehe Tabelle \ref{tab:T 1/2}, ist mit großer Wahrscheinlichkeit bereits so gering, dass die empfohlenen $25cm$ Abstand zum Detektor, nicht mehr notwendig sind. Angeblich seien diese von 1995 und damit sind alle hoch aktiven Quellen wie $^{60}Co$ und $^{22}Na$ bereits auf $2^{-20a/T_{1/2}} \approx 1/16 \ bzw. \ 1/1024 $ der ursprünglichen Menge und damit Aktivität zerfallen. Alle Materialien anderen besitzen wegen hoher Halbwertszeit sowieso nur geringe Aktivitäten. 
 Daher wurden die Präparate direkt an der Vakuumkammer fixiert.
 
