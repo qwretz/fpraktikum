@@ -1,0 +1,11 @@
+Co60 ,Cs137, Am241 Aufgabe 5
+
+Na 
+511keV Vernichtungsstrahlung
+1275keV Linie
+
+Co60
+1173.2,1332.5 MeV
+
+Am241
+59.5409 keV
