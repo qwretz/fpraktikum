@@ -93,6 +93,10 @@ For this experiment a rubidium gas cell of the isotopes $^{85}Rb$ and $^{87}Rb$ 
 
 As shown in \autoref{fig:signals} the difference between the spectra of the different methodes are grave. As expected a) shows no hyperfine transitions due to insufficent resolution. For b) those are now clearly visible and will be used to identify the transitions in the following chapters. They are already labelled according to the transitions shown in \ref{fig:Rb_hyperfine}.
 The difference signal c) should only show the peaks of the hyperfine structure.
+Usually the difference signal should show no sign of any remains of the Doppler broadening signal. It seems as there are some fluctuations caused by the second laser, because the Doppler broadening is higher for the SAS. 
+
+For the last peak  $^{87}Rb\ F=1$ the difference is not correctly calculated. There shouldn't be such a strong dip in the signal. This is probably caused by the very few data values the oscilloscope saved in this region. The fast rise consists of less than 10 values and is therefore a bad example to argue with. This problem will occur later for the estimation of the rubidium gas temperature.
+
 
 \subsection{Calibration}
 \begin{figure}[H]
@@ -114,13 +118,9 @@ G(x) = A \cdot exp\left( -\frac{(x-\mu)^2}{2\sigma^2} \right)
 \begin{figure}[H]
 \centering
 \includegraphics[width=.8\textwidth]{Plots/Calibration_Second_Real.png}
-\caption{Saturated absorption spectroscopy with sidebands subtracted with the curve for AS. This improves the visibility of the individual peak. They are already named as explained later.}
+\caption{Saturated absorption spectroscopy with sidebands subtracted with the curve for AS. This improves the visibility of the individual peak. They are already named as shown in the following chapters.}
 \label{fig:calibration}
 \end{figure}
-
-%%%%% The naming of the peaks will be discussed in \ref asdas
-
-
 
 \begin{table}[H]
 \centering
@@ -137,10 +137,19 @@ CO23 & SB CO23 right & $7.75 \pm 0.36$
 \label{tab:calc}
 \end{table}
 
-By dividing the equivalent $300MHz$ per time difference shown in\autoref{tab:calc} with the average value of $7.78 \pm 0.32$ results in the following conversion rule.
+By dividing the equivalent $300\ MHz$ per time difference shown in\autoref{tab:calc} with the average value of $7.78 \pm 0.32\ ns$ results in the following conversion rule.
 \begin{equation}
-1ns = 38.56 \pm 1.59 \ MHz
+f=t\cdot u \;,\;\; \Delta f = \sqrt{(\Delta t \cdot u)^2+ (t \cdot \Delta u)^2} \;,\;\; u\pm\Delta u= 38.56 \pm 1.59
 \label{eq:conversion rule}
+\end{equation}
+
+
+This will now be used to recalibrate the time axis to a scale of frequency. From the relative distance of the peaks we'll be able to identify their origin, by comparing them with the distances given in \autoref{fig:Rb_hyperfine}. 
+The relative frequency is determined in comparison with the first named peak and follows \autoref{eq:rel freq}.
+
+\begin{equation}
+f_{rel} = f - f_0 \;,\;\; \Delta f_{rel} = \sqrt{ \Delta f^2 + \Delta f_0^2}
+\label{eq:rel freq}
 \end{equation}
 
 
@@ -155,24 +164,199 @@ By dividing the equivalent $300MHz$ per time difference shown in\autoref{tab:cal
 \begin{subfigure}[c]{.7\textwidth}
 \includegraphics[width=\linewidth]{Plots/87F2_Diff.png}
 \end{subfigure}
-\caption{Measured signals on top and difference signal with Gaussian fits for each visible peak underneath.}
+\caption{$^{87}Rb\ F=2 $. Measured signals on top and difference signal with Gaussian fits for each visible peak underneath.}
 \label{fig: 87F2}
 \end{figure}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|||c|c|}
+\hline
+Peak & Time $t$ [ns] & Frequency $f$ [MHz] & $f_{rel}$ [MHz] & Name \\ \hline\hline
+1 & $7.77 \pm 0.30$  & $299.65 \pm 16.80$  & $0.00 \pm 23.75$  & F'=1 \\ \hline
+2 & $9.90 \pm 0.26$  & $381.92 \pm 18.59$  & $82.28 \pm 25.06$  & CO 12 \\ \hline
+3 & $12.09 \pm 0.32$  & $466.17 \pm 22.75$  & $166.52 \pm 28.28$  & F'=2 \\ \hline
+4 & $13.46 \pm 0.19$  & $519.16 \pm 22.52$  & $219.52 \pm 28.10$  & CO 13 \\ \hline
+5 & $15.51 \pm 0.27$  & $598.19 \pm 26.75$  & $298.54 \pm 31.59$  & CO 23 \\ \hline
+6 & $19.05 \pm 0.19$  & $734.45 \pm 31.06$  & $434.80 \pm 35.31$  & F'=3 \\ \hline
+\hline
+\end{tabular}
+\caption{$^{87}Rb\ F=2 $. Values for the peaks position and the relative frequency to the first peak allocatable to the spectrum. See \autoref{fig:Rb_hyperfine} and \autoref{tab: rel rb freq}.}
+\end{table}
 
 %%% tabel with postional values
 
 \newpage
 \subsection{Rubidium 85, F=3}
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.7\textwidth}
+\includegraphics[width=\linewidth]{Plots/85F3_Both.png}
+\end{subfigure}
+
+\begin{subfigure}[c]{.7\textwidth}
+\includegraphics[width=\linewidth]{Plots/85F3_Diff.png}
+\end{subfigure}
+\caption{$^{85}Rb\ F=3 $. Measured signals on top and difference signal with Gaussian fits for each visible peak underneath.}
+\label{fig: 85F3}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|||c|c|}
+\hline
+Peak & Time $t$ [ns] & Frequency $f$ [MHz] & $f_{rel}$ [MHz] & Name \\ \hline\hline
+1 & $1.83 \pm 0.27$  & $70.62 \pm 10.64$  & $0.00 \pm 15.05$  & CO 23 \\ \hline
+2 & $3.40 \pm 0.21$  & $131.07 \pm 9.68$  & $60.45 \pm 14.39$  & CO 24 \\ \hline
+3 & $4.19 \pm 0.20$  & $161.71 \pm 10.24$  & $91.09 \pm 14.77$  & CO 34 \\ \hline
+4 & $5.82 \pm 0.15$  & $224.32 \pm 10.94$  & $153.70 \pm 15.27$  & F'=4 \\ \hline
+\hline
+\end{tabular}
+\caption{$^{85}Rb\ F=3 $. Values for the peaks position and the relative frequency to the first peak allocatable to the spectrum. See \autoref{fig:Rb_hyperfine} and \autoref{tab: rel rb freq}.}
+\end{table}
+
+
 \newpage
 \subsection{Rubidium 85, F=2}
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.7\textwidth}
+\includegraphics[width=\linewidth]{Plots/85F2_Both.png}
+\end{subfigure}
+
+\begin{subfigure}[c]{.7\textwidth}
+\includegraphics[width=\linewidth]{Plots/85F2_Diff.png}
+\end{subfigure}
+\caption{$^{85}Rb\ F=2 $. Measured signals on top and difference signal with Gaussian fits for each visible peak underneath.}
+\label{fig: 85F2}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|||c|c|}
+\hline
+Peak & Time $t$ [ns] & Frequency $f$ [MHz] & $f_{rel}$ [MHz] & Name \\ \hline\hline
+1 & $3.95 \pm 0.13$  & $152.29 \pm 7.92$  & $-32.90 \pm 35.99$  & N/A \\ \hline
+2 & $4.80 \pm 0.89$  & $185.19 \pm 35.11$  & $0.00 \pm 49.65$  & F'=2 \\ \hline
+3 & $5.37 \pm 0.77$  & $206.93 \pm 30.71$  & $21.74 \pm 46.64$  & CO 23 \\ \hline
+4 & $6.23 \pm 0.52$  & $240.16 \pm 22.40$  & $54.97 \pm 41.64$  & F'=3 \\ \hline
+\hline
+\end{tabular}
+\caption{$^{85}Rb\ F=2 $. Values for the peaks position and the relative frequency to the first peak allocatable to the spectrum. See \autoref{fig:Rb_hyperfine} and \autoref{tab: rel rb freq}.}
+\end{table}
+
+
 \newpage
 \subsection{Rubidium 87, F=1}
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.7\textwidth}
+\includegraphics[width=\linewidth]{Plots/87F1_Both.png}
+\end{subfigure}
+
+\begin{subfigure}[c]{.7\textwidth}
+\includegraphics[width=\linewidth]{Plots/87F1_Diff.png}
+\end{subfigure}
+\caption{$^{87}Rb\ F=1 $. Measured signals on top and difference signal with Gaussian fits for each visible peak underneath.}
+\label{fig: 87F1}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|||c|c|}
+\hline
+Peak & Time $t$ [ns] & Frequency $f$ [MHz] & $f_{rel}$ [MHz] & Name \\ \hline\hline
+1 & $1.58 \pm 0.53$  & $61.03 \pm 20.59$  & $-7.87 \pm 22.50$  & N/A \\ \hline
+2 & $1.79 \pm 0.22$  & $68.90 \pm 9.07$  & $0.00 \pm 12.83$  & CO 01 \\ \hline
+3 & $3.99 \pm 0.70$  & $153.76 \pm 27.78$  & $84.85 \pm 29.23$  & CO 02 \\ \hline
+4 & $4.84 \pm 0.20$  & $186.71 \pm 10.76$  & $117.80 \pm 14.08$  & CO 12 \\ \hline
+5 & $6.98 \pm 0.29$  & $269.25 \pm 15.78$  & $200.35 \pm 18.20$  & F'=2 \\ \hline
+\hline
+\end{tabular}
+\caption{$^{87}Rb\ F=1 $. Values for the peaks position and the relative frequency to the first peak allocatable to the spectrum. See \autoref{fig:Rb_hyperfine}.}
+\end{table}
+
 
 \newpage
-\section{Discussion}
+\subsection{Temperature estimation of Rubidium}
+To estimate the temperature of the rubidium gas the Doppler broadening seen in \autoref{fig:signals} has to be fitted with two different Gaussians for higher precision. One on the right and one on the left side to receive a value for the FWHM, as shown in \autoref{fig:Doppler whole broken}.
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=.9\textwidth]{Plots/Doppler_whole.png}
+\caption{Doppler broadening spectrum. Each side of a transitions peak is fitted separately with a Gaussian to determine the FWHM.}
+\label{fig:Doppler whole broken}
+\end{figure}
+
+To calculate the Doppler width $\delta v_D$ the double standard derivation of the Gaussians mean value is used. Because there are two slightly different fits on each peaks side, the mean value of them will be calculated. This is shown in \autoref{tab:wrong temps} column Time $2\sigma_t$. The calculation is given by:
+
+\begin{equation}
+\sigma_t = \frac{1}{2}\cdot(\sigma_{left} + \sigma_{right}) \;,\quad \Delta\sigma_t = \frac{1}{2} \cdot |\sigma_{left} - \sigma_{right}|
+\end{equation}
+
+We are using \autoref{eq:gauss} to create the connection between FWHM and the gas temperature. We will use the Doppler width $\delta v_D = \delta \omega_D /2\pi$ as FWHM, because we are comparing the values with the transition frequencies. By rewriting the equation and inserting $c=\lambda_0 \cdot \omega_0 /2\pi$ we get the following equation:
+
+\begin{gather}
+\delta v_D = \frac{2}{2\pi}\ \sqrt{ln(2)}\  \frac{2\pi}{\lambda_0}\ \sqrt{\frac{2k_BT}{m}} \\
+T = \frac{m}{8ln(2)k_B}\ \lambda_0^2 \cdot \delta v_D^2\ =:\ k \cdot\delta v_D^2 \;,\;\; \Delta T = k \cdot 2\delta v_D \Delta\delta v_D
+\end{gather}
+
+The problem with \autoref{fig:Doppler whole broken} is that this spectrum was taken for an other calibration and therefore useless for our determination of the temperature. We missed taking another complete Doppler broadening spectrum.
+The values for the four peaks shown here are presented in\autoref{tab:wrong temps}.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Peak & Time $2\sigma_t\ [ns]$ & $\delta v_D\ [MHz]$ & Temperature $[K]$ \\ \hline\hline
+$^{87}Rb$ F=2 & $6.00 \pm 0.77$  & $231.42 \pm 31.31$  & $60.07 \pm 16.26$  \\ \hline
+$^{85}Rb$ F=3 & $6.12 \pm 0.33$  & $235.97 \pm 16.12$  & $62.45 \pm 8.53$  \\ \hline
+$^{85}Rb$ F=2 & $5.43 \pm 0.63$  & $209.53 \pm 25.93$  & $49.24 \pm 12.19$  \\ \hline
+$^{87}Rb$ F=1 & $1.18 \pm 0.82$  & $45.57 \pm 31.55$  & $2.33 \pm 3.23$  \\ \hline
+\hline
+\end{tabular}
+\caption{Calculated values for the $\delta v_D$ as the FWHM mean value for each peak and the according Temperature.}
+\label{tab:wrong temps}
+\end{table}
+
+The expected Temperature was displayed at the lasers configuration panel. Over the course of the experiment the value was steadily $20.4^\circ C = 297.55 K$, which is the average room temperature. This is not directly the temperature of the rubidium gas. The tansversing light will increase its temperature and therefore we assumed a temperature of about $300K$. Comparing this to the upper values, the argumentation of a different calibration is valid, although the last peaks fit should be excluded due to an insufficient amount of data values taken.
+
+Luckily the spectrum of $^{87}Rb\ F=2$ provided the possibility to fit both sides of the Doppler broadening. The results are presented in \autoref{fig:Doppler 87F2 good}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.8\textwidth]{Plots/Doppler_87F2.png}
+\caption{Fits for the Doppler width at the example of the Doppler broadening peak $^{87}Rb\ F=2$.}
+\label{fig:Doppler 87F2 good}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Peak & Time $2\sigma_t\ [ns]$ & $\delta v_D\ [MHz]$ & Temperature $[K]$ \\ \hline\hline
+$^{87}Rb$ F=2 & $13.82 \pm 0.62$  & $533.13 \pm 32.43$ & $318.80 \pm 38.67$   \\ \hline
+\hline
+\end{tabular}
+\end{table}
+
+This temperature is a good value compared to the others. Its error is covering a broad range and without any other values for comparison this is not a good result. But the method stays the same and with more values a mean value could have shown a lower temperature which we expected. Gas temperatures much higher than the average room temperature would be unrealistic, due to thermal heat transfer provided by the glass walls of the gas cell.
+
+\subsection{Error analysis}
+Most of the errors are given by the standard derivation of Gaussian fits. This value is used, because the error on the expected value $\mu$ is very low to good fitting data values. This ensures that influences like slightly shifting laser current and fluctuations in the signal generator frequency are covered.
+
+We tried to arrange the mirrors for the maximum overlap of the tow laser beams, but less overlap effects directly the intensity and thereby the quality of our fits. 
+
+
+\subsection{Discussion}
+as
+%%%%%%%%% Zeeman keine Zeit, wegen Zeeman Versuch xD
 
 \newpage
+\section{Conclusion}
+as
+
+
 \section{Appendix}
 \subsection{Rubidiums hyperfine structure}
 \begin{figure}[H]
@@ -192,6 +376,25 @@ By dividing the equivalent $300MHz$ per time difference shown in\autoref{tab:cal
 \caption{Hyperfine structure of both used rubidium isotopes.}
 \label{fig:Rb_hyperfine}
 \end{figure}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c|c| |c|c|c}
+$^{85}Rb$ & F=2 & F=3 & $^{87}Rb$ & F=1 & F=2 \\ \hline\hline
+F'=1 & 0    & -     & F'=0 & 0     & - \\
+CO 12& 14.69& -     & CO 01& 36.11 & - \\
+F'=2 & 29.37& 0     & F'=1 & 72.22 & 0 \\
+CO 13& 46.39& -     & CO 02& 114.59& - \\
+CO 23& 61.07& 31.70 & CO 12& 150.70& 78.48 \\
+F'=3 & 92.77& 63.40 & F'=2 & 229.17& 156.95 \\
+CO 24& -    & 92.02 & CO 13& -     & 211.80 \\
+CO 34& -    & 123.72& CO 23& -     & 280.28 \\
+F'=4 & -    & 184.04& F'=3 & -     & 423.60 \\
+\end{tabular}
+\caption{Expected frequency differences [MHz] for the four hyperfine transitions relative to the lowest possible one. Given by \autoref{fig:Rb_hyperfine} and \autoref{tab: rel rb freq}.}
+\label{tab: rel rb freq}
+\end{table}
+
 
 \newpage
 \begin{thebibliography}{}

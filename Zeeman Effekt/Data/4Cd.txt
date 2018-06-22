@@ -1,0 +1,12 @@
+ordnung	distance mm	ddistance 0.1mm wegen den Ablese-Nagel
+
+1	4.00
+2	4.82
+3	5.45
+4	6.00
+5	6.48
+6	6.86
+7	7.26
+8	7.55
+9	7.98
+10	8.26
