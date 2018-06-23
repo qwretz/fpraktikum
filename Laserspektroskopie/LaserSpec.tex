@@ -15,18 +15,24 @@
 
 \maketitle
 \begin{abstract}
-
-
+The comparison of saturated and normal absorption spectroscopy leads to the confirmation of better resolution regarding the hyperfine structure.  
+By measuring the $D2$ lines of $^{85}Rb$ and $^{87}Rb$, in a ratio of $72.2 : 27.8$, we were able to confirm the relative frequencies of the energy levels. Additionally the expected room temperature for the rubidium gas has been confirmed.
 \end{abstract}
 
 \newpage
 \tableofcontents
 
+
+
 \newpage
 \section{Introduction}
 Understanding the behaviour of excited atomic states and being able to manipulate them is a part of atomic physics. To visualize the energy transitions a spectrum has to be taken and analysed. 
-This experiment about laser spectroscopy will show the problem of absorption spectroscopy (AS) regarding the resolution of the transition energy. This will be shown at the example of $^{87}Rb$ and $^{85}Rb$. The transition between $5^2S_{1/2}$ and $5^2P_{3/2}$, also called $D2$ line, will be excited with a $780nm$ laser. %%%%%%%%%%%%%% The natural linewidth
-Due to Doppler broadening an atom can be excited in a wider range of energy, thereby it is not possible to resolve the hyperfine structure in this case. The application of saturated absorption spectroscopy (SAS) will improve the spectrum to shown the exact transitions within the Doppler broadening.
+This experiment about laser spectroscopy will show the problem of absorption spectroscopy (AS) regarding the resolution of the transitions energy. This will be shown at the example of $^{87}Rb$ and $^{85}Rb$. The transition between $5^2S_{1/2}$ and $5^2P_{3/2}$, also called $D2$ line, will be excited with a $780nm$ laser. The natural linewidth of this transition is $\Gamma = 2\pi \cdot 5.8\ MHz$.
+Due to Doppler broadening an atom can be excited in a wider range of energy, thereby it is not possible to resolve the hyperfine structure. The application of saturated absorption spectroscopy (SAS) will improve the spectrum to shown the exact transitions within the Doppler broadening. With the comparison to the theoretical values a confirmation for the hyperfine structure will be possible.
+
+The Doppler broadening spectrum itself is not useless and contains information about the temperature of the material. Therefore an estimation is possible and can be compared to the room temperature to see the effects of the driven excitations on the material.
+
+
 
 \newpage
 \section{Theory}
@@ -65,6 +71,22 @@ I(\omega)=I(\omega_0)\ exp\left[ - \frac{(\omega-\omega_0)^2}{\omega_0v_{||}\ / 
 For room temperature $T=300K$ this results in $\delta\omega_{D} \approx 3201\ MHz$. Compared to the usual hyperfine transitions for the excited state in \autoref{fig:Rb_hyperfine}, this value is too high to resolve those transitions. Therefore a different approach has to be made.
 
 \subsection{Saturated absorption spectroscopy}
+Instead of using only one laser the idea of SAS is to split it and make use of the atoms velocity distribution. The laser is split in a pump beam with higher intensity than the other probe beam. They will be send through the atoms from different sides. Thereby each one will mostly excite the atoms according to \autoref{eq:dopplershift}. The probe beams intensity will be measured. If the lasers frequency is exactly on resonance, spectral hole burning of the pump beam can be observed. This means the maximum of 50\% of the atoms will be excited. Therefore the probe beam won't be able to excite any atoms, and therefore won't lose its intensity. Instead due to stimulated emission the intensity it will be increased. This is called "lamb dip", due to break down in the probe beams absorption, but a peak in intensity will be observed. On this way the individual peaks of the hyperfine transitions will be resolved.
+
+\subsection{Cross over resonances}
+In the spectrum of SAS additional peaks will be observable. They are created when the lasers frequency is exactly between two transitions. For example, the pump beam will excite the transition $\hbar\omega_{01}$ with atoms moving with $+v_{||}$ and simultaneously $\hbar\omega_{02}$ with $-v_{||}$. The probe beam, coming from the other spacial direction, will try to excite $\hbar\omega_{01}$ with $-v_{||}$ and $\hbar\omega_{02}$ with $+v_{||}$, the exact opposite velocities. Because of the already excited atoms, for the probe beam the medium becomes transperent again and an additional peak will be visible.
+
+\begin{equation}
+\omega_{CO 12} = \frac{\omega_{01}+\omega_{02}}{2}
+\end{equation}
+
+\subsection{Rubidium}
+In this experiment rubidium is used. The reason is that the transitions between $5^2S_{1/2} \rightarrow 5^2P_{3/2}$ is at around $780nm$ which is a good wavelength to build laser for. The other reason is that the hyperfine structure for the two isotopes $^{87}Rb$ and $^{85}Rb$ is exactly the same regarding the structure and not the energy itself. The different shifts in energy are mostly caused by the different nucleus spins: $I(^{87}Rb)=\frac{3}{2}$ and $I(^{85}Rb)=\frac{5}{2}$. The relation is shown in \autoref{eq:HFS} where $\mu_K$ is the magnetic moment of the nucleus, $g_I$ is the Landé factor for nucleus spin coupling and $B_j$ the magnetic field induced by the coupling of spin and orbit, see \cite{dem3}.
+
+\begin{equation}
+\Delta E_{HFS}=\frac{A}{2} [F(F+1) + j(j+1) - I(I+1)] \;,\;\; A= \frac{g_I \mu_K |B_j|}{\sqrt{j(j+1)}}
+\label{eq:HFS}
+\end{equation}
 
 
 
@@ -74,11 +96,15 @@ For room temperature $T=300K$ this results in $\delta\omega_{D} \approx 3201\ MH
 \centering
 \includegraphics[width=1\textwidth]{Plots/Setup.png}
 \caption{Schematics of the experimental set-up used.}
+\label{fig:setup}
 \end{figure}
 
-For this experiment a rubidium gas cell of the isotopes $^{85}Rb$ and $^{87}Rb$ with an ratio of $72.2 : 27.8$ is used. The wavelength of the laser was set on $780.24nm$.
+For this experiment a rubidium gas cell of the isotopes $^{85}Rb$ and $^{87}Rb$ with an ratio of $72.2 : 27.8$ is used. The wavelength of the laser was set on $780.24nm$. As shown in \autoref{fig:setup} the laser is split by the polarising beam splitter. The distribution of the polarisations is regualted in advance with the $\lambda/2$ wave-plate. Because we don't know which polarisation is favoured by the laser we adjust the wave-plate in such a way, that the pump beam has the significant higher intensity. This can be monitored by intersecting the laser with a piece of paper. Important is to overlap both beam while they are in the gas cell to prevent intensity-loss of the probe beam on resonance.
 
-%%%%% ramp gen fährt freq durch, aufsteigend -> labelling of the peaks
+Setting the laser is the difficult part of this experiment. You have to find a spectrum without mode hops. This mean that for all time the same wavelength is standing in your laser cavity. For small changes in current or temperature, the wavelength can change and a different spectrum will be visible. A small triangular ramp signal will be added to the laser currents fine adjustment by a piezoelement to screen different frequencies. For the calibration another signal generator is used to create sidebands, see \autoref{fig:all}.
+
+In the end a photo diode will register the probe beams intensity. In our case the signal will be visualized by an oscilloscope and from there data will be recorded via an USB stick.
+
 
 
 \newpage
@@ -345,16 +371,26 @@ This temperature is a good value compared to the others. Its error is covering a
 \subsection{Error analysis}
 Most of the errors are given by the standard derivation of Gaussian fits. This value is used, because the error on the expected value $\mu$ is very low to good fitting data values. This ensures that influences like slightly shifting laser current and fluctuations in the signal generator frequency are covered.
 
-We tried to arrange the mirrors for the maximum overlap of the tow laser beams, but less overlap effects directly the intensity and thereby the quality of our fits. 
+We tried to arrange the mirrors for the maximum overlap of the tow laser beams, but less overlap effects directly the intensity and thereby the quality of our fits. But a perfect overlapping laser path was not possible.
+
+The choice of the right laser current was also important. This affected the quality of the peaks registered. In the beginning we had a good current, but somehow the signal was lost and we had to calibrate again. This is where the difference in the temperature estimation comes from.
 
 
 \subsection{Discussion}
-as
-%%%%%%%%% Zeeman keine Zeit, wegen Zeeman Versuch xD
+Returning to the identification of the hyperfine transitions the naming of the peaks was done by comparing the relative values in \autoref{tab: rel rb freq}. Worth mentioning is that the cross over peaks are mostly the higher ones, due to the excitation of two different energy levels. Therefore this is a good starting point for comparison. For $^{85}Rb\ F=2$ and $^{87}Rb\ F=1$ the first peak is labelled "N/A" which should suggest that there is no real peak. This is an artefact of the first attempts to see many transitions. But in the end they are none, although in some graphics one could think of them as a peak. Therefore their values from the relative frequency calculation are regardless.
+
+The best result is the $^{87}Rb\ F=2$ graphic where all transitions are found. With increasing transition energy from $5^2S_{1/2} \rightarrow 5^2P_{3/2}$ the quality gets lower, although the graphics for $^{87}Rb$ are in general from better quality, due to the higher energy distance in the $5^2P_{3/2}$ state. Interesting is that the ratio of $^{87}Rb$ and $^{85}Rb$ doesn't influence the quality regarding to more atoms results in a better resolution of the peaks.
+
+We took additional data to see the effects of the Zeeman effect, but the effects on the oscilloscope were poorly and the analysis would have taken too much additional time, which was needed for the following experiment, which is funnily enough the Zeeman effect.
+
+
 
 \newpage
 \section{Conclusion}
-as
+The results of this experiment are satisfying but not extraordinary good. The calibration worked as expected, but with an additional peak in the sidebands the value could have been more precise. We have not been able to display all of the possible hyperfine transitions and cross over peaks, but at least there were 50\% of them visible and matchable. The first $^{87}Rb\ F=2$ spectrum contains actually all of the peak. Positive is that the relative frequency to the first peak is most of the time pretty accurate. Within the errors given, the values are showing the expected hyperfine structure for at least $^{87}Rb$.
+
+As shown the application of saturated absorption spectroscopy instead of the usual one increases the resolving capacity of the transitions dramatically. Laser spectroscopy is a good way to analyse the energy structure of chemical elements and to confirm quantum mechanical effects like the hyperfine structure.
+
 
 
 \section{Appendix}
@@ -401,6 +437,8 @@ F'=4 & -    & 184.04& F'=3 & -     & 423.60 \\
 \bibitem[Steck85]{steck85} Rubidium 85 D Line Data, Daniel Adam Steck, University of Oregon
 
 \bibitem[Steck87]{steck87} Rubidium 87 D Line Data, Daniel Adam Steck, University of Oregon
+
+\bibitem[Dem3]{dem3} Demtröder Experimentalphysik 3: Atome, Moleküle und Festkörper, Springer
 
 
 \end{thebibliography}
