@@ -15,8 +15,8 @@
 
 \maketitle
 \begin{abstract}
-The comparison of saturated and normal absorption spectroscopy leads to the confirmation of better resolution regarding the hyperfine structure.  
-By measuring the $D2$ lines of $^{85}Rb$ and $^{87}Rb$, in a ratio of $72.2 : 27.8$, we were able to confirm the relative frequencies of the energy levels. Additionally the expected room temperature for the rubidium gas has been confirmed.
+The comparison of saturated and normal absorption spectroscopy leads to the confirmation of increased resolution regarding hyperfine structure transitions.  
+By measuring the $D2$ lines of $^{85}Rb$ and $^{87}Rb$, in a gas cell with the ratio $72.2 : 27.8$, we were able to confirm the relative frequencies of the energy levels. Additionally the expected room temperature of the rubidium gas has been confirmed by the Doppler broadening spectrum.
 \end{abstract}
 
 \newpage
@@ -27,8 +27,9 @@ By measuring the $D2$ lines of $^{85}Rb$ and $^{87}Rb$, in a ratio of $72.2 : 27
 \newpage
 \section{Introduction}
 Understanding the behaviour of excited atomic states and being able to manipulate them is a part of atomic physics. To visualize the energy transitions a spectrum has to be taken and analysed. 
-This experiment about laser spectroscopy will show the problem of absorption spectroscopy (AS) regarding the resolution of the transitions energy. This will be shown at the example of $^{87}Rb$ and $^{85}Rb$. The transition between $5^2S_{1/2}$ and $5^2P_{3/2}$, also called $D2$ line, will be excited with a $780nm$ laser. The natural linewidth of this transition is $\Gamma = 2\pi \cdot 5.8\ MHz$.
-Due to Doppler broadening an atom can be excited in a wider range of energy, thereby it is not possible to resolve the hyperfine structure. The application of saturated absorption spectroscopy (SAS) will improve the spectrum to shown the exact transitions within the Doppler broadening. With the comparison to the theoretical values a confirmation for the hyperfine structure will be possible.
+This experiment about laser spectroscopy will show the problem of absorption spectroscopy (AS) regarding the resolution of the transition energies. This will be shown at the example of $^{87}Rb$ and $^{85}Rb$. The transition between $5^2S_{1/2}$ and $5^2P_{3/2}$, also called $D2$ line, will be excited with a $780nm$ laser. The natural linewidth of this transition is $\Gamma = 2\pi \cdot 5.8\ MHz$.
+
+Due to Doppler broadening an atom can be excited in a much wider range of energy and therefore frequency. Therefore it is not possible to resolve the hyperfine structure. The application of saturated absorption spectroscopy (SAS) will improve the spectrum to shown the exact transitions within the Doppler broadening. With the comparison to the theoretical values a confirmation for the hyperfine structure will be possible.
 
 The Doppler broadening spectrum itself is not useless and contains information about the temperature of the material. Therefore an estimation is possible and can be compared to the room temperature to see the effects of the driven excitations on the material.
 
@@ -37,7 +38,7 @@ The Doppler broadening spectrum itself is not useless and contains information a
 \newpage
 \section{Theory}
 \subsection{Absorption spectroscopy}
-The transmitted intensity of light after the transition through matter can be described with the Lambert Beer law. The transmission $T$ depends on the materials length $L$ and the absorption coefficient $\alpha$ which is depending on the resonance frequency $\omega_0$ of the individual atomic transitions as well the natural linewidth $\Gamma$ of this transition.
+The transmitted intensity of light after the transition through matter ca n be described with the Lambert Beer law. The transmission $T$ depends on the materials length $L$ and the absorption coefficient $\alpha$ which is depending on the lights frequency $\omega$, the resonance frequency $\omega_0$ of the individual atomic transitions as well the natural linewidth $\Gamma$ of this transition.
 
 \begin{equation}
 T(\omega)\approx 1-\alpha(\omega)L \:,\: \alpha(\omega)= \alpha(\omega_0)\frac{\Gamma/2\pi}{(\omega-\omega_0)^2 + (\Gamma/2\pi)^2}
@@ -99,11 +100,11 @@ In this experiment rubidium is used. The reason is that the transitions between 
 \label{fig:setup}
 \end{figure}
 
-For this experiment a rubidium gas cell of the isotopes $^{85}Rb$ and $^{87}Rb$ with an ratio of $72.2 : 27.8$ is used. The wavelength of the laser was set on $780.24nm$. As shown in \autoref{fig:setup} the laser is split by the polarising beam splitter. The distribution of the polarisations is regualted in advance with the $\lambda/2$ wave-plate. Because we don't know which polarisation is favoured by the laser we adjust the wave-plate in such a way, that the pump beam has the significant higher intensity. This can be monitored by intersecting the laser with a piece of paper. Important is to overlap both beam while they are in the gas cell to prevent intensity-loss of the probe beam on resonance.
+For this experiment a rubidium gas cell with the isotopes $^{85}Rb$ and $^{87}Rb$ in an ratio of $72.2 : 27.8$ is used. The wavelength of the laser was set on $780.24nm$. As shown in \autoref{fig:setup} the laser is split by the polarising beam splitter. The distribution of the polarisations is regualted in advance with the $\lambda/2$ wave-plate. Because we don't know which polarisation is favoured by the laser we adjust the wave-plate in such a way, that the pump beam has the significant higher intensity. This can be monitored by intersecting the laser with a piece of paper. Important is to overlap both beam while they are in the gas cell to prevent intensity-loss of the probe beam on resonance.
 
-Setting the laser is the difficult part of this experiment. You have to find a spectrum without mode hops. This mean that for all time the same wavelength is standing in your laser cavity. For small changes in current or temperature, the wavelength can change and a different spectrum will be visible. A small triangular ramp signal will be added to the laser currents fine adjustment by a piezoelement to screen different frequencies. For the calibration another signal generator is used to create sidebands, see \autoref{fig:all}.
+Setting the lasers wavelength is the difficult part of this experiment. You have to find a spectrum without mode hops. This mean that for all time the same wavelength is standing in your laser cavity. For small changes in current or temperature, the wavelength can change and a different spectrum will be visible. A small triangular ramp signal will be added to the laser currents fine adjustment by a piezoelement to screen different frequencies and create the spectrum. For the calibration another signal generator is used to create sidebands, see \autoref{fig:all}.
 
-In the end a photo diode will register the probe beams intensity. In our case the signal will be visualized by an oscilloscope and from there data will be recorded via an USB stick.
+In the end a photo diode will register the probe beams intensity. The signal can be visualized by an oscilloscope and from there we took our data.
 
 
 
@@ -117,9 +118,9 @@ In the end a photo diode will register the probe beams intensity. In our case th
 \label{fig:signals}
 \end{figure}
 
-As shown in \autoref{fig:signals} the difference between the spectra of the different methodes are grave. As expected a) shows no hyperfine transitions due to insufficent resolution. For b) those are now clearly visible and will be used to identify the transitions in the following chapters. They are already labelled according to the transitions shown in \ref{fig:Rb_hyperfine}.
+As shown in \autoref{fig:signals} the difference between the spectra of the different methodes are grave. As expected a) shows no hyperfine transitions due to insufficent resolution. For b) those are now clearly visible and will be used to identify the transitions in the following chapters. They are already labelled according to the transitions shown in \autoref{fig:Rb_hyperfine}.
 The difference signal c) should only show the peaks of the hyperfine structure.
-Usually the difference signal should show no sign of any remains of the Doppler broadening signal. It seems as there are some fluctuations caused by the second laser, because the Doppler broadening is higher for the SAS. 
+Usually the difference signal should show no sign of any remains of the Doppler broadening signal. It seems as there are some fluctuations caused by the pump laser between the different measurements, because the Doppler broadening is higher for the SAS. 
 
 For the last peak  $^{87}Rb\ F=1$ the difference is not correctly calculated. There shouldn't be such a strong dip in the signal. This is probably caused by the very few data values the oscilloscope saved in this region. The fast rise consists of less than 10 values and is therefore a bad example to argue with. This problem will occur later for the estimation of the rubidium gas temperature.
 
@@ -128,12 +129,12 @@ For the last peak  $^{87}Rb\ F=1$ the difference is not correctly calculated. Th
 \begin{figure}[H]
 \centering
 \includegraphics[width=.8\textwidth]{Plots/Calibration_Second_All.png}
-\caption{Graphic of the difference between AS and SAS. The hyperfine structure transitions are now visible. In red the SAS while an additional signal generator is on to create the sidebands for calibration purposes.}
+\caption{Difference between AS and SAS for the transition $^{87}Rb\ F=2$. The hyperfine structure transitions are now visible. In red the SAS while an additional signal generator is on to create the sidebands for calibration purposes.}
 \label{fig:all}
 \end{figure}
 
-The measurement data taken from the oscilloscope consists of intensities and the time. The orange line for absorption spectroscopy and the green one for saturated AS shifted on top are showing the difference between the methodes.
-To determine at which energy a peak is it is necessary to convert the time into an energy or according frequency scale. This is done with the red curve in \autoref{fig:all}. An additional signal generator creates the sidebands in a set frequency distance of $\omega_{shift}=600MHZ$. These sidebands are the difference between green and red curve. They are echoes of the peaks already seen but shifted by $\omega_{shift}/2$ in both directions. Determination of the expected value of each peak in the red curve leads to the conversion rule from time to energy. 
+The data taken from the oscilloscope consists of intensities and the time values. The orange line for absorption spectroscopy and the green one for saturated AS shifted on top are showing the difference between the methodes.
+To determine at which energy a peak is, it is necessary to convert the time into an energy or according frequency scale. This is done with the red curve in \autoref{fig:all}. An additional signal generator creates the sidebands in a set frequency distance of $\omega_{shift}=600MHZ$. These sidebands are the difference between green and red curve. They are echoes of the peaks already seen but shifted by $\omega_{shift}/2$ in both directions. Determination of the expected value of each peak in the red curve leads to the conversion rule from time to energy. 
 
 \autoref{fig:calibration} is created by subtracting the AS spectrum from the red curve to increase the visibility of the peaks for better results while fitting them. The fits are Gaussian due to \autoref{eq:gauss} with an error given by the standard derivation $\sigma$. Gaussian function with $\mu$ as expected value:
 
@@ -299,7 +300,7 @@ Peak & Time $t$ [ns] & Frequency $f$ [MHz] & $f_{rel}$ [MHz] & Name \\ \hline\hl
 5 & $6.98 \pm 0.29$  & $269.25 \pm 15.78$  & $200.35 \pm 18.20$  & F'=2 \\ \hline
 \hline
 \end{tabular}
-\caption{$^{87}Rb\ F=1 $. Values for the peaks position and the relative frequency to the first peak allocatable to the spectrum. See \autoref{fig:Rb_hyperfine}.}
+\caption{$^{87}Rb\ F=1 $. Values for the peaks position and the relative frequency to the first peak allocatable to the spectrum. See \autoref{fig:Rb_hyperfine} and \autoref{tab: rel rb freq}.}
 \end{table}
 
 
@@ -391,8 +392,6 @@ The results of this experiment are satisfying but not extraordinary good. The ca
 
 As shown the application of saturated absorption spectroscopy instead of the usual one increases the resolving capacity of the transitions dramatically. Laser spectroscopy is a good way to analyse the energy structure of chemical elements and to confirm quantum mechanical effects like the hyperfine structure.
 
-
-
 \section{Appendix}
 \subsection{Rubidiums hyperfine structure}
 \begin{figure}[H]
@@ -427,7 +426,7 @@ CO 24& -    & 92.02 & CO 13& -     & 211.80 \\
 CO 34& -    & 123.72& CO 23& -     & 280.28 \\
 F'=4 & -    & 184.04& F'=3 & -     & 423.60 \\
 \end{tabular}
-\caption{Expected frequency differences [MHz] for the four hyperfine transitions relative to the lowest possible one. Given by \autoref{fig:Rb_hyperfine} and \autoref{tab: rel rb freq}.}
+\caption{Expected frequency differences [MHz] for the four hyperfine transitions relative to the lowest possible one. Given by \autoref{fig:Rb_hyperfine}.}
 \label{tab: rel rb freq}
 \end{table}
 
