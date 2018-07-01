@@ -160,13 +160,280 @@ Halbwertszeit $T_{1/2} [a]$ & 5.27 & 10.51 & 13.52 & 30.17 & 2.60 & 241.06  \\
 
 Zuletzt wird das Signal von Analog-To-Digital Converter (ADC) umgeformt, damit der aus dem Peak ein langes Signal wird, welches dann die Energieinformation beinhaltet. Dazu wird prinzipiell die Energie in eine Kondensator gespeichert und die Zeit der Entladung gemessen. Diese wird als Signal an den PC weitergegeben und entspricht weiterhin der Photonenenergie. Ein positives Ablehnungssignal würde die Weitergabe des Signals verhindern. Effektiv wäre dies dann keine Messung.
 
+\subsection{Durchführung}
+Da der Detektor zu warm war um den Versuch durchzuführen mussten wir leider auf Altdaten einer zurückgreifen. Wir haben dabei für die Daten der Gruppe 23, Sommersemester 2018, entschieden, da diese den Pulser bei jeder Messung eingeschaltet haben, was eine exakte Totzeitkorrektur für jede Messung ermöglicht. Da die Durchführung des Versuchs darin besteht verschiedene Proben auf den Detektor zu legen und eine Messung am PC zu starten gehen wir davon aus, dass hier keine relevanten experimentellen Fehler gemacht wurden. 
 %%% Signal verarbietung? JA!
+\subsection{Auswertung}
+Das Ziel des Versuchs ist es die Aktivität und die Energie Gamma-Peaks der Verschieden Proben zu bestimmen. Dazu führen wir als erstes eine Totzeitkorrektur aus gefolgt von einer Korrektur der Hintergrundstrahlung. Mit den korrigierten Daten können wir dann eine Energiekalibrierung anhand bekannter Peakenergien durchführen. Nachdem alles Kalibriert ist müssen wir nur noch die gemessenen Peaks fitten und können die Proben identifizieren, bzw. die gemessenen Werte mit Literaturwerten vergleichen. 
+\subsubsection{Totzeitkorrektur} 
+Der Pulser ist konstant auf eine Energie am oberen Ende des Spektrums unseres Detektors und eine Frequenz von 50Hz eingestellt (\ref{fig:rawNa22}). Diese Frequenz ist so niedrig, dass sie unsere Totzeit nur minimal erhöht und gleichzeitig eine relativ präzise Bestimmung der Totzeit zulässt. Die Totzeitkorrektur berechnet sich wie folgt:
+\begin{equation}
+	k_{tot}=\frac{Gemessene \: Ereignisse}{t*50Hz}
+\end{equation}
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{RawPlots/Na22}
+	\caption{The large peak at channel 13760 is the peak of the Pulser}
+	\label{fig:rawNa22}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{Plots/Totzeit/Na22}
+	\caption{Example Fit of the Pulser Peak}
+	\label{fig:DeadTimena22}
+\end{figure}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		Messung & Relative Totzeit [\%] & korrigierte Messzeit [s] & Messzeit [s] \\ \hline\hline
+		hintergrund & 99.83 & 3593.92 & 3600 \\ \hline
+		Na22 & 99.84 & 898.52 & 900 \\ \hline
+		Totzeit & 99.85 & 299.56 & 900 \\ \hline
+		unbekannt & 99.86 & 898.75 & 900 \\ \hline
+		Eu152 & 95.03 & 855.26 & 900 \\ \hline
+		Cs137 & 96.90 & 872.14 & 900 \\ \hline
+		Co60 & 99.37 & 894.31 & 900 \\ \hline
+		Ba133 & 96.87 & 871.84 & 900 \\ \hline
+		Aufgabe5 & 93.26 & 839.33 & 900 \\ \hline
+		Am241 & 97.43 & 876.88 & 900 \\ \hline
+		\hline
+	\end{tabular}
+	\caption{Die Gemessenen Ereignisse ergeben sich aus dem Integral über den Gaußpeak mit der Energie des Pulsers.\ref{fig:DeadTimena22} \label{}}
+\end{table}
+
+
+
+\subsubsection{Korrektur der Hintergrundstrahlung}
+Um nur die Peaks der Proben zu erhalten müssen wir die Hintergrundstrahlung die z.B. aus den Wänden des Raums kommt korrigieren. Hierzu nutzen wir die Hintergrundmessung. Wir modellieren das Strahlungsprofil ohne die Peaks mit einem quadratischen Anstieg bis zu einem Maximum , gefolgt von einem Exponentiellen Abfall (\ref{fig:hintergrundkorrektur}). Die Peaks der Hintergrundstrahlung sind unproblematisch, da man sie immer bei den selben Energien findet.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{Plots/Hintergrundkorrektur}
+	\caption{}
+	\label{fig:hintergrundkorrektur}
+\end{figure}
+
+\subsubsection{Energiekalibrierung}
+Bevor wir die Peaks der Hintergrundstrahlung analysieren müssen wir eine Energiekalibrierung für unseren Detektor durchführen, da der Zusammenhang zwischen Channelnummer und Energie nicht konstant, sondern stark Temperaturabhängig ist. Hierzu haben wir die Strahlungsquellen $^{60}Co$, $^{137}Cs$ und $^{241}Am$ verwendet Gammaspektren wir kennen. Wir wissen, dass die Energie mit der Channelnummer ansteigt und können die Peaks so einfach den Stoffen zuordnen.
+
+\begin{table}[H]
+\caption{Bekannte Energien}
+\centering
+	\begin{tabular}{|c|c|}
+	
+		\hline
+		Quelle & Energie \\
+		\hline 
+		$^{241}Am$ & 59.5409 keV \\ 
+		\hline 
+		$^{137}Cs$ & 661.7keV \\ 
+		\hline 
+		$^{60}Co$ &  1173.2,1332.5 keV\\ 
+		\hline 
+
+	\end{tabular} 
+\end{table}
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{Energiekalibrierung.png}
+	\caption{Peak 5 gehört zum Pulser. Die restlichen Peaks sind die der Quellen  $^{60}Co$, $^{137}Cs$ und $^{241}Am$}
+	\label{fig:hintergrund}
+\end{figure}
+
+Damit können wir jetzt eine Energiekalibrierung durchführen. Wir nehmen einen quadratischen Zusammenhang zwischen der Channelnummer und der Energie an (\ref{fig:energiekalibrierung-fit}).
+\begin{equation}
+	f(x)=ax^2+mx+b
+\end{equation}
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{Energiekalibrierung_Fit}
+	\caption{Energiekalibrierung anhand der bekannten Energien.}
+	\label{fig:energiekalibrierung-fit}
+\end{figure}
+
+\subsubsection{Zuordnung der Peaks}
+\paragraph{Hintergrundpeaks}\mbox{} \\
+Mithilfe der Energiekalibrierung können wir die Peaks der verschiedenen Stoffe analysieren. Dazu betrachten wir als erstes die Peaks der Hintergrundstrahlung um sie von den Peaks der Quellen unterscheiden zu können.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{hintergrund}
+	\caption{}
+	\label{fig:hintergrund}
+\end{figure}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		peak[keV] & peakerror[kev] & integrated peakevents &Wahrscheinliche Quelle\\ \hline\hline
+		4.26e+02 & 4.42e-01 & 9.84e+02 &\\ \hline
+		1.38e+03 & 4.81e-01 & 1.38e+03 &\\ \hline
+		3.53e+03 & 2.35e-01 & 1.15e+03 &\\ \hline
+		3.84e+03 & 2.43e-01 & 1.44e+03 &\\ \hline
+		6.81e+03 & 3.10e-01 & 1.55e+03 &\\ \hline
+		7.74e+03 & 1.72e-01 & 1.57e+03 &\\ \hline
+		8.48e+03 & 1.45e-01 & 2.75e+03 &\\ \hline
+		1.38e+04 & 1.18e-02 & 1.80e+05 &\\ \hline
+
+	\end{tabular}
+	\caption{Hintergrundpeaks \label{tab:hintergrundpeaks}}
+\end{table}
+
+
+\subsubsection{Vergleich von Erwarteter und gemessener Zählrate und Effizienzkalibrierung}
+Wir kennen die Aktivität der Quellen und deren Halbwertszeit ($t_\frac{1}{2}$) zum Zeitpunkt des Erwerbs 1995. Die Aktivität zum Zeitpunkt des Experiments berechnet sich damit als
+\begin{equation}
+	I(t)=I_0e^{\frac{ln(2)}{t_{1/2}}*t}
+\end{equation}
+
+\subsubsection{Zuordnung der Hintergrundstrahlung zu einzelnen Elementen}
+\subsubsection{Energieauflösung des Germaniumdetektors}
+
+\subsection{Ergebnis}
+%genauigkeit unserer messungen
+%welche probleme beim messen
+%mögliche lösungen.
 
 
 \newpage
 \section{Anhang}
+\subsection{Hintergrund}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	peak[keV]&$\Delta$peak[kev]&Literaturwert&peakevents&Aktivität[Bq]&Quelle \\ \hline\hline
+		7.23e+01 & 7.86e+00 && 9.84e+02 & 2.74e-01 & some $\beta$-decay\\ \hline
+		2.21e+02 & 7.87e+00 &210& 1.38e+03 & 3.84e-01 & Ge77 \\ \hline
+ 		5.74e+02 & 7.83e+00 && 1.15e+03 & 3.19e-01 & \\ \hline
+		6.26e+02 & 7.83e+00 && 1.44e+03 & 4.01e-01 &\\ \hline
+		1.16e+03 & 7.84e+00 && 1.55e+03 & 4.32e-01 &Co60\\ \hline
+		1.34e+03 & 7.82e+00 && 1.57e+03 & 4.37e-01 &Co60\\ \hline
+		1.48e+03 & 7.82e+00 && 2.75e+03 & 7.64e-01 &\\ \hline
+		2.61e+03 & 7.80e+00 && 1.80e+05 & 5.00e+01 &\\ \hline
+		\hline
+	\end{tabular}
+	\caption{\label{}}
+\end{table}
+\subsection{Na22}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		peak[keV]&$\Delta$peak[kev]&Literaturwert&peakevents&Aktivität[Bq]&Quelle \\ \hline\hline
+		7.30e+01 & 7.89e+00 & & 4.71e+02 & 5.25e-01 & Hintergrund\\ \hline
+		2.20e+02 & 7.91e+00 & &6.06e+02 & 6.74e-01 & Hintergrund\\ \hline
+		4.77e+02 & 7.82e+00 & 5.11e+02 &4.39e+03 & 4.88e+00 & Na22\\ \hline
+		1.27e+03 & 7.83e+00 & 1.27e+02&9.87e+02 & 1.10e+00 & Na22\\ \hline
+		1.48e+03 & 7.84e+00 & &6.36e+02 & 7.07e-01 & K40\\ \hline
+		2.61e+03 & 7.80e+00 & &4.49e+04 & 4.99e+01 & Pulser\\ \hline
+		\hline
+	\end{tabular}
+\caption{\label{}}
+\end{table}
+\subsection{Co60}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	peak[keV]&$\Delta$peak[kev]&Literaturwert&peakevents&Aktivität[Bq]&Quelle \\ \hline\hline
+		1.16e+03 & 7.81e+00 & 1.17e+03& 2.46e+04 & 2.75e+01 & Co60\\ \hline
+		1.34e+03 & 7.81e+00 & 1.33+e03& 2.10e+04 & 2.35e+01 & Co60\\ \hline
+		2.61e+03 & 7.80e+00 && 4.46e+04 & 4.99e+01 & Pulser \\ \hline
+		1.48e+03 & 7.83e+00 & 1.46e+03& 6.63e+02 & 7.41e-01 & K40\\ \hline
+		\hline
+	\end{tabular}
+	\caption{\label{}}
+\end{table}
+\subsection{Unbekannt}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	peak[keV]&$\Delta$peak[kev]&Literaturwert&peakevents&Aktivität[Bq]&Quelle \\ \hline\hline
+		1.16e+03 & 7.82e+00 & 1.94e+03 & 2.15e+00 &Hintergrund &Co60\\ \hline
+		1.34e+03 & 7.80e+00 & 4.49e+04 & 4.99e+01 &Hintergrund &Co60\\ \hline
+		1.48e+03 & 7.89e+00 & 3.18e+02 & 3.54e-01 &Hintergrund &K40\\ \hline
+		\hline
+	\end{tabular}
+	\caption{\label{}}
+\end{table}
+\subsection{Cs137}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	peak[keV]&$\Delta$peak[kev]&Literaturwert&peakevents&Aktivität[Bq]&Quelle \\ \hline\hline
+		3.54e+01 & 7.81e+00 && 1.36e+05 & 1.56e+02 & $\beta$-decay to Ba137\\ \hline
+		3.93e+01 & 7.81e+00 && 3.55e+04 & 4.07e+01 & $\beta$-decay to Ba137\\ \hline
+		6.26e+02 & 7.80e+00 & 6.61e+02& 3.82e+05 & 4.38e+02 & Ba137 Gamma\\ \hline
+		2.61e+03 & 7.80e+00 && 4.18e+04 & 4.79e+01 & Pulser\\ \hline
+		\hline
+	\end{tabular}
+	\caption{\label{}}
+\end{table}
+\subsection{Ba133}
+\begin{table}[H]
+	\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	peak[keV]&$\Delta$peak[kev]&Literaturwert&peakevents&Aktivität[Bq]&Quelle \\ \hline\hline
+		3.45e+01 & 7.83e+00 && 6.78e+05 & 7.77e+02 & $\beta$-decay Cs137 to Ba137 \\ \hline
+		7.85e+01 & 7.80e+00 & 8.00e+01& 2.96e+05 & 3.39e+02 & Ba133\\ \hline
+		2.55e+02 & 7.80e+00 && 2.93e+04 & 3.36e+01 & \\ \hline
+		2.80e+02 & 7.80e+00 && 6.72e+04 & 7.70e+01 & \\ \hline
+		3.30e+02 & 7.80e+00 && 1.91e+05 & 2.19e+02 & \\ \hline
+		3.56e+02 & 7.80e+00 &3.56e+02& 2.51e+04 & 2.88e+01 & Ba133\\ \hline
+		\hline
+	\end{tabular}
+	\caption{\label{}}
+\end{table}
+\subsection{Eu152}
 
+\begin{table}[H]
+	\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	peak[keV]&$\Delta$peak[kev]&Literaturwert&peakevents&Aktivität[Bq]&Quelle \\ \hline\hline
 
+		4.22e+01 & 7.84e+00 & &1.03e+06 & 1.21e+03 \\ \hline
+		1.15e+02 & 7.80e+00 & 1.20e+02 &3.56e+05 & 4.16e+02 &Eu152\\ \hline
+		2.26e+02 & 7.80e+00 & &5.34e+04 & 6.24e+01 &Hintergrund\\ \hline
+		3.19e+02 & 7.80e+00 & 3.44e+02 &1.37e+05 & 1.61e+02 &Eu152\\ \hline
+		4.72e+01 & 7.80e+00 &4.7e+01 &1.47e+05 & 1.72e+02 &Pb210\\ \hline
+		3.82e+02 & 7.81e+00 & &1.80e+04 & 2.11e+01&\\ \hline
+		4.13e+02 & 7.81e+00 & 4.11e+02 &2.07e+04 & 2.42e+01 &Eu152 $\beta$ \\ \hline
+		7.44e+02 & 7.80e+00 & &3.65e+04 & 4.27e+01 &\\ \hline
+		8.35e+02 & 7.81e+00 & &1.49e+04 & 1.74e+01 &\\ \hline
+		9.36e+02 & 7.81e+00 & &3.07e+04 & 3.59e+01 &Hintergrund \\ \hline
+		1.07e+03 & 7.84e+00 &1.09e+03 &2.19e+04 & 2.56e+01 &Eu152 $\beta$  \\ \hline
+		1.09e+03 & 7.81e+00 & 1.11e+03 &2.56e+04 & 2.99e+01  &Eu152 $\beta$\\\hline
+		1.42e+03 & 7.81e+00 & 1.408e+03 &2.76e+04 & 3.22e+01 &Eu152\\ \hline
+		2.60e+03 & 7.80e+00 & &3.55e+04 & 4.15e+01 &Pulser \\ \hline
+		\hline
+	\end{tabular}
+	\caption{\label{}}
+\end{table}
+
+\subsection{Am241}
+\begin{table}[H]
+	\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	peak[keV]&$\Delta$peak[kev]&Literaturwert&peakevents&Aktivität[Bq]&Quelle \\ \hline\hline
+		5.96e+01 & 7.80e+00 &6.0e+01& 1.31e+06 & 1.49e+03 &Am241\\ \hline
+		2.21e+02 & 7.88e+00 && 4.15e+02 & 4.73e-01 & Hintergrund\\ \hline
+		3.26e+02 & 7.87e+00 && 1.86e+02 & 2.12e-01 & \\ \hline
+		6.26e+02 & 7.84e+00 &6.61e+02& 4.81e+02 & 5.49e-01 &Cs/Ba137 Gamma\\ \hline
+		1.16e+03 & 7.86e+00& 1.17e+03& 4.32e+02 & 4.93e-01 &Co60\\ \hline
+		1.48e+03 & 7.84e+00 &1.46+e03& 5.90e+02 & 6.73e-01 &K40\\ \hline
+		2.61e+03 & 7.80e+00 && 4.37e+04 & 4.98e+01 &Pulser\\ \hline
+		\hline
+	\end{tabular}
+	\caption{\label{}}
+\end{table}
 \newpage
 \begin{thebibliography}{}
 
