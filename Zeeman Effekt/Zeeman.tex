@@ -23,7 +23,7 @@ In this experiment we were able to confirm the existence of the Zeeman effect, b
 
 \newpage
 \section{Introduction}
-In this experiment the Zeeman effect will be discussed. In general atomic physics deals with the energy levels in an atom. With the spin orbit coupling and the fine structure, resulting from the Dirac formalism, the degeneracy of the atomic levels, calculated by Bohr, is lifted. Another splitting of the energy levels happens by adding another perturbation term depending on the nucleus spin. The levels of the so-called hyperfine and the fine structure are also degenerated, due to the spheric harmonics which are necessary to describe the wave function of an shell electron. This can be lifted by a static magnetic field and is called the Zeeman effect named after Pieter Zeeman in 1896.
+In this experiment the Zeeman effect will be discussed. In general atomic physics deals with the energy levels in an atom. With the spin orbit coupling and the fine structure, resulting from the Dirac formalism, the degeneracy of the atomic levels calculated by Bohr is lifted. Another splitting of the energy levels happens by adding another perturbation term depending on the nucleus spin. The levels of the so-called hyperfine and the fine structure are also degenerated, due to the spheric harmonics which are necessary to describe the wave function of a shell electron. This can be lifted by a static magnetic field and is called the Zeeman effect named after Pieter Zeeman in 1896.
 Nowadays it is important for magnetic resonance imaging and spectroscopy of the nucleus.
 
 
@@ -125,7 +125,7 @@ The resolving capacity of a FPI is defined as the quotient of the observed light
 \left(\frac{\lambda_0}{\delta\lambda}\right)_{FPI} = \frac{d\pi}{\lambda_0}\frac{2\sqrt{R}}{1-R}
 \label{eq:resolving cap}
 \end{equation}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 \newpage
@@ -141,7 +141,7 @@ The general set-up is shown in \autoref{fig:setup}. Two coils are producing the 
 
 In between the coils the lamps will be placed. For the Zeeman effect the cadmium lamp is used, but we'll also determine the wavelength of the red spectral line of zinc. Thereby red-filter discards all the other spectral lines given from the lamps.
 
-The Zeeman effect will be observed on the transitions $\sigma^+$ and $\sigma^-$. Therefore we have to filter those polarisation with the $\lambda/4$ wave plate and the polarisation filter. The first lens focuses the light to create this relative angle to the mirror while entering the FPI, as shown in \autoref{fig:fpi}. Ocular is then placed in the focal plane of the second lens and there the interference pattern is recorded by a camera. A needle inside the ocular will be used to determine the distance between the maxima. By changing the position of the ocular in an $90^\circ$ degree angle to the entering light, the needles position will change and we can get the relative position of a maximum $r_p$.
+The Zeeman effect will be observed on the transitions with $\sigma^+$ and $\sigma^-$ polarised light. Therefore we have to filter those polarisation with the $\lambda/4$ wave plate and the polarisation filter. The first lens focuses the light to create this relative angle to the mirror while entering the FPI, as shown in \autoref{fig:fpi}. Ocular is then placed in the focal plane of the second lens and there the interference pattern is recorded by a camera. A needle inside the ocular will be used to determine the distance between the maxima. By changing the position of the ocular in an $90^\circ$ degree angle to the entering light, the needles position will change and we can get the relative position of a maximum $r_p$.
 
 
 
@@ -160,11 +160,11 @@ B(x) = a\cdot x^3 + b\cdot x^2 + c\cdot x + d
 \begin{figure}[H]
 \centering
 \includegraphics[width=.8\textwidth]{Plots/hysteresis.png}
-\caption{Hysteresis curve for the magnetic field between both coils. The position where the lamps will be in the next chapters.}
+\caption{Hysteresis curve for the magnetic field between both coils. The position where the lamps will be in the next chapters. Large $\chi^2$ values due to the scale of $[mT]$ and therefore large values itself. }
 \label{fig:hyst}
 \end{figure}
 
-As shown in \autoref{fig:hyst} there is a difference between increasing and decreasing the current and thereby the magnetic field. As expected the values for $B_{down}$ are slightly higher than $B_{up}$ . Up and Down are representing the direction of the change in current.
+As shown in \autoref{fig:hyst} there is a difference between increasing and decreasing the current and thereby the magnetic field. As expected the values for $B_{down}$ are slightly higher than $B_{up}$. Up and Down are representing the direction of the change in current.
 
 In the following chapters hysteresis won't be considered any longer, due to the insufficient discrepancy of the magnetic fields. The error on the magnetic field is calculated by \autoref{eq: B error}.
 
@@ -202,11 +202,11 @@ Cadminum & $5.86 \pm 0.12$  & $982.72 \pm 39.37$ & $643.85$
 \label{tab:lam 0}
 \end{table}
 
-\autoref{tab:lam 0} shows the calculated values. Our values are very differing from the expected values. Nevertheless the wavelength of zinc is smaller than the one from cadmium, which was expected. It seems like there was a systematic error, that increased the our values by $300nm$ or additional $50\%$.
+\autoref{tab:lam 0} shows the calculated values. Our values are very different from the expected values. Nevertheless the wavelength of zinc is smaller than the one from cadmium, which was expected. It seems like there was a systematic error, that increased the our values by $300nm$ or additional $50\%$.
 
 
 \subsection{Zeeman effect}
-The following parts are always done with the cadmium lamp. To begin with we looked at the dispersion zone for a increasing magnetic field. The dispersion zone is defined as the relative position of the one maximum of the $\sigma^+$ light and the next orders $\sigma^-$. $1/2$ dispersion zone is reached if those two maxima are at the same position. The values $1/4$ and $3/4$ are given when the distance between the lights of each order is the same, meaning there are twice as many peak as in the case without magnetic field in the same distance to each other. The difference for those cases is the magnetic field strength. The results are shown in \autoref{tab:dispersion zone}. The magnetic field is calculated with \autoref{eq:B fit} and \autoref{eq: B error}.
+The following parts are always done with the cadmium lamp. To begin with we looked at the dispersion zone for a increasing magnetic field. The dispersion zone is defined as the relative position of maximum of the $\sigma^+$ light and the next orders $\sigma^-$. $1/2$ dispersion zone is reached if those two maxima are at the same position. The values $1/4$ and $3/4$ are given when the distance between the lights of each order is the same, meaning there are twice as many peak as in the case without magnetic field or $1/2$ dispersion zone. The difference for those cases is the magnetic field strength. The results are shown in \autoref{tab:dispersion zone}. The magnetic field is calculated with \autoref{eq:B fit} and \autoref{eq: B error}.
 
 \begin{table}[H]
 \centering
@@ -220,9 +220,9 @@ Dispersion zone & Current I $[A]$ & Mag. Field B $[mT]$ \\ \hline\hline
 \label{tab:dispersion zone}
 \end{table}
 
-The same procedure as before is now applied for the case with $\lambda/4$ wave plate and polarisation filter at $1/4$ dispersion zone. By changing the polarisation filter we were able to observe the switch from $\sigma^+$ and $\sigma^-$ polarised light. The position of the maxima shifted not continuously. It was more like one faded away while the other slowly appeared.
+The same procedure as before is now applied for the case with $\lambda/4$ wave plate and polarisation filter at $1/4$ dispersion zone. By changing the polarisation filter we were able to observe the transition from $\sigma^+$ and $\sigma^-$ polarised light. The position of the maxima shifted not continuously by moving to another location. It was more like one faded away while the other ring slowly appeared.
 
-From theory we already know that the $\sigma^+$ light hast the higher energy and therefore the shorter wavelength: $\lambda_{\sigma^+} < \lambda_{\sigma^-}$. This will help us to determine which wavelength corresponds to which polarisation.
+From theory we already know that the $\sigma^+$ light has the higher energy and therefore the shorter wavelength: $\lambda_{\sigma^+} < \lambda_{\sigma^-}$. This will help us to determine which wavelength corresponds to which polarisation.
 
 \begin{table}[H]
 \centering
@@ -235,7 +235,7 @@ $\sigma^-$ & $6.47 \pm 0.20$  & $1085.33 \pm 49.86$
 \label{tab: lam sigmas}
 \end{table}
 
-Again the wavelengths not around the expected value of $643.85nm$, even differing form the results in \autoref{tab:lam 0}. But the relative shift of the Zeeman effect is nicely illustrated.
+Again the wavelengths not around the expected value of $643.85nm$, even differing form the results in \autoref{tab:lam 0} with $\lambda_0 = 982.72\pm39.37 nm$. But the relative shift of the Zeeman effect is nicely illustrated.
 
 A comparison between energy difference of the wavelengths and the expected difference due to the magnetic field is shown below. The magnetic field for $1/4$ dispersion zone is used.
 
@@ -259,7 +259,7 @@ The wavelength differences are larger than expected. Due to their large error th
 The expected resolving capacity for the Fabry-Pérot Interferometer was given in \autoref{eq:resolving cap}. This will be compared to the values taken when the line started to split up. For this only three orders were clearly visible. The current was $6\pm 0.5 A \overset{\land}{=} 134.19 \pm 10.19 mT$. 
 With \autoref{eq: resolving capacity herleitung} the measured one is calculated.
 
-In these equations $\delta$ incicates the difference, while $\Delta$ is describing the error on the value. The value for $\lambda_0$ will be given by the entry for cadmium from \autoref{tab:lam 0}.
+In these equations $\delta$ incicates the difference, while $\Delta$ is describing the error on the value. The value for $\lambda_0$ will be given by the entry for cadmium from \autoref{tab:lam 0} with $\lambda_0 = 982.72\pm39.37 nm$.
 
 \begin{align}
 \delta E= hc \cdot k\ =\ hc \frac{\lambda_1-\lambda_2}{\lambda_1\lambda_2}\ \approx\ hc\frac{\delta \lambda}{\lambda_0^2}\ \overset{!}{=}\ 2\mu_B B 
@@ -273,7 +273,7 @@ In these equations $\delta$ incicates the difference, while $\Delta$ is describi
 \centering
 \begin{tabular}{c|c}
 &$\lambda_0/\delta\lambda$ $[10^4]$\\ \hline\hline
-Theory & $731.6 \pm 29.3$    \\ \hline
+Theory & $960.6 \pm 38.5$    \\ \hline
 Measured & $8.1 \pm 0.7$  
 \end{tabular}
 \caption{Results from the calculations of the resolving capacity.}
@@ -309,9 +309,9 @@ Again the result differs by a factor of $10^3$ and the large error shows that so
 \section{Error discussion and Conclusion}
 The large error bars are caused by the large distances $r_p$ and the linear fit. We assumed an error of $0.1mm$ on the distances due to the thickness of the rings. By measuring relative to the center the distances could have been smaller and thereby a better fit would have been possible, but this shouldn't affect the measured value, only the error. Due to the large errors and the propagation of uncertainty the determination of the specific charge ended in an error 2000 times larger than the value itself.
 
-The difference of the factor $10^3$ is still untraceable. Calculating \autoref{eq: 10^3 faktor} in SI units this value should be right. The small offset on the hysteresis calibration, due to the hall probe always measuring a small magnetic field and fluctuation shown values, doesn't explain this difference. Although the magnetic field should be nearly the same in between the coils, the later position of the lamp relative to the location we measured the magnetic field, could cause some variation.
+The difference of the factor $10^3$ is still untraceable. Calculating \autoref{eq: 10^3 faktor} in SI units this value should be right. The small offset on the hysteresis calibration, due to the hall probes are always measuring a small magnetic field. Those fluctuations don't explain the large difference for the shown values. Although the magnetic field should be nearly the same in between the coils, the later position of the lamp relative to the location we measured the magnetic field, could cause some variation.
 
-Our small resolving capacity reinforces the assumption that the we couldn't measure the wavelengths as precise as wanted to. It seems like the wavelength is also depending on the settings we used to display the on the monitor. Before taking the values of the Zeeman shift we had to recalibrate the camera setting to visualise the rings. This could explain why $\lambda_0$ is not between the wavelengths of both circular polarised lights. See Appendix for \autoref{fig: not used}, which was taken to calculate the resolving capacity for another different setting. Again the wavelengths are different for the same spectral line.
+Our small resolving capacity reinforces the assumption that the we couldn't measure the wavelengths as precise as wanted to. It seems like the wavelength is also depending on the settings we used to display the on the monitor. Before taking the values of the Zeeman shift we had to recalibrate the camera setting to visualise the rings. This could explain why $\lambda_0$ is not between the wavelengths of both circular polarised lights. See Appendix for \autoref{fig: not used}, which was taken to calculate the resolving capacity for another different setting. Again the wavelengths are different for the same spectral line are changing the camera settings.
 
 Maybe also the numbering of our maxima was wrong, but we didn't see any other, which could justify to skip an order. This would reduce the overall wavelengths. External light sources should not have affected the experiment, because the rings were red.
 \\ \\
@@ -325,7 +325,7 @@ We didn't checked if the beam path was optimal to create the best possible inter
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{Plots/Res_Cap.png}
-\caption{Additional try to get the resolving capacity. It was not used due to the extremely differing wavelengths due to insufficient data values for the fit.}
+\caption{Additional attempt to calculate the resolving capacity of the FPI. It was not used due to the extremely differing wavelengths from the shown gradients. The values are bad due to an insufficient amount of data values for the fit.}
 \label{fig: not used}
 \end{figure}
 
