@@ -1,0 +1,4 @@
+Aktivität heute berechnen
+Schwächungskoeffizienten in für die Energien berechnen
+Gammaintensität berechnen (inklusive schwächungskoeff) und 
+Gamma gegen E plotten
